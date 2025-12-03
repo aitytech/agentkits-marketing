@@ -1,0 +1,40 @@
+{
+  "name": "meta-ads",
+  "description": "Facebook & Instagram advertising management and analytics",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "meta-ads-mcp"],
+  "env": {
+    "META_ACCESS_TOKEN": "${META_ACCESS_TOKEN}"
+  },
+  "setup": {
+    "requirements": [
+      "Node.js 18+",
+      "Meta Business Account",
+      "Meta Marketing API access token"
+    ],
+    "tokenScopes": ["ads_management", "ads_read", "business_management"]
+  },
+  "capabilities": {
+    "tools": 25,
+    "categories": [
+      "analytics",
+      "campaigns",
+      "ad-sets",
+      "ads",
+      "audiences",
+      "creatives",
+      "diagnostics"
+    ]
+  },
+  "rateLimit": {
+    "standardCallsPerHour": 200,
+    "insightsCallsPerHour": 60
+  },
+  "source": {
+    "github": "https://github.com/brijr/meta-mcp",
+    "alternative": "https://github.com/pipeboard-co/meta-ads-mcp"
+  },
+  "documentation": "https://developers.facebook.com/docs/marketing-apis/",
+  "_disclaimer": "Unofficial third-party tool, not affiliated with Meta"
+}

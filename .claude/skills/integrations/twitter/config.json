@@ -1,0 +1,27 @@
+{
+  "name": "twitter",
+  "description": "Twitter/X posting, search, and analytics",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "x-mcp-server"],
+  "env": {
+    "TWITTER_API_KEY": "${TWITTER_API_KEY}",
+    "TWITTER_API_SECRET": "${TWITTER_API_SECRET}",
+    "TWITTER_ACCESS_TOKEN": "${TWITTER_ACCESS_TOKEN}",
+    "TWITTER_ACCESS_SECRET": "${TWITTER_ACCESS_SECRET}"
+  },
+  "setup": {
+    "requirements": [
+      "Twitter Developer Account",
+      "API v2 access (Basic tier or higher)",
+      "OAuth 1.0a credentials"
+    ]
+  },
+  "capabilities": {
+    "tools": 8,
+    "categories": ["posting", "search", "media", "threads"]
+  },
+  "source": {
+    "github": "https://github.com/mbelinky/x-mcp-server"
+  }
+}

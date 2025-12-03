@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "agentkits-marketing",
+  "description": "AI-powered marketing automation kit with specialized funnel-stage agents for lead generation, email campaigns, sales enablement, customer retention, and revenue optimization.",
+  "buildDate": "2025-12-03T00:00:00.000Z",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentkits/agentkits-marketing.git"
+  },
+  "download": {
+    "lastDownloadedAt": null,
+    "downloadedBy": null,
+    "installCount": 0
+  }
+}

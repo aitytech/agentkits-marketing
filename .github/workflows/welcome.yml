@@ -1,0 +1,48 @@
+name: Welcome
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  welcome:
+    name: Welcome New Contributors
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome first-time issue creator
+        if: github.event_name == 'issues'
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            Welcome to AgentKits! Thanks for opening your first issue.
+
+            A maintainer will review this shortly. In the meantime:
+
+            - Make sure you've searched [existing issues](https://github.com/agentkits/agentkits-marketing/issues) for duplicates
+            - Check our [documentation](https://docs.agentkits.net) for answers
+            - Join the discussion in [GitHub Discussions](https://github.com/agentkits/agentkits-marketing/discussions)
+
+            If this is a bug report, please ensure you've included:
+            - Steps to reproduce
+            - Expected vs actual behavior
+            - Your environment details
+
+            Thanks for helping improve AgentKits!
+          pr-message: |
+            Welcome to AgentKits! Thanks for your first pull request.
+
+            A maintainer will review this shortly. Please ensure:
+
+            - Your PR follows our [contribution guidelines](CONTRIBUTING.md)
+            - Commits follow [Conventional Commits](https://www.conventionalcommits.org/) format
+            - All checks pass
+
+            Thanks for contributing to AgentKits!

@@ -1,0 +1,30 @@
+{
+  "name": "hubspot",
+  "description": "HubSpot CRM - contacts, companies, deals, marketing",
+  "type": "remote",
+  "transport": "sse",
+  "url": "https://mcp.hubspot.com",
+  "env": {
+    "HUBSPOT_ACCESS_TOKEN": "${HUBSPOT_ACCESS_TOKEN}"
+  },
+  "alternativeConfig": {
+    "_note": "Community npm package alternative",
+    "command": "npx",
+    "args": ["-y", "@smithery/cli", "install", "mcp-hubspot", "--client", "claude"]
+  },
+  "setup": {
+    "requirements": [
+      "HubSpot account",
+      "Private App access token with required scopes"
+    ],
+    "scopes": ["crm.objects.contacts.read", "crm.objects.companies.read", "crm.objects.deals.read"]
+  },
+  "capabilities": {
+    "tools": 15,
+    "categories": ["contacts", "companies", "deals", "engagements", "marketing"]
+  },
+  "source": {
+    "official": "https://developers.hubspot.com/mcp",
+    "docs": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-hubspot-mcp-server"
+  }
+}

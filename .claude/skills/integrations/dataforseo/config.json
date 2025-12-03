@@ -1,0 +1,23 @@
+{
+  "name": "dataforseo",
+  "description": "Comprehensive SEO data API - SERP, keywords, backlinks",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "@anthropic-ai/dataforseo-mcp"],
+  "env": {
+    "DATAFORSEO_LOGIN": "${DATAFORSEO_LOGIN}",
+    "DATAFORSEO_PASSWORD": "${DATAFORSEO_PASSWORD}"
+  },
+  "setup": {
+    "requirements": ["DataForSEO account", "API credentials"],
+    "pricing": "Pay-as-you-go, varies by endpoint"
+  },
+  "capabilities": {
+    "tools": 50,
+    "categories": ["serp", "keywords", "backlinks", "onpage", "content"]
+  },
+  "source": {
+    "github": "https://github.com/Skobyn/dataforseo-mcp-server",
+    "docs": "https://docs.dataforseo.com/"
+  }
+}

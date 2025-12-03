@@ -1,0 +1,34 @@
+{
+  "name": "google-search-console",
+  "description": "Search performance, indexing, and SEO insights from Google Search",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "mcp-server-gsc"],
+  "env": {
+    "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}"
+  },
+  "setup": {
+    "requirements": [
+      "Node.js 18+",
+      "Google Cloud Project with Search Console API enabled",
+      "Service Account with Search Console access"
+    ],
+    "credentialsPath": "Path to service account JSON file"
+  },
+  "capabilities": {
+    "tools": 6,
+    "categories": [
+      "search-analytics",
+      "url-inspection",
+      "sitemaps"
+    ]
+  },
+  "rateLimit": {
+    "requestsPerMinute": 1200
+  },
+  "source": {
+    "npm": "https://www.npmjs.com/package/mcp-server-gsc",
+    "github": "https://github.com/ahonn/mcp-server-gsc"
+  },
+  "documentation": "https://developers.google.com/webmaster-tools/v1/api_reference_index"
+}

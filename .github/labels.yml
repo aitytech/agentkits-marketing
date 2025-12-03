@@ -1,0 +1,131 @@
+# GitHub Labels Configuration
+# Use with actions/labeler or manage manually
+# Learn more: https://github.com/marketplace/actions/labeler
+
+# Type labels
+- name: bug
+  color: "d73a4a"
+  description: "Something isn't working"
+
+- name: enhancement
+  color: "a2eeef"
+  description: "New feature or request"
+
+- name: documentation
+  color: "0075ca"
+  description: "Improvements or additions to documentation"
+
+- name: question
+  color: "d876e3"
+  description: "Further information is requested"
+
+- name: support
+  color: "7057ff"
+  description: "Help or support request"
+
+# Status labels
+- name: triage
+  color: "ededed"
+  description: "Needs triage and categorization"
+
+- name: stale
+  color: "fef2c0"
+  description: "No recent activity"
+
+- name: pinned
+  color: "006b75"
+  description: "Pinned - won't auto-close"
+
+- name: in-progress
+  color: "fbca04"
+  description: "Currently being worked on"
+
+- name: blocked
+  color: "b60205"
+  description: "Blocked by something else"
+
+# Priority labels
+- name: "priority: critical"
+  color: "b60205"
+  description: "Critical priority"
+
+- name: "priority: high"
+  color: "d93f0b"
+  description: "High priority"
+
+- name: "priority: medium"
+  color: "fbca04"
+  description: "Medium priority"
+
+- name: "priority: low"
+  color: "0e8a16"
+  description: "Low priority"
+
+# Area labels
+- name: "area: agents"
+  color: "1d76db"
+  description: "Related to agents"
+
+- name: "area: commands"
+  color: "1d76db"
+  description: "Related to commands"
+
+- name: "area: skills"
+  color: "1d76db"
+  description: "Related to skills"
+
+- name: "area: workflows"
+  color: "1d76db"
+  description: "Related to workflows"
+
+- name: "area: training"
+  color: "1d76db"
+  description: "Related to training content"
+
+- name: "area: integrations"
+  color: "1d76db"
+  description: "Related to MCP integrations"
+
+# Contribution labels
+- name: "good first issue"
+  color: "7057ff"
+  description: "Good for newcomers"
+
+- name: "help wanted"
+  color: "008672"
+  description: "Extra attention is needed"
+
+- name: "hacktoberfest"
+  color: "ff7619"
+  description: "Hacktoberfest participation"
+
+# Dependency labels
+- name: dependencies
+  color: "0366d6"
+  description: "Dependency updates"
+
+- name: npm
+  color: "cb3837"
+  description: "npm package related"
+
+- name: github-actions
+  color: "2088ff"
+  description: "GitHub Actions related"
+
+# Resolution labels
+- name: "wontfix"
+  color: "ffffff"
+  description: "This will not be worked on"
+
+- name: "duplicate"
+  color: "cfd3d7"
+  description: "This issue or PR already exists"
+
+- name: "invalid"
+  color: "e4e669"
+  description: "This doesn't seem right"
+
+# Security
+- name: security
+  color: "d73a4a"
+  description: "Security related issue"

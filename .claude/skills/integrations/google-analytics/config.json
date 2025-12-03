@@ -1,0 +1,27 @@
+{
+  "name": "google-analytics",
+  "description": "Google Analytics 4 (GA4) web analytics data access",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "mcp-server-google-analytics"],
+  "env": {
+    "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}",
+    "GA4_PROPERTY_ID": "${GA4_PROPERTY_ID}"
+  },
+  "setup": {
+    "requirements": [
+      "Node.js 18+",
+      "Google Cloud Project with Analytics Data API enabled",
+      "Service Account with GA4 property access"
+    ]
+  },
+  "capabilities": {
+    "tools": 6,
+    "categories": ["reports", "realtime", "dimensions", "metrics"]
+  },
+  "source": {
+    "npm": "https://www.npmjs.com/package/mcp-server-google-analytics",
+    "github": "https://github.com/ruchernchong/mcp-server-google-analytics",
+    "official": "https://github.com/googleanalytics/google-analytics-mcp"
+  }
+}

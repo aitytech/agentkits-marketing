@@ -1,0 +1,25 @@
+{
+  "name": "semrush",
+  "description": "SEO, PPC, and content research from Semrush",
+  "type": "remote",
+  "transport": "sse",
+  "url": "https://mcp.semrush.com/v1/mcp",
+  "env": {
+    "SEMRUSH_API_KEY": "${SEMRUSH_API_KEY}"
+  },
+  "setup": {
+    "requirements": [
+      "Semrush account with API access",
+      "API key from Semrush settings"
+    ],
+    "pricing": "Varies by plan, API units consumed per request"
+  },
+  "capabilities": {
+    "tools": 20,
+    "categories": ["keywords", "backlinks", "domain-analytics", "position-tracking"]
+  },
+  "source": {
+    "official": "https://developer.semrush.com/api/basics/semrush-mcp/",
+    "community": "https://github.com/mrkooblu/semrush-mcp"
+  }
+}

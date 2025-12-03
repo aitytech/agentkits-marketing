@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="40" height="40" rx="8" fill="url(#logoGrad)"/>
+  <!-- Central hub -->
+  <circle cx="20" cy="20" r="5" fill="#fff"/>
+  <!-- Nodes -->
+  <circle cx="20" cy="9" r="3" fill="#fff"/>
+  <circle cx="20" cy="31" r="3" fill="#fff"/>
+  <circle cx="9" cy="20" r="3" fill="#fff"/>
+  <circle cx="31" cy="20" r="3" fill="#fff"/>
+  <!-- Connections -->
+  <line x1="20" y1="15" x2="20" y2="12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="20" y1="25" x2="20" y2="28" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="15" y1="20" x2="12" y2="20" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="25" y1="20" x2="28" y2="20" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Center dot -->
+  <circle cx="20" cy="20" r="2" fill="#2563EB"/>
+</svg>
