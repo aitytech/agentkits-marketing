@@ -1,0 +1,39 @@
+# AgentKits Marketing - Code Owners
+# These owners will be requested for review when someone opens a PR
+# Learn more: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything
+* @agentkits/core
+
+# Core plugin configuration
+/.claude-plugin/ @agentkits/core
+/CLAUDE.md @agentkits/core
+/plugin.json @agentkits/core
+/marketplace.json @agentkits/core
+
+# Agents
+/.claude/agents/ @agentkits/core
+
+# Commands
+/.claude/commands/ @agentkits/core
+
+# Skills
+/.claude/skills/ @agentkits/core
+
+# Workflows
+/.claude/workflows/ @agentkits/core
+
+# Training content
+/training/ @agentkits/core
+
+# Documentation
+/docs/ @agentkits/core
+/README.md @agentkits/core
+/CONTRIBUTING.md @agentkits/core
+
+# CI/CD and GitHub configuration
+/.github/ @agentkits/core
+
+# Package configuration
+/package.json @agentkits/core
+/.releaserc @agentkits/core

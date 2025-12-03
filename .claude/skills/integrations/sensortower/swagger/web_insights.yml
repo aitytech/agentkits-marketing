@@ -1,0 +1,676 @@
+openapi: 3.0.0
+info:
+  title: Web Insights API
+  version: '1.0'
+  description: ''
+servers:
+  - url: https://api.sensortower.com
+security:
+  - auth_token: []
+paths:
+  /v1/websites/facets:
+    post:
+      tags:
+        - WEB
+      description: This endpoint allows you to retrieve estimated web traffic metrics for unified websites.
+      operationId: website_facets
+      summary: Fetch data for websites.
+      requestBody:
+        description: |
+          Request Body Structure
+          <br><br>
+          The request body must contain the following fields:
+          - facets: An array of facet objects specifying the metrics and dimensions you want to retrieve.
+          - filters: An object where each key is a dimension and the value is the filter criteria for that dimension.
+          - breakdown: An array of dimensions used to break down the returned metrics.
+          - order_by: (Optional) An array of objects specifying the sorting order for the results.
+            Each object should have a key that corresponds to a metric or dimension and a value of "asc" or "desc".
+          - limit: (Optional) The maximum number of records to return.
+          - offset: (Optional) The number of records to skip before starting to collect the result set.
+
+          <br>
+          Facet object:
+            Each item in the facets array should have the following structure:
+            <pre>
+            {
+                "facet": "string",          // Name of the metric or dimension
+                "alias": "string",          // (Optional) Custom name for the response field
+                "measure": "absolute",      // Currently only "absolute" is supported
+                "time_period": "string"     // Granularity: "day", "week", or "month"
+            }
+            </pre>
+
+          <br>
+          Supported Metrics & Dimensions:
+            - est_web_website_visits
+              - supported time_period: day, week, month
+              - supported dimensions: unified_website_id, date, region, device, brand_id, brand_name, brand_category, brand_category_name
+            - est_web_website_visitors
+              - supported time_period: day, week, month
+              - supported dimensions: unified_website_id, date, region, device, brand_id, brand_name, brand_category, brand_category_name
+            - est_web_website_visits_per_visitor
+              - supported time_period: day, week, month
+              - supported dimensions: unified_website_id, date, region, device, brand_id, brand_name
+            - est_website_true_audience_visitors
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_app_id, date, region, brand_id, brand_name
+            - est_web_website_only_visitors
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_app_id, date, region, brand_id, brand_name
+            - est_web_app_only_visitors
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_app_id, date, region, brand_id, brand_name
+            - est_web_website_and_app_visitors
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_app_id, date, region, brand_id, brand_name
+            - est_web_website_duration
+                - measured in years
+                - supported time_period: day, week, month
+                - supported dimensions: unified_website_id, date, region, device, brand_id, brand_name, brand_category, brand_category_name
+            - est_web_website_duration_per_visitor
+                - measured in minutes
+                - supported time_period: day, week, month
+                - supported dimensions: unified_website_id, date, region, device, brand_id, brand_name
+            - est_web_path_visits
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_website_path_id, path_types, date, region, device
+            - est_web_path_duration
+                - measured in years
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_website_path_id, path_types, date, region, device
+            - est_web_path_visits_path_share
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_website_path_id, path_types, date, region, device
+            - est_web_path_duration_path_share
+                - supported time_period: month
+                - supported dimensions: unified_website_id, unified_website_path_id, path_types, date, region, device
+            - region
+              - supported by est_web_website_visits, est_web_website_visitors, est_web_website_visits_per_visitor, est_web_website_duration and est_web_website_duration_per_visitor:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                AE, AR, AU, BR, CA, CO, DE, EG, ES, FR, GB, ID, IN, IT, JP, KR, MX, NL, PH, PL, RU, SA, TR, TW, US, VN
+              - supported by est_website_true_audience_visitors, est_web_website_only_visitors, est_web_app_only_visitors and est_web_website_and_app_visitors:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                AU, BR, CA, DE, ES, FR, GB, IN, JP, PL, RU, US
+            - device
+              - supported values: desktop, mobile
+            - brand_category
+              - supported values:<a target='_blank' href='/api/web_insights/brands/taxonomy'>Brand Categories</a>
+            - brand_id
+              - breakdown and facets only, not filterable
+            - brand_name
+              - breakdown and facets only, not filterable
+            - brand_category_name
+              - breakdown and facets only, not filterable
+        required: true
+        content:
+          application/json:
+            examples:
+              visits_metrics_by_websites:
+                summary: Visits metrics by Websites
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: date
+                    - facet: brand_id
+                    - facet: brand_name
+                    - facet: brand_category
+                    - facet: brand_category_name
+                    - facet: est_web_website_visits
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_visitors
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_visits_per_visitor
+                      time_period: day
+                      measure: absolute
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-01-02'
+                    unified_website_ids:
+                      - google.com
+                      - youtube.com
+                    regions:
+                      - US
+                      - CA
+                    devices:
+                      - desktop
+                      - mobile
+                  breakdown:
+                    - unified_website_id
+                    - date
+                    - brand_id
+                    - brand_name
+                    - brand_category
+                    - brand_category_name
+              visits_metrics_by_devices:
+                summary: Visits metrics by Devices
+                value:
+                  facets:
+                    - facet: device
+                    - facet: date
+                    - facet: est_web_website_visits
+                      time_period: week
+                      measure: absolute
+                    - facet: est_web_website_visitors
+                      time_period: week
+                      measure: absolute
+                    - facet: est_web_website_visits_per_visitor
+                      time_period: week
+                      measure: absolute
+                  filters:
+                    start_date: '2025-01-06'
+                    end_date: '2025-01-19'
+                    unified_website_ids:
+                      - google.com
+                      - youtube.com
+                    regions:
+                      - US
+                      - CA
+                    devices:
+                      - desktop
+                      - mobile
+                  breakdown:
+                    - device
+                    - date
+              visits_metrics_by_countries:
+                summary: Visits metrics by Countries
+                value:
+                  facets:
+                    - facet: region
+                    - facet: date
+                    - facet: est_web_website_visits
+                      time_period: month
+                      measure: absolute
+                    - facet: est_web_website_visitors
+                      time_period: month
+                      measure: absolute
+                    - facet: est_web_website_visits_per_visitor
+                      time_period: month
+                      measure: absolute
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-02-01'
+                    unified_website_ids:
+                      - google.com
+                      - youtube.com
+                    regions:
+                      - US
+                      - CA
+                    devices:
+                      - desktop
+                      - mobile
+                  breakdown:
+                    - region
+                    - date
+              top_10_websites_by_visitors_across_all_categories:
+                summary: Top 10 Websites By Total Visits Across All Categories
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: brand_id
+                    - facet: brand_name
+                    - facet: brand_category
+                    - facet: brand_category_name
+                    - facet: est_web_website_visits
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_visitors
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_visits_per_visitor
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_duration
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_duration_per_visitor
+                      time_period: day
+                      measure: absolute
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-01-01'
+                    regions:
+                      - US
+                    devices:
+                      - desktop
+                      - mobile
+                  breakdown:
+                    - unified_website_id
+                    - brand_id
+                    - brand_name
+                    - brand_category
+                    - brand_category_name
+                  order_by:
+                    - est_web_website_visits: desc
+                  limit: 10
+              top_10_websites_by_visitors_in_the_auto_category:
+                summary: Top 10 Websites By Total Visits in the Auto Category
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: brand_id
+                    - facet: brand_name
+                    - facet: brand_category
+                    - facet: brand_category_name
+                    - facet: est_web_website_visits
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_visitors
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_visits_per_visitor
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_duration
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_duration_per_visitor
+                      time_period: day
+                      measure: absolute
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-01-01'
+                    regions:
+                      - US
+                    devices:
+                      - desktop
+                      - mobile
+                    brand_categories:
+                      - 3
+                  breakdown:
+                    - unified_website_id
+                    - brand_id
+                    - brand_name
+                    - brand_category
+                    - brand_category_name
+                  order_by:
+                    - est_web_website_visits: desc
+                  limit: 10
+              device_overlap_by_unique_visitors:
+                summary: Device Overlap by Unique Visitors
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: unified_app_id
+                    - facet: date
+                    - facet: brand_id
+                    - facet: brand_name
+                    - facet: brand_category
+                    - facet: brand_category_name
+                    - facet: est_website_true_audience_visitors
+                      time_period: month
+                      measure: absolute
+                    - facet: est_web_app_only_visitors
+                      time_period: month
+                      measure: absolute
+                    - facet: est_web_website_only_visitors
+                      time_period: month
+                      measure: absolute
+                    - facet: est_web_website_and_app_visitors
+                      time_period: month
+                      measure: absolute
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-02-01'
+                    unified_website_ids:
+                      - google.com
+                      - youtube.com
+                  breakdown:
+                    - unified_website_id
+                    - unified_app_id
+                    - date
+                    - brand_id
+                    - brand_name
+                    - brand_category
+                    - brand_category_name
+              duration_metrics_by_websites:
+                summary: Duration metrics by Websites
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: date
+                    - facet: brand_id
+                    - facet: brand_name
+                    - facet: brand_category
+                    - facet: brand_category_name
+                    - facet: est_web_website_duration
+                      time_period: day
+                      measure: absolute
+                    - facet: est_web_website_duration_per_visitor
+                      time_period: day
+                      measure: absolute
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-01-02'
+                    unified_website_ids:
+                      - google.com
+                      - youtube.com
+                    regions:
+                      - US
+                      - CA
+                    devices:
+                      - desktop
+                      - mobile
+                  breakdown:
+                    - unified_website_id
+                    - date
+                    - brand_id
+                    - brand_name
+                    - brand_category
+                    - brand_category_name
+              total_visits_by_paths:
+                summary: Total Visits by Website Paths
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: unified_website_path_id
+                    - facet: date
+                    - facet: est_web_path_visits
+                      time_period: month
+                    - facet: est_web_path_visits_path_share
+                      time_period: month
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-01-02'
+                    unified_website_path_ids:
+                      - google.com/search/*
+                    regions:
+                      - US
+                    devices:
+                      - desktop
+                      - mobile
+                  breakdown:
+                    - unified_website_id
+                    - unified_website_path_id
+                    - date
+              total_duration_by_paths:
+                summary: Total Duration by Website Paths
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: unified_website_path_id
+                    - facet: date
+                    - facet: est_web_path_duration
+                      time_period: month
+                    - facet: est_web_path_duration_path_share
+                      time_period: month
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-01-02'
+                    unified_website_path_ids:
+                      - google.com/search
+                    regions:
+                      - US
+                    devices:
+                      - desktop
+                      - mobile
+                  breakdown:
+                    - unified_website_id
+                    - unified_website_path_id
+                    - date
+              top_paths_by_total_visits:
+                summary: Top Paths by Total Visits
+                value:
+                  facets:
+                    - facet: unified_website_id
+                    - facet: unified_website_path_id
+                    - facet: est_web_path_visits
+                      time_period: month
+                    - facet: est_web_path_visits_path_share
+                      time_period: month
+                  filters:
+                    start_date: '2025-01-01'
+                    end_date: '2025-01-01'
+                    unified_website_ids:
+                      - google.com
+                    regions:
+                      - US
+                    devices:
+                      - desktop
+                      - mobile
+                    path_types:
+                      - starts_with
+                  breakdown:
+                    - unified_website_id
+                    - unified_website_path_id
+                  order_by:
+                    - est_web_path_visits: desc
+                  limit: 10
+            schema:
+              type: object
+              required:
+                - breakdown
+                - facets
+                - filters
+              properties:
+                breakdown:
+                  type: array
+                  description: |
+                    List of breakdown fields.
+                  items:
+                    type: string
+                    enum:
+                      - date
+                      - unified_website_id
+                      - unified_website_path_id
+                      - unified_app_id
+                      - region
+                      - device
+                      - brand_id
+                      - brand_name
+                      - brand_category
+                      - brand_category_name
+                  example:
+                    - unified_website_id
+                    - date
+                filters:
+                  type: object
+                  properties:
+                    start_date:
+                      type: date
+                      example: '2024-01-01'
+                    end_date:
+                      type: date
+                      example: '2024-12-31'
+                    regions:
+                      type: array
+                      description: |
+                        List of regions/country codes. <br>  US, ES, CA, IT, etc.
+                      items:
+                        type: string
+                      example:
+                        - US
+                    devices:
+                      type: array
+                      description: |
+                        List of device types.
+                      items:
+                        type: string
+                        enum:
+                          - desktop
+                          - mobile
+                      example:
+                        - desktop
+                    unified_website_ids:
+                      type: array
+                      description: |
+                        List of unified website ids.
+                      items:
+                        type: string
+                      example:
+                        - google.com
+                    unified_app_ids:
+                      type: array
+                      description: |
+                        List of unified app ids.
+                      items:
+                        type: string
+                      example:
+                        - 55c530a702ac64f9c0002dff
+                    unified_website_path_ids:
+                      type: array
+                      description: |
+                        List of unified path ids.
+                      items:
+                        type: string
+                      example:
+                        - google.com/search
+                    path_types:
+                      type: array
+                      description: |
+                        List of path types.
+                      items:
+                        type: string
+                        enum:
+                          - exact
+                          - starts_with
+                      example:
+                        - exact
+                facets:
+                  type: array
+                  description: |
+                    Array of facets to fetch for each app. See examples.
+                  items:
+                    type: object
+                    description: |
+                      Facet object.
+                    required:
+                      - facet
+                    properties:
+                      facet:
+                        type: string
+                        enum:
+                          - est_web_website_visits
+                          - est_web_website_visitors
+                          - est_web_website_visits_per_visitor
+                          - est_website_true_audience_visitors
+                          - est_web_website_only_visitors
+                          - est_web_app_only_visitors
+                          - est_web_website_and_app_visitors
+                          - est_web_website_duration
+                          - est_web_website_duration_per_visitor
+                          - est_web_path_visits
+                          - est_web_path_duration
+                          - date
+                          - region
+                          - device
+                          - unified_website_id
+                          - unified_app_id
+                          - unified_website_path_id
+                        description: |
+                          metrics and dimensions to fetch
+                      alias:
+                        type: string
+                        description: |
+                          Optional alias for the facet. It defines the name of the field in response. Default is the name of the facet.
+                      measure:
+                        type: string
+                        enum:
+                          - absolute
+                          - comparison
+                          - delta
+                          - growth
+                        description: |
+                          Measure type for metric facets, only "absolute" is supported for now.
+                        example: absolute
+                      time_period:
+                        type: string
+                        enum:
+                          - day
+                          - week
+                          - month
+                        description: |
+                          Metric granularity.
+                        example: day
+              default:
+                facets:
+                  - facet: unified_website_id
+                  - facet: date
+                  - facet: brand_id
+                  - facet: brand_name
+                  - facet: brand_category
+                  - facet: brand_category_name
+                  - facet: est_web_website_visits
+                    time_period: day
+                    measure: absolute
+                  - facet: est_web_website_visitors
+                    time_period: day
+                    measure: absolute
+                  - facet: est_web_website_visits_per_visitor
+                    time_period: day
+                    measure: absolute
+                filters:
+                  start_date: '2025-01-01'
+                  end_date: '2025-01-02'
+                  unified_website_ids:
+                    - google.com
+                    - youtube.com
+                  regions:
+                    - US
+                    - CA
+                  devices:
+                    - desktop
+                    - mobile
+                breakdown:
+                  - unified_website_id
+                  - date
+                  - brand_id
+                  - brand_name
+                  - brand_category
+                  - brand_category_name
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          description: '<strong>Invalid authentication token.</strong> <br> Generate an API authentication token on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> and ensure that your organization has access to this product. <br> Please contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Invalid authentication token.
+                required:
+                  - error
+                type: object
+        '403':
+          description: '<strong>Forbidden.</strong> <br> Your API token is not valid. <br> If you lost your API token you can generate a new one on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> or contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Your API token is not authorized.
+                required:
+                  - error
+                type: object
+        '422':
+          description: <strong>Invalid Query Parameter.</strong> <br> Please check that all required params are present and valid.
+          content:
+            application/json:
+              schema:
+                properties:
+                  errors:
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Required parameter: name is missing'
+                      required:
+                        - title
+                    type: array
+                required:
+                  - errors
+                type: object
+components:
+  securitySchemes:
+    auth_token:
+      type: apiKey
+      description: 'API authentication token. You can generate yours on your <a target="_blank" href="/users/edit/api-settings">account profile (API Settings tab)</a>.'
+      name: auth_token
+      in: query
+tags:
+  - name: WEB

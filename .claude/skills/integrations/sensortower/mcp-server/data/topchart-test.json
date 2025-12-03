@@ -1,0 +1,672 @@
+{
+  "test_scope": "US iOS - All Games + Puzzle",
+  "generated_at": "2026-01-09T01:01:53.284Z",
+  "data_source": "✅ SensorTower API",
+  "charts": {
+    "US_iOS_AllGames_2024-12": {
+      "date": "2024-12-01",
+      "rankings": [
+        {
+          "rank": 1,
+          "app_id": 6448311069,
+          "app_name": "ChatGPT",
+          "publisher": "OpenAI",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 2,
+          "app_id": 422689480,
+          "app_name": "Gmail - Email by Google",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Social Networking"
+        },
+        {
+          "rank": 3,
+          "app_id": 6477489729,
+          "app_name": "Google Gemini",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 4,
+          "app_id": 507874739,
+          "app_name": "Google Drive",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": null
+        },
+        {
+          "rank": 5,
+          "app_id": 1661308505,
+          "app_name": "ChatOn AI - Chat Bot Assistant",
+          "publisher": "AIBY",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 6,
+          "app_id": 842842640,
+          "app_name": "Google Docs",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 7,
+          "app_id": 1370293473,
+          "app_name": "VPN - Super Unlimited Proxy",
+          "publisher": "Mobile Jump Pte Ltd",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 8,
+          "app_id": 842849113,
+          "app_name": "Google Sheets",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 9,
+          "app_id": 951937596,
+          "app_name": "Microsoft Outlook",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 10,
+          "app_id": 983156458,
+          "app_name": "Microsoft Authenticator",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 11,
+          "app_id": 1528940523,
+          "app_name": "VPN - Fast VPN Super ™",
+          "publisher": "TOPAPPS TECH PTE LTD",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 12,
+          "app_id": 477537958,
+          "app_name": "Microsoft OneDrive",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": "Photo & Video"
+        },
+        {
+          "rank": 13,
+          "app_id": 469284907,
+          "app_name": "HP",
+          "publisher": "HP Inc.",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 14,
+          "app_id": 577586159,
+          "app_name": "Yahoo Mail",
+          "publisher": "Yahoo",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 15,
+          "app_id": 6447763703,
+          "app_name": "ChatBox AI - Chatbot Assistant",
+          "publisher": "FLORATE LIMITED",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 16,
+          "app_id": 879478102,
+          "app_name": "Google Slides",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 17,
+          "app_id": 909319292,
+          "app_name": "Google Calendar: Get Organized",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": null
+        },
+        {
+          "rank": 18,
+          "app_id": 586447913,
+          "app_name": "Microsoft Word",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": null
+        },
+        {
+          "rank": 19,
+          "app_id": 327630330,
+          "app_name": "Dropbox: Cloud Storage Backup",
+          "publisher": "Dropbox, Inc.",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 20,
+          "app_id": 1250312807,
+          "app_name": "X-VPN: VPN Fast & Secure",
+          "publisher": "LIGHTNINGLINK NETWORKS PTE. LTD.",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        }
+      ]
+    },
+    "US_iOS_AllGames_2024-11": {
+      "date": "2024-11-01",
+      "rankings": [
+        {
+          "rank": 1,
+          "app_id": 6448311069,
+          "app_name": "ChatGPT",
+          "publisher": "OpenAI",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 2,
+          "app_id": 422689480,
+          "app_name": "Gmail - Email by Google",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Social Networking"
+        },
+        {
+          "rank": 3,
+          "app_id": 983156458,
+          "app_name": "Microsoft Authenticator",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 4,
+          "app_id": 842842640,
+          "app_name": "Google Docs",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 5,
+          "app_id": 507874739,
+          "app_name": "Google Drive",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": null
+        },
+        {
+          "rank": 6,
+          "app_id": 951937596,
+          "app_name": "Microsoft Outlook",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 7,
+          "app_id": 1661308505,
+          "app_name": "ChatOn AI - Chat Bot Assistant",
+          "publisher": "AIBY",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 8,
+          "app_id": 842849113,
+          "app_name": "Google Sheets",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 9,
+          "app_id": 541164041,
+          "app_name": "Microsoft 365 Copilot",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 10,
+          "app_id": 1370293473,
+          "app_name": "VPN - Super Unlimited Proxy",
+          "publisher": "Mobile Jump Pte Ltd",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 11,
+          "app_id": 1528940523,
+          "app_name": "VPN - Fast VPN Super ™",
+          "publisher": "TOPAPPS TECH PTE LTD",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 12,
+          "app_id": 879478102,
+          "app_name": "Google Slides",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 13,
+          "app_id": 909319292,
+          "app_name": "Google Calendar: Get Organized",
+          "publisher": "Google",
+          "genre": "Productivity",
+          "subgenre": null
+        },
+        {
+          "rank": 14,
+          "app_id": 586447913,
+          "app_name": "Microsoft Word",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": null
+        },
+        {
+          "rank": 15,
+          "app_id": 6447763703,
+          "app_name": "ChatBox AI - Chatbot Assistant",
+          "publisher": "FLORATE LIMITED",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 16,
+          "app_id": 477537958,
+          "app_name": "Microsoft OneDrive",
+          "publisher": "Microsoft Corporation",
+          "genre": "Productivity",
+          "subgenre": "Photo & Video"
+        },
+        {
+          "rank": 17,
+          "app_id": 327630330,
+          "app_name": "Dropbox: Cloud Storage Backup",
+          "publisher": "Dropbox, Inc.",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 18,
+          "app_id": 577586159,
+          "app_name": "Yahoo Mail",
+          "publisher": "Yahoo",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        },
+        {
+          "rank": 19,
+          "app_id": 469284907,
+          "app_name": "HP",
+          "publisher": "HP Inc.",
+          "genre": "Productivity",
+          "subgenre": "Business"
+        },
+        {
+          "rank": 20,
+          "app_id": 6447419372,
+          "app_name": "AI Chat -Ask Chatbot Assistant",
+          "publisher": "MLink Studio",
+          "genre": "Productivity",
+          "subgenre": "Utilities"
+        }
+      ]
+    },
+    "US_iOS_Puzzle_2024-12": {
+      "date": "2024-12-01",
+      "rankings": [
+        {
+          "rank": 1,
+          "app_id": 1617391485,
+          "app_name": "Block Blast！",
+          "publisher": "Hungry Studio",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 2,
+          "app_id": 6447113804,
+          "app_name": "Shap10r",
+          "publisher": "William Scott Jensen",
+          "genre": "Puzzle",
+          "subgenre": "Strategy"
+        },
+        {
+          "rank": 3,
+          "app_id": 6689516283,
+          "app_name": "Perfect Tidy",
+          "publisher": "ABI GLOBAL LTD.",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 4,
+          "app_id": 1644099880,
+          "app_name": "Cryptogram: Word Brain Puzzle",
+          "publisher": "Joyteractive",
+          "genre": "Puzzle",
+          "subgenre": "Word"
+        },
+        {
+          "rank": 5,
+          "app_id": 1606549505,
+          "app_name": "Royal Kingdom",
+          "publisher": "Dream Games",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 6,
+          "app_id": 6737214802,
+          "app_name": "Mini Games: Calm & Chill",
+          "publisher": "CTC Technology Limited",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 7,
+          "app_id": 6471572249,
+          "app_name": "Fruit Merge™: Match Game",
+          "publisher": "Bravestars Technology JSC",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        },
+        {
+          "rank": 8,
+          "app_id": 6689516366,
+          "app_name": "Bus Escape: Traffic Jam",
+          "publisher": "ABI GLOBAL LTD.",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 9,
+          "app_id": 664575829,
+          "app_name": "Fishdom",
+          "publisher": "Playrix",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 10,
+          "app_id": 6547835725,
+          "app_name": "Screw Away: 3D Pin Puzzle",
+          "publisher": "WONDER GROUP HOLDINGS LIMITED",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        },
+        {
+          "rank": 11,
+          "app_id": 1105855019,
+          "app_name": "Gardenscapes",
+          "publisher": "Playrix",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 12,
+          "app_id": 6449094229,
+          "app_name": "Match Factory!",
+          "publisher": "Peak Games",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 13,
+          "app_id": 6463127238,
+          "app_name": "Hexa Sort",
+          "publisher": "Lion Studios Plus",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 14,
+          "app_id": 307569751,
+          "app_name": "NYT Games: Wordle & Crossword",
+          "publisher": "The New York Times Company",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 15,
+          "app_id": 6505095234,
+          "app_name": "Car Jam: Escape Traffic Puzzle",
+          "publisher": "Mindscaplay",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        },
+        {
+          "rank": 16,
+          "app_id": 1207472156,
+          "app_name": "Wordscapes: Word puzzle game",
+          "publisher": "PeopleFun, Inc.",
+          "genre": "Puzzle",
+          "subgenre": "Education"
+        },
+        {
+          "rank": 17,
+          "app_id": 6547858927,
+          "app_name": "Crossword Master - Word Puzzle",
+          "publisher": "Easybrain Ltd",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 18,
+          "app_id": 6482849843,
+          "app_name": "Goods Puzzle: Sort Challenge",
+          "publisher": "ONESOFT GLOBAL PTE. LTD.",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 19,
+          "app_id": 6448104157,
+          "app_name": "Offline Games - No Wifi Games",
+          "publisher": "Moreno Maio",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 20,
+          "app_id": 6736378756,
+          "app_name": "Bus Out",
+          "publisher": "Zego Global Pte Ltd",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        }
+      ]
+    },
+    "US_iOS_Puzzle_2024-11": {
+      "date": "2024-11-01",
+      "rankings": [
+        {
+          "rank": 1,
+          "app_id": 1617391485,
+          "app_name": "Block Blast！",
+          "publisher": "Hungry Studio",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 2,
+          "app_id": 6689516283,
+          "app_name": "Perfect Tidy",
+          "publisher": "ABI GLOBAL LTD.",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 3,
+          "app_id": 6737214802,
+          "app_name": "Mini Games: Calm & Chill",
+          "publisher": "CTC Technology Limited",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 4,
+          "app_id": 6471572249,
+          "app_name": "Fruit Merge™: Match Game",
+          "publisher": "Bravestars Technology JSC",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        },
+        {
+          "rank": 5,
+          "app_id": 1482155847,
+          "app_name": "Royal Match",
+          "publisher": "Dream Games",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        },
+        {
+          "rank": 6,
+          "app_id": 1105855019,
+          "app_name": "Gardenscapes",
+          "publisher": "Playrix",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 7,
+          "app_id": 6449094229,
+          "app_name": "Match Factory!",
+          "publisher": "Peak Games",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 8,
+          "app_id": 6482849843,
+          "app_name": "Goods Puzzle: Sort Challenge",
+          "publisher": "ONESOFT GLOBAL PTE. LTD.",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 9,
+          "app_id": 6463127238,
+          "app_name": "Hexa Sort",
+          "publisher": "Lion Studios Plus",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 10,
+          "app_id": 6608973267,
+          "app_name": "Clue Master - Logic Puzzles",
+          "publisher": "Lion Studios Plus",
+          "genre": "Puzzle",
+          "subgenre": "Word"
+        },
+        {
+          "rank": 11,
+          "app_id": 553834731,
+          "app_name": "Candy Crush Saga",
+          "publisher": "King",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 12,
+          "app_id": 1644099880,
+          "app_name": "Cryptogram: Word Brain Puzzle",
+          "publisher": "Joyteractive",
+          "genre": "Puzzle",
+          "subgenre": "Word"
+        },
+        {
+          "rank": 13,
+          "app_id": 6476556796,
+          "app_name": "Fun Differences: Find & Spot",
+          "publisher": "Topsmart Mobile Ltd.",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        },
+        {
+          "rank": 14,
+          "app_id": 1602508478,
+          "app_name": "Word Search Explorer®",
+          "publisher": "PlaySimple Games Pte Ltd",
+          "genre": "Puzzle",
+          "subgenre": "Word"
+        },
+        {
+          "rank": 15,
+          "app_id": 307569751,
+          "app_name": "NYT Games: Wordle & Crossword",
+          "publisher": "The New York Times Company",
+          "genre": "Puzzle",
+          "subgenre": "Entertainment"
+        },
+        {
+          "rank": 16,
+          "app_id": 1207472156,
+          "app_name": "Wordscapes: Word puzzle game",
+          "publisher": "PeopleFun, Inc.",
+          "genre": "Puzzle",
+          "subgenre": "Education"
+        },
+        {
+          "rank": 17,
+          "app_id": 6476144780,
+          "app_name": "Nut Sort: Color Sorting Game",
+          "publisher": "Tripledot Studios",
+          "genre": "Puzzle",
+          "subgenre": "Arcade"
+        },
+        {
+          "rank": 18,
+          "app_id": 6473156285,
+          "app_name": "Seat Away",
+          "publisher": "Rollic Games",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 19,
+          "app_id": 6448104157,
+          "app_name": "Offline Games - No Wifi Games",
+          "publisher": "Moreno Maio",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        },
+        {
+          "rank": 20,
+          "app_id": 664575829,
+          "app_name": "Fishdom",
+          "publisher": "Playrix",
+          "genre": "Puzzle",
+          "subgenre": "Puzzle"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "total_charts": 4,
+    "total_apps": 49,
+    "api_calls": 7
+  }
+}

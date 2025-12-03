@@ -1,0 +1,24 @@
+{
+  "name": "tiktok",
+  "description": "TikTok video discovery and analytics",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "tiktok-mcp"],
+  "env": {
+    "TIKNEURON_API_KEY": "${TIKNEURON_API_KEY}"
+  },
+  "setup": {
+    "requirements": [
+      "TikNeuron API key for data access"
+    ],
+    "note": "Uses TikNeuron service, not official TikTok API"
+  },
+  "capabilities": {
+    "tools": 5,
+    "categories": ["video-analysis", "search", "trending", "subtitles"]
+  },
+  "source": {
+    "github": "https://github.com/Seym0n/tiktok-mcp",
+    "alternative": "https://viral.app/free-tools/tiktok-mcp"
+  }
+}

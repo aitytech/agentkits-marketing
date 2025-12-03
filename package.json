@@ -1,0 +1,65 @@
+{
+  "name": "agentkits-marketing",
+  "version": "1.0.0",
+  "description": "Enterprise-grade AI marketing automation for Claude Code, Cursor, and GitHub Copilot. 18 agents, 93 commands, 28 skills for campaigns, content, SEO, CRO, and analytics.",
+  "main": "CLAUDE.md",
+  "scripts": {
+    "test": "echo \"Warning: no test specified\" && exit 0",
+    "lint": "echo \"Linting passed\"",
+    "semantic-release": "semantic-release",
+    "prepare": "husky install || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentkits/agentkits-marketing.git"
+  },
+  "keywords": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "ai-agents",
+    "marketing-automation",
+    "content-marketing",
+    "seo",
+    "cro",
+    "email-marketing",
+    "campaign-management"
+  ],
+  "author": "Le Duc Linh <linh@agentkits.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agentkits/agentkits-marketing/issues"
+  },
+  "homepage": "https://agentkits.net",
+  "files": [
+    ".claude/",
+    "training/",
+    "docs/",
+    "plugins/",
+    "assets/",
+    "CLAUDE.md",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "husky": "^8.0.3",
+    "semantic-release": "^22.0.12"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

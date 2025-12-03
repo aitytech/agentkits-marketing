@@ -1,0 +1,542 @@
+openapi: 3.0.0
+info:
+  title: Your Metrics API
+  version: '1.0'
+  description: ''
+servers:
+  - url: https://api.sensortower.com
+security:
+  - auth_token: []
+paths:
+  /v1/ios/sales_reports/analytics_metrics:
+    get:
+      tags:
+        - 'CONNECTED APPS: My App Analytics'
+      description: 'Retrieve a detailed app store analytics report of your apps by country and date, with information such as app impressions, app store views, in-app purchases, sessions, and active devices.'
+      operationId: sales_reports_analytics_metrics
+      summary: Fetches App Store analytics report of your apps.
+      parameters:
+        - description: 'App IDs of apps that you currently manage, separated by commas'
+          in: query
+          name: app_ids
+          required: true
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: |-
+            Specify the countries you want download / revenue for, <a target='_blank' href='/api/ios/sales_reports/countries.json'>
+              Itunes Country Codes
+            </a>, <a target='_blank' href='/api/android/sales_reports/countries.json'>
+              Android Country Codes
+            </a>, separated by commas
+          in: query
+          name: countries
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2021-01-10'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2021-01-20'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              example: |
+                [
+                  {
+                    "app_id": 1234567890,
+                    "country": "US",
+                    "date": "2024-01-01T00:00:00Z",
+                    "iphone_app_store_views": 15,
+                    "iphone_app_impressions": 918,
+                    "iphone_app_units": 3,
+                    "iphone_paying_users": 0,
+                    "iphone_in_app_purchases": 0,
+                    "iphone_installations": 3,
+                    "iphone_sessions": 39,
+                    "iphone_active_devices": 17,
+                    "ipad_app_store_views": 2,
+                    "ipad_app_impressions": 304,
+                    "ipad_app_units": 0,
+                    "ipad_paying_users": 0,
+                    "ipad_in_app_purchases": 0,
+                    "ipad_installations": 1,
+                    "ipad_sessions": 3,
+                    "ipad_active_devices": 2,
+                    "ipod_app_store_views": 0,
+                    "ipod_app_impressions": 0,
+                    "ipod_app_units": 0,
+                    "ipod_paying_users": 0,
+                    "ipod_in_app_purchases": 0,
+                    "ipod_installations": 0,
+                    "ipod_sessions": 0,
+                    "ipod_active_devices": 0
+                  }
+                ]
+        '401':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1sales_reports/get/responses/422'
+  /v1/ios/sales_reports/sources_metrics:
+    get:
+      tags:
+        - 'CONNECTED APPS: My App Analytics'
+      description: 'Retrieve a detailed app store report by traffic source type, country and date. Currently only available for Search source type metrics (app units and impressions).'
+      operationId: sales_reports_sources_metrics
+      summary: Fetches App Store metrics by Source Type of your apps.
+      parameters:
+        - description: 'App IDs of apps that you currently manage, separated by commas'
+          in: query
+          name: app_ids
+          required: true
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: |-
+            Specify the countries you want report for, <a target='_blank' href='/api/ios/sales_reports/countries.json'>
+              Itunes Country Codes
+            </a>
+          in: query
+          name: countries
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2024-01-10'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2024-01-20'
+          schema:
+            type: string
+            format: date
+        - description: 'Limit, maximum number of reports to retrieve, maximum of 6000.'
+          in: query
+          name: limit
+          required: false
+          schema:
+            type: number
+            minimum: 1
+            maximum: 6000
+        - description: 'Offset, used to paginate results.'
+          in: query
+          name: offset
+          required: false
+          schema:
+            type: number
+            minimum: 0
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              example: |
+                [
+                  {
+                    "app_id": 1234567890,
+                    "country": "US",
+                    "date": "2024-01-10T00:00:00Z",
+                    "app_impressions_by_app_store_search": 50.0,
+                    "app_units_by_app_store_search": 4.0
+                  }
+                ]
+        '401':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1sales_reports/get/responses/422'
+  '/v1/{os}/sales_reports':
+    get:
+      tags:
+        - 'CONNECTED APPS: My Sales Metrics'
+      description: 'Retrieve downloads and revenue report of your apps by country and date. <br><br> All revenue is Net. All revenues are returned in cents. <br><br> <strong>Note:</strong> This is <strong><u>ONLY for your own apps</u></strong> that you connected to Sensor Tower via iTunes Connect or Google Play. <br><br> If you are looking for download and revenue <strong>estimates for competitor apps</strong>, please refer to the API documentation for <a href="/api/docs/app_analysis#/PERFORMANCE%3A%20Downloads%20%26%20Revenue/sales_report_estimates">App Analysis</a>.'
+      operationId: sales_report
+      summary: Fetches downloads and revenue sales report of your apps.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: 'App IDs of apps that you currently manage, separated by commas'
+          in: query
+          name: app_ids
+          required: true
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: |-
+            Specify the countries you want download / revenue for, <a target='_blank' href='/api/ios/sales_reports/countries.json'>
+              Itunes Country Codes
+            </a>, <a target='_blank' href='/api/android/sales_reports/countries.json'>
+              Android Country Codes
+            </a>, separated by commas (use "WW" for worldwide)
+          in: query
+          name: countries
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Aggregate estimates by granularity (use "daily", "weekly", "monthly", or "quarterly") defaults to "daily"'
+          in: query
+          name: date_granularity
+          required: true
+          schema:
+            default: daily
+            enum:
+              - daily
+              - weekly
+              - monthly
+              - quarterly
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2024-01-10'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2024-01-20'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              examples:
+                ios:
+                  value: |
+                    [
+                      {
+                        "app_id": 1234567890,
+                        "country": "US",
+                        "date": "2024-03-10T00:00:00Z",
+                        "ipad_units": 123,
+                        "iphone_units": 234
+                      },
+                      {
+                        "app_id": 1234567890,
+                        "country": "US",
+                        "date": "2024-03-11T00:00:00Z",
+                        "ipad_units": 345,
+                        "iphone_units": 456
+                      }
+                    ]
+                android:
+                  value: |
+                    [
+                      {
+                        "app_id": "com.example.app",
+                        "country": "US",
+                        "date": "2024-03-10T00:00:00Z",
+                        "daily_user_installs": 100,
+                        "daily_device_installs": 200,
+                        "active_device_installs": 100100
+                      },
+                      {
+                        "app_id": "com.example.app",
+                        "country": "US",
+                        "date": "2024-03-11T00:00:00Z",
+                        "daily_user_installs": 110,
+                        "daily_device_installs": 150,
+                        "active_device_installs": 100200
+                      }
+                    ]
+        '401':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1sales_reports/get/responses/422'
+  /v1/unified/sales_reports:
+    get:
+      tags:
+        - 'CONNECTED APPS: My Sales Metrics'
+      description: 'Retrieve downloads and revenue report of your apps by country and date grouped by unified apps. You must specify at least one app_ids parameter: unified_app_ids, itunes_app_ids, or android_app_ids. For itunes_app_ids or android_app_ids, it will take parent unified apps and retrieve data for all sub apps.<br><br> All revenue is Net. All revenues are returned in cents. <br><br> <strong>Note:</strong> This is <strong><u>ONLY for your own apps</u></strong> that you connected to Sensor Tower via iTunes Connect or Google Play. <br><br> If you are looking for download and revenue <strong>estimates for competitor apps</strong>, please refer to the API documentation for <a href="/api/docs/app_analysis#/PERFORMANCE%3A%20Downloads%20%26%20Revenue/sales_report_estimates">App Analysis</a>.'
+      operationId: unified_sales_report
+      summary: Fetches unified downloads and revenue sales report of your apps.
+      parameters:
+        - description: 'Unified App IDs of apps that you currently manage, separated by commas'
+          in: query
+          name: unified_app_ids
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'App IDs of Itunes apps that you currently manage, separated by commas'
+          in: query
+          name: itunes_app_ids
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Android App IDs of apps that you currently manage, separated by commas'
+          in: query
+          name: android_app_ids
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Specify the countries you want download / revenue for, <a target=''_blank'' href=''/api/unified/sales_reports/countries.json''>Country Codes</a>, separated by commas (use "WW" for all countries)'
+          in: query
+          name: countries
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Aggregate estimates by granularity (use "daily", "weekly", "monthly", or "quarterly") defaults to "daily"'
+          in: query
+          name: date_granularity
+          required: true
+          schema:
+            default: daily
+            enum:
+              - daily
+              - weekly
+              - monthly
+              - quarterly
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2024-01-10'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2024-01-20'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              example: |
+                [
+                  {
+                    "unified_app_id": "61c25dc864df7d6b51498ab9",
+                    "itunes_apps": [
+                      {
+                        "app_id": 1234567890,
+                        "country": "US",
+                        "date": "2023-01-09T00:00:00Z",
+                        "ipad_units": 20,
+                        "ipad_revenue": 140,
+                        "iphone_units": 100
+                      }
+                    ],
+                    "android_apps": [
+                      {
+                        "app_id": "com.example.app",
+                        "country": "US",
+                        "date": "2023-01-09T00:00:00Z",
+                        "daily_user_installs": 2500,
+                        "daily_device_installs": 2200
+                      }
+                    ],
+                    "aggregated": [
+                      {
+                        "ipad_units": 20,
+                        "ipad_revenue": 140,
+                        "iphone_units": 100,
+                        "daily_user_installs": 2500,
+                        "daily_device_installs": 2200,
+                        "country": "US",
+                        "date": "2023-01-09T00:00:00Z"
+                      }
+                    ]
+                  }
+                ]
+        '401':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1api_usage/get/responses/403'
+        '422':
+          description: <strong>Invalid Query Parameter.</strong> <br> Please check that all required params are present and valid.
+          content:
+            application/json:
+              schema:
+                properties:
+                  errors:
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Required parameter: name is missing'
+                      required:
+                        - title
+                    type: array
+                required:
+                  - errors
+                type: object
+  /v1/api_usage:
+    get:
+      tags:
+        - 'API USAGE: API Usage'
+      description: |
+        Retrieve API Usage for a given period for a user and their organization. <br> Additionally, monthly API limit and API tier (if present) will be returned.
+      operationId: api_usage
+      summary: Fetches API usage for a given period.
+      parameters:
+        - description: 'Optional date to check monthly usage for as an ISO 8601 string (yyyy-mm-dd). The month will be extracted from this, truncating the day of the month. When omitted, defaults to the current month.'
+          in: query
+          name: date
+          required: false
+          schema:
+            type: date
+            description: YYYY-MM-DD Date.
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - user
+                  - organization
+                properties:
+                  organization:
+                    description: Organization data
+                    type: object
+                    required:
+                      - usage
+                      - limit
+                    properties:
+                      limit:
+                        description: Current (not historical) API request limit
+                        type: integer
+                      tier:
+                        description: API tier (if set)
+                        type: string
+                      usage:
+                        description: API request usage
+                        type: integer
+                      data_points:
+                        description: 'Information about API data points usage, if available'
+                        type: object
+                        required:
+                          - usage
+                          - limit
+                        properties:
+                          limit:
+                            description: Current (not historical) API data points limit
+                            type: integer
+                          usage:
+                            description: API data points usage
+                            type: integer
+                  user:
+                    description: User's API token data
+                    type: object
+                    required:
+                      - usage
+                    properties:
+                      usage:
+                        description: API request usage
+                        type: integer
+                      usage_data_points:
+                        description: API data points usage
+                        type: integer
+        '401':
+          description: '<strong>Invalid authentication token.</strong> <br> Generate an API authentication token on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> and ensure that your organization has access to this product. <br> Please contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Invalid authentication token.
+                required:
+                  - error
+                type: object
+        '403':
+          description: '<strong>Forbidden.</strong> <br> Your API token is not valid. <br> If you lost your API token you can generate a new one on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> or contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Your API token is not authorized.
+                required:
+                  - error
+                type: object
+components:
+  securitySchemes:
+    auth_token:
+      type: apiKey
+      description: 'API authentication token. You can generate yours on your <a target="_blank" href="/users/edit/api-settings">account profile (API Settings tab)</a>.'
+      name: auth_token
+      in: query
+tags:
+  - name: 'CONNECTED APPS: My App Analytics'
+  - name: 'CONNECTED APPS: My Sales Metrics'
+  - name: 'API USAGE: API Usage'

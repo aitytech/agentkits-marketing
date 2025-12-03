@@ -1,0 +1,24 @@
+# Funding platforms for AgentKits
+# Learn more: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+
+# GitHub Sponsors (personal account - easier to set up)
+# Change to [agentkits] once org Sponsors is approved
+github: [agentkits]
+
+# Ko-fi
+ko_fi: agentkits
+
+# Buy Me a Coffee (via custom)
+# Patreon (if you have one)
+# patreon: agentkits
+
+# Open Collective (if you have one)
+# open_collective: agentkits
+
+# Polar (if you have one)
+# polar: agentkits
+
+# Custom links
+custom:
+  - https://buymeacoffee.com/agentkits
+  - https://agentkits.net/sponsor

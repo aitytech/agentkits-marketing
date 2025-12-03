@@ -1,0 +1,66 @@
+name: Question / Support
+description: Ask a question or get help using AgentKits
+title: "[Question]: "
+labels: ["question", "support"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? We're here to help!
+
+        **Note:** For general discussions, consider using [GitHub Discussions](https://github.com/agentkits/agentkits-marketing/discussions) instead.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Before Asking
+      description: Please confirm you've tried these first
+      options:
+        - label: I have read the [documentation](https://docs.agentkits.net)
+          required: true
+        - label: I have searched existing issues and discussions
+          required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      description: What is your question about?
+      options:
+        - Installation / Setup
+        - Commands
+        - Agents
+        - Skills
+        - Workflows
+        - MCP Integrations
+        - Training
+        - Best Practices
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: |
+        How do I...?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What Have You Tried?
+      description: What approaches or solutions have you already attempted?
+      placeholder: |
+        I tried...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any relevant details about your environment or use case

@@ -1,0 +1,1359 @@
+openapi: 3.0.0
+info:
+  title: Store Intelligence.
+  description: ''
+  version: '1.0'
+servers:
+  - url: https://api.sensortower.com
+security:
+  - auth_token: []
+paths:
+  /v1/ios/featured/today/stories:
+    get:
+      tags:
+        - 'FEATURED: Featured Today'
+      description: |
+        <p>Retrieve featured today story metadata, such as story title, label, style, and position, as well as the story's featured apps and relevant app metadata.</p> <p> <strong>Note:</strong> Non-App Performance Insights users are limited the the last 3 days of featured today stories. App Performance Insights users will be able to retrieve all-time featured today stories, including <strong>tomorrow's</strong> stories.</p>
+      operationId: featured_today_stories
+      summary: Fetches featured today stories.
+      parameters:
+        - description: |-
+            Country code for the featured today stories,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          example: US
+          schema:
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` (defaults to 3 days ago)'
+          in: query
+          name: start_date
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` (defaults to today)'
+          in: query
+          name: end_date
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  /v1/ios/featured/apps:
+    get:
+      tags:
+        - 'FEATURED: Featured Apps and Games'
+      description: |
+        <p>Retrieve apps featured on the App Store&#39;s Apps &amp; Games pages.</p> <p><strong>Note:</strong> Non-App Performance Insights users are limited to the last 3 days of data. App Performance Insights users will be able to retrieve all-time data.</p>
+      operationId: featured_apps
+      summary: Fetches featured apps and games.
+      parameters:
+        - description: |-
+            Category ID,
+            <a target='_blank' href='/api/docs/static/featured_apps_category_ids.json'>Category IDs</a>
+          in: query
+          name: category
+          required: true
+          example: '6020'
+          schema:
+            type: string
+        - description: |-
+            Country code,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          example: FR
+          schema:
+            default: US
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` (defaults to 3 days ago)'
+          in: query
+          name: start_date
+          example: '2021-10-01'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` (defaults to today)'
+          in: query
+          name: end_date
+          example: '2021-10-01'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          description: '<strong>Invalid authentication token.</strong> <br> Generate an API authentication token on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> and ensure that your organization has access to this product. <br> Please contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Invalid authentication token.
+                required:
+                  - error
+                type: object
+        '403':
+          description: '<strong>Forbidden.</strong> <br> Your API token is not valid. <br> If you lost your API token you can generate a new one on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> or contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Your API token is not authorized.
+                required:
+                  - error
+                type: object
+        '422':
+          description: <strong>Invalid Query Parameter.</strong> <br> Please check that all required params are present and valid.
+          content:
+            application/json:
+              schema:
+                properties:
+                  errors:
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Required parameter: name is missing'
+                      required:
+                        - title
+                    type: array
+                required:
+                  - errors
+                type: object
+  '/v1/{os}/featured/creatives':
+    get:
+      tags:
+        - 'FEATURED: Featured App Rankings'
+      description: |
+        Retrieve the featured creatives and their positions within the App and Google Play store over time. <br> <strong>Note:</strong> Some Feature Types are specific to the iOS App Store.
+      operationId: featured_creatives
+      summary: Fetches featured creatives details of a particular app.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: ID of App
+          in: query
+          name: app_id
+          required: true
+          example: '479516143'
+          schema:
+            type: string
+        - description: |-
+            Countries to return results for, separated by commas
+            <br>
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: countries
+          explode: false
+          example:
+            - US
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: |-
+            Types to return results for, separated by commas,
+            <a target='_blank' href='/api/docs/static/featured_rankings_types.json'>Types</a>
+          in: query
+          name: types
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Start Date, `YYYY-MM-DD` (defaults to 30 days ago)'
+          in: query
+          name: start_date
+          example: '2021-02-01'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` (defaults to today)'
+          in: query
+          name: end_date
+          example: '2021-02-02'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  features:
+                    type: array
+                    items:
+                      $ref: '#/paths/~1v1~1%7Bos%7D~1featured~1creatives/get/responses/200/content/application~1json/schema/components/schemas/FeaturedCreative'
+                components:
+                  schemas:
+                    FeaturedCreative:
+                      type: object
+                      properties:
+                        country_name:
+                          type: string
+                          example: US
+                        country:
+                          type: string
+                          example: US
+                        category:
+                          oneOf:
+                            - type: integer
+                            - type: string
+                              description: The App or Google Play Store category that the specific feature was shown in
+                          example: 11
+                        type:
+                          type: string
+                          example: story_list
+                        path:
+                          type: array
+                          items:
+                            type: string
+                          description: The name of the specific feature section and name of the specific feature list/creative
+                          example:
+                            - Today
+                            - Top Games Right Now
+                        creatives:
+                          type: array
+                          items:
+                            type: string
+                            description: The url of the feature creative
+                          example: []
+                        first_seen_at:
+                          type: string
+                          example: null
+                        positions:
+                          type: array
+                          items:
+                            type: array
+                            items:
+                              oneOf:
+                                - type: string
+                                  description: The date of the specific feature
+                                - type: array
+                                  items:
+                                    type: integer
+                                    description: The ranking or position of the target app for the given feature type and date
+                            example:
+                              - '2021-10-11'
+                              - - 21
+                        store_positions:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              date:
+                                type: string
+                                example: '2021-10-11'
+                                description: The date of the specific feature
+                              app_position:
+                                type: integer
+                                example: 21
+                                description: The ranking or position of the target app for the given feature type and date
+                              section_position:
+                                type: integer
+                                description: The position in which the specific feature type is located on the App or Google Play Store on the given date. An indicator of how far a user must scroll before reaching the feature list
+                                example: 2
+                        downloads:
+                          type: integer
+                          description: The number of total downloads attributed to the specific feature for the selected time period
+                          example: 32
+                        downloads_share:
+                          type: number
+                          format: float
+                          description: The percentage of total downloads from all featurings that are attributed to the specific feature
+                          example: 1.75
+                        feature_downloads:
+                          type: array
+                          items:
+                            type: array
+                            items:
+                              oneOf:
+                                - type: string
+                                  description: The date of the specific feature
+                                - type: integer
+                                  description: The number of downloads attributed to the specific feature for the given date
+                            example:
+                              - '2021-10-11'
+                              - 4
+                        occurrences:
+                          type: integer
+                          description: The number of times that the target app appeared in the specific feature during the selected time period
+                          example: 8
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/featured/impacts':
+    get:
+      tags:
+        - 'FEATURED: Featured App Rankings'
+      description: |
+        Retrieve the occurrence and download-impact data for an apps featured in the App or Google Play Store. <br> <strong>Note:</strong> Some Feature Types are specific to the iOS App Store.
+      operationId: featured_impacts
+      summary: Fetches occurrence and download-impact data for an app.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: ID of App
+          in: query
+          name: app_id
+          required: true
+          example: '479516143'
+          schema:
+            type: string
+        - description: |-
+            Countries to return results for, separated by commas
+            <br>
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: countries
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: |-
+            Types to return results for, separated by commas,
+            <a target='_blank' href='/api/docs/static/featured_rankings_types.json'>Types</a>
+          in: query
+          name: types
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: Breakdown type for the featured today stories
+          in: query
+          name: breakdown
+          example: country
+          schema:
+            type: string
+            enum:
+              - country
+              - type
+        - description: 'Start Date, `YYYY-MM-DD` (defaults to 30 days ago)'
+          in: query
+          name: start_date
+          example: '2021-02-01'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` (defaults to today)'
+          in: query
+          name: end_date
+          example: '2021-05-01'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  /v1/ios/ajax/user_apps:
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: User Apps'
+      description: Retrieve detailed information on the iOS <b>and</b> Android apps that you own or currently have access to.
+      operationId: user_apps
+      summary: Fetches apps that you manage.
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+  '/v1/{os}/keywords/keywords':
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Keyword Rankings'
+      description: 'Retrieve a summary of the keywords that you are currently tracking for a particular app that you follow in your Sensor Tower account. Information includes keyword traffic, ranking difficulty, trend, current rank, and density.<br><br> Density is a tuple consisting of: term density (%), term frequency (integer), and total number of non-filler words (integer) <br><br> Rank is 1-indexed.'
+      operationId: keywords
+      summary: Fetches currently tracked keywords of a particular app that you manage.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: ID of your User App (this is not the `app_id`). Use the <a target='_blank' href='#/APP%20STORE%20OPTIMIZATION%3A%20User%20Apps/user_apps'>User App API</a> to get a list of your User App IDs
+          in: query
+          name: user_app_id
+          required: true
+          example: 695b7ad843283adbd81a157e
+          schema:
+            type: string
+        - description: 'Country code for the keywords, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a>'
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: 'On iOS, use "phone", or "tablet". For Android, use "phone".'
+          in: query
+          name: device
+          required: true
+          schema:
+            default: phone
+            enum:
+              - phone
+              - tablet
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/keywords/get_current_keywords':
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Keyword Rankings'
+      description: |-
+        Retrieve a list of filtered and unfiltered keywords for any app on the
+        Google Play / App Store.
+        <br><br>
+        <strong>Note:</strong> While we don't set a hard limit, a subscription
+        must be purchased for the continued use of this API.
+      operationId: get_current_keywords
+      summary: Fetches keyword list of a particular app.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: ID of App
+          in: query
+          name: app_id
+          required: true
+          schema:
+            type: string
+          examples:
+            ios:
+              value: '284882215'
+              summary: integer (iOS)
+            android:
+              value: com.facebook.katana
+              summary: string (Android)
+        - description: |-
+            Country code for the keywords,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          schema:
+            default: US
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/keywords/overview/history':
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Keyword Overview'
+      description: 'Retrieve a historical summary of the keywords that you are currently tracking for a particular app that you follow in your Sensor Tower account. Information includes keyword traffic, ranking difficulty, trend, and current rank. Rank is 1-indexed.'
+      operationId: overview_history
+      summary: Fetches overall ranking of an app against a list of keywords.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            enum:
+              - ios
+              - android
+            type: string
+        - description: ID of your User App (this is not the `app_id`). Use the <a target='_blank' href='#/APP%20STORE%20OPTIMIZATION%3A%20User%20Apps/user_apps'>User App API</a> to get a list of your User App IDs
+          in: query
+          name: user_app_id
+          required: true
+          example: 695b7ad843283adbd81a157e
+          schema:
+            type: string
+        - description: |-
+            Country code for the keywords,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` (defaults to 30 days ago)'
+          in: query
+          name: start_date
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` (defaults to today)'
+          in: query
+          name: end_date
+          schema:
+            type: string
+            format: date
+        - description: 'On iOS, use "phone", or "tablet". For Android, use "phone".'
+          in: query
+          name: device
+          required: true
+          schema:
+            default: phone
+            enum:
+              - phone
+              - tablet
+            type: string
+        - description: 'Aggregate counts of Keyword Rankings (use "daily", or "weekly")'
+          in: query
+          name: date_granularity
+          schema:
+            enum:
+              - daily
+              - weekly
+            type: string
+        - description: 'Optional floor of traffic scores to query. "0" or empty, means "all".'
+          in: query
+          name: traffic_score
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/keywords/downloads/history':
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Keyword Downloads'
+      description: 'Retrieve estimates of the downloads that an app earned from user searches for specific keywords. You must follow the app in your Sensor Tower account, and provide the country and device. Estimates are at a weekly or monthly granularity and go back to January 1, 2020. You may optionally include estimates for keywords that you do not currently track.'
+      operationId: keyword_downloads_history
+      summary: Fetches download estimates for various search terms.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            enum:
+              - ios
+              - android
+            type: string
+        - description: ID of your User App (this is not the `app_id`). Use the <a target='_blank' href='#/APP%20STORE%20OPTIMIZATION%3A%20User%20Apps/user_apps'>User App API</a> to get a list of your User App IDs
+          in: query
+          name: user_app_id
+          required: true
+          example: 695b7ad843283adbd81a157e
+          schema:
+            type: string
+        - description: |-
+            Country code for the keywords,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` (defaults to 30 days ago)'
+          in: query
+          name: start_date
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` (defaults to today)'
+          in: query
+          name: end_date
+          schema:
+            type: string
+            format: date
+        - description: 'On iOS, use "phone", or "tablet". For Android, use "phone".'
+          in: query
+          name: device
+          required: true
+          schema:
+            default: phone
+            enum:
+              - phone
+              - tablet
+            type: string
+        - description: 'Aggregate counts of Keyword Download estimates (use "weekly", or "monthly")'
+          in: query
+          name: date_granularity
+          required: true
+          schema:
+            default: weekly
+            enum:
+              - weekly
+              - monthly
+            type: string
+        - description: Optionally include top untracked Keywords.
+          in: query
+          name: display_untracked_keywords
+          schema:
+            default: false
+            type: boolean
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/keywords/research_keyword':
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Keyword Research'
+      description: 'Retrieve detailed information for any keyword, such as related search terms, traffic data, and ranking difficulty, along with a list of apps that are currently ranking for that keyword.'
+      operationId: research_keywords
+      summary: Fetches detailed summary of a particular keyword.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: 'App ID for Keyword Ranking Prediction <span style=''color: #ff0000''>(iOS only)</span>'
+          in: query
+          name: app_id
+          schema:
+            type: integer
+        - description: Term to research
+          in: query
+          name: term
+          required: true
+          schema:
+            default: social
+            type: string
+        - description: |-
+            Country code for the keywords,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: Offset the top ranking apps by 25 for each Page Index
+          in: query
+          name: page
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  /v1/ios/keywords/search_suggestions:
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Keyword Research'
+      description: Retrieve a list of search suggestion for any iOS keyword.
+      operationId: search_suggestions
+      summary: Fetches iOS search suggestions of a particular keyword.
+      parameters:
+        - description: Term to research
+          in: query
+          name: term
+          required: true
+          schema:
+            default: social
+            type: string
+        - description: |-
+            Country code for the keywords,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  /v1/ios/keywords/trending_searches:
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Keyword Research'
+      description: Retrieve a list currently trending search terms on the iOS App Store.
+      operationId: trending_searches
+      summary: Fetches current trending search terms.
+      parameters:
+        - description: 'Country code for trending searches, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a>'
+          in: query
+          name: country
+          schema:
+            default: US
+            type: string
+        - description: 'Use "iphone" or "ipad", defaults to "iphone"'
+          in: query
+          name: device
+          schema:
+            default: iphone
+            type: string
+        - description: 'Date, `YYYY-MM-DD` Format, defaults to today'
+          in: query
+          name: date
+          example: '2021-06-01'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/keywords/traffic':
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Traffic Score'
+      description: |
+        Retrieve a list of traffic scores for up to 500 keywords for up to 25 countries. <br> <strong>Note:</strong> Some keywords may not have a traffic score for each requested country. In such cases, the country key will be omitted in the response.
+      operationId: keywords_traffic
+      summary: Fetches current keyword traffic scores.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            enum:
+              - ios
+              - android
+            type: string
+        - description: |
+            Requested countries, separated by commas. <br> <b>Max: 25</b> <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a><br>
+          in: query
+          name: countries
+          required: true
+          explode: false
+          example:
+            - US
+            - CA
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: |
+            List of keywords to scan per country, separated by commas. <br> <b>Max: 500</b>
+          in: query
+          name: terms
+          required: true
+          explode: false
+          example:
+            - taxi
+            - limo
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/keywords/traffic_history':
+    get:
+      tags:
+        - 'APP STORE OPTIMIZATION: Traffic Score'
+      description: 'Retrieve a list of historical traffic scores for up to 25 keyword/terms for up to 10 countries. <br> <strong>Note:</strong> Traffic scores go back to Jan 1st 2018.'
+      operationId: keywords_traffic_history
+      summary: Fetches historical keyword traffic scores.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2021-01-01'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2021-01-15'
+          schema:
+            type: string
+            format: date
+        - description: |-
+            Countries to return results for, separated by commas
+            <br>
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a><br>
+            <b>Max: 10</b>
+          in: query
+          name: countries
+          required: true
+          explode: false
+          example:
+            - US
+            - CA
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Aggregate traffic scores (use "weekly", "monthly")'
+          in: query
+          name: date_granularity
+          required: true
+          schema:
+            default: weekly
+            enum:
+              - weekly
+              - monthly
+            type: string
+        - description: 'List of keywords to scan per country, separated by commas. <br><b>Max: 25</b>'
+          in: query
+          name: terms
+          required: true
+          explode: false
+          example:
+            - taxi
+            - limo
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/review/get_reviews':
+    get:
+      tags:
+        - 'RATINGS & REVIEWS: Review Analysis and History'
+      description: 'Retrieve user reviews with information such as the review''s content, rating, username, app id, version, date, tags, and more. <br><br> Note: The `tags` and `search_terms` filters are applied together so that all reviews with at least one matching tag or search term will be returned.'
+      operationId: get_reviews
+      summary: Fetches detailed reviews information for a particular app.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: Filter reviews by the App ID i.e. 529479190 (iOS) or com.facebook.katana (Android)
+          in: query
+          name: app_id
+          required: true
+          schema:
+            type: string
+          examples:
+            ios:
+              value: '529479190'
+              summary: integer (iOS)
+            android:
+              value: com.facebook.katana
+              summary: string (Android)
+        - description: 'Start Date, `YYYY-MM-DD` format'
+          in: query
+          name: start_date
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` format'
+          in: query
+          name: end_date
+          schema:
+            type: string
+            format: date
+        - description: 'Country code for the reviews, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a>'
+          in: query
+          name: country
+          deprecated: true
+          schema:
+            type: string
+        - description: 'Country codes for the reviews, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a> , separated by commas. (only for iOS)'
+          in: query
+          name: countries
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+        - description: 'Language codes for the reviews, <a target=''_blank'' href=''/api/docs/static/app_review_language_ids.json''>Language Codes</a> ,separated by commas. (only for Android)'
+          in: query
+          name: languages
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+        - description: 'Filter reviews by the ratings given by the user, "positive" "negative", or 1-5  (e.g. 4)'
+          in: query
+          name: rating_filter
+          deprecated: true
+          schema:
+            type: String / Integer
+        - description: 'Filter reviews by the ratings given by the user 1-5, separated by commas. (e.g. 4,5)'
+          in: query
+          name: rating_filters
+          explode: false
+          schema:
+            type: array
+            items:
+              type: integer
+        - description: Filter reviews by content (e.g. "love the app!")
+          in: query
+          name: search_term
+          deprecated: true
+          schema:
+            type: string
+        - description: Filter reviews by search terms (e.g. "love the app!")
+          in: query
+          name: 'search_terms[]'
+          explode: true
+          schema:
+            type: array
+            items:
+              type: string
+        - description: 'Filter reviews by tags, <a target=''_blank'' href=''/api/docs/static/app_review_tags.json''>Tag List</a> , separated by commas.'
+          in: query
+          name: tags
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+        - description: 'Filter reviews by app versions, separated by commas.'
+          in: query
+          name: versions
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+        - description: 'Filter reviews by sentiments, separated by commas.'
+          in: query
+          name: sentiments
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - happy
+                - mixed
+                - neutral
+                - unhappy
+        - description: Filter reviews by the username of the reviewer
+          in: query
+          name: username
+          schema:
+            type: string
+        - description: 'Limit how many reviews per call (maximum: 200)'
+          in: query
+          name: limit
+          schema:
+            default: 10
+            type: integer
+        - description: 'Offset reviews by the limit for each page, valid values are >= 1'
+          in: query
+          name: page
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/review/app_history_summary':
+    get:
+      tags:
+        - 'RATINGS & REVIEWS: Review Breakdown'
+      description: 'Retrieve a summary of positive and or negative reviews of a particular app by each day, along with the app''s version update information.'
+      operationId: app_history_summary
+      summary: Fetches summary of positive and negative review counts by day.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: Filter reviews by the App ID
+          in: query
+          name: app_id
+          required: true
+          schema:
+            type: string
+          examples:
+            ios:
+              value: '585661281'
+              summary: integer (iOS)
+            android:
+              value: com.facebook.katana
+              summary: string (Android)
+        - description: 'Start Date, `YYYY-MM-DD` format'
+          in: query
+          name: start_date
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` format'
+          in: query
+          name: end_date
+          schema:
+            type: string
+            format: date
+        - description: 'Country code for the reviews, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a> (defaults to US)'
+          in: query
+          name: country
+          schema:
+            default: US
+            type: string
+        - description: 'Filter reviews by the ratings given by the user, "positive" "negative", or 1-5  (e.g. 4)'
+          in: query
+          name: rating_filter
+          schema:
+            type: String / Integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  '/v1/{os}/review/get_ratings':
+    get:
+      tags:
+        - 'RATINGS & REVIEWS: Rating Analysis'
+      description: 'Retrieve historical rating count summary for a particular app, ordered by descending date. If the start date and end date parameters are both left blank, this will return a 0 or 1 length array containing the most recent Rating Count Breakdown for the specified app. <br><br> The returned <code>breakdown</code> is the total cumulative ratings for the lifetime and current version (if applicable) of the app sorted from 1 star to 5 stars. The returned <code>average</code> and <code>total</code> values are of the lifetime breakdowns. <br><br> <strong>Note:</strong> Rating count breakdowns may not be available every day for every app. <br><br> <strong>Deprecation:</strong> <code>current_version_breakdown</code> parameter is deprecated and currently returns the same data as in <code>breakdown</code>.'
+      operationId: get_ratings
+      summary: Fetches rating count breakdown of a particular app.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: Filter ratings by the App ID i.e. 284882215 (iOS) or com.facebook.katana (Android)
+          in: query
+          name: app_id
+          required: true
+          schema:
+            type: string
+          examples:
+            ios:
+              value: '284882215'
+              summary: integer (iOS)
+            android:
+              value: com.facebook.katana
+              summary: string (Android)
+        - description: 'Start Date, `YYYY-MM-DD` format'
+          in: query
+          name: start_date
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` format'
+          in: query
+          name: end_date
+          schema:
+            type: string
+            format: date
+        - description: 'Country code for the ratings, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a>'
+          in: query
+          name: country
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  /v1/ios/search_ads/apps:
+    get:
+      tags:
+        - 'SEARCH ADS: Apple Search Ads'
+      description: |-
+        Retrieve a list of apps that have Search Ads for the given keyword,
+        along with its current share of voice for that keyword.
+      operationId: search_ads_apps
+      summary: Fetches search ad apps of a particular keyword.
+      parameters:
+        - description: Keyword to lookup
+          in: query
+          name: term
+          required: true
+          schema:
+            default: social
+            type: string
+        - description: |-
+            Country code for the keywords,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  /v1/ios/search_ads/terms:
+    get:
+      tags:
+        - 'SEARCH ADS: Apple Search Ads'
+      description: |-
+        Retrieve a list of keywords that the given app has Search Ads for,
+        along with its share of voice for the selected date range, number of competitors
+        for the same keyword, and information on the keyword's top competitors
+      operationId: search_ads_terms
+      summary: Fetches search ad keywords of a particular app.
+      parameters:
+        - description: ID of App
+          in: query
+          name: app_id
+          required: true
+          example: 284882215
+          schema:
+            type: string
+        - description: |-
+            Country code for the keywords,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2021-06-01'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2021-06-02'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+  /v1/ios/search_ads/history:
+    get:
+      tags:
+        - 'SEARCH ADS: Apple Search Ads'
+      description: 'Retrieve historical share of voice information for the given apps and term, broken down by date.'
+      operationId: search_ads_history
+      summary: Fetches historical search ads share of voice for the particular apps and term.
+      parameters:
+        - description: ID of App
+          in: query
+          name: app_id
+          required: true
+          example: '905953485'
+          schema:
+            type: string
+        - description: Keyword to lookup
+          in: query
+          name: term
+          required: true
+          example: vpn
+          schema:
+            type: string
+        - description: |-
+            Country code for the history,
+            <a target='_blank' href='/api/docs/static/country_ids.json'>Country Codes</a>
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2021-06-01'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2021-06-02'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1ios~1featured~1apps/get/responses/422'
+components:
+  securitySchemes:
+    auth_token:
+      type: apiKey
+      description: 'API authentication token. You can generate yours on your <a target="_blank" href="/users/edit/api-settings">account profile (API Settings tab)</a>.'
+      name: auth_token
+      in: query
+tags:
+  - name: 'FEATURED: Featured Today'
+  - name: 'FEATURED: Featured Apps and Games'
+  - name: 'FEATURED: Featured App Rankings'
+  - name: 'APP STORE OPTIMIZATION: User Apps'
+  - name: 'APP STORE OPTIMIZATION: Keyword Rankings'
+  - name: 'APP STORE OPTIMIZATION: Keyword Overview'
+  - name: 'APP STORE OPTIMIZATION: Keyword Downloads'
+  - name: 'APP STORE OPTIMIZATION: Keyword Research'
+  - name: 'APP STORE OPTIMIZATION: Traffic Score'
+  - name: 'RATINGS & REVIEWS: Review Analysis and History'
+  - name: 'RATINGS & REVIEWS: Review Breakdown'
+  - name: 'RATINGS & REVIEWS: Rating Analysis'
+  - name: 'SEARCH ADS: Apple Search Ads'

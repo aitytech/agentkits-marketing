@@ -1,0 +1,31 @@
+{
+  "name": "crosspost",
+  "description": "Multi-platform social media posting",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "@humanwhocodes/crosspost", "--mcp"],
+  "env": {
+    "TWITTER_API_KEY": "${TWITTER_API_KEY}",
+    "TWITTER_API_SECRET": "${TWITTER_API_SECRET}",
+    "TWITTER_ACCESS_TOKEN": "${TWITTER_ACCESS_TOKEN}",
+    "TWITTER_ACCESS_SECRET": "${TWITTER_ACCESS_SECRET}",
+    "MASTODON_ACCESS_TOKEN": "${MASTODON_ACCESS_TOKEN}",
+    "MASTODON_HOST": "${MASTODON_HOST}",
+    "BLUESKY_IDENTIFIER": "${BLUESKY_IDENTIFIER}",
+    "BLUESKY_PASSWORD": "${BLUESKY_PASSWORD}",
+    "LINKEDIN_ACCESS_TOKEN": "${LINKEDIN_ACCESS_TOKEN}",
+    "DISCORD_WEBHOOK_URL": "${DISCORD_WEBHOOK_URL}"
+  },
+  "setup": {
+    "requirements": ["Credentials for each platform you want to use"],
+    "supported": ["Twitter", "Mastodon", "Bluesky", "LinkedIn", "Discord", "Telegram", "dev.to"]
+  },
+  "capabilities": {
+    "tools": 3,
+    "categories": ["posting", "scheduling", "multi-platform"]
+  },
+  "source": {
+    "npm": "https://www.npmjs.com/package/@humanwhocodes/crosspost",
+    "github": "https://github.com/humanwhocodes/crosspost"
+  }
+}

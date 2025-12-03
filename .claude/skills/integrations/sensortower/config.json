@@ -1,0 +1,24 @@
+{
+  "name": "sensortower",
+  "description": "App intelligence & market analysis for iOS/Android",
+  "type": "custom",
+  "command": "node",
+  "args": ["${SKILL_PATH}/mcp-server/dist/index.js"],
+  "env": {
+    "SENSOR_TOWER_API_TOKEN": "${SENSOR_TOWER_API_TOKEN}"
+  },
+  "setup": {
+    "build": "cd ${SKILL_PATH}/mcp-server && npm install && npm run build",
+    "test": "node ${SKILL_PATH}/mcp-server/dist/index.js --version"
+  },
+  "capabilities": {
+    "tools": 29,
+    "categories": [
+      "app-analysis",
+      "store-marketing",
+      "market-analysis",
+      "ad-intelligence",
+      "your-metrics"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "asana",
+  "description": "Asana project and task management",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "@roychri/mcp-server-asana"],
+  "env": {
+    "ASANA_ACCESS_TOKEN": "${ASANA_ACCESS_TOKEN}",
+    "ASANA_WORKSPACE_ID": "${ASANA_WORKSPACE_ID}"
+  },
+  "setup": {
+    "requirements": [
+      "Asana account",
+      "Personal Access Token from Asana Developer Console"
+    ]
+  },
+  "capabilities": {
+    "tools": 12,
+    "categories": ["tasks", "projects", "workspaces", "users"]
+  },
+  "source": {
+    "npm": "https://www.npmjs.com/package/@roychri/mcp-server-asana",
+    "alternative": "https://www.npmjs.com/package/@cristip73/mcp-server-asana"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "slack",
+  "description": "Slack messaging and notifications",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "@anthropic-ai/slack-mcp"],
+  "env": {
+    "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+    "SLACK_TEAM_ID": "${SLACK_TEAM_ID}"
+  },
+  "setup": {
+    "requirements": [
+      "Slack workspace",
+      "Slack App with Bot Token",
+      "Required scopes: chat:write, channels:read, users:read"
+    ]
+  },
+  "capabilities": {
+    "tools": 10,
+    "categories": ["messaging", "channels", "users", "notifications"]
+  },
+  "source": {
+    "github": "https://github.com/korotovsky/slack-mcp-server",
+    "alternative": "https://github.com/ubie-oss/slack-mcp-server"
+  }
+}

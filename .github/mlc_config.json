@@ -1,0 +1,33 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://docs.agentkits.net"
+    },
+    {
+      "pattern": "^https://agentkits.net"
+    },
+    {
+      "pattern": "^mailto:"
+    },
+    {
+      "pattern": "localhost"
+    },
+    {
+      "pattern": "127.0.0.1"
+    },
+    {
+      "pattern": "example.com"
+    },
+    {
+      "pattern": "your-"
+    },
+    {
+      "pattern": "\\{\\{"
+    }
+  ],
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "30s",
+  "aliveStatusCodes": [200, 206, 301, 302, 307, 308]
+}

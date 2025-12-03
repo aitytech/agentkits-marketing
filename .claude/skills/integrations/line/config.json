@@ -1,0 +1,28 @@
+{
+  "name": "line",
+  "description": "LINE messaging for Japan market (97M+ users)",
+  "type": "npm",
+  "command": "npx",
+  "args": ["-y", "@anthropic-ai/line-bot-mcp-server"],
+  "env": {
+    "LINE_CHANNEL_ACCESS_TOKEN": "${LINE_CHANNEL_ACCESS_TOKEN}",
+    "LINE_CHANNEL_SECRET": "${LINE_CHANNEL_SECRET}",
+    "DESTINATION_USER_ID": "${LINE_DESTINATION_USER_ID}"
+  },
+  "setup": {
+    "requirements": [
+      "LINE Official Account",
+      "Messaging API enabled",
+      "Channel Access Token"
+    ],
+    "market": "Japan (94% reach), Taiwan, Thailand, Indonesia"
+  },
+  "capabilities": {
+    "tools": 5,
+    "categories": ["messaging", "push", "flex-messages", "rich-menu"]
+  },
+  "source": {
+    "github": "https://github.com/line/line-bot-mcp-server",
+    "docs": "https://developers.line.biz/en/docs/messaging-api/"
+  }
+}

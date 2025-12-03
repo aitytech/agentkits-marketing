@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write # to be able to publish a GitHub release
+  issues: write # to be able to comment on released issues
+  pull-requests: write # to be able to comment on released pull requests
+  id-token: write # to enable use of OIDC for npm provenance
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: npm audit signatures
+
+      - name: Run tests
+        run: npm test
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run semantic-release
+
+      - name: Capture release notes
+        id: release_notes
+        run: |
+          node <<'EOF'
+          const fs = require('fs');
+          const path = 'CHANGELOG.md';
+          const maxLength = 1900;
+          let message = '';
+          if (fs.existsSync(path)) {
+            const lines = fs.readFileSync(path, 'utf8').split('\n');
+            let collecting = false;
+            for (const line of lines) {
+              if (line.startsWith('## ')) {
+                if (!collecting) {
+                  collecting = true;
+                } else {
+                  break;
+                }
+              }
+              if (collecting) {
+                message += line + '\n';
+              }
+            }
+            message = message.trim();
+          }
+          if (!message) {
+            message = 'Release completed successfully but no changelog entry was found.';
+          }
+          if (message.length > maxLength) {
+            message = message.slice(0, maxLength - 20) + '\n...[truncated]';
+          }
+          const encoded = Buffer.from(message, 'utf8').toString('base64');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `notes=${encoded}\n`);
+          EOF

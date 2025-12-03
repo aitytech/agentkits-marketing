@@ -1,0 +1,864 @@
+openapi: 3.0.0
+info:
+  title: Usage Intelligence API
+  version: '1.0'
+  description: ''
+servers:
+  - url: https://api.sensortower.com
+security:
+  - auth_token: []
+paths:
+  '/v1/{os}/search_entities':
+    get:
+      tags:
+        - 'APP AND PUBLISHER METADATA: Search Entities'
+      description: 'Search for apps and publishers that contain certain words or phrases in their name, description, subtitle, promo text and in-app purchases. <br> You can also find an app by ID or Unified ID. <br> <br> <strong>Deprecation:</strong> <code>valid_countries</code>, <code>publisher_ids</code>, <code>global_rating_count</code> on top level of response  if `os` = unified, `entity_type` = app'
+      operationId: get_search_entities
+      summary: Find apps or publishers from a search term.
+      parameters:
+        - description: Platform
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+              - both_stores
+              - unified
+            type: string
+        - description: App or Publisher
+          in: query
+          name: entity_type
+          required: true
+          schema:
+            default: app
+            enum:
+              - app
+              - publisher
+            type: string
+        - description: 'Search term (Minimum Characters: 2 non-Latin or 3 Latin)'
+          in: query
+          name: term
+          required: true
+          example: Lyft
+          schema:
+            type: string
+        - description: 'Limit how many apps returned per call (Max: 250)'
+          in: query
+          name: limit
+          schema:
+            default: 100
+            type: integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  '/v1/{os}/apps/app_ids':
+    get:
+      tags:
+        - 'APP AND PUBLISHER METADATA: App and Publisher Metadata'
+      description: |
+        Retrieve a list of 10,000 (or less) App IDs <strong>starting</strong> from the specified release date and specified updated date. You will also receive the date range (release date) of the App IDs returned <br><br> <strong>Note:</strong> As the offset gets large, the amount of time for the server to respond will increase. In these circumstances, it may be better to use the start date parameter.
+      operationId: app_ids
+      summary: Fetches app IDs from a given release/updated date in a particular category.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: |-
+            ID of the Category, <a target='_blank' href='/api/docs/static/category_ids.json'>
+              Category Ids
+            </a>
+          in: query
+          name: category
+          required: true
+          schema:
+            type: string
+          examples:
+            ios:
+              value: 6005
+              summary: Social Networking (iOS)
+            android:
+              value: business
+              summary: Business (Android)
+        - description: 'Minimum Start Date, `YYYY-MM-DD` format'
+          in: query
+          name: start_date
+          schema:
+            format: date
+            type: string
+        - description: 'Minimum Updated Date, `YYYY-MM-DD` format'
+          in: query
+          name: updated_date
+          schema:
+            format: date
+            type: string
+        - description: Number of App IDs to offset the results by
+          in: query
+          name: offset
+          schema:
+            type: integer
+        - description: 'Limit how many App IDs per call (defaults to maximum: 10,000)'
+          in: query
+          name: limit
+          schema:
+            default: 1000
+            type: integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  '/v1/{os}/publisher/publisher_apps':
+    get:
+      tags:
+        - 'APP AND PUBLISHER METADATA: App and Publisher Metadata'
+      description: Retrieves a collection of Apps for the specified Publisher.
+      operationId: get_publisher_apps
+      summary: Fetches apps for a particular publisher.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: Fetches apps for a given Publisher.
+          in: query
+          name: publisher_id
+          required: true
+          examples:
+            ios:
+              value: '368677371'
+              summary: integer (iOS)
+            android:
+              value: Facebook
+              summary: string (Android)
+          schema:
+            type: string
+        - description: Limits number of apps returned per call.  Max 100 apps per call.
+          in: query
+          name: limit
+          schema:
+            default: 20
+            type: integer
+        - description: Number of apps to offset the results by.
+          in: query
+          name: offset
+          schema:
+            default: 0
+            type: integer
+        - description: 'Includes count of publisher apps in response payload.<br> <strong>Note:</strong> setting this to true changes the output structure of the API response.'
+          in: query
+          name: include_count
+          schema:
+            default: false
+            type: boolean
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/unified/publishers/apps:
+    get:
+      tags:
+        - 'APP AND PUBLISHER METADATA: App and Publisher Metadata'
+      description: |
+        Retrieve unified publisher and all of it's unified apps together with platform-specific apps. Result contains only names and IDs. <br><br> See here for further information on unification: <a target='_blank' href='https://help.sensortower.com/hc/en-us/articles/6983248425499-How-is-iOS-and-Android-data-unified-'> How is iOS and Android data unified?</a> <br><br> Supports two ways to find relevant publisher: <ol>
+          <li>By unified publisher ID</li>
+          <li>By unified app ID</li>
+        </ol> <strong>Note:</strong> Result format doesn't depend on what entity was used in query parameter. In both cases unified publisher is returned as root entity. <br><br>
+      operationId: unified_publisher_apps
+      summary: Fetches unified publisher and all of it's apps.
+      parameters:
+        - description: Unified App ID or unified Publisher ID
+          in: query
+          name: unified_id
+          required: true
+          example: 560c48b48ac350643900b82d
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/unified/apps:
+    get:
+      tags:
+        - 'APP AND PUBLISHER METADATA: App and Publisher Metadata'
+      description: |
+        Retrieve unified, iOS and Android app IDs and publisher IDs that are
+        associated together, as well as the unified app name.
+        <br><br>
+        See here for further information on unification: <a target='_blank'
+        href='https://help.sensortower.com/hc/en-us/articles/6983248425499-How-is-iOS-and-Android-data-unified-'>
+        How is iOS and Android data unified?</a>
+        <br><br>
+        <strong>Note:</strong> If two app_ids queried belong to the same unified app, only
+        one unified app object will be returned. Furthermore, if no unified
+        apps matches the app_ids queried, an empty array will be returned.
+      operationId: unified_apps
+      summary: Fetches iOS/Android app IDs of unified apps.
+      parameters:
+        - description: Operating System
+          in: query
+          name: app_id_type
+          required: true
+          schema:
+            enum:
+              - unified
+              - itunes
+              - android
+            type: string
+        - description: 'App IDs of apps, separated by commas (limited to 100)'
+          in: query
+          name: app_ids
+          required: true
+          explode: false
+          examples:
+            unified:
+              value:
+                - 55c5025102ac64f9c0001f96
+                - 55c503be02ac64f9c000203c
+              summary: string (Unified)
+            ios:
+              value:
+                - '284882215'
+              summary: integer (iOS)
+            android:
+              value:
+                - com.facebook.katana
+              summary: string (Android)
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          description: '<strong>Invalid authentication token.</strong> <br> Generate an API authentication token on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> and ensure that your organization has access to this product. <br> Please contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Invalid authentication token.
+                required:
+                  - error
+                type: object
+        '403':
+          description: '<strong>Forbidden.</strong> <br> Your API token is not valid. <br> If you lost your API token you can generate a new one on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> or contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Your API token is not authorized.
+                required:
+                  - error
+                type: object
+        '422':
+          description: <strong>Invalid Query Parameter.</strong> <br> Please check that all required params are present and valid.
+          content:
+            application/json:
+              schema:
+                properties:
+                  errors:
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Required parameter: name is missing'
+                      required:
+                        - title
+                    type: array
+                required:
+                  - errors
+                type: object
+  /v1/unified/publishers:
+    get:
+      tags:
+        - 'APP AND PUBLISHER METADATA: App and Publisher Metadata'
+      description: |
+        Retrieve unified, iTunes, and android publisher IDs that are associated together. <br><br> See here for further information on unification: <a target='_blank' href='https://help.sensortower.com/hc/en-us/articles/6983248425499-How-is-iOS-and-Android-data-unified-'> How is iOS and Android data unified?</a> <br><br> <strong>Note:</strong> If two publisher_ids queried belong to the same unified publisher, only one unified publisher object will be returned. Furthermore, if no unified publishers matches the publisher_ids queried, an empty array will be returned. <br><br> Some Android publisher IDs contain commas. If you want to query by these publisher IDs, please use the <b>array parameter format</b> instead of the comma separated format. (I.e. <code>?publisher_ids[]=AndroidPubId1&publisher_ids[]=AndroidPubId2&publisher_ids[]=...</code>)
+      operationId: unified_publishers
+      summary: Fetches iOS/Android publisher IDs for unified publishers.
+      parameters:
+        - description: Operating System
+          in: query
+          name: publisher_id_type
+          required: true
+          schema:
+            enum:
+              - unified
+              - itunes
+              - android
+            type: string
+        - description: 'Publisher IDs of publishers, separated by commas (limited to 100)'
+          in: query
+          name: publisher_ids
+          required: true
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+          example:
+            - 5614b32f3f07e2077c000488
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/app_tag/tags_for_apps:
+    get:
+      tags:
+        - 'CUSTOM FIELDS: Retrieve Custom Fields Data'
+      description: |
+        Retrieve a list of global/custom field names and associated tag values for requested apps. <br> Supports requesting specific field names or tag groups by product name.
+      operationId: tags_for_apps
+      summary: Fetches global or custom fields and tag values of apps.
+      parameters:
+        - description: |
+            IDs of apps (iTunes or Android IDs), separated by commas. (max 100) <br> Apps without tags will not be included in the response.
+          in: query
+          name: app_ids
+          required: true
+          explode: false
+          examples:
+            ios:
+              value:
+                - '284882215'
+                - '310633997'
+              summary: integer (iOS)
+            android:
+              value:
+                - com.facebook.katana
+              summary: string (Android)
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: |
+            List of field categories which should be returned in response. See <a target="_blank" href="/api/custom_field/categories.json">complete list</a> of categories and related fields.
+          in: query
+          name: 'field_categories[]'
+          example:
+            - downloads
+          explode: true
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - active_users
+                - advertising
+                - app_content
+                - app_metadata
+                - app_ratings
+                - app_release_and_updates
+                - custom_fields
+                - demographics
+                - developer_integrations
+                - downloads
+                - gaming
+                - monetization
+                - publisher_details
+                - retention
+                - revenue
+        - description: |
+            List of fields which should be returned in response.
+            Both custom and global field names can be requested.
+            Can be used together with "field_categories" parameter.
+          in: query
+          name: 'fields[]'
+          example:
+            - Free
+            - Primary Category
+          explode: true
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/app_tag/apps:
+    get:
+      tags:
+        - 'CUSTOM FIELDS: Retrieve Custom Fields Data'
+      description: |
+        Retrieve a list of App IDs of a specific global/custom field name and value. Alternatively, use custom fields filter ID to get all corresponding App IDs. <br> Supports unified view which returns corresponding unified app IDs along with filtered platform-specific app IDs. <br> Note that unified view has different response schema.
+      operationId: apps_from_tags
+      summary: Fetches apps of a particular global or custom field and tag value.
+      parameters:
+        - description: Operating System
+          in: query
+          name: app_id_type
+          required: true
+          schema:
+            default: itunes
+            enum:
+              - itunes
+              - android
+              - unified
+            type: string
+        - description: |
+            Filter by Custom fields filter.
+            <br>
+            Use filter ID from
+            <a target='_blank'
+              href='/api/docs/custom_fields_metadata#/CUSTOM%20FIELDS%3A%20Custom%20Fields%20Filter%20ID/create_custom_fields_filter'>
+              relevant endpoint
+            <a>.
+          in: query
+          name: custom_fields_filter_id
+          schema:
+            type: string
+        - description: Name of Custom or Global Field
+          in: query
+          name: name
+          schema:
+            default: Stock Ticker
+            type: string
+        - description: Tag value for custom or global field provided. Leave blank to fetch all possible apps.
+          in: query
+          name: value
+          schema:
+            default: 'NASDAQ: MGI'
+            type: string
+        - description: Filter by global or organization custom fields (defaults to "false")
+          in: query
+          name: global
+          schema:
+            default: true
+            type: boolean
+        - description: |-
+            Supply last_known_id from previous request to get next page.
+                          Leave blank to get first page.
+          in: query
+          name: last_known_id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/custom_field/custom_field_list:
+    get:
+      tags:
+        - 'CUSTOM FIELDS: Retrieve Custom Fields Data'
+      description: |-
+        Retrieve a list of global/custom field names and app tag values with
+        total count that are associated with your organization.
+      operationId: custom_field_list
+      summary: Fetches global or custom fields and app tags with summarized app counts.
+      parameters:
+        - description: Filter by OS type (defaults to "all")
+          in: query
+          name: os
+          example: itunes
+          schema:
+            default: all
+            enum:
+              - itunes
+              - android
+              - all
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/app_tag/add_tag_for_app:
+    post:
+      tags:
+        - 'CUSTOM FIELDS: Edit Custom Fields Data'
+      description: Adds a tag value to a custom field for a specific app.
+      operationId: add_tag_for_app
+      summary: Add a tag to a custom field.
+      parameters:
+        - description: ID of App
+          in: query
+          name: app_id
+          required: true
+          example: '284882215'
+          schema:
+            type: string
+        - description: Field name (leading or trailing spaces will be removed)
+          in: query
+          name: name
+          required: true
+          example: Test field
+          schema:
+            type: string
+        - description: Tag value (leading or trailing spaces will be removed)
+          in: query
+          name: value
+          required: true
+          example: test value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/app_tag/edit_tag:
+    post:
+      tags:
+        - 'CUSTOM FIELDS: Edit Custom Fields Data'
+      description: Changes an existing custom field tag to a new tag value. The previous tag will be overridden.
+      operationId: edit_tag_for_app
+      summary: Edit a tag from a custom field.
+      parameters:
+        - description: ID of App
+          in: query
+          name: app_id
+          required: true
+          example: '284882215'
+          schema:
+            type: string
+        - description: Field name (leading or trailing spaces will be removed)
+          in: query
+          name: name
+          required: true
+          example: Test field
+          schema:
+            type: string
+        - description: Tag value (leading or trailing spaces will be removed)
+          in: query
+          name: value
+          required: true
+          example: different value
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/app_tag/remove_tag_for_app:
+    post:
+      tags:
+        - 'CUSTOM FIELDS: Edit Custom Fields Data'
+      description: |-
+        Removes a custom field tag value from a specific app. The app will still
+        be associated with the custom field.
+      operationId: remove_tag_for_app
+      summary: Remove tag from a custom field.
+      parameters:
+        - description: IDs of Apps (separated by commas). Doesn't support unified App IDs
+          in: query
+          name: app_ids
+          required: true
+          explode: false
+          example:
+            - '284882215'
+            - com.facebook.katana
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: Field name (leading or trailing spaces will be removed)
+          in: query
+          name: name
+          required: true
+          example: Test field
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/custom_field/change_all_values_matching:
+    post:
+      tags:
+        - 'CUSTOM FIELDS: Edit Custom Fields Data'
+      description: 'For all instances of a given tag value for a custom field, change the tag to a new value. The previous tag will be overridden for all apps with that field and tag.'
+      operationId: change_all_values_matching
+      summary: Change all tags matching a value to a new value.
+      parameters:
+        - description: Field name (leading or trailing spaces will be removed)
+          in: query
+          name: name
+          required: true
+          example: Test field
+          schema:
+            type: string
+        - description: Current tag value (leading or trailing spaces will be removed)
+          in: query
+          name: old_tag_value
+          required: true
+          schema:
+            default: old value
+            type: string
+        - description: New tag value (leading or trailing spaces will be removed)
+          in: query
+          name: new_tag_value
+          required: true
+          schema:
+            default: new value
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/custom_field/remove_custom_field:
+    post:
+      tags:
+        - 'CUSTOM FIELDS: Edit Custom Fields Data'
+      description: 'Delete all instances of a custom field, for all apps or tag values it has been assigned to. This functionality is destructive. Be careful!'
+      operationId: remove_custom_field
+      summary: Remove a custom field.
+      parameters:
+        - description: Field name (leading or trailing spaces will be removed)
+          in: query
+          name: name
+          required: true
+          example: Test field
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/custom_fields_filter:
+    post:
+      tags:
+        - 'CUSTOM FIELDS: Custom Fields Filter ID'
+      summary: Create a custom fields filter.
+      description: |
+        Create a filter ID and use it to query other endpoints by custom filters. <br> Use "fields_values" endpoint to get a list of possible custom fields and values.
+      operationId: create_custom_fields_filter
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                properties:
+                  custom_fields_filter_id:
+                    type: string
+                required:
+                  - custom_fields_filter_id
+                type: object
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              default:
+                custom_fields:
+                  - exclude: false
+                    global: true
+                    name: Free
+                    values:
+                      - 'true'
+              properties:
+                custom_fields:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      exclude:
+                        description: 'If set, filter will exclude passed values'
+                        type: boolean
+                      global:
+                        type: boolean
+                      name:
+                        type: string
+                      values:
+                        items:
+                          type: string
+                        type: array
+                    required:
+                      - name
+                      - global
+                      - values
+              required:
+                - custom_fields
+              type: object
+        description: JSON
+        required: true
+  '/v1/custom_fields_filter/{id}':
+    get:
+      tags:
+        - 'CUSTOM FIELDS: Custom Fields Filter ID'
+      description: |
+        Query for custom field names and tag values associated with the Custom Fields Filter ID provided
+      operationId: show_custom_fields_filter
+      summary: Show custom fields for a custom filter ID.
+      parameters:
+        - description: Filter ID
+          in: path
+          name: id
+          required: true
+          example: 6009d417241bc16eb8e07e9b
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  custom_fields_filter_id:
+                    type: string
+                required:
+                  - custom_fields_filter_id
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+  /v1/custom_fields_filter/fields_values:
+    get:
+      tags:
+        - 'CUSTOM FIELDS: Custom Fields Filter ID'
+      description: Retrieve a list of all accessible custom fields and their possible values
+      operationId: custom_fields_values
+      summary: List all custom fields values.
+      parameters:
+        - description: Search by field names
+          in: query
+          name: term
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - custom_fields
+                properties:
+                  custom_fields:
+                    type: array
+                    required:
+                      - name
+                      - global
+                      - values
+                    items:
+                      type: object
+                      properties:
+                        global:
+                          type: boolean
+                        name:
+                          type: string
+                        values:
+                          type: array
+                          items:
+                            type: string
+        '401':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1unified~1apps/get/responses/422'
+components:
+  securitySchemes:
+    auth_token:
+      type: apiKey
+      description: 'API authentication token. You can generate yours on your <a target="_blank" href="/users/edit/api-settings">account profile (API Settings tab)</a>.'
+      name: auth_token
+      in: query
+tags:
+  - name: 'APP AND PUBLISHER METADATA: App and Publisher Metadata'
+  - name: 'APP AND PUBLISHER METADATA: Search Entities'
+  - name: 'CUSTOM FIELDS: Retrieve Custom Fields Data'
+  - name: 'CUSTOM FIELDS: Edit Custom Fields Data'
+  - name: 'CUSTOM FIELDS: Custom Fields Filter ID'

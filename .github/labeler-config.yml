@@ -1,0 +1,47 @@
+# Pull Request Labeler Configuration
+# Learn more: https://github.com/actions/labeler
+
+# Area labels based on file paths
+"area: agents":
+  - changed-files:
+      - any-glob-to-any-file: '.claude/agents/**/*'
+
+"area: commands":
+  - changed-files:
+      - any-glob-to-any-file: '.claude/commands/**/*'
+
+"area: skills":
+  - changed-files:
+      - any-glob-to-any-file: '.claude/skills/**/*'
+
+"area: workflows":
+  - changed-files:
+      - any-glob-to-any-file: '.claude/workflows/**/*'
+
+"area: training":
+  - changed-files:
+      - any-glob-to-any-file: 'training/**/*'
+
+"area: integrations":
+  - changed-files:
+      - any-glob-to-any-file: '.claude/skills/integrations/**/*'
+
+# Type labels
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.md'
+          - 'docs/**/*'
+          - 'README.md'
+          - 'CONTRIBUTING.md'
+
+github-actions:
+  - changed-files:
+      - any-glob-to-any-file: '.github/**/*'
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'package.json'
+          - 'package-lock.json'
+          - '.github/dependabot.yml'

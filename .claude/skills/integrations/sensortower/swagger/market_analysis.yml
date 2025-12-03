@@ -1,0 +1,2006 @@
+openapi: 3.0.0
+info:
+  title: Ad Intelligence API
+  version: '1.0'
+  description: ''
+servers:
+  - url: https://api.sensortower.com
+security:
+  - auth_token: []
+paths:
+  '/v1/{os}/ranking':
+    get:
+      tags:
+        - 'APPS: Top Charts'
+      description: Retrieve a list of the top ranking apps on a specific category and chart type.
+      operationId: get_category_rankings
+      summary: Fetches top ranking apps of a particular category and chart type.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: 'ID of the Category, <a target=''_blank'' href=''/api/docs/static/category_ids.json''>Category Ids</a>'
+          in: query
+          name: category
+          required: true
+          schema:
+            type: string
+          examples:
+            ios:
+              value: 6005
+              summary: Social Networking (iOS)
+            android:
+              value: business
+              summary: Business (Android)
+        - description: |-
+            The specific top chart type you are looking for, <a target='_blank' href='/api/docs/static/chart_type_ids.json'>
+              Chart Type Ids
+            </a> (<b>This will override the "identifier" parameter</b>)
+          in: query
+          name: chart_type
+          required: true
+          schema:
+            default: topfreeapplications
+            type: string
+        - description: 'The country you want download rankings for, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a>'
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: Date. `YYYY-MM-DD` format (defaults to date of latest rankings)
+          in: query
+          name: date
+          required: true
+          example: '2021-08-18'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          description: '<strong>Invalid authentication token.</strong> <br> Generate an API authentication token on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> and ensure that your organization has access to this product. <br> Please contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Invalid authentication token.
+                required:
+                  - error
+                type: object
+        '403':
+          description: '<strong>Forbidden.</strong> <br> Your API token is not valid. <br> If you lost your API token you can generate a new one on your <a target="_blank" href="https://app.sensortower.com/users/edit/api-settings">account profile (API Settings tab)</a> or contact the Sensor Tower team for more information.'
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string
+                    example: Your API token is not authorized.
+                required:
+                  - error
+                type: object
+        '422':
+          description: <strong>Invalid Query Parameter.</strong> <br> Please check that all required params are present and valid.
+          content:
+            application/json:
+              schema:
+                properties:
+                  errors:
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Required parameter: name is missing'
+                      required:
+                        - title
+                    type: array
+                required:
+                  - errors
+                type: object
+  '/v1/{os}/sales_report_estimates_comparison_attributes':
+    get:
+      tags:
+        - 'APPS: Top Apps by Downloads and Revenue'
+      description: 'Retrieve top apps and their respective absolute, growth, and growth percentage download and revenue estimates. <br><br> <strong>Note:</strong> All revenues are returned in cents.'
+      operationId: top_and_trending
+      summary: Fetches top apps by download and revenue estimates.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+              - unified
+            type: string
+        - description: 'Comparison Attribute (use "absolute", "delta", or "transformed_delta")'
+          in: query
+          name: comparison_attribute
+          required: true
+          schema:
+            default: absolute
+            enum:
+              - absolute
+              - delta
+              - transformed_delta
+            type: string
+        - description: 'Time Range (use "day", "week", "month", or "quarter")'
+          in: query
+          name: time_range
+          required: true
+          schema:
+            default: week
+            enum:
+              - day
+              - week
+              - month
+              - quarter
+              - year
+            type: string
+        - description: Measure (use "units" or "revenue")
+          in: query
+          name: measure
+          required: true
+          schema:
+            default: units
+            enum:
+              - units
+              - revenue
+            type: string
+        - description: 'Device Type <br> use "iphone", "ipad", or "total" for `ios`, <br> leave blank for `Android`, <br> use "total" for `unified`'
+          in: query
+          name: device_type
+          schema:
+            default: total
+            enum:
+              - iphone
+              - ipad
+              - total
+            type: string
+          examples:
+            ios:
+              value: total
+              summary: iOS
+            android:
+              value: ''
+              summary: Android
+        - description: 'ID of the Category, <a target=''_blank'' href=''/api/docs/static/category_ids.json''>Category Ids</a>'
+          in: query
+          name: category
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+              - type: string
+          examples:
+            ios:
+              value: 6000
+              summary: integer (iOS)
+            android:
+              value: business
+              summary: string (Android)
+        - description: 'Date. <br> `YYYY-MM-DD` format. <br> Auto-changes to the beginning of time_range. <br> Ex: Mondays for weeks, 1st of the month, 1st day of the quarter, 1st day of the year.'
+          in: query
+          name: date
+          required: true
+          example: '2021-01-04'
+          schema:
+            type: string
+        - description: 'End date, inclusive. <br> `YYYY-MM-DD` format. <br> Allows aggregation of multiple weeks/months/quarters/years. <br> Auto-changes to the end of the specified time_range. <br> Ex: Sundays for weeks, last day of month, last day of quarter, last day of year.'
+          in: query
+          name: end_date
+          example: '2021-01-10'
+          schema:
+            type: string
+        - description: 'Regions, separated by commas, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Regions Codes</a>. <br> <b>`regions` parameter should be specified</b>'
+          in: query
+          name: regions
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Limit how many apps per call.<br> (Max: 2000)'
+          in: query
+          name: limit
+          schema:
+            default: 25
+            type: integer
+            maximum: 2000
+        - description: Number of apps to offset the results by
+          in: query
+          name: offset
+          schema:
+            type: integer
+        - description: |-
+            Filter by Custom fields filter. <br> <b>Requires 'custom_tags_mode' parameter if 'os' is 'unified'</b> <br>Use filter ID from <a target='_blank'
+              href='/api/docs/custom_fields_metadata#/CUSTOM%20FIELDS%3A%20Custom%20Fields%20Filter%20ID/create_custom_fields_filter'>
+              relevant endpoint
+            <a>.
+          in: query
+          name: custom_fields_filter_id
+          schema:
+            type: string
+        - description: Custom fields filtering mode. <br> <b>Required for unified 'os' if 'custom_fields_filter_id' selected</b>. <br> 'include_unified_apps' allows you to include all versions of a unified app if at least one of them is included by the filters you've set.
+          in: query
+          name: custom_tags_mode
+          schema:
+            default: include_unified_apps
+            enum:
+              - include_unified_apps
+              - exclude_unified_apps
+            type: string
+        - description: 'Specify the data model used to generate estimates. Use "DM_2025_Q1" to access Sensor Tower’s legacy estimates,  or "DM_2025_Q2" to access estimates produced by our new, improved models. Access to this parameter is limited to eligible accounts. If you believe you should have access, please contact your Account Director.'
+          in: query
+          name: data_model
+          required: false
+          schema:
+            default: DM_2025_Q2
+            enum:
+              - DM_2025_Q2
+              - DM_2025_Q1
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: array
+                    description: iOS/Android Response
+                    items:
+                      properties:
+                        app_id:
+                          type: string
+                          example: Number or String
+                          description: The app's ID.
+                        current_units_value:
+                          type: number
+                          description: Total number of downloads for the current time period.
+                        comparison_units_value:
+                          type: number
+                          description: Difference in number of downloads to the previous period.
+                        units_absolute:
+                          type: number
+                          description: Total number of downloads for the current time period.
+                        units_delta:
+                          type: number
+                          description: Growth (difference) in number of downloads for the current time period compared to its prior period.
+                        units_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads.'
+                        current_revenue_value:
+                          type: number
+                          description: Total revenue for the current time period.
+                        comparison_revenue_value:
+                          type: number
+                          description: Difference in revenue to the previous period.
+                        revenue_absolute:
+                          type: number
+                          description: Total revenue for the current time period.
+                        revenue_delta:
+                          type: number
+                          description: Growth (difference) in revenue for the current time period compared to its prior period.
+                        revenue_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue.'
+                        absolute:
+                          type: number
+                          description: Total number of downloads or revenue for the current time period. This is dictated by the 'measure' parameter.
+                        delta:
+                          type: number
+                          description: Growth (difference) in number of downloads or revenue for the current time period compared to its prior period. This is dictated by the 'measure' parameter.
+                        transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in number of downloads/revenue, divided by the prior same time period''s growth value in number of downloads/revenue. This is dictated by the ''measure'' parameter.'
+                        custom_tags:
+                          type: object
+                        date:
+                          type: string
+                          format: date-time
+                          description: Metric observation date
+                  - type: array
+                    description: Unified Response
+                    items:
+                      properties:
+                        app_id:
+                          type: string
+                          description: The unified app's ID.
+                        entities:
+                          items:
+                            properties:
+                              app_id:
+                                type: string
+                                example: Number or String
+                                description: The app's ID.
+                              current_units_value:
+                                type: number
+                                description: Total number of downloads for the current time period.
+                              comparison_units_value:
+                                type: number
+                                description: Difference in number of downloads to the previous period.
+                              units_absolute:
+                                type: number
+                                description: Total number of downloads for the current time period.
+                              units_delta:
+                                type: number
+                                description: Growth (difference) in number of downloads for the current time period compared to its prior period.
+                              units_transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads.'
+                              current_revenue_value:
+                                type: number
+                                description: Total revenue for the current time period.
+                              comparison_revenue_value:
+                                type: number
+                                description: Difference in revenue to the previous period.
+                              revenue_absolute:
+                                type: number
+                                description: Total revenue for the current time period.
+                              revenue_delta:
+                                type: number
+                                description: Growth (difference) in revenue for the current time period compared to its prior period.
+                              revenue_transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue.'
+                              absolute:
+                                type: number
+                                description: Total number of downloads or revenue for the current time period. This is dictated by the 'measure' parameter.
+                              delta:
+                                type: number
+                                description: Growth (difference) in number of downloads or revenue for the current time period compared to its prior period. This is dictated by the 'measure' parameter.
+                              transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in number of downloads/revenue, divided by the prior same time period''s growth value in number of downloads/revenue. This is dictated by the ''measure'' parameter.'
+                              custom_tags:
+                                type: object
+                              date:
+                                type: string
+                                format: date-time
+                                description: Metric observation date
+                              country:
+                                type: string
+                                description: Country code for observed app metric.
+                        units_absolute:
+                          type: number
+                          description: Total number of downloads for the current time period. For all iOS/Android apps under the unified app.
+                        units_delta:
+                          type: number
+                          description: Growth (difference) in number of downloads for the current time period compared to its prior period. For all iOS/Android apps under the unified app.
+                        units_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads. For all iOS/Android apps under the unified app.'
+                        revenue_absolute:
+                          type: number
+                          description: Total revenue for the current time period for the unified app. For all iOS/Android apps under the unified app.
+                        revenue_delta:
+                          type: number
+                          description: Growth (difference) in revenue for the current time period compared to its prior period. For all iOS/Android apps under the unified app.
+                        revenue_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue. For all iOS/Android apps under the unified app.'
+                        aggregate_tags:
+                          type: object
+                        date:
+                          type: string
+                          format: date-time
+                          description: Metric observation date
+                        country:
+                          type: string
+                          description: Country code for observed app metric.
+              examples:
+                ios:
+                  summary: iOS Response
+                  value:
+                    - app_id: 546505307
+                      current_units_value: 2846013
+                      comparison_units_value: 1826417
+                      units_absolute: 2846013
+                      units_delta: 1019596
+                      units_transformed_delta: 0.558249293562204
+                      current_revenue_value: 0
+                      comparison_revenue_value: 0
+                      revenue_absolute: 0
+                      revenue_delta: 0
+                      revenue_transformed_delta: 0
+                      absolute: 2846013
+                      delta: 1019596
+                      transformed_delta: 0.558249293562204
+                      custom_tags: {}
+                      date: '2021-01-04T00:00:00Z'
+                      country: null
+                android:
+                  summary: Android Response
+                  value:
+                    - app_id: us.zoom.videomeetings
+                      current_units_value: 5645695
+                      comparison_units_value: 4167908
+                      units_absolute: 5645695
+                      units_delta: 1477787
+                      units_transformed_delta: 0.3545632485170018
+                      current_revenue_value: 0
+                      comparison_revenue_value: 0
+                      revenue_absolute: 0
+                      revenue_delta: 0
+                      revenue_transformed_delta: 0
+                      absolute: 5645695
+                      delta: 1477787
+                      transformed_delta: 0.3545632485170018
+                      custom_tags: {}
+                      date: '2021-01-04T00:00:00Z'
+                      country: null
+                unified:
+                  summary: Unified Response
+                  value:
+                    - app_id: 5379e662830f782dbe0067fc
+                      entities:
+                        - app_id: us.zoom.videomeetings
+                          current_units_value: 5645695
+                          comparison_units_value: 4167908
+                          units_absolute: 5645695
+                          units_delta: 1477787
+                          units_transformed_delta: 0.3545632485170018
+                          current_revenue_value: 0
+                          comparison_revenue_value: 0
+                          revenue_absolute: 0
+                          revenue_delta: 0
+                          revenue_transformed_delta: 0
+                          absolute: 5645695
+                          delta: 1477787
+                          transformed_delta: 0.3545632485170018
+                          custom_tags: {}
+                          date: '2021-01-04T00:00:00Z'
+                          country: null
+                        - app_id: 546505307
+                          current_units_value: 2846013
+                          comparison_units_value: 1826417
+                          units_absolute: 2846013
+                          units_delta: 1019596
+                          units_transformed_delta: 0.558249293562204
+                          current_revenue_value: 0
+                          comparison_revenue_value: 0
+                          revenue_absolute: 0
+                          revenue_delta: 0
+                          revenue_transformed_delta: 0
+                          absolute: 2846013
+                          delta: 1019596
+                          transformed_delta: 0.558249293562204
+                          custom_tags: {}
+                          date: '2021-01-04T00:00:00Z'
+                          country: null
+                      units_absolute: 8491708
+                      units_delta: 2497383
+                      units_transformed_delta: 0.4166245573938684
+                      revenue_absolute: 0
+                      revenue_delta: 0
+                      revenue_transformed_delta: 0
+                      aggregate_tags: {}
+                      date: '2021-01-04T00:00:00Z'
+                      country: null
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/422'
+  '/v1/{os}/top_and_trending/active_users':
+    get:
+      tags:
+        - 'APPS: Top Apps by Active Users'
+      description: 'Retrieve top apps and their respective absolute, growth, and growth percentage active user estimates.'
+      operationId: usage_top_apps
+      summary: Fetches top apps by active users.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+              - unified
+            type: string
+        - description: 'Comparison Attribute (use "absolute", "delta", or "transformed_delta")'
+          in: query
+          name: comparison_attribute
+          required: true
+          schema:
+            default: absolute
+            enum:
+              - absolute
+              - delta
+              - transformed_delta
+            type: string
+        - description: 'Time Range (use "week", "month", or "quarter") <br> "week" is not available when measuing by MAU'
+          in: query
+          name: time_range
+          required: true
+          schema:
+            default: month
+            enum:
+              - week
+              - month
+              - quarter
+            type: string
+        - description: 'Measure (use "DAU", "WAU" or "MAU")'
+          in: query
+          name: measure
+          required: true
+          schema:
+            default: DAU
+            enum:
+              - DAU
+              - WAU
+              - MAU
+            type: string
+        - description: 'ID of the Category, <a target=''_blank'' href=''/api/docs/static/category_ids.json''>Category Ids</a>'
+          in: query
+          name: category
+          required: false
+          schema:
+            default: '0'
+            type: string
+        - description: 'Date, `YYYY-MM-DD` format. Should match beginning of range'
+          in: query
+          name: date
+          required: true
+          example: '2021-01-01'
+          schema:
+            type: string
+        - description: 'Regions, separated by commas, <a target=''_blank'' href=''/api/ios/usage/countries.json''>Region Codes</a>. <br> <b>`regions` parameter should be specified</b>'
+          in: query
+          name: regions
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: Limit how many apps per call (defaults to 25)
+          in: query
+          name: limit
+          schema:
+            default: 25
+            type: integer
+        - description: Number of apps to offset the results by
+          in: query
+          name: offset
+          schema:
+            type: integer
+        - description: 'Device type parameter is iOS only. On `iOS`, use "iphone", "ipad" or "total". <br> <strong>Note:</strong> For `Android`, leave this blank.'
+          in: query
+          name: device_type
+          schema:
+            default: total
+            enum:
+              - iphone
+              - ipad
+              - total
+            type: string
+          examples:
+            ios:
+              value: total
+              summary: iOS
+            android:
+              value: ''
+              summary: Android
+        - description: |-
+            Filter by Custom fields filter. <br> <br>Use filter ID from <a target='_blank'
+              href='/api/docs/custom_fields_metadata#/CUSTOM%20FIELDS%3A%20Custom%20Fields%20Filter%20ID/create_custom_fields_filter'>
+                      relevant endpoint
+            <a>.
+          in: query
+          name: custom_fields_filter_id
+          schema:
+            type: string
+        - description: 'Specify the data model used to generate estimates. Use "DM_2025_Q1" to access Sensor Tower’s legacy estimates,  or "DM_2025_Q2" to access estimates produced by our new, improved models. Access to this parameter is limited to eligible accounts. If you believe you should have access, please contact your Account Director.'
+          in: query
+          name: data_model
+          required: false
+          schema:
+            default: DM_2025_Q2
+            enum:
+              - DM_2025_Q2
+              - DM_2025_Q1
+            type: string
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: array
+                    description: iOS/Android Response
+                    items:
+                      properties:
+                        app_id:
+                          type: string
+                          example: Number or String
+                          description: The app's ID.
+                        date:
+                          type: string
+                          format: date-time
+                          description: Metric observation date
+                        users_absolute:
+                          type: number
+                          description: Total number of active users for the current time period.
+                        users_delta:
+                          type: number
+                          description: Growth (difference) in number of active users for the current time period compared to its prior period.
+                        users_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in number of active users, divided by the prior same time period''s growth value in number of active users.'
+                        users_market_share:
+                          type: number
+                          description: 'Active users for the current period, divided by the cumulative active users for the current period.'
+                        custom_tags:
+                          type: object
+                  - type: array
+                    description: Unified Response
+                    items:
+                      properties:
+                        app_id:
+                          type: string
+                          description: The unified app's ID.
+                        date:
+                          type: string
+                          format: date-time
+                          description: Metric observation date
+                        users_absolute:
+                          type: number
+                          description: Total number of active users for the current time period. For all iOS/Android apps under the unified app.
+                        users_delta:
+                          type: number
+                          description: Growth (difference) in number of active users for the current time period compared to its prior period. For all iOS/Android apps under the unified app.
+                        users_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in number of active users, divided by the prior same time period''s growth value in number of active users. For all iOS/Android apps under the unified app.'
+                        users_market_share:
+                          type: number
+                          description: 'Active users for the current period, divided by the cumulative active users for the current period. For all iOS/Android apps under the unified app.'
+                        entities:
+                          items:
+                            properties:
+                              app_id:
+                                type: string
+                                example: Number or String
+                                description: The app's ID.
+                              date:
+                                type: string
+                                format: date-time
+                                description: Metric observation date
+                              users_absolute:
+                                type: number
+                                description: Total number of active users for the current time period.
+                              users_delta:
+                                type: number
+                                description: Growth (difference) in number of active users for the current time period compared to its prior period.
+                              users_transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in number of active users, divided by the prior same time period''s growth value in number of active users.'
+                              users_market_share:
+                                type: number
+                                description: 'Active users for the current period, divided by the cumulative active users for the current period.'
+                              custom_tags:
+                                type: object
+                        aggregate_tags:
+                          type: object
+              examples:
+                ios:
+                  summary: iOS Response
+                  value:
+                    - app_id: 544007664
+                      date: '2021-01-01T00:00:00Z'
+                      users_absolute: 480786661
+                      users_delta: -2198805
+                      users_transformed_delta: -0.004552528294919748
+                      users_market_share: 0.09804337091758258
+                      custom_tags: {}
+                android:
+                  summary: Android Response
+                  value:
+                    - app_id: com.android.chrome
+                      date: '2021-01-01T00:00:00Z'
+                      users_absolute: 1422846550
+                      users_delta: 6573016
+                      users_transformed_delta: 0.004641063920354244
+                      users_market_share: 0.1073140508364117
+                      custom_tags: {}
+                unified:
+                  summary: Unified Response
+                  value:
+                    - app_id: 55c5027502ac64f9c0001fa6
+                      date: '2021-01-01T00:00:00Z'
+                      users_absolute: 1726567083
+                      users_delta: 1978807
+                      users_transformed_delta: 0.001147408356845399
+                      users_market_share: 0.09506202380003964
+                      entities:
+                        - app_id: 544007664
+                          date: '2021-01-01T00:00:00Z'
+                          users_absolute: 480786661
+                          users_delta: -2198805
+                          users_transformed_delta: -0.004552528294919748
+                          users_market_share: 0.02647134505269819
+                          custom_tags: {}
+                        - app_id: com.google.android.youtube
+                          date: '2021-01-01T00:00:00Z'
+                          users_absolute: 1236025970
+                          users_delta: 4664916
+                          users_transformed_delta: 0.003788422562859455
+                          users_market_share: 0.06805361421199241
+                          custom_tags: {}
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/422'
+  '/v1/{os}/top_and_trending/publishers':
+    get:
+      tags:
+        - 'APPS: Top App Publishers'
+      description: 'Retrieve top app publishers and their respective absolute, growth, and growth percentage download and revenue estimates. <br><br> <strong>Note:</strong> All revenues are returned in cents.'
+      operationId: top_publishers
+      summary: Fetches top publishers by download and revenue estimates.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+              - unified
+            type: string
+        - description: 'Comparison Attribute (use "absolute", "delta", or "transformed_delta")'
+          in: query
+          name: comparison_attribute
+          required: true
+          schema:
+            default: absolute
+            enum:
+              - absolute
+              - delta
+              - transformed_delta
+            type: string
+        - description: 'Time Range (use "day", "week", "month", or "quarter")'
+          in: query
+          name: time_range
+          required: true
+          schema:
+            default: week
+            enum:
+              - day
+              - week
+              - month
+              - quarter
+              - year
+            type: string
+        - description: Comparison Attribute (use "units" or "revenue")
+          in: query
+          name: measure
+          required: true
+          schema:
+            default: units
+            enum:
+              - units
+              - revenue
+            type: string
+        - description: 'Device Type <br> use "iphone", "ipad", or "total" for `ios`, <br> leave blank for `Android`, <br> use "total" for `unified`'
+          in: query
+          name: device_type
+          schema:
+            default: total
+            enum:
+              - iphone
+              - ipad
+              - total
+            type: string
+          examples:
+            ios:
+              value: total
+              summary: iOS
+            android:
+              value: ''
+              summary: Android
+        - description: 'ID of the Category, <a target=''_blank'' href=''/api/docs/static/category_ids.json''>Category Ids</a>'
+          in: query
+          name: category
+          required: true
+          schema:
+            oneOf:
+              - type: integer
+              - type: string
+          examples:
+            ios:
+              value: 6000
+              summary: integer (iOS)
+            android:
+              value: business
+              summary: string (Android)
+        - description: 'Date. <br> `YYYY-MM-DD` format. <br> Auto-changes to the beginning of time_range. <br> Ex: Mondays for weeks, 1st of the month, 1st day of the quarter, 1st day of the year.'
+          in: query
+          name: date
+          required: true
+          example: '2021-01-04'
+          schema:
+            type: string
+        - description: 'End date, inclusive. <br> `YYYY-MM-DD` format. <br> Allows aggregation of multiple weeks/months/quarters/years. <br> Auto-changes to the end of the specified time_range. <br> Ex: Sundays for weeks, last day of month, last day of quarter, last day of year.'
+          in: query
+          name: end_date
+          example: '2021-01-10'
+          schema:
+            type: string
+        - description: 'Country or Region Code, <a target=''_blank'' href=''/api/docs/static/country_ids.json''>Country Codes</a>, <a target=''_blank'' href=''/api/docs/static/region_ids.json''>Region Codes</a>.'
+          in: query
+          name: country
+          schema:
+            type: string
+        - description: Limit how many publishers per call
+          in: query
+          name: limit
+          schema:
+            default: 25
+            type: integer
+        - description: Number of publishers to offset the results by
+          in: query
+          name: offset
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: array
+                    description: iOS/Android response
+                    items:
+                      properties:
+                        publisher_id:
+                          type: string
+                          description: The publisher ID.
+                        publisher_name:
+                          type: string
+                          description: The publisher name.
+                        date:
+                          type: string
+                          format: date-time
+                          description: Metric observation date
+                        units_absolute:
+                          type: number
+                          description: Total number of downloads for the current time period. For all apps under the publisher.
+                        units_delta:
+                          type: number
+                          description: Growth (difference) in number of downloads for the current time period compared to its prior period. For all apps under the publisher.
+                        revenue_absolute:
+                          type: number
+                          description: Total revenue for the current time period. For all apps under the publisher.
+                        revenue_delta:
+                          type: number
+                          description: Growth (difference) in revenue for the current time period compared to its prior period. For all apps under the publisher.
+                        apps:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              app_id:
+                                type: string
+                                description: The app's ID.
+                              publisher_id:
+                                type: string
+                                description: The app's publisher ID.
+                              units_absolute:
+                                type: number
+                                description: Total number of downloads for the current time period.
+                              units_delta:
+                                type: number
+                                description: Growth (difference) in number of downloads for the current time period compared to its prior period.
+                              units_transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads.'
+                              revenue_absolute:
+                                type: number
+                                description: Total revenue for the current time period.
+                              revenue_delta:
+                                type: number
+                                description: Growth (difference) in revenue for the current time period compared to its prior period.
+                              revenue_transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue.'
+                              custom_tags:
+                                type: object
+                              canonical_country:
+                                type: string
+                                description: App's storefront country.
+                              name:
+                                type: string
+                                description: The app's name.
+                              publisher_name:
+                                type: string
+                                description: The app's publisher name.
+                              humanized_name:
+                                type: string
+                                description: The app's name with removed special characters (suffix).
+                              icon_url:
+                                type: string
+                                description: URL to the app's logo.
+                              os:
+                                type: string
+                                description: The mobile operating system of the app.
+                        units_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads. For all apps under the publisher.'
+                        revenue_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue. For all apps under the publisher.'
+                  - type: array
+                    description: Unified response
+                    items:
+                      properties:
+                        publisher_id:
+                          type: string
+                          description: The unified publisher ID.
+                        publisher_name:
+                          type: string
+                          description: The unified publisher name.
+                        ios_publishers:
+                          type: array
+                          items:
+                            properties:
+                              publisher_id:
+                                type: number
+                                description: The iOS publisher ID.
+                              publisher_name:
+                                type: string
+                                description: The iOS publisher name.
+                              os:
+                                type: string
+                                description: The mobile operating system of the iOS publisher.
+                              url:
+                                type: string
+                                description: The URL to the publisher's store page.
+                        android_publishers:
+                          type: array
+                          items:
+                            properties:
+                              publisher_id:
+                                type: string
+                                description: The Android publisher ID.
+                              publisher_name:
+                                type: string
+                                description: The Android publisher name.
+                              os:
+                                type: string
+                                description: The mobile operating system of the Android publisher.
+                              url:
+                                type: string
+                                description: The URL to the publisher's store page.
+                        date:
+                          type: string
+                          format: date-time
+                          description: Metric observation date
+                        apps:
+                          type: array
+                          items:
+                            properties:
+                              app_id:
+                                type: string
+                                description: The unified app's ID.
+                              name:
+                                type: string
+                                description: The unified app's name.
+                              publisher_id:
+                                type: string
+                                description: The unified publisher ID.
+                              publisher_name:
+                                type: string
+                                description: The unified publisher name.
+                              apps:
+                                type: array
+                                items:
+                                  properties:
+                                    app_id:
+                                      type: string
+                                      description: The app's ID.
+                                    units_absolute:
+                                      type: number
+                                      description: Total number of downloads for the current time period.
+                                    units_delta:
+                                      type: number
+                                      description: Growth (difference) in number of downloads for the current time period compared to its prior period.
+                                    units_transformed_delta:
+                                      type: number
+                                      description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads.'
+                                    revenue_absolute:
+                                      type: number
+                                      description: Total revenue for the current time period.
+                                    revenue_delta:
+                                      type: number
+                                      description: Growth (difference) in revenue for the current time period compared to its prior period.
+                                    revenue_transformed_delta:
+                                      type: number
+                                      description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue.'
+                                    custom_tags:
+                                      type: object
+                                    canonical_country:
+                                      type: string
+                                      description: App's storefront country.
+                                    name:
+                                      type: string
+                                      description: The app's name.
+                                    publisher_name:
+                                      type: string
+                                      description: The app's publisher name.
+                                    publisher_id:
+                                      type: string
+                                      description: The app's publisher ID.
+                                    humanized_name:
+                                      type: string
+                                      description: The app's name with removed special characters (suffix).
+                                    icon_url:
+                                      type: string
+                                      description: URL to the app's logo.
+                                    os:
+                                      type: string
+                                      description: The mobile operating system of the app.
+                              units_absolute:
+                                type: number
+                                description: Total number of downloads for the current time period. For all iOS/Android apps under the unified app.
+                              units_delta:
+                                type: number
+                                description: Growth (difference) in number of downloads for the current time period compared to its prior period. For all iOS/Android apps under the unified app.
+                              revenue_absolute:
+                                type: number
+                                description: Total revenue for the current time period for the unified app. For all iOS/Android apps under the unified app.
+                              revenue_delta:
+                                type: number
+                                description: Growth (difference) in revenue for the current time period compared to its prior period. For all iOS/Android apps under the unified app.
+                              units_transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads. For all iOS/Android apps under the unified app.'
+                              revenue_transformed_delta:
+                                type: number
+                                description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue. For all iOS/Android apps under the unified app.'
+                        units_absolute:
+                          type: number
+                          description: Total number of downloads for the current time period. For all unified apps under the unified publisher.
+                        units_delta:
+                          type: number
+                          description: Growth (difference) in number of downloads for the current time period compared to its prior period (unified app). For all unified apps under the unified publisher.
+                        revenue_absolute:
+                          type: number
+                          description: Total revenue for the current time period for the unified app (unified app). For all unified apps under the unified publisher.
+                        revenue_delta:
+                          type: number
+                          description: Growth (difference) in revenue for the current time period compared to its prior period (unified app). For all unified apps under the unified publisher.
+                        units_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in number of downloads, divided by the prior same time period''s growth value in number of downloads (unified app). For all unified apps under the unified publisher.'
+                        revenue_transformed_delta:
+                          type: number
+                          description: 'Current time period''s growth value in revenue, divided by the prior same time period''s growth value in revenue. For all unified apps under the unified publisher.'
+              examples:
+                ios:
+                  summary: iOS Response
+                  value:
+                    - publisher_id: 298856275
+                      publisher_name: Microsoft Corporation
+                      date: '2021-01-04T00:00:00Z'
+                      units_absolute: 3179744
+                      units_delta: 1691177
+                      revenue_absolute: 2348517
+                      revenue_delta: 90412
+                      apps:
+                        - app_id: 1113153706
+                          publisher_id: 298856275
+                          units_absolute: 1693637
+                          units_delta: 1112164
+                          units_transformed_delta: 1.912666624245666
+                          revenue_absolute: 0
+                          revenue_delta: 0
+                          revenue_transformed_delta: 0
+                          custom_tags: {}
+                          canonical_country: US
+                          name: Microsoft Teams
+                          publisher_name: Microsoft Corporation
+                          humanized_name: Microsoft Teams
+                          icon_url: 'https://is4-ssl.mzstatic.com/image/thumb/Purple112/v4/cf/20/6b/cf206b85-e36e-6d5a-678a-b265e54f78c0/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/150x150bb.jpg'
+                          os: ios
+                      units_transformed_delta: 1.136110769619372
+                      revenue_transformed_delta: 0.04003888216004128
+                android:
+                  summary: Android Response
+                  value:
+                    - publisher_id: zoom.us
+                      publisher_name: zoom.us
+                      date: '2021-01-04T00:00:00Z'
+                      units_absolute: 5758411
+                      units_delta: 1532757
+                      revenue_absolute: 0
+                      revenue_delta: 0
+                      apps:
+                        - app_id: us.zoom.videomeetings
+                          publisher_id: zoom.us
+                          units_absolute: 5645695
+                          units_delta: 1477787
+                          units_transformed_delta: 0.3545632485170018
+                          revenue_absolute: 0
+                          revenue_delta: 0
+                          revenue_transformed_delta: 0
+                          custom_tags: {}
+                          canonical_country: US
+                          name: Zoom - One Platform to Connect
+                          publisher_name: zoom.us
+                          humanized_name: Zoom - One Platform
+                          icon_url: 'https://play-lh.googleusercontent.com/yZsmiNjmji3ZoOuLthoVvptLB9cZ0vCmitcky4OUXNcEFV3IEQkrBD2uu5kuWRF5_ERA=s150'
+                          os: android
+                      units_transformed_delta: 0.3627265743953481
+                      revenue_transformed_delta: 0
+                unified:
+                  summary: Unified Response
+                  value:
+                    - publisher_id: 5604947f8ac3501722010305
+                      publisher_name: Zoom
+                      ios_publishers:
+                        - publisher_id: 530594111
+                          publisher_name: 'Zoom Video Communications, Inc.'
+                          os: ios
+                          url: /ios/publisher/zoom-video-communications-inc/530594111
+                      android_publishers:
+                        - publisher_id: zoom.us
+                          publisher_name: zoom.us
+                          os: android
+                          url: /android/publisher/zoom-dot-us/zoom.us
+                      date: '2021-01-04T00:00:00Z'
+                      apps:
+                        - app_id: 5379e662830f782dbe0067fc
+                          name: Zoom - One Platform to Connect
+                          publisher_id: 5604947f8ac3501722010305
+                          publisher_name: Zoom
+                          apps:
+                            - app_id: us.zoom.videomeetings
+                              units_absolute: 5645695
+                              units_delta: 1477787
+                              units_transformed_delta: 0.3545632485170018
+                              revenue_absolute: 0
+                              revenue_delta: 0
+                              revenue_transformed_delta: 0
+                              custom_tags: null
+                              canonical_country: US
+                              name: Zoom - One Platform to Connect
+                              publisher_name: zoom.us
+                              publisher_id: zoom.us
+                              humanized_name: Zoom - One Platform
+                              icon_url: 'https://play-lh.googleusercontent.com/yZsmiNjmji3ZoOuLthoVvptLB9cZ0vCmitcky4OUXNcEFV3IEQkrBD2uu5kuWRF5_ERA=s150'
+                              os: android
+                            - app_id: 546505307
+                              units_absolute: 2846013
+                              units_delta: 1019596
+                              units_transformed_delta: 0.558249293562204
+                              revenue_absolute: 0
+                              revenue_delta: 0
+                              revenue_transformed_delta: 0
+                              custom_tags: {}
+                              canonical_country: US
+                              name: Zoom - One Platform to Connect
+                              publisher_name: 'Zoom Video Communications, Inc.'
+                              publisher_id: 530594111
+                              humanized_name: Zoom - One Platform
+                              icon_url: 'https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/bc/5d/ef/bc5def5b-0550-1e3f-f2f5-b2ac86778ee0/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/150x150bb.jpg'
+                              os: ios
+                          units_absolute: 8491708
+                          units_delta: 2497383
+                          revenue_absolute: 0
+                          revenue_delta: 0
+                          units_transformed_delta: 0.4166245573938684
+                          revenue_transformed_delta: 0
+                      units_absolute: 8714182
+                      units_delta: 2583390
+                      revenue_absolute: 0
+                      revenue_delta: 0
+                      units_transformed_delta: 0.4213794889795641
+                      revenue_transformed_delta: 0
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/422'
+  '/v1/{os}/store_summary':
+    get:
+      tags:
+        - 'APPS: Store Summary'
+      description: 'Retrieve aggregated download and revenue estimates of store categories by country and date. <br><br> <strong>Note:</strong> The latest day''s available Google Play estimates may change. More data becomes available to us a day later and we use this data to recalibrate the estimate for increased accuracy. <br><br> <strong>Note:</strong> All revenues are returned in cents.'
+      operationId: store_summary
+      summary: Fetches aggregated download and revenue estimates of store categories.
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: 'IDs of the Categories, <a target=''_blank'' href=''/api/docs/static/category_ids.json''>Category Ids</a> (use "categories" for multiples, separated by commas). Game categories are also supported, but the game_breakdown endpoint is recommended.'
+          in: query
+          name: categories
+          required: true
+          explode: false
+          example:
+            - '6012'
+          schema:
+            items:
+              default: ''
+              type: string
+            type: array
+        - description: 'Specify the countries you want download / revenue for, separated by commas: <a target=''_blank'' href=''/api/ios/sales_report_estimates/countries''>Itunes Country Codes</a> /  <a target=''_blank'' href=''/api/android/sales_report_estimates/countries''>Android Country Codes</a> (use "WW" for worldwide).'
+          in: query
+          name: countries
+          explode: false
+          schema:
+            items:
+              default: ''
+              type: string
+            type: array
+        - description: 'Aggregate estimates by granularity (use "daily", "weekly", "monthly", or "quarterly") defaults to "daily"'
+          in: query
+          name: date_granularity
+          required: true
+          schema:
+            default: daily
+            enum:
+              - daily
+              - weekly
+              - monthly
+              - quarterly
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format'
+          in: query
+          name: start_date
+          required: true
+          example: '2021-07-15'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2021-07-20'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: array
+                    description: iOS Response
+                    items:
+                      properties:
+                        ca:
+                          type: number
+                          description: iOS category ID.
+                        cc:
+                          type: string
+                          description: Country code.
+                        d:
+                          type: string
+                          format: date-time
+                          description: Metric observation date.
+                        au:
+                          type: number
+                          description: iPad downloads.
+                        ar:
+                          type: number
+                          description: iPad revenue.
+                        iu:
+                          type: number
+                          description: iPhone downloads.
+                        ir:
+                          type: number
+                          description: iPhone revenue.
+                  - type: array
+                    description: Android Response
+                    items:
+                      properties:
+                        ca:
+                          type: string
+                          description: Android category ID.
+                        cc:
+                          type: string
+                          description: Country code.
+                        d:
+                          type: string
+                          format: date-time
+                          description: Metric observation date.
+                        u:
+                          type: number
+                          description: Android downloads.
+                        r:
+                          type: number
+                          description: Android revenue.
+              examples:
+                ios:
+                  summary: iOS Response
+                  value:
+                    - ca: 6012
+                      cc: AE
+                      d: '2021-07-15T00:00:00Z'
+                      au: 1073
+                      ar: 21539
+                      iu: 15077
+                      ir: 1464385
+                android:
+                  summary: Android Response
+                  value:
+                    - ca: lifestyle
+                      cc: AE
+                      d: '2021-07-15T00:00:00Z'
+                      u: 21658
+                      r: 442186
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/422'
+  '/v1/{os}/ad_intel/top_apps':
+    get:
+      tags:
+        - 'ADVERTISING: Top Advertisers and Ad Publishers'
+      description: Fetches the current and prior Share of Voice for the top advertisers or publishers over a given time period.
+      operationId: top_apps
+      summary: Fetches the top advertisers or publishers over a given time period.
+      parameters:
+        - description: Operating System.
+          in: path
+          name: os
+          required: true
+          schema:
+            default: unified
+            enum:
+              - ios
+              - android
+              - unified
+            type: string
+        - description: Advertisers or publishers.
+          in: query
+          name: role
+          required: true
+          schema:
+            enum:
+              - advertisers
+              - publishers
+            type: string
+        - description: 'Start date for impression data, `YYYY-MM-DD` format.'
+          in: query
+          name: date
+          required: true
+          example: '2023-01-01'
+          schema:
+            type: string
+        - description: Time period to calculate Share of Voice.
+          in: query
+          name: period
+          required: true
+          schema:
+            default: month
+            enum:
+              - week
+              - month
+              - quarter
+            type: string
+        - description: Category ID to return results for (<a target='_blank' href='/api/docs/static/category_ids.json'>Category Ids</a>). Use iOS categories for unified.
+          in: query
+          name: category
+          required: true
+          schema:
+            type: string
+          examples:
+            ios/unified:
+              value: 6005
+              summary: Social Networking (iOS/Unified)
+            android:
+              value: social
+              summary: Social (Android)
+        - description: Country to return results for (<a target='_blank' href='/api/ios/ad_intel/countries.json'>Countries</a>).
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: Countries to filter results by. Available when role is advertisers. Accepts multiple country codes (<a target='_blank' href='/api/ios/ad_intel/countries.json'>Countries</a>). Takes priority over the country parameter when both are provided and role is advertisers.
+          in: query
+          name: countries
+          required: false
+          schema:
+            type: array
+            items:
+              type: string
+          example:
+            - US
+            - GB
+            - CA
+        - description: Network to return results for (<a target='_blank' href='/api/ios/ad_intel/networks.json'>Networks</a>).
+          in: query
+          name: network
+          required: true
+          example: Admob
+          schema:
+            type: string
+            enum:
+              - All Networks
+              - Adcolony
+              - Admob
+              - Applovin
+              - BidMachine
+              - Chartboost
+              - Digital Turbine
+              - Facebook
+              - InMobi
+              - Instagram
+              - Line
+              - Meta Audience Network
+              - Mintegral
+              - Moloco
+              - Mopub
+              - Pangle
+              - Pinterest
+              - Smaato
+              - Snapchat
+              - Supersonic
+              - Tapjoy
+              - TikTok
+              - Twitter
+              - Unity
+              - Verve
+              - Vungle
+              - Youtube
+              - Apple Search Ads
+        - description: |-
+            Filter by Custom fields filter. <br> <br>Use filter ID from <a target='_blank'
+              href='/api/docs/custom_fields_metadata#/CUSTOM%20FIELDS%3A%20Custom%20Fields%20Filter%20ID/create_custom_fields_filter'>
+              relevant endpoint
+            <a>.
+          in: query
+          name: custom_fields_filter_id
+          schema:
+            type: string
+        - description: 'Limits the number of apps returned, maximum of 250.'
+          in: query
+          name: limit
+          required: false
+          example: 25
+          schema:
+            enum:
+              - 25
+              - 100
+              - 250
+            type: integer
+            maximum: 250
+        - description: Page number. Total number of pages is returned in response field "pages".
+          in: query
+          name: page
+          required: false
+          schema:
+            default: 1
+            type: integer
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/422'
+  '/v1/{os}/ad_intel/top_apps/search':
+    get:
+      tags:
+        - 'ADVERTISING: Top Advertisers and Ad Publishers'
+      description: Fetches the rank of a top advertiser or top publisher in apps matching the provided filters.
+      operationId: top_apps_search
+      summary: Fetches the rank of an advertiser or publisher.
+      parameters:
+        - description: Operating System.
+          in: path
+          name: os
+          required: true
+          schema:
+            default: unified
+            enum:
+              - ios
+              - android
+              - unified
+            type: string
+        - description: App to search for.
+          in: query
+          name: app_id
+          required: true
+          examples:
+            unified:
+              value: 55c527c302ac64f9c0002b18
+              summary: string (Unified)
+            ios:
+              value: '284882215'
+              summary: integer (iOS)
+            android:
+              value: com.zhiliaoapp.musically
+              summary: string (Android)
+          schema:
+            type: string
+        - description: Search advertisers or publishers.
+          in: query
+          name: role
+          required: true
+          schema:
+            enum:
+              - advertisers
+              - publishers
+            type: string
+        - description: 'Date to search, `YYYY-MM-DD` format.'
+          in: query
+          name: date
+          required: true
+          example: '2023-01-01'
+          schema:
+            type: string
+        - description: Time period to search.
+          in: query
+          name: period
+          required: true
+          schema:
+            default: month
+            enum:
+              - week
+              - month
+              - quarter
+            type: string
+        - description: Category to search (<a target='_blank' href='/api/docs/static/category_ids.json'>Category Ids</a>). Use iOS categories for unified.
+          in: query
+          name: category
+          required: true
+          schema:
+            type: string
+          examples:
+            ios/unified:
+              value: 6005
+              summary: Social Networking (iOS/Unified)
+            android:
+              value: social
+              summary: Social (Android)
+        - description: Country to search (<a target='_blank' href='/api/ios/ad_intel/countries.json'>Countries</a>).
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: Network to search (<a target='_blank' href='/api/ios/ad_intel/networks.json'>Networks</a>).
+          in: query
+          name: network
+          required: true
+          example: Admob
+          schema:
+            type: string
+            enum:
+              - All Networks
+              - Adcolony
+              - Admob
+              - Applovin
+              - BidMachine
+              - Chartboost
+              - Digital Turbine
+              - Facebook
+              - InMobi
+              - Instagram
+              - Line
+              - Meta Audience Network
+              - Mintegral
+              - Mopub
+              - Pinterest
+              - Smaato
+              - Snapchat
+              - Supersonic
+              - Tapjoy
+              - TikTok
+              - Twitter
+              - Unity
+              - Verve
+              - Vungle
+              - Youtube
+              - Apple Search Ads
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/422'
+  '/v1/{os}/ad_intel/creatives/top':
+    get:
+      tags:
+        - 'ADVERTISING: Top Creatives'
+      description: Fetches the top creatives over a given time period.
+      operationId: top_creatives
+      summary: Fetches the top creatives over a given time period.
+      parameters:
+        - description: Operating System.
+          in: path
+          name: os
+          required: true
+          schema:
+            default: unified
+            enum:
+              - ios
+              - android
+              - unified
+            type: string
+        - description: 'Start date for creatives data, `YYYY-MM-DD` format.'
+          in: query
+          name: date
+          required: true
+          example: '2023-01-01'
+          schema:
+            type: string
+        - description: Time period for creatives data.
+          in: query
+          name: period
+          required: true
+          schema:
+            default: month
+            enum:
+              - week
+              - month
+              - quarter
+            type: string
+        - description: Category ID to return results for (<a target='_blank' href='/api/docs/static/category_ids.json'>Category Ids</a>). Use iOS categories for unified.
+          in: query
+          name: category
+          required: true
+          schema:
+            type: string
+          examples:
+            ios/unified:
+              value: 6005
+              summary: Social Networking (iOS/Unified)
+            android:
+              value: social
+              summary: Social (Android)
+        - description: Country to return results for (<a target='_blank' href='/api/ios/ad_intel/countries.json'>Countries</a>).
+          in: query
+          name: country
+          required: true
+          schema:
+            default: US
+            type: string
+        - description: 'Network to return results for. List of networks: (<a target=''_blank'' href=''/api/ios/ad_intel/creative_networks.json''>ios networks</a>), (<a target=''_blank'' href=''/api/android/ad_intel/creative_networks.json''>android networks</a>), (<a target=''_blank'' href=''/api/unified/ad_intel/creative_networks.json''>unified networks</a>).'
+          in: query
+          name: network
+          required: true
+          example: Youtube
+          schema:
+            type: string
+            enum:
+              - Adcolony
+              - Admob
+              - Applovin
+              - BidMachine
+              - Chartboost
+              - Digital Turbine
+              - Facebook
+              - InMobi
+              - Instagram
+              - Line
+              - Meta Audience Network
+              - Mintegral
+              - Moloco
+              - Mopub
+              - Pangle
+              - Pinterest
+              - Smaato
+              - Snapchat
+              - Supersonic
+              - Tapjoy
+              - TikTok
+              - Twitter
+              - Unity
+              - Verve
+              - Vungle
+              - Youtube
+        - description: 'Ad types to include, separated by commas.'
+          in: query
+          name: ad_types
+          required: true
+          explode: false
+          example:
+            - video
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - image
+                - image-banner
+                - image-interstitial
+                - image-other
+                - banner
+                - full_screen
+                - video
+                - video-rewarded
+                - video-interstitial
+                - video-other
+                - playable
+                - interactive-playable
+                - interactive-playable-rewarded
+                - interactive-playable-other
+        - description: 'Limits the number of apps returned, maximum of 250.'
+          in: query
+          name: limit
+          required: false
+          example: 25
+          schema:
+            enum:
+              - 25
+              - 100
+              - 250
+            type: integer
+            maximum: 250
+        - description: Page number. Total number of pages can be calculated by dividing "count" from response by limit size.
+          in: query
+          name: page
+          required: false
+          schema:
+            default: 1
+            type: integer
+        - description: 'Ad placement(s) to include, separated by commas.'
+          in: query
+          name: placements
+          required: false
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - ad_on_reel
+                - feed
+                - marketplace
+                - player
+                - reel
+                - search
+                - story
+                - other
+        - description: 'The video durations to include, separated by commas. To filter video durations using ranges, one can specify the start and end points of each range in seconds, separated by a colon. For instance, `10:30` would filter videos longer than 10 seconds but 30 seconds or shorter. Multiple ranges can be applied simultaneously, with the logic that a video''s duration only needs to meet the criteria of one range to be included. Open-ended ranges are also possible, where only one end of the range is specified, such as `:3` to include videos up to 3 seconds long, or `60:` for videos longer than 60 seconds.'
+          in: query
+          name: video_durations
+          required: false
+          explode: false
+          schema:
+            type: array
+            items:
+              default: ''
+              type: string
+        - description: 'Specify the aspect ratios to include, separated by commas. This applies to all creative ad types except banners; for banners this parameter is ignored. The parameter can accept one or more values from a predefined set of common aspect ratios available. Aspect ratio sets are used as buckets, grouping creatives that might not fit the ratio fully, as we assume a small margin of error while computing the exact width and height'
+          in: query
+          name: aspect_ratios
+          required: false
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - '9:16'
+                - '4:5'
+                - '1:1'
+                - '1.91:1'
+                - '16:9'
+                - '2:3'
+                - other
+        - description: 'Specify the banner dimensions to include, separated by commas. This applies to banner creatives only; this parameter will be ignored for the creatives of other ad types. The parameter can accept one or more values from a predefined set.'
+          in: query
+          name: banner_dimensions
+          required: false
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - 970x250
+                - 728x90
+                - 350x110
+                - 320x50
+                - other
+        - description: 'New creative flag. If the parameter''s value is ''true'', the endpoint will return new creatives only. The new creatives are creatives which are first seen in requested date range.'
+          in: query
+          name: new_creative
+          required: false
+          schema:
+            default: false
+            type: boolean
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          description: <strong>Invalid Query Parameter.</strong> <br> Please check that all required params are present and valid.
+          content:
+            application/json:
+              schema:
+                properties:
+                  errors:
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: 'Required parameter: name is missing'
+                        parameter:
+                          type: string
+                          example: name
+                        code:
+                          type: string
+                          example: invalid
+                      required:
+                        - title
+                    type: array
+                required:
+                  - errors
+                type: object
+  '/v1/{os}/games_breakdown':
+    get:
+      tags:
+        - 'GAMES: Game Summary'
+      summary: Fetches aggregated download and revenue estimates of game categories.
+      description: 'Retrieve aggregated download and revenue estimates of game categories by country and date. <a target=''blank'' href=''/api/docs/static/games_breakdown_key.json''>Game Summary Response Key</a> <br><br> <strong>Note:</strong> The latest day''s available Google Play estimates may change. More data becomes available to us a day later and we use this data to recalibrate the estimate for increased accuracy. <br><br> <strong>Note:</strong> All revenues are returned in cents.'
+      operationId: games_breakdown
+      parameters:
+        - description: Operating System
+          in: path
+          name: os
+          required: true
+          schema:
+            default: ios
+            enum:
+              - ios
+              - android
+            type: string
+        - description: 'IDs of Game Categories, <a target=''_blank'' href=''/api/docs/static/category_ids.json''>Category Ids</a> (use "categories" for multiples, separated by commas). Play and the App Store use completely different game category IDs.'
+          in: query
+          name: categories
+          required: true
+          explode: false
+          example:
+            - '7001'
+          schema:
+            items:
+              default: ''
+              type: string
+            type: array
+        - description: 'Specify the countries you want download / revenue for, separated by commas: <a target=''_blank'' href=''/api/ios/sales_report_estimates/countries''>Itunes Country Codes</a> /  <a target=''_blank'' href=''/api/android/sales_report_estimates/countries''>Android Country Codes</a> (use "WW" for worldwide).'
+          in: query
+          name: countries
+          explode: false
+          schema:
+            items:
+              default: ''
+              type: string
+            type: array
+        - description: 'Aggregate estimates by granularity (use "daily", "weekly", "monthly", or "quarterly") defaults to "daily"'
+          in: query
+          name: date_granularity
+          required: true
+          schema:
+            default: daily
+            enum:
+              - daily
+              - weekly
+              - monthly
+              - quarterly
+            type: string
+        - description: 'Start Date, `YYYY-MM-DD` Format. Data before 2016-01-01 is not supported.'
+          in: query
+          name: start_date
+          required: true
+          example: '2021-01-01'
+          schema:
+            type: string
+            format: date
+        - description: 'End Date, `YYYY-MM-DD` Format'
+          in: query
+          name: end_date
+          required: true
+          example: '2021-01-07'
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: <strong>Success.</strong>
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/paths/~1v1~1%7Bos%7D~1store_summary/get/responses/200/content/application~1json/schema/oneOf/0'
+                  - $ref: '#/paths/~1v1~1%7Bos%7D~1store_summary/get/responses/200/content/application~1json/schema/oneOf/1'
+              examples:
+                ios:
+                  summary: iOS Response
+                  value:
+                    - ca: 7001
+                      cc: AE
+                      d: '2021-01-01T00:00:00Z'
+                      au: 20894
+                      ar: 2473155
+                      iu: 29534
+                      ir: 11238229
+                android:
+                  summary: Android Response
+                  value:
+                    - ca: game_action
+                      cc: AE
+                      d: '2021-01-01T00:00:00Z'
+                      u: 46684
+                      r: 9878620
+        '401':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/401'
+        '403':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/403'
+        '422':
+          $ref: '#/paths/~1v1~1%7Bos%7D~1ranking/get/responses/422'
+components:
+  securitySchemes:
+    auth_token:
+      type: apiKey
+      description: 'API authentication token. You can generate yours on your <a target="_blank" href="/users/edit/api-settings">account profile (API Settings tab)</a>.'
+      name: auth_token
+      in: query
+tags:
+  - name: 'APPS: Top Charts'
+  - name: 'APPS: Top Apps by Downloads and Revenue'
+  - name: 'APPS: Top Apps by Active Users'
+  - name: 'APPS: Top App Publishers'
+  - name: 'APPS: Store Summary'
+  - name: 'ADVERTISING: Top Advertisers and Ad Publishers'
+  - name: 'ADVERTISING: Top Creatives'
+  - name: 'GAMES: Game Summary'

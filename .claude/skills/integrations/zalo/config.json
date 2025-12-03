@@ -1,0 +1,31 @@
+{
+  "name": "zalo",
+  "description": "Zalo messaging for Vietnam market (74M+ users)",
+  "type": "custom",
+  "status": "planned",
+  "command": "node",
+  "args": ["${SKILL_PATH}/mcp-server/dist/index.js"],
+  "env": {
+    "ZALO_APP_ID": "${ZALO_APP_ID}",
+    "ZALO_APP_SECRET": "${ZALO_APP_SECRET}",
+    "ZALO_OA_ACCESS_TOKEN": "${ZALO_OA_ACCESS_TOKEN}"
+  },
+  "setup": {
+    "requirements": [
+      "Zalo Official Account (OA)",
+      "Zalo Developer App",
+      "ZNS (Zalo Notification Service) access"
+    ],
+    "market": "Vietnam (Top 10 messaging app globally)",
+    "note": "No official MCP package - requires custom implementation"
+  },
+  "capabilities": {
+    "tools": 0,
+    "planned": ["send_zns", "send_message", "get_followers", "broadcast"],
+    "categories": ["messaging", "zns", "oa-management"]
+  },
+  "source": {
+    "api_docs": "https://developers.zalo.me/docs",
+    "zns_docs": "https://developers.zalo.me/docs/zalo-notification-service"
+  }
+}
