@@ -1,13 +1,13 @@
-# AgentKits Engineer CLI
+# AgentKits Marketing CLI
 
-**Multi-IDE AI Development Framework Installer**
+**Multi-IDE AI Marketing Framework Installer**
 
-AgentKits Engineer supports 17+ AI IDEs including Claude Code, Cursor, Windsurf, GitHub Copilot, Gemini CLI, and more.
+AgentKits Marketing supports 17+ AI IDEs including Claude Code, Cursor, Windsurf, GitHub Copilot, Gemini CLI, and more.
 
 ## Quick Start
 
 ```bash
-npx agentkits-engineer install
+npx @aitytech/agentkits-marketing install
 ```
 
 Follow the interactive prompts to select your AI tools and modules.
@@ -40,19 +40,19 @@ Follow the interactive prompts to select your AI tools and modules.
 | Google Antigravity | Google's AI environment | `.agent/workflows` |
 | Crush | AI development assistant | `.crush/commands` |
 | iFlow | AI workflow automation | `.iflow/commands` |
-| Kiro CLI | Kiro command-line interface | `.kiro` |
+| Kiro CLI | AWS agentic IDE | `.kiro` |
 
 ## Available Modules
 
 | Module | Required | Description |
 |--------|----------|-------------|
-| **Core** | Yes | Essential agents, skills, and commands |
-| **GDJ** | No | Guided Developer Journeys (60+ templates, 19 guides) |
-| **Quality** | No | Code review, TDD, adversarial review |
-| **Security** | No | Security review, OWASP, authentication |
-| **Development** | No | Architect, debugger, refactorer specialists |
-| **Automation** | No | Docs search, repomix, automation tools |
-| **Training** | No | Interactive training modules |
+| **Core** | Yes | 18 marketing agents, essential skills, base commands |
+| **SEO** | No | Keyword research, competitor analysis, content optimization |
+| **CRO** | No | Page, form, signup, popup, onboarding optimization |
+| **Content** | No | Blog, social, landing pages, copywriting, editing |
+| **Email** | No | Welcome, nurture, re-engagement sequences |
+| **Analytics** | No | Campaign ROI, funnel analysis, attribution |
+| **Training** | No | 23 interactive modules, pattern library |
 
 ## Commands
 
@@ -60,36 +60,36 @@ Follow the interactive prompts to select your AI tools and modules.
 
 ```bash
 # Interactive installation
-npx agentkits-engineer install
+npx @aitytech/agentkits-marketing install
 
 # Skip prompts with defaults
-npx agentkits-engineer install --yes
+npx @aitytech/agentkits-marketing install --yes
 
 # Specify IDE
-npx agentkits-engineer install --ide cursor
+npx @aitytech/agentkits-marketing install --ide cursor
 
 # Specify multiple modules
-npx agentkits-engineer install --modules "core,gdj,quality,security"
+npx @aitytech/agentkits-marketing install --modules "core,seo,cro,content"
 
 # Specify installation path
-npx agentkits-engineer install --path /path/to/project
+npx @aitytech/agentkits-marketing install --path /path/to/project
 ```
 
 ### List
 
 ```bash
 # List supported IDEs
-npx agentkits-engineer list-ides
+npx @aitytech/agentkits-marketing list-ides
 
 # List available modules
-npx agentkits-engineer list-modules
+npx @aitytech/agentkits-marketing list-modules
 ```
 
 ### Update
 
 ```bash
 # Update existing installation
-npx agentkits-engineer update
+npx @aitytech/agentkits-marketing update
 ```
 
 ## Installation Structure
@@ -98,29 +98,63 @@ After installation, your project will have:
 
 ```
 your-project/
-├── .claude/                    # AgentKits core files
-│   ├── agents/                 # AI agent definitions
-│   ├── skills/                 # Skill modules
-│   ├── commands/               # Command definitions
-│   ├── memory/                 # CPS memory files
-│   ├── journeys/               # GDJ journey guides
-│   └── workflows/              # Workflow definitions
+├── .claude/                    # AgentKits Marketing core files
+│   ├── agents/                 # 18 marketing AI agents
+│   │   ├── core/               # Core marketing agents
+│   │   ├── supporting/         # Supporting agents
+│   │   └── reviewers/          # Reviewer agents
+│   ├── skills/                 # 40+ marketing skills
+│   ├── commands/               # 76 slash commands
+│   ├── memory/                 # Memory markdown files
+│   └── workflows/              # Marketing workflows
+│
+├── docs/                       # Marketing documentation
+│   ├── usage-guide.md
+│   ├── brand-guidelines.md
+│   ├── campaign-playbooks.md
+│   └── ...
 │
 ├── .cursor/commands/           # Cursor launchers (if selected)
-│   ├── agentkits-pie-init.md
-│   ├── agentkits-gdj.md
+│   ├── agentkits-campaign-plan.md
+│   ├── agentkits-content-blog.md
 │   └── ...
 │
 ├── .windsurf/workflows/        # Windsurf launchers (if selected)
-│   ├── agentkits-pie-init.md
+│   ├── agentkits-campaign-plan.md
 │   └── ...
 │
 ├── .github/agents/             # GitHub Copilot agents (if selected)
-│   ├── pie-init.agent.md
+│   ├── campaign-plan.agent.md
 │   └── ...
 │
-└── _agentkits-output/          # Generated artifacts
+└── _agentkits-output/          # Generated marketing assets
 ```
+
+## Marketing Agents
+
+### Core Marketing Agents
+- `attraction-specialist` - Lead generation, SEO, TOFU
+- `lead-qualifier` - Intent detection, lead scoring
+- `email-wizard` - Email campaigns, sequences
+- `sales-enabler` - Sales collateral, case studies
+- `continuity-specialist` - Retention, engagement
+- `upsell-maximizer` - Revenue expansion
+
+### Supporting Agents
+- `researcher` - Market research, competitive analysis
+- `brainstormer` - Campaign ideation
+- `planner` - Campaign planning
+- `project-manager` - Coordination
+- `copywriter` - Content creation
+- `docs-manager` - Documentation
+
+### Reviewer Agents
+- `brand-voice-guardian` - Brand consistency
+- `conversion-optimizer` - CRO review
+- `seo-specialist` - SEO optimization
+- `manager-maria` - B2B perspective
+- `solo-steve` - Solopreneur perspective
+- `startup-sam` - Startup perspective
 
 ## Architecture
 
@@ -153,39 +187,17 @@ Instead of duplicating agents for each IDE, AgentKits uses lightweight launchers
 
 ```markdown
 ---
-name: 'pie-init'
-description: 'Initialize project with PIE analysis'
+name: 'campaign-plan'
+description: 'Create comprehensive marketing campaign plan'
 ---
 
-LOAD the FULL @{project-root}/.claude/commands/pie-init.md
+LOAD the FULL @{project-root}/.claude/commands/campaign/plan.md
 READ its contents and follow instructions exactly!
-```
-
-## AgentKits PAID Architecture
-
-- **PIE™** (Project Intelligence Engine) - Auto-detect tech stacks
-- **CPS™** (Context Persistence System) - Memory that survives sessions
-- **GDJ™** (Guided Developer Journeys) - Step-by-step implementation guides
-
-## Development
-
-### Local Development
-
-```bash
-cd tools/cli
-npm install
-npm run install-local
-```
-
-### Testing
-
-```bash
-npm test
 ```
 
 ## Cross-IDE Compatibility
 
-AgentKits agents, commands, and skills work across all supported IDEs:
+AgentKits Marketing agents, commands, and skills work across all supported IDEs:
 
 | IDE | Experience | Capabilities |
 |-----|------------|--------------|
@@ -196,8 +208,6 @@ AgentKits agents, commands, and skills work across all supported IDEs:
 | Gemini CLI | Good | Terminal |
 | Other IDEs | Moderate | Guidance mode |
 
-See the [main README](../../README.md#-cross-platform-compatibility) for details.
-
 ### Adaptive Behavior
 
 All AgentKits components include `ide_compatibility` metadata that enables:
@@ -206,14 +216,30 @@ All AgentKits components include `ide_compatibility` metadata that enables:
 - Universal checkpoint patterns
 - File-based state management
 
+## Development
+
+### Local Development
+
+```bash
+cd packages/cli
+npm install
+npm run install-local
+```
+
+### Testing
+
+```bash
+npm test
+```
+
 ## License
 
 MIT License - see [LICENSE](../../LICENSE) for details.
 
 ---
 
-**AgentKits Engineer by AityTech**
+**AgentKits Marketing by AityTech**
 
 - Website: https://agentkits.net
-- GitHub: https://github.com/agentkits/agentkits-engineer
-- Support: https://github.com/agentkits/agentkits-engineer/issues
+- GitHub: https://github.com/aitytech/agentkits-marketing
+- Support: https://github.com/aitytech/agentkits-marketing/issues

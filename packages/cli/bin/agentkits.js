@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * AgentKits Engineer CLI
+ * AgentKits Marketing CLI
  *
- * Main entry point for the AgentKits installer
+ * Main entry point for the AgentKits Marketing installer
  * Supports multiple AI IDEs: Claude Code, Cursor, Windsurf, GitHub Copilot, etc.
  *
  * Usage:
- *   npx agentkits-engineer install
- *   npx agentkits-engineer --help
+ *   npx @aitytech/agentkits-marketing install
+ *   npx @aitytech/agentkits-marketing --help
  *
  * @author AityTech
  * @license MIT
@@ -30,54 +30,54 @@ const program = new Command();
 
 // Big ASCII Art Logo
 const asciiLogo = `
-${chalk.bold.cyan('╔════════════════════════════════════════════════════════════════════════════════╗')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.bold.white('█████╗  ██████╗ ███████╗███╗   ██╗████████╗██╗  ██╗██╗████████╗███████╗')}      ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.bold.white('██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██║ ██╔╝██║╚══██╔══╝██╔════╝')}      ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.bold.white('███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   █████╔╝ ██║   ██║   ███████╗')}      ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.bold.white('██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██╔═██╗ ██║   ██║   ╚════██║')}      ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.bold.white('██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ██║  ██╗██║   ██║   ███████║')}      ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.bold.white('╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝')}      ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}`;
+${chalk.bold.magenta('╔════════════════════════════════════════════════════════════════════════════════╗')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.bold.white('█████╗  ██████╗ ███████╗███╗   ██╗████████╗██╗  ██╗██╗████████╗███████╗')}      ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.bold.white('██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██║ ██╔╝██║╚══██╔══╝██╔════╝')}      ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.bold.white('███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   █████╔╝ ██║   ██║   ███████╗')}      ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.bold.white('██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██╔═██╗ ██║   ██║   ╚════██║')}      ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.bold.white('██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ██║  ██╗██║   ██║   ███████║')}      ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.bold.white('╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝')}      ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}`;
 
 // ASCII Art Banner for install
 const banner = `
 ${asciiLogo}
-${chalk.bold.cyan('║')}   ${chalk.bold.yellow('Engineer')} - ${chalk.dim('Enterprise AI Development Kit')}                                  ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.bold.white('28')} Agents  ${chalk.bold.white('100+')} Skills  ${chalk.bold.white('62')} Commands  ${chalk.bold.white('150+')} References  ${chalk.bold.white('22')} Lessons      ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.yellow('⚡ PIE™')} Project Intelligence    ${chalk.green('💾 CPS™')} SQLite+HNSW Memory          ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.magenta('🗺️  GDJ™')} Guided Journeys         ${chalk.cyan('🌐 5+')} Platforms Supported          ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.dim('Not prompts - real enterprise knowledge. OWASP, NIST, Clean Architecture.')}    ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.dim('by AityTech')}                                                               ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('╚════════════════════════════════════════════════════════════════════════════════╝')}
+${chalk.bold.magenta('║')}   ${chalk.bold.yellow('Marketing')} - ${chalk.dim('Enterprise AI Marketing Kit')}                                  ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.bold.white('18')} Agents  ${chalk.bold.white('40+')} Skills  ${chalk.bold.white('76')} Commands  ${chalk.bold.white('128')} Workflows  ${chalk.bold.white('23')} Lessons       ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.yellow('📊 SEO')} Content & Keywords      ${chalk.green('📧 Email')} Sequences & Campaigns       ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.cyan('📈 CRO')} Conversion Optimization  ${chalk.magenta('🎯 Ads')} Paid Advertising             ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.dim('Not prompts - real marketing expertise. Funnel strategy, psychology, CRO.')}   ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.dim('by AityTech')}                                                               ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('╚════════════════════════════════════════════════════════════════════════════════╝')}
 `;
 
 // Custom version output
 const versionOutput = `
 ${asciiLogo}
-${chalk.bold.cyan('║')}   ${chalk.bold.yellow('Engineer')} ${chalk.bgGreen.black.bold(` v${VERSION} `)}                                                       ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.yellow('PIE™')} + ${chalk.green('CPS™')} + ${chalk.magenta('GDJ™')} Architecture                                            ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.gray('Website:')}  ${chalk.white('https://agentkits.net')}                                            ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.gray('GitHub:')}   ${chalk.white('https://github.com/agentkits/agentkits-engineer')}                 ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.gray('Author:')}   ${chalk.white('AityTech')}                                                         ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}   ${chalk.gray('License:')}  ${chalk.white('MIT')}                                                              ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('║')}                                                                                ${chalk.bold.cyan('║')}
-${chalk.bold.cyan('╚════════════════════════════════════════════════════════════════════════════════╝')}
+${chalk.bold.magenta('║')}   ${chalk.bold.yellow('Marketing')} ${chalk.bgGreen.black.bold(` v${VERSION} `)}                                                      ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.yellow('SEO')} + ${chalk.green('CRO')} + ${chalk.cyan('Content')} + ${chalk.magenta('Analytics')} Architecture                              ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.gray('Website:')}  ${chalk.white('https://agentkits.net')}                                            ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.gray('GitHub:')}   ${chalk.white('https://github.com/aitytech/agentkits-marketing')}               ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.gray('Author:')}   ${chalk.white('AityTech')}                                                         ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}   ${chalk.gray('License:')}  ${chalk.white('MIT')}                                                              ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('║')}                                                                                ${chalk.bold.magenta('║')}
+${chalk.bold.magenta('╚════════════════════════════════════════════════════════════════════════════════╝')}
 `;
 
 program
-  .name('agentkits-engineer')
-  .description('AgentKits Engineer - Multi-IDE AI Development Framework')
+  .name('agentkits-marketing')
+  .description('AgentKits Marketing - Multi-IDE AI Marketing Framework')
   .version(versionOutput, '-v, --version', 'Display version information');
 
 program
   .command('install')
-  .description('Install AgentKits to your project with 28 agents, 100+ skills, 62 commands')
+  .description('Install AgentKits Marketing to your project with 18 agents, 40+ skills, 76 commands')
   .option('-p, --path <path>', 'Installation path (default: current directory)')
   .option('-y, --yes', 'Skip prompts and use defaults')
   .option('--ide <ide>', 'Specify IDE (claude-code, cursor, windsurf, github-copilot, cline)')
@@ -124,7 +124,7 @@ program
 
 program
   .command('update')
-  .description('Update existing AgentKits installation with new commands, agents, skills')
+  .description('Update existing AgentKits Marketing installation with new commands, agents, skills')
   .option('-p, --path <path>', 'Project path (default: current directory)')
   .option('-y, --yes', 'Auto-accept all updates without prompting')
   .option('--list', 'List available updates without applying')
@@ -145,14 +145,13 @@ program
           { key: 'commands', icon: '📝', label: 'Commands' },
           { key: 'agents', icon: '🤖', label: 'Agents' },
           { key: 'skills', icon: '⚡', label: 'Skills' },
-          { key: 'journeys', icon: '🗺️', label: 'Journeys' },
           { key: 'workflows', icon: '🔄', label: 'Workflows' },
         ];
 
         let hasUpdates = false;
         for (const category of categories) {
           const data = analysis[category.key];
-          if (data.new.length > 0 || data.updated.length > 0) {
+          if (data && (data.new.length > 0 || data.updated.length > 0)) {
             hasUpdates = true;
             console.log(chalk.bold(`${category.icon} ${category.label}:`));
             data.new.forEach(f => console.log(chalk.green(`  + NEW: ${f.name}`)));
@@ -164,7 +163,7 @@ program
         if (!hasUpdates) {
           console.log(chalk.green('✓ Your installation is up to date!\n'));
         } else {
-          console.log(chalk.dim('Run "npx agentkits-engineer update" to apply updates.\n'));
+          console.log(chalk.dim('Run "npx @aitytech/agentkits-marketing update" to apply updates.\n'));
         }
       } else {
         await updater.run(options);
@@ -203,106 +202,106 @@ program
 
 program
   .command('list-modules')
-  .description('List available AgentKits modules')
+  .description('List available AgentKits Marketing modules')
   .action(async () => {
     console.log('');
-    console.log(chalk.bold.cyan('╔════════════════════════════════════════════════════════════════════════════════╗'));
-    console.log(chalk.bold.cyan('║                                                                                ║'));
-    console.log(chalk.bold.cyan('║   ') + chalk.bold.white('█████╗  ██████╗ ███████╗███╗   ██╗████████╗██╗  ██╗██╗████████╗███████╗') + chalk.bold.cyan('      ║'));
-    console.log(chalk.bold.cyan('║   ') + chalk.bold.white('██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██║ ██╔╝██║╚══██╔══╝██╔════╝') + chalk.bold.cyan('      ║'));
-    console.log(chalk.bold.cyan('║   ') + chalk.bold.white('███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   █████╔╝ ██║   ██║   ███████╗') + chalk.bold.cyan('      ║'));
-    console.log(chalk.bold.cyan('║   ') + chalk.bold.white('██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██╔═██╗ ██║   ██║   ╚════██║') + chalk.bold.cyan('      ║'));
-    console.log(chalk.bold.cyan('║   ') + chalk.bold.white('██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ██║  ██╗██║   ██║   ███████║') + chalk.bold.cyan('      ║'));
-    console.log(chalk.bold.cyan('║   ') + chalk.bold.white('╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝') + chalk.bold.cyan('      ║'));
-    console.log(chalk.bold.cyan('║                                                                                ║'));
-    console.log(chalk.bold.cyan('║   ') + chalk.bold.yellow('Available Modules - All Included by Default') + chalk.bold.cyan('                               ║'));
-    console.log(chalk.bold.cyan('║                                                                                ║'));
-    console.log(chalk.bold.cyan('╚════════════════════════════════════════════════════════════════════════════════╝'));
+    console.log(chalk.bold.magenta('╔════════════════════════════════════════════════════════════════════════════════╗'));
+    console.log(chalk.bold.magenta('║                                                                                ║'));
+    console.log(chalk.bold.magenta('║   ') + chalk.bold.white('█████╗  ██████╗ ███████╗███╗   ██╗████████╗██╗  ██╗██╗████████╗███████╗') + chalk.bold.magenta('      ║'));
+    console.log(chalk.bold.magenta('║   ') + chalk.bold.white('██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██║ ██╔╝██║╚══██╔══╝██╔════╝') + chalk.bold.magenta('      ║'));
+    console.log(chalk.bold.magenta('║   ') + chalk.bold.white('███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   █████╔╝ ██║   ██║   ███████╗') + chalk.bold.magenta('      ║'));
+    console.log(chalk.bold.magenta('║   ') + chalk.bold.white('██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██╔═██╗ ██║   ██║   ╚════██║') + chalk.bold.magenta('      ║'));
+    console.log(chalk.bold.magenta('║   ') + chalk.bold.white('██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ██║  ██╗██║   ██║   ███████║') + chalk.bold.magenta('      ║'));
+    console.log(chalk.bold.magenta('║   ') + chalk.bold.white('╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝') + chalk.bold.magenta('      ║'));
+    console.log(chalk.bold.magenta('║                                                                                ║'));
+    console.log(chalk.bold.magenta('║   ') + chalk.bold.yellow('Marketing Modules - All Included by Default') + chalk.bold.magenta('                               ║'));
+    console.log(chalk.bold.magenta('║                                                                                ║'));
+    console.log(chalk.bold.magenta('╚════════════════════════════════════════════════════════════════════════════════╝'));
     console.log('');
 
     const modules = [
       {
         name: 'CORE',
-        fullName: 'AgentKits Core',
-        brand: 'PIE™ + CPS™',
+        fullName: 'Marketing Core',
+        brand: 'Essential Marketing',
         icon: '⚡',
         required: true,
         features: [
-          'Project Intelligence Engine (PIE™) - Auto-detect tech stacks',
-          'Context Persistence System (CPS™) - Memory that survives sessions',
-          'Essential agents, skills, and base commands',
+          'Core marketing agents (18 specialists)',
+          'Campaign planning and content workflows',
+          'Essential skills and base commands',
         ],
       },
       {
-        name: 'GDJ™',
-        fullName: 'AgentKits GDJ™',
-        brand: 'Guided Developer Journeys',
-        icon: '🗺️',
+        name: 'SEO',
+        fullName: 'SEO Mastery',
+        brand: 'Search Optimization',
+        icon: '📊',
         required: false,
         features: [
-          '60+ implementation templates for common features',
-          '19 step-by-step journey guides',
-          'Multi-methodology support (TDD, BDD, DDD)',
+          'Keyword research and competitor analysis',
+          'Programmatic SEO and schema markup',
+          'Content optimization workflows',
         ],
       },
       {
-        name: 'QUALITY',
-        fullName: 'AgentKits Quality',
-        brand: 'Code Excellence',
-        icon: '✨',
+        name: 'CRO',
+        fullName: 'Conversion Optimization',
+        brand: 'CRO Excellence',
+        icon: '📈',
         required: false,
         features: [
-          'Code review agents with best practices',
-          'TDD workflows and test framework integration',
-          'Adversarial review for edge cases',
+          'Page, form, and signup optimization',
+          'Popup and onboarding CRO',
+          'A/B testing frameworks',
         ],
       },
       {
-        name: 'SECURITY',
-        fullName: 'AgentKits Security',
-        brand: 'Security First',
-        icon: '🔒',
+        name: 'CONTENT',
+        fullName: 'Content Marketing',
+        brand: 'Content Engine',
+        icon: '✍️',
         required: false,
         features: [
-          'Security review agents',
-          'OWASP Top 10 vulnerability scanning',
-          'Authentication patterns and best practices',
+          'Blog, social, and email content creation',
+          'Copywriting and editing workflows',
+          'Brand voice consistency',
         ],
       },
       {
-        name: 'DEVELOPMENT',
-        fullName: 'AgentKits Development',
-        brand: 'Dev Specialists',
-        icon: '🛠️',
+        name: 'EMAIL',
+        fullName: 'Email Marketing',
+        brand: 'Email Automation',
+        icon: '📧',
         required: false,
         features: [
-          'Architect agent for system design',
-          'Debugger specialist for troubleshooting',
-          'Refactoring expert and build error resolver',
+          'Welcome, nurture, and re-engagement sequences',
+          'Email wizard and automation',
+          'Deliverability optimization',
         ],
       },
       {
-        name: 'AUTOMATION',
-        fullName: 'AgentKits Automation',
-        brand: 'Workflow Tools',
-        icon: '🤖',
+        name: 'ANALYTICS',
+        fullName: 'Analytics & Reporting',
+        brand: 'Data-Driven',
+        icon: '📉',
         required: false,
         features: [
-          'Documentation search and generation',
-          'Repomix integration for codebase analysis',
-          'Workflow automation and CI/CD helpers',
+          'Campaign ROI and funnel analysis',
+          'Weekly and monthly reports',
+          'Attribution modeling',
         ],
       },
       {
         name: 'TRAINING',
-        fullName: 'AgentKits Training',
+        fullName: 'Marketing Training',
         brand: 'Skill Building',
         icon: '📚',
         required: false,
         features: [
-          'Interactive training modules',
-          'Skill-building exercises',
-          'Best practices tutorials',
+          '23 interactive training modules',
+          'Pattern library and best practices',
+          '10x Marketer Framework',
         ],
       },
     ];
@@ -312,27 +311,27 @@ program
         ? chalk.bgRed.white.bold(' REQUIRED ')
         : chalk.bgGreen.white.bold(' INCLUDED ');
 
-      console.log(chalk.cyan('┌─────────────────────────────────────────────────────────────────────────────┐'));
-      console.log(chalk.cyan('│ ') + mod.icon + '  ' + chalk.bold.white(mod.fullName) + '  ' + chalk.yellow(`(${mod.brand})`) + '  ' + badge);
-      console.log(chalk.cyan('│'));
+      console.log(chalk.magenta('┌─────────────────────────────────────────────────────────────────────────────┐'));
+      console.log(chalk.magenta('│ ') + mod.icon + '  ' + chalk.bold.white(mod.fullName) + '  ' + chalk.yellow(`(${mod.brand})`) + '  ' + badge);
+      console.log(chalk.magenta('│'));
 
       mod.features.forEach(feature => {
-        console.log(chalk.cyan('│') + chalk.gray('    ▸ ') + chalk.white(feature));
+        console.log(chalk.magenta('│') + chalk.gray('    ▸ ') + chalk.white(feature));
       });
 
-      console.log(chalk.cyan('└─────────────────────────────────────────────────────────────────────────────┘'));
+      console.log(chalk.magenta('└─────────────────────────────────────────────────────────────────────────────┘'));
       console.log('');
     });
 
-    console.log(chalk.bold.cyan('════════════════════════════════════════════════════════════════════════════════'));
-    console.log(chalk.bold.yellow('  💡 All modules are installed by default with: ') + chalk.white('npx agentkits-engineer install'));
-    console.log(chalk.bold.cyan('════════════════════════════════════════════════════════════════════════════════'));
+    console.log(chalk.bold.magenta('════════════════════════════════════════════════════════════════════════════════'));
+    console.log(chalk.bold.yellow('  💡 All modules are installed by default with: ') + chalk.white('npx @aitytech/agentkits-marketing install'));
+    console.log(chalk.bold.magenta('════════════════════════════════════════════════════════════════════════════════'));
     console.log('');
   });
 
 program
   .command('memory')
-  .description('Manage the CPS™ memory system')
+  .description('Manage the memory system')
   .option('-p, --path <path>', 'Project path (default: current directory)')
   .option('--setup', 'Set up or reset memory system')
   .option('--status', 'Show memory system status')
@@ -343,15 +342,15 @@ program
 
     // Check if .claude directory exists
     if (!(await fs.pathExists(claudeDir))) {
-      console.log(chalk.red('\nNo AgentKits installation found.'));
-      console.log(chalk.dim('Run "npx agentkits-engineer install" first.\n'));
+      console.log(chalk.red('\nNo AgentKits Marketing installation found.'));
+      console.log(chalk.dim('Run "npx @aitytech/agentkits-marketing install" first.\n'));
       process.exit(1);
     }
 
     const memorySetup = new MemorySetup();
 
     if (options.setup) {
-      console.log(chalk.bold('\nSetting up CPS™ memory system...\n'));
+      console.log(chalk.bold('\nSetting up memory system...\n'));
 
       const result = await memorySetup.setup(projectDir, claudeDir, { verbose: true });
 
@@ -373,7 +372,7 @@ program
       // Default: show status
       const status = await memorySetup.getStatus(claudeDir);
 
-      console.log(chalk.bold('\nCPS™ Memory System Status\n'));
+      console.log(chalk.bold('\nMemory System Status\n'));
       console.log(chalk.dim('  Project: ') + projectDir);
       console.log('');
 
@@ -404,7 +403,7 @@ program
 
       // Recommendations
       if (!status.memoryDirExists || !status.hooksFileExists) {
-        console.log(chalk.yellow('  Run "npx agentkits-engineer memory --setup" to configure.\n'));
+        console.log(chalk.yellow('  Run "npx @aitytech/agentkits-marketing memory --setup" to configure.\n'));
       } else if (!status.databaseExists) {
         console.log(chalk.dim('  Database will be created on first Claude Code session.\n'));
       } else {
@@ -417,16 +416,16 @@ program
 if (process.argv.length === 2) {
   console.log(banner);
   console.log(chalk.bold.yellow('\n  Quick Install:\n'));
-  console.log(chalk.white('    npx @agentkits/cli install              ') + chalk.dim('# Interactive setup'));
-  console.log(chalk.white('    npx @agentkits/cli install --with-memory') + chalk.dim('# With persistent memory'));
-  console.log(chalk.white('    npx @agentkits/cli install -y           ') + chalk.dim('# Accept defaults'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install              ') + chalk.dim('# Interactive setup'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install --with-memory') + chalk.dim('# With persistent memory'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install -y           ') + chalk.dim('# Accept defaults'));
   console.log('');
   console.log(chalk.bold.yellow('  Platform-Specific:\n'));
-  console.log(chalk.white('    npx @agentkits/cli install --platform claude  ') + chalk.dim('# Claude Code'));
-  console.log(chalk.white('    npx @agentkits/cli install --platform cursor  ') + chalk.dim('# Cursor IDE'));
-  console.log(chalk.white('    npx @agentkits/cli install --platform windsurf') + chalk.dim('# Windsurf'));
-  console.log(chalk.white('    npx @agentkits/cli install --platform cline   ') + chalk.dim('# Cline'));
-  console.log(chalk.white('    npx @agentkits/cli install --platform all     ') + chalk.dim('# All platforms'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install --platform claude  ') + chalk.dim('# Claude Code'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install --platform cursor  ') + chalk.dim('# Cursor IDE'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install --platform windsurf') + chalk.dim('# Windsurf'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install --platform cline   ') + chalk.dim('# Cline'));
+  console.log(chalk.white('    npx @aitytech/agentkits-marketing install --platform all     ') + chalk.dim('# All platforms'));
   console.log('');
   console.log(chalk.bold.yellow('  Other Commands:\n'));
   program.outputHelp();

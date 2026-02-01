@@ -166,7 +166,7 @@ model: sonnet
 
 ## Questions?
 
-- Open an [Issue](https://github.com/agentkits/agentkits-marketing/issues)
-- Start a [Discussion](https://github.com/agentkits/agentkits-marketing/discussions)
+- Open an [Issue](https://github.com/aitytech/agentkits-marketing/issues)
+- Start a [Discussion](https://github.com/aitytech/agentkits-marketing/discussions)
 
 Thank you for contributing!

@@ -10,7 +10,7 @@ body:
       value: |
         Have a question? We're here to help!
 
-        **Note:** For general discussions, consider using [GitHub Discussions](https://github.com/agentkits/agentkits-marketing/discussions) instead.
+        **Note:** For general discussions, consider using [GitHub Discussions](https://github.com/aitytech/agentkits-marketing/discussions) instead.
 
   - type: checkboxes
     id: prerequisites

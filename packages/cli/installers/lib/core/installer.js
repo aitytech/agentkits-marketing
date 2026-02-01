@@ -1,7 +1,7 @@
 /**
- * AgentKits Core Installer
+ * AgentKits Marketing Core Installer
  *
- * Handles the interactive installation of AgentKits to projects
+ * Handles the interactive installation of AgentKits Marketing to projects
  * Supports multiple AI IDEs through config-driven architecture
  *
  * @author AityTech
@@ -29,7 +29,7 @@ class Installer {
    * Main installation flow
    */
   async run(options = {}) {
-    console.log(chalk.bold('\nWelcome to AgentKits Engineer!\n'));
+    console.log(chalk.bold('\nWelcome to AgentKits Marketing!\n'));
 
     // Step 1: Initialize IDE handlers
     await this.ideManager.ensureInitialized();
@@ -77,7 +77,7 @@ class Installer {
     // Check what's already installed
     const memoryStatus = await this.memorySetup.getStatus(claudeDir);
 
-    console.log(chalk.yellow('⚠️  AgentKits is already installed in this project.\n'));
+    console.log(chalk.yellow('⚠️  AgentKits Marketing is already installed in this project.\n'));
 
     if (options.yes) {
       // Auto mode: update existing
@@ -154,7 +154,7 @@ class Installer {
       {
         type: 'list',
         name: 'installPath',
-        message: 'Where would you like to install AgentKits?',
+        message: 'Where would you like to install AgentKits Marketing?',
         choices: [
           { name: `Current directory (${process.cwd()})`, value: process.cwd() },
           { name: 'Custom path...', value: 'custom' },
@@ -239,38 +239,38 @@ class Installer {
 
     const moduleChoices = [
       {
-        name: `${chalk.bold.cyan('⚡ AgentKits Core')} ${chalk.bgRed.white.bold(' REQUIRED ')}\n     ${chalk.white('PIE™ Project Intelligence Engine + CPS™ Context Persistence System')}\n     ${chalk.gray('• Essential agents • Skills • Base commands • Memory system')}\n`,
+        name: `${chalk.bold.magenta('⚡ Marketing Core')} ${chalk.bgRed.white.bold(' REQUIRED ')}\n     ${chalk.white('18 Marketing Agents + Campaign & Content Workflows')}\n     ${chalk.gray('• Core agents • Essential skills • Base commands • Workflows')}\n`,
         value: 'core',
         checked: true,
         disabled: 'Required',
       },
       {
-        name: `${chalk.bold.cyan('🗺️  AgentKits GDJ™')} ${chalk.yellow('Guided Developer Journeys')}\n     ${chalk.white('60+ implementation templates • 19 step-by-step guides')}\n     ${chalk.gray('• Multi-methodology (TDD, BDD, DDD) • Feature templates • Journey tracking')}\n`,
-        value: 'gdj',
+        name: `${chalk.bold.magenta('📊 SEO Mastery')} ${chalk.yellow('Search Optimization')}\n     ${chalk.white('Keyword research • Competitor analysis • Content optimization')}\n     ${chalk.gray('• Programmatic SEO • Schema markup • Technical SEO')}\n`,
+        value: 'seo',
         checked: true,
       },
       {
-        name: `${chalk.bold.cyan('✨ AgentKits Quality')} ${chalk.yellow('Code Excellence')}\n     ${chalk.white('Code review agents • TDD workflows • Test frameworks')}\n     ${chalk.gray('• Adversarial review • Best practices • Coverage analysis')}\n`,
-        value: 'quality',
+        name: `${chalk.bold.magenta('📈 CRO Excellence')} ${chalk.yellow('Conversion Optimization')}\n     ${chalk.white('Page CRO • Form optimization • Signup flows')}\n     ${chalk.gray('• Popup design • Onboarding CRO • A/B testing frameworks')}\n`,
+        value: 'cro',
         checked: true,
       },
       {
-        name: `${chalk.bold.cyan('🔒 AgentKits Security')} ${chalk.yellow('Security First')}\n     ${chalk.white('Security review agents • OWASP Top 10 • Vulnerability scanning')}\n     ${chalk.gray('• Authentication patterns • Secret detection • Dependency audit')}\n`,
-        value: 'security',
+        name: `${chalk.bold.magenta('✍️  Content Marketing')} ${chalk.yellow('Content Engine')}\n     ${chalk.white('Blog posts • Social content • Landing pages')}\n     ${chalk.gray('• Copywriting • Editing workflows • Brand voice')}\n`,
+        value: 'content',
         checked: true,
       },
       {
-        name: `${chalk.bold.cyan('🛠️  AgentKits Development')} ${chalk.yellow('Dev Specialists')}\n     ${chalk.white('Architect agent • Debugger specialist • Refactoring expert')}\n     ${chalk.gray('• Build error resolver • Clean architecture • System design')}\n`,
-        value: 'development',
+        name: `${chalk.bold.magenta('📧 Email Marketing')} ${chalk.yellow('Email Automation')}\n     ${chalk.white('Welcome sequences • Nurture campaigns • Re-engagement')}\n     ${chalk.gray('• Email wizard • Deliverability • Personalization')}\n`,
+        value: 'email',
         checked: true,
       },
       {
-        name: `${chalk.bold.cyan('🤖 AgentKits Automation')} ${chalk.yellow('Workflow Tools')}\n     ${chalk.white('Documentation search • Repomix integration • CI/CD helpers')}\n     ${chalk.gray('• Workflow automation • Code generation • Task orchestration')}\n`,
-        value: 'automation',
+        name: `${chalk.bold.magenta('📉 Analytics & Reporting')} ${chalk.yellow('Data-Driven')}\n     ${chalk.white('Campaign ROI • Funnel analysis • Attribution')}\n     ${chalk.gray('• Weekly reports • Monthly reports • MCP integrations')}\n`,
+        value: 'analytics',
         checked: true,
       },
       {
-        name: `${chalk.bold.cyan('📚 AgentKits Training')} ${chalk.yellow('Skill Building')}\n     ${chalk.white('Interactive training modules • Skill-building exercises')}\n     ${chalk.gray('• Best practices tutorials • Hands-on labs • Progress tracking')}\n`,
+        name: `${chalk.bold.magenta('📚 Marketing Training')} ${chalk.yellow('Skill Building')}\n     ${chalk.white('23 interactive modules • Pattern library • Best practices')}\n     ${chalk.gray('• 10x Marketer Framework • Hands-on exercises')}\n`,
         value: 'training',
         checked: true,
       },
@@ -278,7 +278,7 @@ class Installer {
 
     if (options.yes) {
       // Install all modules by default
-      return ['core', 'gdj', 'quality', 'security', 'development', 'automation', 'training'];
+      return ['core', 'seo', 'cro', 'content', 'email', 'analytics', 'training'];
     }
 
     const { selectedModules } = await inquirer.prompt([
@@ -334,7 +334,7 @@ class Installer {
    * Execute the installation
    */
   async executeInstallation(projectDir, selectedIdes, selectedModules, installMode = 'new') {
-    const spinner = ora('Installing AgentKits...').start();
+    const spinner = ora('Installing AgentKits Marketing...').start();
     const claudeDir = path.join(projectDir, this.agentkitsFolderName);
     const isReinstall = installMode === 'reinstall';
 
@@ -344,11 +344,11 @@ class Installer {
       await this.createDirectories(projectDir);
 
       // Step 2: Copy core files
-      spinner.text = isReinstall ? 'Reinstalling AgentKits files...' : 'Copying AgentKits files...';
+      spinner.text = isReinstall ? 'Reinstalling marketing files...' : 'Copying marketing files...';
       await this.copyAgentKitsFiles(projectDir, selectedModules, isReinstall);
 
-      // Step 3: Set up memory system (CPS™)
-      spinner.text = 'Setting up memory system (CPS™)...';
+      // Step 3: Set up memory system
+      spinner.text = 'Setting up memory system...';
       await this.memorySetup.setup(projectDir, claudeDir, { verbose: false });
 
       // Step 4: Generate launchers for each IDE
@@ -364,10 +364,10 @@ class Installer {
       await fs.ensureDir(path.join(projectDir, '_agentkits-output'));
 
       const successMsg = installMode === 'new'
-        ? 'AgentKits installed successfully!'
+        ? 'AgentKits Marketing installed successfully!'
         : installMode === 'update'
-          ? 'AgentKits updated successfully!'
-          : 'AgentKits reinstalled successfully!';
+          ? 'AgentKits Marketing updated successfully!'
+          : 'AgentKits Marketing reinstalled successfully!';
 
       spinner.succeed(chalk.green(successMsg));
     } catch (error) {
@@ -386,7 +386,7 @@ class Installer {
       path.join(projectDir, this.agentkitsFolderName, 'skills'),
       path.join(projectDir, this.agentkitsFolderName, 'commands'),
       path.join(projectDir, this.agentkitsFolderName, 'memory'),
-      path.join(projectDir, this.agentkitsFolderName, 'journeys'),
+      path.join(projectDir, this.agentkitsFolderName, 'workflows'),
       path.join(projectDir, '_agentkits-output'),
     ];
 
@@ -399,7 +399,7 @@ class Installer {
    * Copy AgentKits files to project
    */
   async copyAgentKitsFiles(projectDir, selectedModules, overwrite = false) {
-    // Determine source directory (where AgentKits is installed)
+    // Determine source directory (where AgentKits Marketing is installed)
     const sourceDir = path.resolve(__dirname, '../../../../..');
 
     // Check if source exists
@@ -427,13 +427,21 @@ class Installer {
             return true;
           }
 
-          // Filter by module
-          if (relativePath.startsWith('journeys') && !selectedModules.includes('gdj')) {
+          // Filter by module - training commands
+          if (relativePath.startsWith('commands/training') && !selectedModules.includes('training')) {
             return false;
           }
 
           return true;
         },
+      });
+    }
+
+    // Copy docs folder if it exists
+    const docsDir = path.join(sourceDir, 'docs');
+    if (await fs.pathExists(docsDir)) {
+      await fs.copy(docsDir, path.join(projectDir, 'docs'), {
+        overwrite: overwrite,
       });
     }
   }
@@ -450,15 +458,16 @@ class Installer {
         ? '  Update Complete!                                             '
         : '  Reinstallation Complete!                                     ';
 
-    console.log(chalk.green('╔══════════════════════════════════════════════════════════════╗'));
-    console.log(chalk.green('║') + chalk.bold.white(title) + chalk.green('║'));
-    console.log(chalk.green('╚══════════════════════════════════════════════════════════════╝'));
+    console.log(chalk.magenta('╔══════════════════════════════════════════════════════════════╗'));
+    console.log(chalk.magenta('║') + chalk.bold.white(title) + chalk.magenta('║'));
+    console.log(chalk.magenta('╚══════════════════════════════════════════════════════════════╝'));
     console.log('');
 
     console.log(chalk.bold('What was installed:\n'));
-    console.log(chalk.dim('  .claude/') + '           - AgentKits core files');
-    console.log(chalk.dim('  .claude/memory/') + '    - CPS™ memory system');
+    console.log(chalk.dim('  .claude/') + '           - Marketing agents, skills, commands');
+    console.log(chalk.dim('  .claude/memory/') + '    - Memory system');
     console.log(chalk.dim('  .claude/hooks.json') + ' - Auto-capture hooks');
+    console.log(chalk.dim('  docs/') + '              - Marketing documentation');
 
     for (const ide of selectedIdes) {
       const handler = this.ideManager.handlers.get(ide);
@@ -470,29 +479,28 @@ class Installer {
       }
     }
 
-    console.log(chalk.dim('  _agentkits-output/') + ' - Generated artifacts\n');
+    console.log(chalk.dim('  _agentkits-output/') + ' - Generated marketing assets\n');
 
-    console.log(chalk.bold('Memory System (CPS™):\n'));
-    console.log(chalk.green('  ✓') + ' Session auto-capture enabled');
-    console.log(chalk.green('  ✓') + ' Tool observations tracked');
-    console.log(chalk.green('  ✓') + ' Context persistence ready');
+    console.log(chalk.bold('Marketing Agents Ready:\n'));
+    console.log(chalk.green('  ✓') + ' 18 specialized marketing agents');
+    console.log(chalk.green('  ✓') + ' 40+ marketing skills');
+    console.log(chalk.green('  ✓') + ' 76 slash commands');
 
     if (installMode === 'update' || installMode === 'reinstall') {
-      console.log(chalk.green('  ✓') + ' Existing memory data preserved');
+      console.log(chalk.green('  ✓') + ' Existing customizations preserved');
     }
 
-    console.log(chalk.dim('    Memory files: .claude/memory/*.md'));
-    console.log(chalk.dim('    Database: .claude/memory/.db/\n'));
+    console.log(chalk.dim('    Documentation: docs/usage-guide.md\n'));
 
     console.log(chalk.bold('Next steps:\n'));
     console.log('  1. Open your project in your AI IDE');
-    console.log('  2. Run ' + chalk.cyan('/pie-init') + ' to analyze your project');
-    console.log('  3. Try ' + chalk.cyan('/gdj') + ' to start a guided journey');
-    console.log('  4. Run ' + chalk.cyan('/memory:status') + ' to view memory state');
-    console.log('  5. Run ' + chalk.cyan('/help') + ' to see all available commands\n');
+    console.log('  2. Run ' + chalk.cyan('/training:start-0-0') + ' to begin the course');
+    console.log('  3. Try ' + chalk.cyan('/campaign:plan') + ' to create a campaign');
+    console.log('  4. Run ' + chalk.cyan('/content:blog') + ' to write a blog post');
+    console.log('  5. Run ' + chalk.cyan('/training:help') + ' to see all commands\n');
 
     console.log(chalk.dim('Documentation: https://agentkits.net'));
-    console.log(chalk.dim('Support: https://github.com/agentkits/agentkits-engineer/issues\n'));
+    console.log(chalk.dim('Support: https://github.com/aitytech/agentkits-marketing/issues\n'));
   }
 }
 

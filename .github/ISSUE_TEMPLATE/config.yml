@@ -2,7 +2,7 @@ blank_issues_enabled: false
 
 contact_links:
   - name: GitHub Discussions
-    url: https://github.com/agentkits/agentkits-marketing/discussions
+    url: https://github.com/aitytech/agentkits-marketing/discussions
     about: Ask questions and discuss with the community
 
   - name: Documentation
@@ -10,5 +10,5 @@ contact_links:
     about: Read the documentation for answers
 
   - name: Training
-    url: https://github.com/agentkits/agentkits-marketing/tree/main/training
+    url: https://github.com/aitytech/agentkits-marketing/tree/main/training
     about: Learn AgentKits with our training modules

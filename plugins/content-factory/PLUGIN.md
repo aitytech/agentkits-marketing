@@ -62,7 +62,7 @@ The CF plugin transforms how marketers create content by enabling rapid, paralle
 
 ```bash
 # Add marketplace (if not already added)
-/plugin marketplace add https://github.com/agentkits/agentkits-marketing
+/plugin marketplace add https://github.com/aitytech/agentkits-marketing
 
 # Install CF
 /plugin install cf@marketing-tools-marketplace
@@ -74,7 +74,7 @@ The CF plugin transforms how marketers create content by enabling rapid, paralle
 ### Manual Installation
 
 ```bash
-git clone https://github.com/agentkits/agentkits-marketing.git
+git clone https://github.com/aitytech/agentkits-marketing.git
 cd marketing-tools-marketplace
 ln -s $(pwd)/plugins/cf ~/.claude/plugins/cf
 ```
@@ -524,8 +524,8 @@ Control quality/speed trade-off:
 
 - **Documentation:** [Getting Started Guide](../../docs/GETTING-STARTED.md)
 - **Examples:** [CF Examples](../../examples/cf/)
-- **Issues:** [GitHub Issues](https://github.com/agentkits/agentkits-marketing/issues)
-- **Community:** [GitHub Discussions](https://github.com/agentkits/agentkits-marketing/discussions)
+- **Issues:** [GitHub Issues](https://github.com/aitytech/agentkits-marketing/issues)
+- **Community:** [GitHub Discussions](https://github.com/aitytech/agentkits-marketing/discussions)
 
 ## License
 

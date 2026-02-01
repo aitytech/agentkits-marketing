@@ -1,7 +1,7 @@
 {
-  "name": "@agentkits/marketing-cli",
+  "name": "@aitytech/agentkits-marketing",
   "version": "1.0.0",
-  "description": "Install 18 marketing AI agents, 40+ enterprise marketing skills, 76 commands with persistent SQLite memory. One command: npx @agentkits/marketing-cli. Cross-platform: Claude Code, Cursor, Copilot, Windsurf, Cline.",
+  "description": "Install 18 marketing AI agents, 40+ enterprise marketing skills, 76 commands with persistent SQLite memory. One command: npx @aitytech/agentkits-marketing. Cross-platform: Claude Code, Cursor, Copilot, Windsurf, Cline.",
   "main": "bin/agentkits.js",
   "bin": {
     "agentkits-marketing": "./bin/agentkits.js",
@@ -12,7 +12,8 @@
     "start": "node bin/agentkits.js",
     "install-local": "node bin/agentkits.js install",
     "test": "echo \"CLI tests pending\" && exit 0",
-    "lint": "echo \"CLI lint pending\" && exit 0"
+    "lint": "echo \"CLI lint pending\" && exit 0",
+    "publish:npm": "npm publish --access public"
   },
   "keywords": [
     "agentkits",
@@ -44,7 +45,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/agentkits/agentkits-marketing",
+    "url": "https://github.com/aitytech/agentkits-marketing",
     "directory": "packages/cli"
   },
   "homepage": "https://agentkits.net",

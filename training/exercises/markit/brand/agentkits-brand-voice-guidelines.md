@@ -198,7 +198,7 @@ Shipped: /marketing:psychology now includes 70+ mental models for pricing, persu
 
 Try it on your next landing page.
 
-github.com/agentkits/agentkits-marketing
+github.com/aitytech/agentkits-marketing
 ```
 
 ### LinkedIn
@@ -260,7 +260,7 @@ No signup. No API keys. Just marketing.
 ### Founder
 
 **Le Duc Linh** - Creator of AgentKits
-- GitHub: github.com/agentkits
+- GitHub: github.com/aitytech
 - Website: agentkits.net
 
 ### Company

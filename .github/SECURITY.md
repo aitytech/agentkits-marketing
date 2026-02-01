@@ -20,7 +20,7 @@ We take security seriously at AgentKits. If you discover a security vulnerabilit
 Instead, please report them via one of these methods:
 
 1. **Email:** Send details to [security@agentkits.net](mailto:security@agentkits.net)
-2. **GitHub Security Advisories:** [Report a vulnerability](https://github.com/agentkits/agentkits-marketing/security/advisories/new)
+2. **GitHub Security Advisories:** [Report a vulnerability](https://github.com/aitytech/agentkits-marketing/security/advisories/new)
 
 ### What to Include
 

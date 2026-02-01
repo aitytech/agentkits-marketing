@@ -1,7 +1,7 @@
 # AgentKits Platform Codes Configuration
 # Central configuration for all platform/IDE codes used in the AgentKits system
 #
-# AgentKits Engineer by AityTech
+# AgentKits Marketing by AityTech
 #
 # Format:
 #   code: Platform identifier used internally
@@ -259,69 +259,85 @@ categories:
     description: "Cloud-based development platforms"
 
 # ============================================================================
-# AgentKits Modules Configuration
+# AgentKits Marketing Modules Configuration
 # ============================================================================
 
 modules:
   core:
-    name: "AgentKits Core"
+    name: "Marketing Core"
     required: true
-    description: "Essential agents, skills, and commands"
+    description: "18 marketing agents, essential skills, base commands"
     includes:
       - agents/core/*
+      - agents/supporting/*
+      - agents/reviewers/*
       - skills/core/*
-      - skills/methodology/*
-      - commands/pie-init.md
+      - commands/campaign/*
+      - commands/content/*
+      - workflows/*
       - memory/*
 
-  gdj:
-    name: "GDJ (Guided Developer Journeys)"
+  seo:
+    name: "SEO Mastery"
     required: false
-    description: "60+ templates, 19 journey guides, multi-methodology"
+    description: "Keyword research, competitor analysis, content optimization"
     includes:
-      - journeys/*
-      - commands/gdj*.md
-      - skills/methodology/guided-journeys/*
+      - skills/seo-mastery/*
+      - commands/seo/*
+      - skills/programmatic-seo/*
+      - skills/schema-markup/*
 
-  quality:
-    name: "Quality & Testing"
+  cro:
+    name: "CRO Excellence"
     required: false
-    description: "Code review, TDD, adversarial review, test frameworks"
+    description: "Page, form, signup, popup, and onboarding optimization"
     includes:
-      - agents/quality/*
-      - skills/quality/*
-      - commands/test.md
+      - skills/page-cro/*
+      - skills/form-cro/*
+      - skills/signup-flow-cro/*
+      - skills/popup-cro/*
+      - skills/onboarding-cro/*
+      - skills/paywall-upgrade-cro/*
+      - commands/cro/*
+      - commands/test/*
 
-  security:
-    name: "Security"
+  content:
+    name: "Content Marketing"
     required: false
-    description: "Security review, OWASP, authentication patterns"
+    description: "Blog, social, landing pages, copywriting, editing"
     includes:
-      - agents/security/*
-      - skills/security/*
+      - skills/copywriting/*
+      - skills/copy-editing/*
+      - skills/content-strategy/*
+      - commands/content/*
+      - commands/brand/*
 
-  development:
-    name: "Development Agents"
+  email:
+    name: "Email Marketing"
     required: false
-    description: "Architect, debugger, refactorer specialists"
+    description: "Welcome, nurture, re-engagement sequences"
     includes:
-      - agents/development/*
-      - skills/engineering/*
+      - skills/email-marketing/*
+      - skills/email-sequence/*
+      - commands/sequence/*
 
-  automation:
-    name: "Automation"
+  analytics:
+    name: "Analytics & Reporting"
     required: false
-    description: "Docs search, repomix, automation tools"
+    description: "Campaign ROI, funnel analysis, attribution modeling"
     includes:
-      - skills/automation/*
+      - skills/analytics-attribution/*
+      - commands/analytics/*
+      - commands/report/*
 
   training:
-    name: "Training Modules"
+    name: "Marketing Training"
     required: false
-    description: "Interactive training for developers"
+    description: "23 interactive modules, pattern library, best practices"
     includes:
-      - commands/training*.md
-      - skills/training/*
+      - commands/training/*
+      - skills/marketing-psychology/*
+      - skills/marketing-ideas/*
 
 # ============================================================================
 # Template Types
@@ -436,5 +452,5 @@ conventions:
   launcher_prefix: "agentkits-"
 
 # ============================================================================
-# AgentKits Engineer by AityTech
+# AgentKits Marketing by AityTech
 # ============================================================================
