@@ -1,5 +1,21 @@
 # /training:start-1-4 - Using Agents for Marketing
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-1-3` (First Marketing Tasks)
+- [ ] Familiar with content creation commands
+- [ ] Ready to learn agent system
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/agents/` - All agent definitions
+2. `./docs/agent-organization-update.md` - Agent organization
+3. `./CLAUDE.md` - Agent overview section
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

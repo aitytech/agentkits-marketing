@@ -3,6 +3,22 @@ description: Design lead nurture sequence
 argument-hint: [segment-or-stage]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Target segment or funnel stage defined
+- [ ] Current lead journey understood
+- [ ] Content assets available
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Buyer personas
+3. `.claude/skills/email-sequence/SKILL.md` - Nurture frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -181,6 +197,26 @@ Content: [Content brief]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering nurture sequence:
+- [ ] Journey stage mapped correctly
+- [ ] Content progression logical
+- [ ] Entry/exit triggers defined
+- [ ] Success metrics set
+- [ ] CTA strategy clear
+
+---
+
 ## Output Location
 
 Save sequence to: `./docs/sequences/nurture-[segment]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After nurture design, consider:
+- `/crm:sequence` - Implement in CRM
+- `/content:email` - Write detailed email copy
+- `/leads:score` - Design scoring model

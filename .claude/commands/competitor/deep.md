@@ -3,6 +3,21 @@ description: Deep competitor analysis with strategic insights
 argument-hint: [competitor-name-or-url]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Competitor name or URL
+- [ ] MCP configured: `semrush`, `dataforseo`, `sensortower` (for apps)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Your product context for positioning
+2. `./docs/competitors/` - Existing competitor research
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Competitive frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -181,3 +196,23 @@ argument-hint: [competitor-name-or-url]
 ## Output Location
 
 Save analysis to: `./docs/competitors/deep-[competitor]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering competitor analysis:
+- [ ] Data sourced from MCP or marked unavailable
+- [ ] Strengths AND weaknesses balanced
+- [ ] Differentiation opportunities identified
+- [ ] Actionable recommendations included
+- [ ] Battlecard elements ready for sales
+
+---
+
+## Next Steps
+
+After competitor analysis, consider:
+- `/competitor:alternatives` - Create comparison landing page
+- `/sales:battlecard` - Create sales battlecard
+- `/content:landing` - Build comparison page

@@ -3,6 +3,22 @@ description: Daily social media management checklist
 argument-hint: [platforms] [brand]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Platforms to manage identified
+- [ ] Time budget determined
+- [ ] Brand voice guidelines available
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/social/` - Social media strategies
+3. `.claude/skills/social-media/SKILL.md` - Social frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -222,6 +238,26 @@ argument-hint: [platforms] [brand]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering social daily checklist:
+- [ ] All time blocks covered
+- [ ] Platform-specific tasks included
+- [ ] Response time goals set
+- [ ] Metrics tracker included
+- [ ] Engagement guidelines clear
+
+---
+
 ## Output Location
 
 Save checklist to: `./docs/social/daily-[date]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After social daily checklist, consider:
+- `/social:schedule` - Create posting schedule
+- `/social:engage` - Develop engagement strategy
+- `/social:viral` - Create viral content

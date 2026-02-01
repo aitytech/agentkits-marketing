@@ -5,6 +5,22 @@ argument-hint:
 
 # Module 3, Lesson 2: Form & Signup Optimization
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-3-1` (CRO Fundamentals)
+- [ ] Understand CRO framework and page optimization
+- [ ] Ready for form and signup optimization
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/skills/form-cro/SKILL.md` - Form CRO framework
+2. `./.claude/skills/signup-flow-cro/SKILL.md` - Signup optimization
+3. `./.claude/skills/ab-test-setup/SKILL.md` - A/B testing
+
+---
+
 ## Mastering Form and Registration CRO
 
 Forms are conversion gatekeepers. Every unnecessary field costs you leads. This lesson teaches you to optimize lead capture forms and signup flows.

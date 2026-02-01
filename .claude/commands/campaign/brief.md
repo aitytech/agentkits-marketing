@@ -3,6 +3,26 @@ description: Generate creative brief for campaign execution
 argument-hint: [campaign-name] - Interactive mode, user will be asked for all parameters
 ---
 
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Campaign name or initiative provided
+- [ ] Campaign plan exists (run `/campaign:plan` first)
+- [ ] Key stakeholders identified
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product context
+2. **Brand**: Read `./docs/brand-guidelines.md` for voice/visual
+3. **Campaign Plan**: Check `./plans/campaigns/` for existing plan
+4. **Marketing Skill**: Load `.claude/skills/marketing-fundamentals/SKILL.md`
+5. **Content Skill**: Load `.claude/skills/content-strategy/SKILL.md`
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -216,3 +236,28 @@ argument-hint: [campaign-name] - Interactive mode, user will be asked for all pa
 ## Output Location
 
 Save brief to: `./docs/campaign/brief-[campaign-name]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering creative brief:
+
+- [ ] **Objective Clear**: One-line goal statement
+- [ ] **Audience Defined**: Persona with pain points
+- [ ] **Message Sharp**: Key message is memorable
+- [ ] **Deliverables Listed**: All assets specified
+- [ ] **Specs Included**: Format, size requirements
+- [ ] **Timeline Set**: Deadlines for each asset
+- [ ] **Brand Aligned**: Guidelines referenced
+- [ ] **Approval Process**: Review steps defined
+
+---
+
+## Next Steps After Delivery
+
+1. **Review**: Stakeholder feedback on brief
+2. **Approve**: Get sign-off before execution
+3. **Create**: Run content commands for assets
+4. **Track**: Use brief as checklist
+5. **Report**: Reference brief in campaign analysis

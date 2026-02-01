@@ -1,5 +1,21 @@
 # /training:start-1-6 - Project Memory (CLAUDE.md)
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-1-5` (Reviewer Agents)
+- [ ] Understand agent system
+- [ ] Ready to learn project context management
+
+## Context Loading
+
+Reference these files:
+1. `./CLAUDE.md` - The project memory file
+2. `./.claude/workflows/marketing-rules.md` - Marketing rules
+3. `./.claude/workflows/primary-workflow.md` - Main workflow
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

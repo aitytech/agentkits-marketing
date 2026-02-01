@@ -3,6 +3,22 @@ description: Weekly marketing review and planning
 argument-hint: [week-ending-date] - Interactive mode, user will be asked for all parameters
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Week to review identified
+- [ ] Access to campaign data
+- [ ] MCP configured: `google-analytics`, `hubspot` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/ops/weekly/` - Previous weekly reviews
+3. `./plans/` - Active campaign plans
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -201,6 +217,26 @@ Use MCP for metrics; if unavailable show "⚠️ NOT AVAILABLE":
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering weekly review:
+- [ ] Key metrics vs targets shown
+- [ ] Campaign status updated
+- [ ] Content reviewed
+- [ ] Next week priorities set
+- [ ] Blockers identified
+
+---
+
 ## Output Location
 
 Save review to: `./docs/ops/weekly/W[XX]-[YYYY].md`
+
+---
+
+## Next Steps
+
+After weekly review, consider:
+- `/ops:daily` - Daily task management
+- `/report:weekly` - Client-ready report
+- `/campaign:calendar` - Content calendar update

@@ -3,6 +3,23 @@ description: Comprehensive marketing audit across all channels
 argument-hint: [brand-or-website]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Brand name or website URL
+- [ ] Access to analytics (GA, GSC, CRM)
+- [ ] MCP configured: `google-analytics`, `google-search-console`, `semrush`, `hubspot`
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand-guidelines.md` - Brand standards
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Marketing frameworks
+4. `.claude/skills/seo-mastery/SKILL.md` - SEO checklist
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -440,3 +457,23 @@ argument-hint: [brand-or-website]
 ## Output Location
 
 Save audit to: `./docs/audits/full-[brand]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering audit:
+- [ ] All areas scored with consistent methodology
+- [ ] Data sourced from MCP or marked unavailable
+- [ ] Quick wins prioritized by impact/effort
+- [ ] Action plan has clear owners and timelines
+- [ ] Unresolved questions listed at end
+
+---
+
+## Next Steps
+
+After marketing audit, consider:
+- `/seo:audit` - Deep SEO-specific audit
+- `/cro:page` - Optimize high-priority pages
+- `/campaign:plan` - Plan improvement campaigns

@@ -1,5 +1,21 @@
 # /training:start-0-2 - Your First Marketing Task
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-0-1` (Installation & Setup)
+- [ ] Verified Claude Code is working
+- [ ] Marketing kit files are accessible
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Product context
+2. `./docs/brand-guidelines.md` - Brand standards template
+3. `./docs/content-style-guide.md` - Content guidelines
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

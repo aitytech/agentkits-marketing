@@ -3,6 +3,20 @@ description: Analyze industry/market trends
 argument-hint: [industry-or-topic]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Industry or topic clearly defined
+- [ ] Time horizon in mind
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context for relevance
+2. `.claude/skills/marketing-fundamentals/SKILL.md` - Trend frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -227,3 +241,23 @@ echo "Trend Analysis Date: $CURRENT_DATE"
 ## Output Location
 
 Save analysis to: `./docs/research/trends/[topic]-trends-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering trend analysis:
+- [ ] All claims have citations
+- [ ] Confidence levels assigned
+- [ ] Adoption stages identified
+- [ ] Strategic implications clear
+- [ ] Action items prioritized
+
+---
+
+## Next Steps
+
+After trend analysis, consider:
+- `/research:market` - Full market analysis
+- `/content:blog` - Create trend-focused content
+- `/campaign:plan` - Plan trend-aligned campaigns

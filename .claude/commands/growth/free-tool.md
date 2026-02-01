@@ -3,6 +3,22 @@ description: Plan free tool or calculator for engineering-as-marketing
 argument-hint: [product-or-audience]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Target audience defined
+- [ ] Product context for alignment
+- [ ] Development resources estimated
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product and audience context
+2. `.claude/skills/free-tool-strategy/SKILL.md` - Tool frameworks
+3. `.claude/skills/programmatic-seo/SKILL.md` - SEO strategy
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -184,3 +200,23 @@ argument-hint: [product-or-audience]
 ## Output Location
 
 Save strategy to: `./docs/growth/free-tool-[concept]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering free tool strategy:
+- [ ] Tool concept aligns with product
+- [ ] Lead capture strategy defined
+- [ ] SEO opportunity validated
+- [ ] Development feasibility assessed
+- [ ] Success metrics established
+
+---
+
+## Next Steps
+
+After free tool strategy, consider:
+- `/seo:keywords` - Research tool-related keywords
+- `/seo:programmatic` - Plan programmatic pages
+- `/sequence:nurture` - Create lead nurture sequence

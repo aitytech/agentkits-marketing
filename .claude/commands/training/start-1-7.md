@@ -1,5 +1,21 @@
 # /training:start-1-7 - Navigation & Search
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed all Module 1 lessons (1-1 through 1-6)
+- [ ] Familiar with agents, commands, and workflows
+- [ ] Ready to master navigation
+
+## Context Loading
+
+Reference these files:
+1. `./CLAUDE.md` - Command categories reference
+2. `./docs/usage-guide.md` - Complete system reference
+3. `./.claude/commands/` - All command definitions
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

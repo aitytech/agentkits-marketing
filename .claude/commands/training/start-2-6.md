@@ -1,5 +1,21 @@
 # /training:start-2-6 - SEO Optimization
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-2-5` (Competitive Analysis)
+- [ ] Understand competitive landscape
+- [ ] Ready for SEO mastery
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/skills/seo-mastery/SKILL.md` - SEO frameworks
+2. `./docs/content-style-guide.md` - SEO writing guidelines
+3. `./.claude/commands/seo/` - All SEO commands
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

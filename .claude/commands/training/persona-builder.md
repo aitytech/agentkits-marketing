@@ -1,5 +1,21 @@
 # /training:persona-builder - Interactive Persona Builder
 
+## Prerequisites
+
+Before this session:
+- [ ] Know your product/service basics
+- [ ] Have a target market in mind
+- [ ] No marketing experience needed
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Product context for examples
+2. `./docs/brand-guidelines.md` - Brand persona examples
+3. `./.claude/agents/reviewers/` - Persona reviewer agents
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

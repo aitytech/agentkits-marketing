@@ -3,6 +3,22 @@ description: Generate comprehensive brand book
 argument-hint: [brand-name]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Brand name and core messaging defined
+- [ ] Visual assets available (logo, colors)
+- [ ] Target audience understood
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand/` - Existing brand documentation
+3. `.claude/skills/brand-building/SKILL.md` - Brand frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -169,6 +185,26 @@ argument-hint: [brand-name]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering brand book:
+- [ ] Mission/vision clearly stated
+- [ ] Visual identity specs complete
+- [ ] Voice guidelines included
+- [ ] Usage examples provided
+- [ ] Do's and don'ts clear
+
+---
+
 ## Output Location
 
 Save brand book to: `./docs/brand/book-[brand]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After brand book creation, consider:
+- `/brand:voice` - Detailed voice guidelines
+- `/brand:assets` - Organize brand assets
+- `/content:landing` - Create branded landing pages

@@ -3,6 +3,22 @@ description: Create social media posting schedule
 argument-hint: [platforms] [timeframe]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Target platforms identified
+- [ ] Timeframe defined
+- [ ] Content mix preferences known
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/social/` - Existing social strategies
+3. `.claude/skills/social-media/SKILL.md` - Platform guidelines
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -173,6 +189,26 @@ argument-hint: [platforms] [timeframe]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering social schedule:
+- [ ] Platform timing optimized
+- [ ] Content mix balanced
+- [ ] Campaign dates integrated
+- [ ] Frequency sustainable
+- [ ] Hashtag strategy included
+
+---
+
 ## Output Location
 
 Save schedule to: `./docs/social/schedule-[timeframe]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After social schedule, consider:
+- `/social:engage` - Develop engagement strategy
+- `/content:social` - Create social content
+- `/social:viral` - Create viral content

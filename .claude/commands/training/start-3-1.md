@@ -5,6 +5,22 @@ argument-hint:
 
 # Module 3, Lesson 1: CRO Fundamentals
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed Module 2 (Advanced Applications)
+- [ ] Understand campaign, content, and SEO workflows
+- [ ] Ready to learn conversion optimization
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/skills/page-cro/SKILL.md` - Page CRO framework
+2. `./.claude/skills/marketing-psychology/SKILL.md` - Psychology models
+3. `./docs/campaign-playbooks.md` - CRO templates
+
+---
+
 ## Welcome to Conversion Rate Optimization
 
 In this module, you'll master the new CRO (Conversion Rate Optimization) skills added to AgentKits Marketing. These skills help you systematically improve conversion rates across all marketing assets.

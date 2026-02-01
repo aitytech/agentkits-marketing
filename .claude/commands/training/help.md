@@ -1,5 +1,19 @@
 # /training:help - Course Command Reference
 
+## Prerequisites
+
+Before using this reference:
+- [ ] Basic understanding of AgentKits Marketing
+- [ ] Familiar with slash command structure
+
+## Context Loading
+
+Reference these files:
+1. `./CLAUDE.md` - Full command catalog
+2. `./docs/usage-guide.md` - Detailed usage documentation
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

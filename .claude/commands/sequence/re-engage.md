@@ -3,6 +3,22 @@ description: Create re-engagement sequence for inactive contacts
 argument-hint: [brand-or-product] [inactive-criteria]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Inactivity criteria defined
+- [ ] Win-back strategy chosen
+- [ ] List hygiene policy understood
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/sequences/` - Existing sequences
+3. `.claude/skills/email-sequence/SKILL.md` - Sequence frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -173,6 +189,26 @@ argument-hint: [brand-or-product] [inactive-criteria]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering re-engagement sequence:
+- [ ] Win-back message compelling
+- [ ] Escalation clear
+- [ ] Breakup email included
+- [ ] Post-sequence action defined
+- [ ] GDPR compliance noted
+
+---
+
 ## Output Location
 
 Save sequence to: `./docs/sequences/re-engage-[brand]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After re-engagement sequence, consider:
+- `/sequence:nurture` - Nurture re-engaged leads
+- `/crm:segment` - Update segment definitions
+- `/content:email` - Write email copy

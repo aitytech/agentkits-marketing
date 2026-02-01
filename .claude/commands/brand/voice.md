@@ -3,6 +3,22 @@ description: Create brand voice guidelines
 argument-hint: [brand-context]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Brand positioning defined
+- [ ] Target audience understood
+- [ ] Existing brand materials (if any)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand/` - Existing brand documentation
+3. `.claude/skills/brand-building/SKILL.md` - Brand frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -171,6 +187,26 @@ argument-hint: [brand-context]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering brand voice guidelines:
+- [ ] Voice attributes clearly defined
+- [ ] Tone variations by channel
+- [ ] Do's and don'ts included
+- [ ] Example copy provided
+- [ ] Quick reference usable
+
+---
+
 ## Output Location
 
 Save guidelines to: `./docs/brand/voice-[brand]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After brand voice creation, consider:
+- `/brand:book` - Full brand book
+- `/content:good` - Write on-brand copy
+- `/content:editing` - Edit copy for brand consistency

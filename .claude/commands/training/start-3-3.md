@@ -5,6 +5,22 @@ argument-hint:
 
 # Module 3, Lesson 3: Popup & Onboarding CRO
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-3-2` (Form & Signup)
+- [ ] Understand form and signup optimization
+- [ ] Ready for popup and onboarding CRO
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/skills/popup-cro/SKILL.md` - Popup optimization
+2. `./.claude/skills/onboarding-cro/SKILL.md` - Onboarding activation
+3. `./.claude/skills/paywall-upgrade-cro/SKILL.md` - Paywall design
+
+---
+
 ## Converting Visitors and Activating Users
 
 This lesson covers two critical conversion points: capturing visitors with popups and activating new signups through onboarding.

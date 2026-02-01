@@ -3,6 +3,22 @@ description: Calculate lead score with demographic and behavioral factors
 argument-hint: [lead-data]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Lead data available
+- [ ] Scoring model defined
+- [ ] MCP configured: `hubspot` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/leads/` - Lead scoring models
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Scoring frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -163,6 +179,26 @@ argument-hint: [lead-data]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering lead score:
+- [ ] Score calculation justified
+- [ ] Temperature assignment accurate
+- [ ] Factors broken down clearly
+- [ ] Next action recommended
+- [ ] Segment assignment noted
+
+---
+
 ## Output Location
 
 Save score to: `./docs/crm/score-[contact]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After lead scoring, consider:
+- `/crm:lifecycle` - Update lifecycle stage
+- `/sales:qualify` - Qualify hot leads
+- `/sales:outreach` - Create outreach for qualified leads

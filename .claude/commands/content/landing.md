@@ -3,6 +3,27 @@ description: Create high-converting landing page copy
 argument-hint: [offer] [audience]
 ---
 
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Offer/product clearly defined
+- [ ] Target audience identified
+- [ ] Conversion goal specified (signup, demo, purchase)
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product and positioning
+2. **Brand**: Read `./docs/brand-guidelines.md` for voice
+3. **Copywriting**: Load `.claude/skills/copywriting/SKILL.md`
+4. **Psychology**: Load `.claude/skills/marketing-psychology/SKILL.md`
+5. **CRO Skill**: Load `.claude/skills/page-cro/SKILL.md`
+6. **Templates**: Check `.claude/skills/common/templates/headline-formulas.md`
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -177,3 +198,29 @@ argument-hint: [offer] [audience]
 ## Output Location
 
 Save landing page to: `./docs/content/landing/[offer]-[audience]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering landing page copy:
+
+- [ ] **Value Prop Clear**: 5-second test passes
+- [ ] **Headline Compelling**: Specific benefit + credibility
+- [ ] **CTA Strong**: Action verb + value statement
+- [ ] **Objections Addressed**: Key concerns handled
+- [ ] **Social Proof**: Testimonials or logos included
+- [ ] **Mobile Considered**: Copy works on small screens
+- [ ] **Brand Voice**: Matches guidelines
+- [ ] **Variations Provided**: 2-3 headline options
+
+---
+
+## Next Steps After Delivery
+
+1. **Review**: Stakeholder feedback on copy
+2. **Design**: Hand to designer with copy structure
+3. **Build**: Implement in landing page tool
+4. **CRO Check**: Run `/cro:page` for optimization
+5. **Launch**: Go live with tracking in place
+6. **Test**: Run `/test:ab-setup` for A/B variants

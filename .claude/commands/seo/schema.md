@@ -3,6 +3,22 @@ description: Add or optimize schema markup and structured data
 argument-hint: [page-type-or-url]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Page type or URL identified
+- [ ] Current schema status known
+- [ ] Rich result goals defined
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/seo/` - Existing SEO research
+3. `.claude/skills/schema-markup/SKILL.md` - Schema frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -202,6 +218,26 @@ argument-hint: [page-type-or-url]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering schema markup:
+- [ ] JSON-LD syntax valid
+- [ ] Required properties included
+- [ ] Content matches visible page
+- [ ] Tested with validation tools
+- [ ] Implementation instructions clear
+
+---
+
 ## Output Location
 
 Save schema to: `./docs/seo/schema-[page-type]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After schema markup, consider:
+- `/seo:audit` - Full SEO audit
+- `/seo:optimize` - On-page optimization
+- `/cro:page` - Conversion optimization

@@ -1,5 +1,21 @@
 # /training:start-1-2 - Working with Marketing Files
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-1-1` (Welcome to Markit)
+- [ ] Familiar with campaign planning commands
+- [ ] Ready to explore documentation structure
+
+## Context Loading
+
+Reference these files:
+1. `./docs/` - All documentation files
+2. `./docs/campaign-playbooks.md` - Campaign templates
+3. `./docs/content-style-guide.md` - Writing standards
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

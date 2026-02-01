@@ -3,6 +3,23 @@ description: Create competitor comparison or alternative pages for SEO and sales
 argument-hint: [competitor-or-product]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Competitor name or product to compare
+- [ ] Your product positioning defined
+- [ ] `/competitor:deep` analysis completed (recommended)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Your product context
+2. `./docs/competitors/` - Existing competitor research
+3. `.claude/skills/competitor-alternatives/SKILL.md` - Page frameworks
+4. `.claude/skills/seo-mastery/SKILL.md` - SEO optimization
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -172,3 +189,23 @@ argument-hint: [competitor-or-product]
 ## Output Location
 
 Save page to: `./docs/content/alternatives-[competitor]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering alternatives page:
+- [ ] Comparison is fair and accurate
+- [ ] SEO elements optimized (title, meta, headings)
+- [ ] Schema markup included (Complete scope)
+- [ ] CTAs strategically placed
+- [ ] Copy follows brand voice
+
+---
+
+## Next Steps
+
+After alternatives page, consider:
+- `/seo:schema` - Add rich snippet markup
+- `/content:cro` - Optimize for conversion
+- `/seo:keywords` - Find more comparison keywords

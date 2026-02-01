@@ -1,5 +1,21 @@
 # /training:start-1-3 - First Marketing Tasks
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-1-2` (Working with Marketing Files)
+- [ ] Familiar with documentation structure
+- [ ] Ready for hands-on content creation
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Product context (AgentKits)
+2. `./docs/brand-guidelines.md` - Brand voice reference
+3. `./docs/content-style-guide.md` - Writing standards
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

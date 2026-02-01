@@ -3,6 +3,22 @@ description: Design lead scoring model
 argument-hint: [business-context]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Business context defined
+- [ ] Behavioral signals identified
+- [ ] CRM platform known
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/leads/` - Existing scoring models
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Scoring frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -186,6 +202,26 @@ argument-hint: [business-context]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering scoring model:
+- [ ] Signals comprehensive
+- [ ] Weights justified
+- [ ] Thresholds defined
+- [ ] Decay rules set
+- [ ] Actions mapped to scores
+
+---
+
 ## Output Location
 
 Save scoring model to: `./docs/leads/score-[context]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After scoring model design, consider:
+- `/leads:qualify` - Create qualification framework
+- `/crm:score` - Calculate individual scores
+- `/leads:nurture` - Design nurture by score tier

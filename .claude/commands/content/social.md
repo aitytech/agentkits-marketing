@@ -3,6 +3,26 @@ description: Create platform-specific social content
 argument-hint: [topic] [platform]
 ---
 
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Topic or message to share is clear
+- [ ] Target platform(s) identified
+- [ ] Any links or assets referenced are ready
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product context
+2. **Brand**: Read `./docs/brand-guidelines.md` for voice
+3. **Social Skill**: Load `.claude/skills/social-media/SKILL.md`
+4. **Playbook**: Load `.claude/skills/social-media/references/social-media-playbook.md`
+5. **Prior Posts**: Check `./docs/content/social/` for consistency
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -176,3 +196,30 @@ argument-hint: [topic] [platform]
 ## Output Location
 
 Save social content to: `./docs/content/social/[platform]-[topic]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering social content:
+
+- [ ] **Hook Strong**: First line stops the scroll
+- [ ] **Platform Native**: Format fits platform norms
+- [ ] **Character Count**: Within platform limits
+- [ ] **Hashtags Appropriate**: Quantity matches platform
+- [ ] **CTA Present**: Clear desired action
+- [ ] **Visual Specified**: Image/video description included
+- [ ] **Links Checked**: Any URLs are correct
+- [ ] **Brand Voice**: Matches guidelines
+
+---
+
+## Next Steps After Delivery
+
+1. **Review**: Approve content and visuals
+2. **Create Assets**: Design images/videos if needed
+3. **Schedule**: Run `/social:schedule` for timing
+4. **Post**: Publish to platforms
+5. **Engage**: Monitor and respond to comments
+6. **Analyze**: Track engagement metrics
+7. **Repurpose**: Adapt top performers for other platforms

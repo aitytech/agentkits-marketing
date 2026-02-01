@@ -3,6 +3,23 @@ description: Calculate campaign/channel ROI
 argument-hint: [campaign-or-channel]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Campaign or channel name to analyze
+- [ ] Access to spend data (ad accounts or manual records)
+- [ ] Revenue/conversion data available
+- [ ] MCP configured: `meta-ads`, `hubspot`, `google-analytics`
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/analytics-setup.md` - Tracking configuration
+3. `.claude/skills/analytics-attribution/SKILL.md` - Attribution frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -227,3 +244,23 @@ echo "ROI Analysis Date: $CURRENT_DATE"
 ## Output Location
 
 Save analysis to: `./docs/analytics/roi/[subject]-roi-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering ROI analysis:
+- [ ] All data sourced from MCP or clearly marked unavailable
+- [ ] Formulas shown transparently
+- [ ] Time period clearly stated
+- [ ] Comparison to targets/benchmarks included
+- [ ] Actionable recommendations provided
+
+---
+
+## Next Steps
+
+After ROI analysis, consider:
+- `/analytics:funnel` - Deep dive into conversion funnel
+- `/campaign:analyze` - Full campaign performance review
+- `/report:monthly` - Include in monthly report

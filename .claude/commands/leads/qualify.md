@@ -3,6 +3,22 @@ description: Create lead qualification criteria
 argument-hint: [product-or-service]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Product or service defined
+- [ ] Sales process understood
+- [ ] Historical conversion data (if available)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Buyer personas
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Qualification frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -175,6 +191,26 @@ argument-hint: [product-or-service]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering qualification framework:
+- [ ] ICP clearly defined
+- [ ] MQL criteria actionable
+- [ ] Disqualifiers identified
+- [ ] Handoff process clear
+- [ ] Score thresholds set
+
+---
+
 ## Output Location
 
 Save framework to: `./docs/leads/qualify-[product]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After qualification framework, consider:
+- `/leads:score` - Design scoring model
+- `/leads:nurture` - Create nurture sequence
+- `/sales:qualify` - Qualify individual leads

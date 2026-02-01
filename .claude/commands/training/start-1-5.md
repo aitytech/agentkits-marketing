@@ -1,5 +1,21 @@
 # /training:start-1-5 - Reviewer Agents Deep Dive
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-1-4` (Using Agents for Marketing)
+- [ ] Understand the 18-agent system
+- [ ] Ready to practice with reviewer agents
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/agents/reviewers/` - Reviewer agent definitions
+2. `./docs/reviewer-agents-update.md` - Reviewer agent details
+3. `./docs/brand-guidelines.md` - For brand review context
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

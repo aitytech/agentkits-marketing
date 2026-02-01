@@ -3,6 +3,22 @@ description: Monthly analytics review and insights template
 argument-hint: [month-year] [client-or-brand]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Month and period defined
+- [ ] Access to analytics platforms
+- [ ] MCP configured: `google-analytics` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/analytics/` - Previous analytics reviews
+3. `.claude/skills/analytics-attribution/SKILL.md` - Analytics frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -202,6 +218,26 @@ argument-hint: [month-year] [client-or-brand]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering analytics review:
+- [ ] All data from verified sources
+- [ ] Traffic and conversion analyzed
+- [ ] Top insights highlighted
+- [ ] Action items defined
+- [ ] Comparison period included
+
+---
+
 ## Output Location
 
 Save review to: `./docs/analytics/monthly-[month-year]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After analytics review, consider:
+- `/report:monthly` - Generate client report
+- `/ops:monthly` - Monthly operations review
+- `/analytics:funnel` - Deep funnel analysis

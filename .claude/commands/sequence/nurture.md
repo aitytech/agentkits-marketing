@@ -3,6 +3,22 @@ description: Create lead nurturing sequence to convert leads to MQL/SQL
 argument-hint: [product-or-service] [target-segment]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Target segment defined
+- [ ] Funnel stage identified
+- [ ] Content assets available
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Buyer personas
+3. `.claude/skills/email-sequence/SKILL.md` - Sequence frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -174,6 +190,26 @@ Content: [Industry pain points]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering nurture sequence:
+- [ ] Journey stage clearly mapped
+- [ ] Content progression logical
+- [ ] Entry/exit triggers defined
+- [ ] CTAs clear and compelling
+- [ ] Success metrics set
+
+---
+
 ## Output Location
 
 Save sequence to: `./docs/sequences/nurture-[segment]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After nurture sequence, consider:
+- `/sequence:welcome` - Create welcome sequence
+- `/content:email` - Write detailed email copy
+- `/crm:sequence` - Implement in CRM

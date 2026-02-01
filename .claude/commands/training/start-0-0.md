@@ -1,5 +1,20 @@
 # /training:start-0-0 - Course Introduction
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Claude Code CLI installed
+- [ ] AgentKits Marketing kit cloned
+- [ ] Running inside the project directory
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Project overview
+2. `./CLAUDE.md` - System instructions
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

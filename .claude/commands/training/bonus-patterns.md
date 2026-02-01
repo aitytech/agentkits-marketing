@@ -1,5 +1,21 @@
 # /training:bonus-patterns - Marketing Pattern Library
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed most course modules
+- [ ] Run several campaigns with results
+- [ ] Ready to document winning patterns
+
+## Context Loading
+
+Reference these files:
+1. `./docs/content-style-guide.md` - Content guidelines
+2. `./docs/campaign-playbooks.md` - Campaign templates
+3. `./.claude/skills/common/templates/` - Pattern templates
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

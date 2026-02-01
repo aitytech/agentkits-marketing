@@ -1,5 +1,21 @@
 # /training:start-0-1 - Installation & Setup
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Claude Code CLI installed
+- [ ] AgentKits Marketing kit cloned
+- [ ] Running inside the project directory
+
+## Context Loading
+
+Reference these files:
+1. `./CLAUDE.md` - System instructions and commands
+2. `./.claude/commands/` - All available commands
+3. `./docs/usage-guide.md` - Detailed usage documentation
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

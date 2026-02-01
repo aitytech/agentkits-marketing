@@ -1,5 +1,21 @@
 # /training:bonus-secret - The 10x Marketer Framework
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed most course modules
+- [ ] Practiced with main commands
+- [ ] Ready for advanced workflows
+
+## Context Loading
+
+Reference these files:
+1. `./docs/campaign-playbooks.md` - Campaign templates
+2. `./docs/content-style-guide.md` - Content guidelines
+3. `./.claude/workflows/` - All workflows
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

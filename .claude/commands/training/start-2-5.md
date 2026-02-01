@@ -1,5 +1,21 @@
 # /training:start-2-5 - Competitive Analysis
 
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-2-4` (Campaign Data)
+- [ ] Understand analytics and reporting
+- [ ] Ready for competitive research
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Product context (AgentKits)
+2. `./docs/campaign-playbooks.md` - Competitive response templates
+3. `./.claude/agents/core/researcher.md` - Research agent
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.

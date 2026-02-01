@@ -3,6 +3,20 @@ description: Intelligently select optimal skills for a marketing task using sema
 allowed-tools: [Read, Grep]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Task or request clearly defined
+- [ ] Keywords or intent understood
+
+## Context Loading
+
+Load these files first:
+1. `.claude/skills/skills-registry.json` - Skills catalog
+2. `.claude/skills/dependency-graph.md` - Skill dependencies
+
+---
+
 # Skill Selector
 
 You are an intelligent skill selection system. Your job is to analyze user requests and recommend the most relevant skills from the skills registry.
@@ -149,3 +163,23 @@ For skills with references:
 ```
 Read: .claude/skills/[skill-name]/references/[topic].md
 ```
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering skill recommendations:
+- [ ] Keywords extracted correctly
+- [ ] Matches scored appropriately
+- [ ] Prerequisites identified
+- [ ] Loading order logical
+- [ ] Alternatives provided
+
+---
+
+## Next Steps
+
+After skill selection, consider:
+- Load recommended skills
+- Execute relevant command
+- Review skill documentation

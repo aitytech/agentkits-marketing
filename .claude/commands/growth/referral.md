@@ -3,6 +3,23 @@ description: Design referral program, affiliate program, or word-of-mouth strate
 argument-hint: [product-or-context]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Product name and type
+- [ ] CAC and LTV estimates
+- [ ] Current acquisition channels known
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Target customer profiles
+3. `.claude/skills/referral-program/SKILL.md` - Program frameworks
+4. `.claude/skills/marketing-psychology/SKILL.md` - Viral mechanics
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -182,3 +199,23 @@ argument-hint: [product-or-context]
 ## Output Location
 
 Save program to: `./docs/growth/referral-[product]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering referral program:
+- [ ] Economics validated (reward < CAC)
+- [ ] Incentive structure clear for both parties
+- [ ] Viral mechanics designed
+- [ ] Fraud prevention considered
+- [ ] Launch plan included (Complete scope)
+
+---
+
+## Next Steps
+
+After referral program design, consider:
+- `/content:email` - Create referral invitation emails
+- `/cro:page` - Optimize referral landing page
+- `/test:ab-setup` - Plan incentive A/B tests

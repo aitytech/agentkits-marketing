@@ -3,6 +3,21 @@ description: Apply psychological principles and mental models to marketing
 argument-hint: [marketing-challenge-or-context]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Marketing challenge clearly defined
+- [ ] Context for application (page, email, pricing, etc.)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `.claude/skills/marketing-psychology/SKILL.md` - 70+ mental models
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Marketing frameworks
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -201,3 +216,23 @@ Feedback Loops, Compounding, Network Effects, Flywheel, Switching Costs
 ## Output Location
 
 Save analysis to: `./docs/marketing/psychology-[challenge]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering psychology analysis:
+- [ ] Models match the challenge type
+- [ ] Applications are specific and actionable
+- [ ] Examples provided for each principle
+- [ ] Ethical implementation noted
+- [ ] Before/after comparisons included
+
+---
+
+## Next Steps
+
+After psychology analysis, consider:
+- `/cro:page` - Apply principles to pages
+- `/content:landing` - Create optimized landing page
+- `/pricing:strategy` - Apply to pricing

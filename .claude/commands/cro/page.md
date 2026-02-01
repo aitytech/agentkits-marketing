@@ -3,6 +3,27 @@ description: Optimize marketing page for conversions (homepage, landing, pricing
 argument-hint: [url-or-description]
 ---
 
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Page URL or description provided as argument
+- [ ] Access to view the page (live URL or screenshot)
+- [ ] Current conversion goal is clear
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product and audience context
+2. **Brand**: Read `./docs/brand-guidelines.md` for voice guidelines
+3. **CRO Skill**: Load `.claude/skills/page-cro/SKILL.md`
+4. **Psychology**: Load `.claude/skills/marketing-psychology/SKILL.md`
+5. **Benchmarks**: Load `.claude/skills/common/data/benchmark-metrics.yaml`
+6. **Past Analyses**: Check `./docs/cro/` for prior CRO work
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -255,3 +276,29 @@ argument-hint: [url-or-description]
 ## Output Location
 
 Save analysis to: `./docs/cro/[page-name]-analysis.md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering CRO analysis:
+
+- [ ] **Page Reviewed**: All visible elements analyzed
+- [ ] **Scores Justified**: Each scorecard item has rationale
+- [ ] **Issues Prioritized**: Ranked by impact and effort
+- [ ] **Fixes Actionable**: Specific, implementable recommendations
+- [ ] **Copy Alternatives**: 2-3 headline/CTA variations provided
+- [ ] **Psychology Applied**: Mental models from skill used
+- [ ] **Benchmarks Referenced**: Industry standards cited where relevant
+- [ ] **Next Steps Clear**: Implementation roadmap provided
+
+---
+
+## Next Steps After Delivery
+
+1. **Prioritize**: Implement quick wins first (< 1 hour)
+2. **Test Plan**: Run `/test:ab-setup` for high-impact changes
+3. **Implement**: Make changes to page
+4. **Track**: Set up conversion tracking if not present
+5. **Measure**: Wait 2-4 weeks for statistical significance
+6. **Iterate**: Re-run `/cro:page` after changes to assess impact

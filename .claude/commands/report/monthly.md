@@ -3,6 +3,22 @@ description: Generate client-ready monthly marketing report
 argument-hint: [client-or-project]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Client or project identified
+- [ ] Month to report defined
+- [ ] MCP configured: `google-analytics`, `hubspot`, `meta-ads` (for data)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/reports/` - Previous reports
+3. `./docs/ops/monthly/` - Monthly reviews
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -241,6 +257,26 @@ echo "Date context loaded: Current=$CURRENT_MONTH_NAME"
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering monthly report:
+- [ ] All data from verified sources
+- [ ] Executive summary compelling
+- [ ] Metrics clearly presented
+- [ ] Next month focus defined
+- [ ] Presentation-ready format
+
+---
+
 ## Output Location
 
 Save report to: `./docs/reports/[client]/monthly-[YYYY-MM].md`
+
+---
+
+## Next Steps
+
+After monthly report, consider:
+- `/ops:monthly` - Internal monthly review
+- `/campaign:plan` - Plan next month campaigns
+- `/analytics:roi` - Deep ROI analysis

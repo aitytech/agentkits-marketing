@@ -3,6 +3,22 @@ description: Daily marketing tasks checklist and review
 argument-hint: [focus-area] - Interactive mode, user will be asked for all parameters
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Focus area for the day identified
+- [ ] Access to campaign/content calendar
+- [ ] MCP configured: `hubspot`, `slack` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/ops/` - Previous daily reviews
+3. `./plans/` - Active campaign plans
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -226,6 +242,26 @@ Use MCP for real-time data; tasks from `./plans/` files:
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering daily review:
+- [ ] Hot leads identified with SLAs
+- [ ] Priorities actionable
+- [ ] Content schedule confirmed
+- [ ] Blockers noted
+- [ ] Tomorrow preview included
+
+---
+
 ## Output Location
 
 Save review to: `./docs/ops/daily/[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After daily review, consider:
+- `/ops:weekly` - Weekly review and planning
+- `/leads:nurture` - Plan nurture for leads
+- `/content:social` - Create daily social content

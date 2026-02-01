@@ -3,6 +3,22 @@ description: Generate marketing performance report
 argument-hint: [timeframe]
 ---
 
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Time period defined
+- [ ] MCP configured: `google-analytics`, `google-search-console`, `meta-ads`, `hubspot`
+- [ ] Targets/goals defined for comparison
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/analytics-setup.md` - Tracking configuration
+3. `.claude/skills/analytics-attribution/SKILL.md` - Metrics definitions
+
+---
+
 ## Language & Quality Standards
 
 **CRITICAL**: Respond in the same language the user is using. If Vietnamese, respond in Vietnamese. If Spanish, respond in Spanish.
@@ -215,3 +231,23 @@ echo "Report Date: $CURRENT_DATE"
 ## Output Location
 
 Save report to: `./docs/analytics/reports/performance-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering performance report:
+- [ ] All metrics sourced from MCP or marked unavailable
+- [ ] Period-over-period comparison included
+- [ ] Key wins and concerns highlighted
+- [ ] Recommendations are actionable
+- [ ] Data sources cited
+
+---
+
+## Next Steps
+
+After performance report, consider:
+- `/analytics:roi` - Deep ROI analysis
+- `/analytics:funnel` - Funnel performance review
+- `/ops:weekly` - Include in weekly review
