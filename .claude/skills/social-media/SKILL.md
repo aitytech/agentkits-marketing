@@ -1,6 +1,36 @@
 ---
 name: social-media
+version: "1.0.0"
+category: core
+difficulty: intermediate
 description: Social media strategy, content creation, and platform optimization. Use when creating social content, developing engagement strategies, optimizing for platform algorithms, or building community.
+triggers:
+  - social media
+  - Twitter
+  - LinkedIn
+  - Instagram
+  - TikTok
+  - Facebook
+  - social content
+  - engagement
+  - viral
+  - algorithm
+prerequisites:
+  - content-strategy
+related_skills:
+  - content-strategy
+  - copywriting
+  - paid-advertising
+agents:
+  - attraction-specialist
+  - copywriter
+mcp_integrations:
+  optional:
+    - twitter
+success_metrics:
+  - engagement_rate
+  - follower_growth
+  - reach
 ---
 
 # Social Media

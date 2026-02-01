@@ -1,6 +1,31 @@
 ---
 name: brand-building
+version: "1.0.0"
+category: core
+difficulty: intermediate
 description: Brand strategy, identity, positioning, and voice development. Use when developing brand guidelines, creating positioning statements, defining brand voice, or building brand architecture.
+triggers:
+  - brand
+  - branding
+  - brand voice
+  - positioning
+  - brand guidelines
+  - brand identity
+  - brand strategy
+  - tone of voice
+prerequisites:
+  - marketing-fundamentals
+related_skills:
+  - copywriting
+  - content-strategy
+agents:
+  - docs-manager
+  - brand-voice-guardian
+mcp_integrations:
+  optional: []
+success_metrics:
+  - brand_consistency
+  - brand_awareness
 ---
 
 # Brand Building

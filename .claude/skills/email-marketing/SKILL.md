@@ -1,6 +1,35 @@
 ---
 name: email-marketing
+version: "1.0.0"
+category: core
+difficulty: intermediate
 description: Email campaign strategy, automation, and optimization. Use when creating email sequences, improving deliverability, designing automation workflows, or optimizing email performance.
+triggers:
+  - email marketing
+  - email campaign
+  - newsletter
+  - deliverability
+  - open rate
+  - click rate
+  - email automation
+  - email list
+prerequisites:
+  - copywriting
+related_skills:
+  - email-sequence
+  - copywriting
+  - analytics-attribution
+agents:
+  - email-wizard
+  - copywriter
+mcp_integrations:
+  optional:
+    - hubspot
+success_metrics:
+  - open_rate
+  - click_rate
+  - conversion_rate
+  - unsubscribe_rate
 ---
 
 # Email Marketing

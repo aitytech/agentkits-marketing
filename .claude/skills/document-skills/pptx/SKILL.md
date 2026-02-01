@@ -1,7 +1,26 @@
 ---
-name: pptx
+name: document-skills/pptx
+version: "1.0.0"
+category: document
+difficulty: intermediate
 description: "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks"
 license: Proprietary. LICENSE.txt has complete terms
+triggers:
+  - PowerPoint
+  - PPTX
+  - presentation
+  - slides
+  - create presentation
+prerequisites: []
+related_skills:
+  - document-skills/docx
+  - document-skills/pdf
+agents:
+  - docs-manager
+  - sales-enabler
+mcp_integrations:
+  optional: []
+success_metrics: []
 ---
 
 # PPTX creation, editing, and analysis

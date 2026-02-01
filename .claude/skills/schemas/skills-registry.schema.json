@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentkits.net/schemas/skills-registry.schema.json",
+  "title": "Skills Registry Schema",
+  "description": "Enterprise-grade schema for marketing skills registry with semantic metadata, dependencies, and MCP mappings",
+  "type": "object",
+  "required": ["name", "version", "categories", "skills"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference"
+    },
+    "name": {
+      "type": "string",
+      "description": "Registry name",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the registry",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the registry"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date",
+      "description": "Last update date in YYYY-MM-DD format"
+    },
+    "categories": {
+      "type": "object",
+      "description": "Skill categories for organization",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["description", "skills"],
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Category description"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of skill IDs in this category"
+          }
+        }
+      }
+    },
+    "dependencyGraph": {
+      "type": "object",
+      "description": "Skill dependency relationships (skill -> prerequisites)",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "Array of skill definitions",
+      "items": {
+        "$ref": "#/$defs/skill"
+      }
+    },
+    "mcpIntegrationMatrix": {
+      "type": "object",
+      "description": "MCP server to skill/agent mappings",
+      "additionalProperties": {
+        "$ref": "#/$defs/mcpIntegration"
+      }
+    },
+    "outputSchemas": {
+      "type": "object",
+      "description": "Standard output schemas for skill outputs",
+      "additionalProperties": {
+        "$ref": "#/$defs/outputSchema"
+      }
+    }
+  },
+  "$defs": {
+    "skill": {
+      "type": "object",
+      "required": ["id", "name", "path", "category", "version", "difficulty", "description", "triggers"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique skill identifier (kebab-case)",
+          "pattern": "^[a-z0-9-/]+$"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable skill name"
+        },
+        "path": {
+          "type": "string",
+          "description": "Relative path to SKILL.md file"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category this skill belongs to",
+          "enum": ["core", "cro", "content", "seo-growth", "document", "specialized"]
+        },
+        "version": {
+          "type": "string",
+          "description": "Skill version",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "difficulty": {
+          "type": "string",
+          "description": "Skill complexity level",
+          "enum": ["beginner", "intermediate", "advanced"]
+        },
+        "description": {
+          "type": "string",
+          "description": "Short description of the skill"
+        },
+        "triggers": {
+          "type": "array",
+          "description": "Keywords that activate this skill",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "prerequisites": {
+          "type": "array",
+          "description": "Skills that should be loaded before this one",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "relatedSkills": {
+          "type": "array",
+          "description": "Related skills for cross-referencing",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "agents": {
+          "type": "array",
+          "description": "Agents that commonly use this skill",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "mcpIntegrations": {
+          "type": "object",
+          "description": "MCP server dependencies",
+          "properties": {
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": []
+            },
+            "optional": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": []
+            }
+          }
+        },
+        "successMetrics": {
+          "type": "array",
+          "description": "Metrics to measure skill effectiveness",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "hasReferences": {
+          "type": "boolean",
+          "description": "Whether this skill has a references/ subdirectory",
+          "default": false
+        }
+      }
+    },
+    "mcpIntegration": {
+      "type": "object",
+      "required": ["skills", "agents", "dataTypes"],
+      "properties": {
+        "skills": {
+          "type": "array",
+          "description": "Skills that use this MCP server",
+          "items": {
+            "type": "string"
+          }
+        },
+        "agents": {
+          "type": "array",
+          "description": "Agents that use this MCP server",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataTypes": {
+          "type": "array",
+          "description": "Types of data provided by this MCP server",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "required": ["sections", "requiredFields"],
+      "properties": {
+        "sections": {
+          "type": "array",
+          "description": "Expected sections in the output",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requiredFields": {
+          "type": "array",
+          "description": "Required fields in the output",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

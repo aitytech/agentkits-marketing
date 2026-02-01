@@ -1,7 +1,7 @@
 {
   "name": "agentkits-marketing",
-  "version": "1.0.0",
-  "description": "Enterprise-grade AI marketing automation framework - 18 agents, 90+ commands, 28 skills for campaigns, content, SEO, and conversion optimization",
+  "version": "2.0.0",
+  "description": "Enterprise-grade AI marketing automation framework - 18 agents, 100+ commands, 32 skills with semantic registry, dependency graphs, and MCP mappings",
   "author": {
     "name": "AgentKits Team",
     "url": "https://agentkits.net"
@@ -61,13 +61,32 @@
     },
     "skills": {
       "path": "./.claude/skills",
-      "count": 28,
+      "count": 32,
+      "registry": "./.claude/skills/skills-registry.json",
+      "schema": "./.claude/skills/schemas/skills-registry.schema.json",
+      "dependencyGraph": "./.claude/skills/dependency-graph.md",
       "categories": {
         "core": ["marketing-fundamentals", "marketing-psychology", "marketing-ideas", "seo-mastery", "social-media", "email-marketing", "paid-advertising", "content-strategy", "analytics-attribution", "brand-building", "problem-solving"],
         "cro": ["page-cro", "form-cro", "popup-cro", "signup-flow-cro", "onboarding-cro", "paywall-upgrade-cro", "ab-test-setup"],
         "content": ["copywriting", "copy-editing", "email-sequence"],
         "seo-growth": ["programmatic-seo", "schema-markup", "competitor-alternatives", "launch-strategy", "pricing-strategy", "referral-program", "free-tool-strategy"],
-        "specialized": ["document-skills", "game-marketing"]
+        "document": ["document-skills/docx", "document-skills/pdf", "document-skills/pptx", "document-skills/xlsx"]
+      },
+      "common": {
+        "data": [
+          "benchmark-metrics.yaml",
+          "conversion-formulas.yaml",
+          "mcp-mapping-matrix.yaml"
+        ],
+        "templates": [
+          "headline-formulas.md",
+          "cta-library.md",
+          "email-subject-lines.md"
+        ],
+        "schemas": [
+          "skills-registry.schema.json",
+          "output-schemas.yaml"
+        ]
       }
     },
     "workflows": {
@@ -77,9 +96,18 @@
   },
   "features": {
     "multiLanguage": true,
-    "mcpIntegrations": ["sensortower", "google-search-console", "google-analytics", "semrush", "dataforseo", "meta-ads", "hubspot", "slack", "notion", "asana"],
+    "mcpIntegrations": ["sensortower", "google-search-console", "google-analytics", "semrush", "dataforseo", "meta-ads", "hubspot", "slack", "notion", "asana", "twitter"],
     "training": true,
-    "trainingModules": 19
+    "trainingModules": 19,
+    "enterpriseFeatures": {
+      "skillsRegistry": true,
+      "dependencyGraph": true,
+      "semanticMatching": true,
+      "mcpMappingMatrix": true,
+      "outputSchemas": true,
+      "benchmarkData": true,
+      "copyTemplates": true
+    }
   },
   "requirements": {
     "claudeCode": ">=1.0.0"

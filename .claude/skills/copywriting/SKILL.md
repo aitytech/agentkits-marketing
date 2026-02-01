@@ -1,6 +1,31 @@
 ---
 name: copywriting
+version: "1.0.0"
+category: content
+difficulty: intermediate
 description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," or "CTA copy." For email copy, see email-sequence. For popup copy, see popup-cro.
+triggers:
+  - write copy
+  - marketing copy
+  - headline
+  - CTA copy
+  - landing page copy
+  - homepage copy
+  - rewrite
+  - improve copy
+prerequisites: []
+related_skills:
+  - copy-editing
+  - page-cro
+  - email-sequence
+agents:
+  - copywriter
+  - brand-voice-guardian
+mcp_integrations:
+  optional: []
+success_metrics:
+  - conversion_rate
+  - engagement_rate
 ---
 
 # Copywriting

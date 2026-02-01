@@ -1,6 +1,34 @@
 ---
 name: onboarding-cro
+version: "1.0.0"
+category: cro
+difficulty: advanced
 description: When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rate," "user activation," "first-run experience," "empty states," "onboarding checklist," "aha moment," or "new user experience." For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.
+triggers:
+  - onboarding
+  - activation
+  - first-run experience
+  - aha moment
+  - user activation
+  - time to value
+  - onboarding checklist
+  - empty states
+prerequisites:
+  - signup-flow-cro
+related_skills:
+  - signup-flow-cro
+  - email-sequence
+agents:
+  - conversion-optimizer
+  - continuity-specialist
+mcp_integrations:
+  optional:
+    - google-analytics
+success_metrics:
+  - activation_rate
+  - time_to_value
+  - feature_adoption
+output_schema: cro-analysis
 ---
 
 # Onboarding CRO

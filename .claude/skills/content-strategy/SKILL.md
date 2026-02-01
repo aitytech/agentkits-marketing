@@ -1,6 +1,36 @@
 ---
 name: content-strategy
+version: "1.0.0"
+category: core
+difficulty: intermediate
 description: Content planning, creation, and distribution strategy. Use when planning content calendars, developing content pillars, creating editorial strategies, or optimizing content for different funnel stages.
+triggers:
+  - content strategy
+  - content calendar
+  - editorial
+  - content pillars
+  - content marketing
+  - blog strategy
+  - content distribution
+prerequisites:
+  - marketing-fundamentals
+related_skills:
+  - seo-mastery
+  - copywriting
+  - social-media
+agents:
+  - planner
+  - copywriter
+  - attraction-specialist
+mcp_integrations:
+  optional:
+    - notion
+    - asana
+success_metrics:
+  - content_output
+  - engagement
+  - traffic_growth
+output_schema: content-plan
 ---
 
 # Content Strategy

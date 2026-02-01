@@ -1,7 +1,24 @@
 ---
-name: pdf
+name: document-skills/pdf
+version: "1.0.0"
+category: document
+difficulty: intermediate
 description: Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.
 license: Proprietary. LICENSE.txt has complete terms
+triggers:
+  - PDF
+  - PDF document
+  - create PDF
+  - edit PDF
+prerequisites: []
+related_skills:
+  - document-skills/docx
+  - document-skills/pptx
+agents:
+  - docs-manager
+mcp_integrations:
+  optional: []
+success_metrics: []
 ---
 
 # PDF Processing Guide

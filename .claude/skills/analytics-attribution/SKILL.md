@@ -1,6 +1,35 @@
 ---
 name: analytics-attribution
+version: "1.0.0"
+category: core
+difficulty: advanced
 description: Performance measurement, attribution modeling, and marketing ROI analysis. Use when setting up tracking, analyzing campaign performance, building attribution models, or creating marketing reports.
+triggers:
+  - analytics
+  - attribution
+  - tracking
+  - ROI
+  - CAC
+  - LTV
+  - dashboard
+  - reporting
+  - conversion tracking
+  - marketing metrics
+prerequisites:
+  - marketing-fundamentals
+related_skills:
+  - ab-test-setup
+  - paid-advertising
+agents:
+  - project-manager
+  - researcher
+mcp_integrations:
+  optional:
+    - google-analytics
+    - google-search-console
+success_metrics:
+  - tracking_accuracy
+  - attribution_confidence
 ---
 
 # Analytics & Attribution

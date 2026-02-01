@@ -1,0 +1,301 @@
+# Conversion & Marketing Formulas
+# Standard calculations for marketing metrics
+# Use these for consistent measurement across skills
+
+version: "1.0.0"
+lastUpdated: "2026-02-01"
+
+# Core Conversion Metrics
+conversion:
+  conversion_rate:
+    formula: "(conversions / visitors) * 100"
+    unit: "%"
+    example: "(50 / 1000) * 100 = 5%"
+
+  click_through_rate:
+    formula: "(clicks / impressions) * 100"
+    unit: "%"
+    example: "(200 / 10000) * 100 = 2%"
+
+  bounce_rate:
+    formula: "(single_page_sessions / total_sessions) * 100"
+    unit: "%"
+    example: "(300 / 1000) * 100 = 30%"
+
+  exit_rate:
+    formula: "(exits_from_page / total_pageviews) * 100"
+    unit: "%"
+    note: "Different from bounce rate - measures exits from specific page"
+
+# Email Metrics
+email:
+  open_rate:
+    formula: "(unique_opens / delivered_emails) * 100"
+    unit: "%"
+    note: "Use delivered, not sent (excludes bounces)"
+
+  click_rate:
+    formula: "(unique_clicks / delivered_emails) * 100"
+    unit: "%"
+    also_called: "Click-Through Rate (CTR)"
+
+  click_to_open_rate:
+    formula: "(unique_clicks / unique_opens) * 100"
+    unit: "%"
+    abbrev: "CTOR"
+    note: "Measures email content effectiveness (vs subject line)"
+
+  unsubscribe_rate:
+    formula: "(unsubscribes / delivered_emails) * 100"
+    unit: "%"
+
+  list_growth_rate:
+    formula: "((new_subscribers - unsubscribes) / total_list) * 100"
+    unit: "%"
+    period: "monthly"
+
+# Form Metrics
+forms:
+  completion_rate:
+    formula: "(form_submissions / form_starts) * 100"
+    unit: "%"
+    also_called: "Form Conversion Rate"
+
+  abandonment_rate:
+    formula: "((form_starts - form_submissions) / form_starts) * 100"
+    unit: "%"
+
+  field_drop_off:
+    formula: "((users_at_field_n - users_at_field_n+1) / users_at_field_n) * 100"
+    unit: "%"
+    note: "Calculate per field to find friction points"
+
+# Signup & Activation
+signup:
+  signup_rate:
+    formula: "(signups / visitors) * 100"
+    unit: "%"
+
+  activation_rate:
+    formula: "(activated_users / signups) * 100"
+    unit: "%"
+    note: "Define 'activated' as completing key action"
+
+  trial_to_paid:
+    formula: "(paid_conversions / trial_signups) * 100"
+    unit: "%"
+
+  freemium_conversion:
+    formula: "(paid_upgrades / free_users) * 100"
+    unit: "%"
+
+  time_to_value:
+    formula: "timestamp(key_action) - timestamp(signup)"
+    unit: "minutes/hours/days"
+    goal: "Minimize"
+
+# Paid Advertising
+paid_ads:
+  cost_per_click:
+    formula: "total_spend / total_clicks"
+    unit: "$"
+    abbrev: "CPC"
+
+  cost_per_mille:
+    formula: "(total_spend / impressions) * 1000"
+    unit: "$"
+    abbrev: "CPM"
+    note: "Cost per 1000 impressions"
+
+  cost_per_lead:
+    formula: "total_spend / leads_generated"
+    unit: "$"
+    abbrev: "CPL"
+
+  cost_per_acquisition:
+    formula: "total_spend / customers_acquired"
+    unit: "$"
+    abbrev: "CPA"
+    also_called: "Cost Per Conversion"
+
+  return_on_ad_spend:
+    formula: "(revenue_from_ads / ad_spend) * 100"
+    unit: "%"
+    abbrev: "ROAS"
+    example: "300% ROAS = $3 revenue per $1 spent"
+
+  return_on_investment:
+    formula: "((revenue - cost) / cost) * 100"
+    unit: "%"
+    abbrev: "ROI"
+    note: "Includes all costs, not just ad spend"
+
+# Customer Metrics
+customer:
+  customer_acquisition_cost:
+    formula: "total_marketing_sales_spend / new_customers"
+    unit: "$"
+    abbrev: "CAC"
+    components:
+      - "Ad spend"
+      - "Marketing salaries"
+      - "Sales salaries"
+      - "Tools and software"
+      - "Agency fees"
+
+  lifetime_value:
+    formula_simple: "average_order_value * purchase_frequency * customer_lifespan"
+    formula_subscription: "ARPU / monthly_churn_rate"
+    unit: "$"
+    abbrev: "LTV"
+
+  ltv_cac_ratio:
+    formula: "LTV / CAC"
+    unit: "ratio"
+    healthy: ">3:1"
+    example: "LTV $300 / CAC $100 = 3:1"
+
+  payback_period:
+    formula: "CAC / (ARPU * gross_margin)"
+    unit: "months"
+    example: "$1000 / ($100 * 0.8) = 12.5 months"
+
+  average_revenue_per_user:
+    formula: "total_revenue / total_users"
+    unit: "$"
+    abbrev: "ARPU"
+    period: "monthly"
+
+# Retention & Churn
+retention:
+  churn_rate:
+    formula: "(customers_lost / customers_start) * 100"
+    unit: "%"
+    period: "monthly or annual"
+
+  retention_rate:
+    formula: "((customers_end - new_customers) / customers_start) * 100"
+    unit: "%"
+    also: "1 - churn_rate"
+
+  net_revenue_retention:
+    formula: "((MRR_start + expansion - contraction - churn) / MRR_start) * 100"
+    unit: "%"
+    abbrev: "NRR"
+    healthy: ">100%"
+
+  gross_revenue_retention:
+    formula: "((MRR_start - contraction - churn) / MRR_start) * 100"
+    unit: "%"
+    abbrev: "GRR"
+    note: "Excludes expansion revenue"
+
+  cohort_retention:
+    formula: "(users_still_active_in_cohort / cohort_size) * 100"
+    unit: "%"
+    by_period: "Day 1, Day 7, Day 30, Day 90"
+
+# Referral & Viral
+viral:
+  viral_coefficient:
+    formula: "invites_per_user * conversion_rate_of_invites"
+    unit: "coefficient"
+    example: "3 invites * 30% conversion = 0.9"
+    note: ">1 = viral growth"
+
+  referral_rate:
+    formula: "(customers_who_referred / total_customers) * 100"
+    unit: "%"
+
+  net_promoter_score:
+    formula: "promoters% - detractors%"
+    unit: "score (-100 to 100)"
+    scale:
+      detractors: "0-6"
+      passives: "7-8"
+      promoters: "9-10"
+
+# SEO Metrics
+seo:
+  organic_click_through_rate:
+    formula: "(organic_clicks / organic_impressions) * 100"
+    unit: "%"
+
+  keyword_difficulty:
+    formula: "varies by tool"
+    scale: "0-100"
+    note: "Higher = harder to rank"
+
+  domain_authority:
+    formula: "proprietary (Moz/Ahrefs)"
+    scale: "0-100"
+    note: "Logarithmic scale"
+
+  page_authority:
+    formula: "proprietary (Moz)"
+    scale: "0-100"
+
+# Content Marketing
+content:
+  engagement_rate:
+    formula: "(engagements / reach) * 100"
+    unit: "%"
+    engagements: "likes + comments + shares + saves"
+
+  amplification_rate:
+    formula: "(shares / followers) * 100"
+    unit: "%"
+
+  content_roi:
+    formula: "((revenue_attributed - content_cost) / content_cost) * 100"
+    unit: "%"
+
+# A/B Testing
+ab_testing:
+  statistical_significance:
+    formula: "Complex (use calculator)"
+    typical_threshold: "95%"
+    note: "Probability result isn't due to chance"
+
+  minimum_detectable_effect:
+    formula: "Complex (depends on sample size, baseline rate)"
+    abbrev: "MDE"
+    note: "Smallest improvement test can reliably detect"
+
+  sample_size:
+    formula: "2 * (z_alpha + z_beta)^2 * p * (1-p) / MDE^2"
+    note: "Use online calculator for practical use"
+
+  lift:
+    formula: "((variant_rate - control_rate) / control_rate) * 100"
+    unit: "%"
+    example: "(5.5% - 5%) / 5% = 10% lift"
+
+# Quick Reference Calculations
+quick_reference:
+  - metric: "Conversion Rate"
+    formula: "Conversions ÷ Visitors × 100"
+
+  - metric: "CPC"
+    formula: "Ad Spend ÷ Clicks"
+
+  - metric: "CPL"
+    formula: "Ad Spend ÷ Leads"
+
+  - metric: "ROAS"
+    formula: "Revenue ÷ Ad Spend × 100"
+
+  - metric: "LTV"
+    formula: "ARPU ÷ Monthly Churn"
+
+  - metric: "CAC"
+    formula: "Marketing + Sales Spend ÷ New Customers"
+
+  - metric: "Payback Period"
+    formula: "CAC ÷ (ARPU × Margin)"
+
+  - metric: "Churn Rate"
+    formula: "Lost Customers ÷ Starting Customers × 100"
+
+  - metric: "NRR"
+    formula: "(Start MRR + Expansion - Contraction - Churn) ÷ Start MRR × 100"

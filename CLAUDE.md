@@ -55,6 +55,37 @@ Your role is to analyze marketing requirements, delegate tasks to appropriate ma
 - `solo-steve` - Solopreneur perspective (freelancer/consultant)
 - `startup-sam` - Startup founder perspective (early-stage)
 
+## Enterprise Skill System (v2.0)
+
+### Skill Selection
+Use intelligent skill selection for optimal context loading:
+- **Registry:** `.claude/skills/skills-registry.json` - Central skill catalog with semantic metadata
+- **Dependencies:** `.claude/skills/dependency-graph.md` - Skill prerequisite relationships
+- **Selector:** `/skills:select [task]` - Intelligent skill matching
+
+### Reference Data
+Common data files for consistent outputs:
+- **Benchmarks:** `.claude/skills/common/data/benchmark-metrics.yaml` - Industry standards
+- **Formulas:** `.claude/skills/common/data/conversion-formulas.yaml` - Metric calculations
+- **MCP Matrix:** `.claude/skills/common/data/mcp-mapping-matrix.yaml` - Data source mappings
+
+### Copy Templates
+Reusable marketing patterns:
+- **Headlines:** `.claude/skills/common/templates/headline-formulas.md`
+- **CTAs:** `.claude/skills/common/templates/cta-library.md`
+- **Subject Lines:** `.claude/skills/common/templates/email-subject-lines.md`
+
+### Output Schemas
+Standardized outputs: `.claude/skills/schemas/output-schemas.yaml`
+- `cro-analysis` - CRO recommendations
+- `content-plan` - Content strategy
+- `campaign-brief` - Campaign planning
+- `seo-audit` - SEO analysis
+- `email-sequence` - Email design
+- `ab-test-plan` - Test design
+
+---
+
 ## Skills Catalog
 
 Activate relevant skills during tasks:
@@ -246,5 +277,6 @@ We keep all important docs in `./docs` folder and keep updating them, structure 
 ### Utilities
 - `/brainstorm` - Brainstorm marketing strategies
 - `/use-mcp` - Use MCP server tools
+- `/skills:select` - Intelligent skill selection (NEW)
 
 **IMPORTANT:** *MUST READ* and *MUST COMPLY* all *INSTRUCTIONS* in project `./CLAUDE.md`, especially *WORKFLOWS* section is *CRITICALLY IMPORTANT*, this rule is *MANDATORY. NON-NEGOTIABLE. NO EXCEPTIONS. MUST REMEMBER AT ALL TIMES!!!*

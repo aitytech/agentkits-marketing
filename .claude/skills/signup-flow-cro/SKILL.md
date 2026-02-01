@@ -1,6 +1,31 @@
 ---
 name: signup-flow-cro
+version: "1.0.0"
+category: cro
+difficulty: intermediate
 description: When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," or "account creation flow." For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.
+triggers:
+  - signup
+  - registration
+  - account creation
+  - trial signup
+  - signup form
+  - signup dropoff
+  - registration friction
+prerequisites:
+  - form-cro
+related_skills:
+  - form-cro
+  - onboarding-cro
+agents:
+  - conversion-optimizer
+mcp_integrations:
+  optional:
+    - google-analytics
+success_metrics:
+  - signup_completion_rate
+  - step_drop_off
+output_schema: cro-analysis
 ---
 
 # Signup Flow CRO
