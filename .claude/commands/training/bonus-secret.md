@@ -1,3 +1,9 @@
+---
+description: "The 10x Marketer Framework"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:bonus-secret - The 10x Marketer Framework
 
 ## Prerequisites

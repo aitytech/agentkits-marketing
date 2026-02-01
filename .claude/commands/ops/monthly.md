@@ -1,5 +1,7 @@
 ---
 description: Monthly marketing performance review and strategy adjustment
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [month-year] - Interactive mode, user will be asked for all parameters
 ---
 

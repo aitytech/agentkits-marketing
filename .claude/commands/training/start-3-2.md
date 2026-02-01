@@ -1,5 +1,7 @@
 ---
 description: /training:start-3-2 - Form & Signup Optimization
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint:
 ---
 

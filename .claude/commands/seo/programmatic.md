@@ -1,5 +1,7 @@
 ---
 description: Build SEO pages at scale using templates and data
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [keyword-pattern-or-context]
 ---
 

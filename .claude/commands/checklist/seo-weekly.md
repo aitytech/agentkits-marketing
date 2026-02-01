@@ -1,5 +1,7 @@
 ---
 description: Weekly SEO maintenance and optimization checklist
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [website-or-domain]
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: pricing-strategy
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: seo-growth
 difficulty: advanced
 description: "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' or 'monetization.' This skill covers pricing research, tier structure, and packaging strategy."

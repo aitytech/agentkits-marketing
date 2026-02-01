@@ -1,5 +1,7 @@
 ---
 description: Create competitive battlecard
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [competitor-name-or-url]
 ---
 

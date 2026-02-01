@@ -1,5 +1,7 @@
 ---
 name: project-manager
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Campaign management and coordination specialist. Use for tracking campaign progress, coordinating marketing activities, managing deadlines, and providing status reports. Examples: <example>Context: User needs campaign oversight. user: "Check the status of our product launch campaign" assistant: "I'll use the project-manager agent to review campaign progress and provide a status report." <commentary>Campaign coordination requires tracking multiple workstreams and deadlines.</commentary></example> <example>Context: User managing multiple campaigns. user: "Give me an overview of all active marketing campaigns" assistant: "Let me use the project-manager agent to consolidate campaign status across all initiatives." <commentary>Multi-campaign management requires systematic tracking and reporting.</commentary></example>
 tools: Glob, Grep, LS, Read, Edit, MultiEdit, Write, NotebookEdit, WebFetch, TodoWrite, WebSearch, BashOutput, KillBash, ListMcpResourcesTool, ReadMcpResourceTool
 model: haiku

@@ -1,5 +1,7 @@
 ---
 description: Analyze competitor SEO strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [competitor-url]
 ---
 

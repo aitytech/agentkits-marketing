@@ -1,5 +1,7 @@
 ---
 description: Analyze industry/market trends
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [industry-or-topic]
 ---
 

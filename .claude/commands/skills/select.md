@@ -1,5 +1,7 @@
 ---
 description: Intelligently select optimal skills for a marketing task using semantic matching
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 allowed-tools: [Read, Grep]
 ---
 

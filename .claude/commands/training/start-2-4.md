@@ -1,3 +1,9 @@
+---
+description: "Analyze Campaign Data"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-4 - Analyze Campaign Data
 
 ## Prerequisites

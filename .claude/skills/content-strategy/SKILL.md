@@ -1,6 +1,7 @@
 ---
 name: content-strategy
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: intermediate
 description: Content planning, creation, and distribution strategy. Use when planning content calendars, developing content pillars, creating editorial strategies, or optimizing content for different funnel stages.

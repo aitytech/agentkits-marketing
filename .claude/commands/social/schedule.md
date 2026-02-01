@@ -1,5 +1,7 @@
 ---
 description: Create social media posting schedule
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [platforms] [timeframe]
 ---
 

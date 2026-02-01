@@ -1,5 +1,7 @@
 ---
 description: Monthly analytics review and insights template
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [month-year] [client-or-brand]
 ---
 

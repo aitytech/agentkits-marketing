@@ -1,5 +1,7 @@
 ---
 description: Edit, review, or improve existing marketing copy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [copy-to-edit] - Interactive mode, user will be asked for all parameters
 ---
 

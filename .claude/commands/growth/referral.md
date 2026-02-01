@@ -1,5 +1,7 @@
 ---
 description: Design referral program, affiliate program, or word-of-mouth strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-context]
 ---
 

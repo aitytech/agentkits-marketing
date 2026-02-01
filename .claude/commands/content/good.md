@@ -1,5 +1,7 @@
 ---
 description: Write good creative & smart copy [GOOD]
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [user-request]
 ---
 

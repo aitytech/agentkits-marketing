@@ -1,3 +1,9 @@
+---
+description: "First Marketing Tasks"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-3 - First Marketing Tasks
 
 ## Prerequisites

@@ -1,6 +1,7 @@
 ---
 name: email-marketing
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: intermediate
 description: Email campaign strategy, automation, and optimization. Use when creating email sequences, improving deliverability, designing automation workflows, or optimizing email performance.

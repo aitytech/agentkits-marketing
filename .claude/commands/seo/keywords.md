@@ -1,5 +1,7 @@
 ---
 description: Conduct keyword research for topic/niche
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [topic-or-seed-keyword]
 ---
 

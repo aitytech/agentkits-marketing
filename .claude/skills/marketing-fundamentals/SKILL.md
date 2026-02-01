@@ -1,6 +1,7 @@
 ---
 name: marketing-fundamentals
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: beginner
 description: Core marketing concepts, psychology, and frameworks for effective marketing. Use for foundational knowledge on funnels, customer journey, positioning, value propositions, and marketing psychology.

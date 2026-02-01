@@ -1,6 +1,7 @@
 ---
 name: paid-advertising
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: intermediate
 description: Paid media strategy and optimization across platforms. Use when planning paid campaigns, optimizing ad performance, managing budgets, or setting up tracking for paid channels.

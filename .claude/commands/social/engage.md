@@ -1,5 +1,7 @@
 ---
 description: Develop social engagement strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [platform]
 ---
 

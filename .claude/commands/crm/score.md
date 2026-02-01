@@ -1,5 +1,7 @@
 ---
 description: Calculate lead score with demographic and behavioral factors
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [lead-data]
 ---
 

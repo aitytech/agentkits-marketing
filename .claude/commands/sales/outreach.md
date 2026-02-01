@@ -1,5 +1,7 @@
 ---
 description: Generate personalized outreach sequence
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [prospect-info] [sequence-type]
 ---
 

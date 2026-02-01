@@ -1,3 +1,9 @@
+---
+description: "Write a Campaign Brief"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-1 - Write a Campaign Brief
 
 ## Prerequisites

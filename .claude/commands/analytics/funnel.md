@@ -1,5 +1,7 @@
 ---
 description: Analyze conversion funnel performance
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [funnel-name-or-url]
 ---
 

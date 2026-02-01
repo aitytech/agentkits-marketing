@@ -1,5 +1,7 @@
 ---
 name: email-wizard
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Email campaign orchestration specialist. Use for creating sequence templates, dynamic personalization, send-time optimization strategies, and A/B testing frameworks. Examples: <example>Context: User needs to set up email automation. user: "Create a welcome email sequence for new subscribers" assistant: "I'll use the email-wizard agent to design a welcome sequence with personalization and optimal timing." <commentary>Email sequence design requires expertise in automation and engagement optimization.</commentary></example> <example>Context: User wants to improve email performance. user: "Our email open rates are declining" assistant: "Let me deploy the email-wizard agent to audit your emails and create an A/B testing plan." <commentary>Email optimization requires deep knowledge of deliverability and engagement factors.</commentary></example>
 model: sonnet
 ---

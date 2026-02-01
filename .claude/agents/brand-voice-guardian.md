@@ -1,5 +1,7 @@
 ---
 name: brand-voice-guardian
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Brand consistency and voice validation specialist. Use for ensuring all marketing content matches brand voice, tone, and style guidelines. Reviews content for messaging consistency, language quality, and emotional impact. Examples: <example>Context: User created email campaign copy. user: "Review this email campaign for brand voice consistency" assistant: "I'll use the brand-voice-guardian agent to validate tone, messaging, and brand alignment." <commentary>Brand voice validation requires expert review against guidelines.</commentary></example> <example>Context: User needs landing page copy reviewed. user: "Check if this landing page sounds like our brand" assistant: "Let me deploy the brand-voice-guardian agent to analyze voice, tone, and messaging consistency." <commentary>Brand consistency review ensures all content aligns with established guidelines.</commentary></example>
 model: sonnet
 ---

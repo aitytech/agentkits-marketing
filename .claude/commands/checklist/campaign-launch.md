@@ -1,5 +1,7 @@
 ---
 description: Pre-launch campaign checklist to ensure nothing is missed
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [campaign-name] [launch-date]
 ---
 

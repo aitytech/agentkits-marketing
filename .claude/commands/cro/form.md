@@ -1,5 +1,7 @@
 ---
 description: Optimize lead capture, contact, demo request, or any non-signup form
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [url-or-form-description]
 ---
 

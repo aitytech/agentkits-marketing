@@ -1,3 +1,9 @@
+---
+description: "Working with Marketing Files"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-2 - Working with Marketing Files
 
 ## Prerequisites

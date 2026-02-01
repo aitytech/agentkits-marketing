@@ -1,5 +1,7 @@
 ---
 description: Analyze the current copy issues and enhance it
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [url-or-content] - Interactive mode, user will be asked for all parameters
 ---
 

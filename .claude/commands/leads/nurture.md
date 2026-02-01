@@ -1,5 +1,7 @@
 ---
 description: Design lead nurture sequence
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [segment-or-stage]
 ---
 

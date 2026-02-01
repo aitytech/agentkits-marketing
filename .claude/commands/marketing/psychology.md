@@ -1,5 +1,7 @@
 ---
 description: Apply psychological principles and mental models to marketing
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [marketing-challenge-or-context]
 ---
 

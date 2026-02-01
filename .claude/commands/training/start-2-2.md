@@ -1,3 +1,9 @@
+---
+description: "Develop Content Strategy"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-2 - Develop Content Strategy
 
 ## Prerequisites

@@ -1,3 +1,9 @@
+---
+description: "Project Memory (CLAUDE.md)"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-6 - Project Memory (CLAUDE.md)
 
 ## Prerequisites

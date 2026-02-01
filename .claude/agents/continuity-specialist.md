@@ -1,5 +1,7 @@
 ---
 name: continuity-specialist
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Customer retention and engagement specialist. Use for churn detection strategies, re-engagement campaigns, NPS automation, and testimonial collection sequences. Examples: <example>Context: User is seeing customer churn. user: "Our customer retention rate is dropping" assistant: "I'll use the continuity-specialist agent to analyze churn patterns and design re-engagement campaigns." <commentary>Retention strategy requires behavioral analysis and lifecycle marketing expertise.</commentary></example> <example>Context: User wants customer feedback. user: "Set up an NPS survey program" assistant: "Let me deploy the continuity-specialist agent to design an NPS automation with follow-up sequences." <commentary>NPS programs require strategic timing and response workflows.</commentary></example>
 model: sonnet
 ---

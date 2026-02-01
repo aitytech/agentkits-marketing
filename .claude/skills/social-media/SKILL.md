@@ -1,6 +1,7 @@
 ---
 name: social-media
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: intermediate
 description: Social media strategy, content creation, and platform optimization. Use when creating social content, developing engagement strategies, optimizing for platform algorithms, or building community.

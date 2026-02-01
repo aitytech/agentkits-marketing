@@ -1,5 +1,7 @@
 ---
 description: Add or optimize schema markup and structured data
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [page-type-or-url]
 ---
 

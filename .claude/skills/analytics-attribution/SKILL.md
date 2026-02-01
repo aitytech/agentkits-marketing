@@ -1,6 +1,7 @@
 ---
 name: analytics-attribution
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: advanced
 description: Performance measurement, attribution modeling, and marketing ROI analysis. Use when setting up tracking, analyzing campaign performance, building attribution models, or creating marketing reports.

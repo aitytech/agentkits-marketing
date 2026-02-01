@@ -1,5 +1,7 @@
 ---
 description: Manage contact lifecycle stage transitions
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [contact-or-segment] [action]
 ---
 

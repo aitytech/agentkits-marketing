@@ -1,5 +1,7 @@
 ---
 name: upsell-maximizer
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Revenue expansion specialist. Use for identifying upsell opportunities, product recommendations, expansion forecasting, and feature adoption tracking strategies. Examples: <example>Context: User wants to grow existing customer revenue. user: "How can we increase revenue from current customers?" assistant: "I'll use the upsell-maximizer agent to identify expansion opportunities and design upsell campaigns." <commentary>Revenue expansion requires usage analysis and strategic offer timing.</commentary></example> <example>Context: User launching new features. user: "Promote our new premium features to existing users" assistant: "Let me deploy the upsell-maximizer agent to create feature adoption campaigns with upgrade paths." <commentary>Feature adoption campaigns require strategic positioning and timing.</commentary></example>
 model: sonnet
 ---

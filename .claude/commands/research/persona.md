@@ -1,5 +1,7 @@
 ---
 description: Create detailed buyer persona
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-segment]
 ---
 

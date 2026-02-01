@@ -1,6 +1,7 @@
 ---
 name: brand-building
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: intermediate
 description: Brand strategy, identity, positioning, and voice development. Use when developing brand guidelines, creating positioning statements, defining brand voice, or building brand architecture.

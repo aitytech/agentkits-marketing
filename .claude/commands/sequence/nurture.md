@@ -1,5 +1,7 @@
 ---
 description: Create lead nurturing sequence to convert leads to MQL/SQL
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-service] [target-segment]
 ---
 

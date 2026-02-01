@@ -1,5 +1,7 @@
 ---
 description: Conduct market research analysis
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [market-or-industry]
 ---
 

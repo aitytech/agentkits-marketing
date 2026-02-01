@@ -1,3 +1,9 @@
+---
+description: "Generate Marketing Copy"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-3 - Generate Marketing Copy
 
 ## Prerequisites

@@ -1,7 +1,7 @@
 {
   "name": "agentkits-marketing",
   "owner": {
-    "name": "AgentKits Team",
+    "name": "AgentKits Team (AityTech)",
     "email": "contact@agentkits.net"
   },
   "metadata": {
@@ -13,7 +13,7 @@
       "source": "./",
       "description": "Full marketing automation suite with 18 agents, 90+ commands, 28 skills",
       "author": {
-        "name": "AgentKits Team"
+        "name": "AgentKits Team (AityTech)"
       },
       "homepage": "https://agentkits.net",
       "repository": "https://github.com/aitytech/agentkits-marketing",

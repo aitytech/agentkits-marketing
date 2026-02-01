@@ -1,5 +1,7 @@
 ---
 description: Generate creative brief for campaign execution
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [campaign-name] - Interactive mode, user will be asked for all parameters
 ---
 

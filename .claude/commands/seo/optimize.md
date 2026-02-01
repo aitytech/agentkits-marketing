@@ -1,5 +1,7 @@
 ---
 description: Optimize content for target keywords
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [content-file] [target-keyword]
 ---
 

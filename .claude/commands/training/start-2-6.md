@@ -1,3 +1,9 @@
+---
+description: "SEO Optimization"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-6 - SEO Optimization
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 ---
 description: Qualify a lead using BANT/MEDDIC frameworks
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [lead-info-or-company]
 ---
 

@@ -1,3 +1,9 @@
+---
+description: "Installation & Setup"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-0-1 - Installation & Setup
 
 ## Prerequisites

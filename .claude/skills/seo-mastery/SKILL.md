@@ -1,6 +1,7 @@
 ---
 name: seo-mastery
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: intermediate
 description: Search engine optimization strategies and tactics for organic growth. Use when optimizing content for search, conducting keyword research, performing SEO audits, or building link strategies.

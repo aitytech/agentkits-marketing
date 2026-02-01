@@ -1,5 +1,7 @@
 ---
 name: brainstormer
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Campaign ideation and creative concept specialist. Use for brainstorming campaign ideas, evaluating marketing approaches, developing messaging angles, and debating creative decisions before execution. Examples: <example>Context: User wants campaign ideas. user: "We need creative concepts for our product launch" assistant: "Let me use the brainstormer agent to explore campaign angles and creative concepts for the launch." <commentary>Campaign ideation requires exploring multiple creative approaches, so delegate to the brainstormer.</commentary></example> <example>Context: User is choosing between marketing approaches. user: "Should we focus on content marketing or paid ads?" assistant: "I'll engage the brainstormer agent to analyze both approaches and recommend the best strategy." <commentary>Strategic decisions require evaluating trade-offs and considering multiple factors.</commentary></example>
 model: sonnet
 ---

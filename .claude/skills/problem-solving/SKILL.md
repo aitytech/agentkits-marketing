@@ -1,6 +1,7 @@
 ---
 name: problem-solving
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: core
 difficulty: advanced
 description: Apply systematic problem-solving techniques for marketing challenges including campaign complexity (simplification cascades), creative blocks (collision-zone thinking), recurring campaign patterns (meta-pattern recognition), assumption constraints (inversion exercise), audience scale uncertainty (scale game), and dispatch when stuck. Techniques derived from proven problem-solving frameworks adapted for marketing execution.

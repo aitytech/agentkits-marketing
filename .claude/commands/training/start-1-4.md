@@ -1,3 +1,9 @@
+---
+description: "Using Agents for Marketing"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-4 - Using Agents for Marketing
 
 ## Prerequisites

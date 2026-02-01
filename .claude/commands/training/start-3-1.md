@@ -1,5 +1,7 @@
 ---
 description: /training:start-3-1 - CRO Fundamentals
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint:
 ---
 

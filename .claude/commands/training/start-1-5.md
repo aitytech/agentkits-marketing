@@ -1,3 +1,9 @@
+---
+description: "Reviewer Agents Deep Dive"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-5 - Reviewer Agents Deep Dive
 
 ## Prerequisites

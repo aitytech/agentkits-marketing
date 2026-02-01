@@ -1,3 +1,9 @@
+---
+description: "Navigation & Search"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-7 - Navigation & Search
 
 ## Prerequisites

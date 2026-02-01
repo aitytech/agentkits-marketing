@@ -1,5 +1,7 @@
 ---
 description: Optimize marketing page for conversions (homepage, landing, pricing, feature pages)
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [url-or-description]
 ---
 

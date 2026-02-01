@@ -1,3 +1,9 @@
+---
+description: "Course Introduction"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-0-0 - Course Introduction
 
 ## Prerequisites

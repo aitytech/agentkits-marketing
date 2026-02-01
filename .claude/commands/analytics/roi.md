@@ -1,5 +1,7 @@
 ---
 description: Calculate campaign/channel ROI
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [campaign-or-channel]
 ---
 

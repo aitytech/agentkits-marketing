@@ -1,5 +1,7 @@
 ---
 description: Create or optimize popups, modals, overlays for conversion
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [goal-or-current-popup]
 ---
 

@@ -1,5 +1,7 @@
 ---
 description: Create comprehensive marketing campaign plan
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [campaign-name]
 ---
 

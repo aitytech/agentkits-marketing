@@ -293,7 +293,7 @@ MIT License - See LICENSE file
 
 - **Inspired by**: EveryInc/every-marketplace - Compounding Engineering Philosophy
 - **Created for**: Claude Code for Marketers course
-- **Maintained by**: agentkits team
+- **Maintained by**: AgentKits Team (AityTech)
 
 ## Version
 

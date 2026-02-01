@@ -1,3 +1,9 @@
+---
+description: "Competitive Analysis"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-5 - Competitive Analysis
 
 ## Prerequisites

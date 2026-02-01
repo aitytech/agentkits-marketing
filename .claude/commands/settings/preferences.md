@@ -1,5 +1,7 @@
 ---
 description: Configure your default preferences for AgentKits Marketing
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [view|set|reset] - Interactive mode, user will be asked for all parameters
 ---
 

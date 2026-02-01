@@ -1,3 +1,9 @@
+---
+description: "Marketing Pattern Library"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:bonus-patterns - Marketing Pattern Library
 
 ## Prerequisites

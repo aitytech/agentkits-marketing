@@ -1,3 +1,9 @@
+---
+description: "Interactive Persona Builder"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:persona-builder - Interactive Persona Builder
 
 ## Prerequisites

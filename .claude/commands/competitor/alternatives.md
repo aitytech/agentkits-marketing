@@ -1,5 +1,7 @@
 ---
 description: Create competitor comparison or alternative pages for SEO and sales
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [competitor-or-product]
 ---
 

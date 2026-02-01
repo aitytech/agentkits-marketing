@@ -1,7 +1,7 @@
 {
   "name": "agentkits-marketing",
   "owner": {
-    "name": "AgentKits Team",
+    "name": "AgentKits Team (AityTech)",
     "email": "contact@agentkits.net",
     "url": "https://agentkits.net"
   },
@@ -17,7 +17,7 @@
       "source": "./",
       "description": "Full marketing automation suite - agents, commands, skills, workflows, and training",
       "author": {
-        "name": "AgentKits Team"
+        "name": "AgentKits Team (AityTech)"
       },
       "homepage": "https://agentkits.net",
       "repository": "https://github.com/aitytech/agentkits-marketing",
@@ -54,7 +54,7 @@
       "source": "./.claude/skills",
       "description": "28 marketing skills including CRO, SEO, copywriting, psychology, and growth",
       "author": {
-        "name": "AgentKits Team"
+        "name": "AgentKits Team (AityTech)"
       },
       "license": "MIT",
       "keywords": [
@@ -72,7 +72,7 @@
       "source": "./.claude/agents",
       "description": "18 specialized marketing agents for campaigns, content, and optimization",
       "author": {
-        "name": "AgentKits Team"
+        "name": "AgentKits Team (AityTech)"
       },
       "license": "MIT",
       "keywords": [
@@ -88,7 +88,7 @@
       "source": "./.claude/commands",
       "description": "90+ marketing slash commands for campaigns, content, SEO, CRO, and analytics",
       "author": {
-        "name": "AgentKits Team"
+        "name": "AgentKits Team (AityTech)"
       },
       "license": "MIT",
       "keywords": [

@@ -1,6 +1,7 @@
 ---
 name: document-skills/pdf
 version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 category: document
 difficulty: intermediate
 description: Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.

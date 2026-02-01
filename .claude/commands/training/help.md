@@ -1,3 +1,9 @@
+---
+description: "Course Command Reference"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:help - Course Command Reference
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 ---
 description: Weekly marketing review and planning
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [week-ending-date] - Interactive mode, user will be asked for all parameters
 ---
 

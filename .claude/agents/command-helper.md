@@ -1,5 +1,7 @@
 ---
 name: command-helper
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Smart command assistant that understands user intent and suggests relevant commands. Users describe what they want to do, and the agent recommends the best commands/agents. No need to memorize commands. Examples: <example>Context: User doesn't know which command to use. user: "I want to write a blog post" assistant: "I'll use the command-helper agent to find the best command for your task." <commentary>Command discovery requires understanding intent and matching to available commands.</commentary></example>
 model: haiku
 ---

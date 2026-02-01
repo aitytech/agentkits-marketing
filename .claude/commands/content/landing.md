@@ -1,5 +1,7 @@
 ---
 description: Create high-converting landing page copy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [offer] [audience]
 ---
 

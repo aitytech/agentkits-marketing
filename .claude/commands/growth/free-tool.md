@@ -1,5 +1,7 @@
 ---
 description: Plan free tool or calculator for engineering-as-marketing
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-audience]
 ---
 

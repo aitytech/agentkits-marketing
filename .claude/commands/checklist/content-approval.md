@@ -1,5 +1,7 @@
 ---
 description: Content approval workflow for team collaboration
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [content-type] [approvers]
 ---
 

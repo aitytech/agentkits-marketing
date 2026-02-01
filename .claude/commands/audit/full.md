@@ -1,5 +1,7 @@
 ---
 description: Comprehensive marketing audit across all channels
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [brand-or-website]
 ---
 

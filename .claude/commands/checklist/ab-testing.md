@@ -1,5 +1,7 @@
 ---
 description: A/B testing framework for marketing optimization
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [test-type] [element-to-test]
 ---
 

@@ -1,5 +1,7 @@
 ---
 description: Daily marketing tasks checklist and review
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [focus-area] - Interactive mode, user will be asked for all parameters
 ---
 

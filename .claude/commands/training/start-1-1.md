@@ -1,3 +1,9 @@
+---
+description: "Welcome to Markit"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-1 - Welcome to Markit
 
 ## Prerequisites

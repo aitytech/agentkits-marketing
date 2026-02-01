@@ -1,5 +1,7 @@
 ---
 description: Design pricing, packaging, and monetization strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-pricing-challenge]
 ---
 

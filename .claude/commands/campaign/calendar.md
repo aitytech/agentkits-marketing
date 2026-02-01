@@ -1,5 +1,7 @@
 ---
 description: Generate content calendar for campaign
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [timeframe] - Interactive mode, user will be asked for all parameters
 ---
 

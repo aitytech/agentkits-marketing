@@ -1,5 +1,7 @@
 ---
 name: conversion-optimizer
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 description: Conversion rate optimization specialist. Use for maximizing conversion rates across marketing assets by applying proven CRO principles and psychology. Reviews landing pages, email copy, ad copy, and CTAs for conversion effectiveness. Examples: <example>Context: User created landing page. user: "Review this landing page for conversion optimization" assistant: "I'll use the conversion-optimizer agent to analyze value proposition, CTAs, and persuasion elements." <commentary>CRO requires expert analysis of conversion psychology and best practices.</commentary></example> <example>Context: User needs email optimized. user: "How can I improve conversions on this email?" assistant: "Let me deploy the conversion-optimizer agent to review copy, CTA placement, and friction points." <commentary>Email conversion optimization requires specialized expertise in persuasion and user psychology.</commentary></example>
 model: sonnet
 ---

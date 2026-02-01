@@ -1,5 +1,7 @@
 ---
 description: Design lead scoring model
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [business-context]
 ---
 

@@ -1,5 +1,7 @@
 ---
 description: Generate client-ready weekly marketing report
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [client-or-project]
 ---
 
