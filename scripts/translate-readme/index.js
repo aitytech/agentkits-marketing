@@ -98,7 +98,6 @@ Guidelines:
 - Preserve technical accuracy
 - Use appropriate technical terminology for ${languageName}
 - Keep proper nouns (product names, company names) unchanged unless they have official translations
-- Add a small note at the very top of the document (before any other content) in ${languageName}: "🌐 This is an automated translation. Community corrections are welcome!"
 
 Here is the README content to translate:
 
@@ -110,7 +109,7 @@ CRITICAL OUTPUT RULES:
 - Output ONLY the raw translated markdown content
 - Do NOT wrap output in \`\`\`markdown code fences
 - Do NOT add any preamble, explanation, or commentary
-- Start directly with the translation note, then the content
+- Start directly with the translated content
 - The output will be saved directly to a .md file`;
 
   let translation = "";
