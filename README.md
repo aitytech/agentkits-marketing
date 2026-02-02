@@ -23,8 +23,8 @@
 </p>
 
 <p align="center">
-  <a href="https://agentkits.net/marketing.html">Website</a> •
-  <a href="https://docs.agentkits.net">Docs</a> •
+  <a href="https://www.agentkits.net/marketing">Website</a> •
+  <a href="https://www.agentkits.net/docs">Docs</a> •
   <a href="#installation">Install</a> •
   <a href="#training">Training</a>
 </p>
@@ -32,6 +32,23 @@
 <p align="center">
   <strong>English</strong> | <a href="README.vi.md">Tiếng Việt</a> | <a href="README.ja.md">日本語</a>
 </p>
+
+---
+
+## Vibe Marketing
+
+<p>
+  <img src="https://img.shields.io/badge/Vibe_Coding-Developers-blue?style=for-the-badge&logo=code&logoColor=white" alt="Vibe Coding">
+  <img src="https://img.shields.io/badge/→-black?style=for-the-badge" alt="arrow">
+  <img src="https://img.shields.io/badge/Vibe_Marketing-Marketers-green?style=for-the-badge&logo=target&logoColor=white" alt="Vibe Marketing">
+</p>
+
+> *Inspired by the "Vibe Coding" movement from developers... we're expanding the universe: **Vibe Marketing** for the AI era where everything just works.*
+
+| | |
+|---|---|
+| **With AI** | Let AI agents handle your campaigns while you focus on strategy. Just vibe and let the agents do the heavy lifting. |
+| **Without AI** | This repo is a **comprehensive reference library** of marketing best practices, frameworks, and templates. Use the skills docs as your marketing playbook. |
 
 ---
 
@@ -81,7 +98,9 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # Lead to customer
 |       |-- crm-workflow.md             # Contact lifecycle
 |
-|-- training/            # 19 interactive training lessons
+|-- training/            # 23 interactive training lessons (English)
+|-- training-vi/         # Vietnamese training (Tiếng Việt)
+|-- training-ja/         # Japanese training (日本語)
 |-- docs/                # Documentation and guides
 |-- marketplace.json     # Self-hosted marketplace config
 ```
@@ -313,10 +332,13 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **Project** | Markit agency working for client AgentKits |
 | **Duration** | 5-6 hours total |
 | **Prerequisite** | Claude Code, Cursor, or compatible AI assistant |
+| **Languages** | English, Vietnamese (Tiếng Việt), Japanese (日本語) |
 
 ```bash
 # Start training now
-/training:start-0-0
+/training:start-0-0           # English
+/training-vi:start-0-0        # Vietnamese (Tiếng Việt)
+/training-ja:start-0-0        # Japanese (日本語)
 ```
 
 ---
@@ -464,6 +486,25 @@ Free User → Paywall CRO → Paid Customer
 
 ---
 
+### Multi-Language Training
+
+Training is available in 3 languages. All content is identical - choose your preferred language:
+
+| Language | Command Prefix | Example |
+|----------|---------------|---------|
+| **English** | `/training:` | `/training:start-0-0` |
+| **Vietnamese** (Tiếng Việt) | `/training-vi:` | `/training-vi:start-0-0` |
+| **Japanese** (日本語) | `/training-ja:` | `/training-ja:start-0-0` |
+
+**Available localized commands:**
+- `start-0-0` to `start-0-2` (Module 0)
+- `start-1-1` to `start-1-7` (Module 1)
+- `start-2-1` to `start-2-6` (Module 2)
+- `start-3-1` to `start-3-3` (Module 3)
+- `help`, `bonus-patterns`, `bonus-secret`, `persona-builder`
+
+---
+
 ### The Compounding Effect
 
 Each campaign makes the next one faster:
@@ -563,8 +604,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ### AgentKits
 - [AgentKits Homepage](https://agentkits.net)
-- [Marketing Kit Page](https://agentkits.net/marketing.html)
-- [Documentation](https://docs.agentkits.net)
+- [Marketing Kit Page](https://www.agentkits.net/marketing)
+- [Documentation](https://www.agentkits.net/docs)
 - [AgentKits CLI](https://github.com/aitytech/agentkits-cli)
 
 ### AI Assistants

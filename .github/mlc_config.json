@@ -1,7 +1,7 @@
 {
   "ignorePatterns": [
     {
-      "pattern": "^https://docs.agentkits.net"
+      "pattern": "^https://www.agentkits.net/docs"
     },
     {
       "pattern": "^https://agentkits.net"

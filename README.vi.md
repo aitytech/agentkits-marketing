@@ -23,8 +23,8 @@
 </p>
 
 <p align="center">
-  <a href="https://agentkits.net/marketing.html">Website</a> •
-  <a href="https://docs.agentkits.net">Tài liệu</a> •
+  <a href="https://www.agentkits.net/marketing">Website</a> •
+  <a href="https://www.agentkits.net/docs">Tài liệu</a> •
   <a href="#cài-đặt">Cài đặt</a> •
   <a href="#đào-tạo">Đào tạo</a>
 </p>
@@ -32,6 +32,23 @@
 <p align="center">
   <a href="README.md">English</a> | <strong>Tiếng Việt</strong> | <a href="README.ja.md">日本語</a>
 </p>
+
+---
+
+## Vibe Marketing
+
+<p>
+  <img src="https://img.shields.io/badge/Vibe_Coding-Developers-blue?style=for-the-badge&logo=code&logoColor=white" alt="Vibe Coding">
+  <img src="https://img.shields.io/badge/→-black?style=for-the-badge" alt="arrow">
+  <img src="https://img.shields.io/badge/Vibe_Marketing-Marketers-green?style=for-the-badge&logo=target&logoColor=white" alt="Vibe Marketing">
+</p>
+
+> *Hưởng ứng phong trào "Vibe Coding" của anh em developer... mình xin phép mở rộng vũ trụ: **Vibe Marketing** cho thời đại AI cái gì cũng làm được.*
+
+| | |
+|---|---|
+| **Có AI** | Để AI agents lo chiến dịch, bạn chỉ cần tập trung vào chiến lược. Cứ vibe thôi, agents sẽ làm hết việc nặng. |
+| **Không có AI** | Repo này vẫn là **thư viện tham khảo toàn diện** về best practices, frameworks và templates marketing. Dùng skills docs như playbook marketing của bạn. |
 
 ---
 
@@ -81,7 +98,9 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # Lead đến customer
 |       |-- crm-workflow.md             # Vòng đời contact
 |
-|-- training/            # 19 bài học đào tạo tương tác
+|-- training/            # 23 bài học đào tạo tương tác (English)
+|-- training-vi/         # Đào tạo tiếng Việt
+|-- training-ja/         # Đào tạo tiếng Nhật (日本語)
 |-- docs/                # Tài liệu và hướng dẫn
 |-- marketplace.json     # Cấu hình marketplace tự host
 ```
@@ -313,10 +332,13 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **Dự án** | Agency Markit làm việc cho khách hàng AgentKits |
 | **Thời lượng** | Tổng cộng 5-6 giờ |
 | **Điều kiện tiên quyết** | Claude Code, Cursor hoặc trợ lý AI tương thích |
+| **Ngôn ngữ** | English, Tiếng Việt, 日本語 (Nhật) |
 
 ```bash
 # Bắt đầu đào tạo ngay
-/training:start-0-0
+/training:start-0-0           # English
+/training-vi:start-0-0        # Tiếng Việt (Khuyến nghị)
+/training-ja:start-0-0        # 日本語 (Nhật)
 ```
 
 ---
@@ -464,6 +486,25 @@ Free User → Paywall CRO → Paid Customer
 
 ---
 
+### Đào Tạo Đa Ngôn Ngữ
+
+Đào tạo có sẵn bằng 3 ngôn ngữ. Tất cả nội dung đều giống nhau - chọn ngôn ngữ bạn thích:
+
+| Ngôn ngữ | Tiền tố Command | Ví dụ |
+|----------|-----------------|-------|
+| **English** | `/training:` | `/training:start-0-0` |
+| **Tiếng Việt** (Khuyến nghị) | `/training-vi:` | `/training-vi:start-0-0` |
+| **日本語** (Nhật) | `/training-ja:` | `/training-ja:start-0-0` |
+
+**Các commands đã được bản địa hóa:**
+- `start-0-0` đến `start-0-2` (Module 0)
+- `start-1-1` đến `start-1-7` (Module 1)
+- `start-2-1` đến `start-2-6` (Module 2)
+- `start-3-1` đến `start-3-3` (Module 3)
+- `help`, `bonus-patterns`, `bonus-secret`, `persona-builder`
+
+---
+
 ### Hiệu Ứng Cộng Hưởng
 
 Mỗi chiến dịch làm chiến dịch tiếp theo nhanh hơn:
@@ -563,8 +604,8 @@ Xem [CONTRIBUTING.md](CONTRIBUTING.md) để biết hướng dẫn.
 
 ### AgentKits
 - [AgentKits Homepage](https://agentkits.net)
-- [Marketing Kit Page](https://agentkits.net/marketing.html)
-- [Tài liệu](https://docs.agentkits.net)
+- [Marketing Kit Page](https://www.agentkits.net/marketing)
+- [Tài liệu](https://www.agentkits.net/docs)
 - [AgentKits CLI](https://github.com/aitytech/agentkits-cli)
 
 ### AI Assistants

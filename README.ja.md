@@ -23,8 +23,8 @@
 </p>
 
 <p align="center">
-  <a href="https://agentkits.net/marketing.html">ウェブサイト</a> •
-  <a href="https://docs.agentkits.net">ドキュメント</a> •
+  <a href="https://www.agentkits.net/marketing">ウェブサイト</a> •
+  <a href="https://www.agentkits.net/docs">ドキュメント</a> •
   <a href="#インストール">インストール</a> •
   <a href="#トレーニング">トレーニング</a>
 </p>
@@ -32,6 +32,23 @@
 <p align="center">
   <a href="README.md">English</a> | <a href="README.vi.md">Tiếng Việt</a> | <strong>日本語</strong>
 </p>
+
+---
+
+## Vibe Marketing
+
+<p>
+  <img src="https://img.shields.io/badge/Vibe_Coding-Developers-blue?style=for-the-badge&logo=code&logoColor=white" alt="Vibe Coding">
+  <img src="https://img.shields.io/badge/→-black?style=for-the-badge" alt="arrow">
+  <img src="https://img.shields.io/badge/Vibe_Marketing-Marketers-green?style=for-the-badge&logo=target&logoColor=white" alt="Vibe Marketing">
+</p>
+
+> *開発者コミュニティの「Vibe Coding」ムーブメントに触発されて... 宇宙を拡張します：AIですべてがうまくいく時代の**Vibe Marketing**。*
+
+| | |
+|---|---|
+| **AIあり** | AIエージェントにキャンペーンを任せて、あなたは戦略に集中。リラックスして、エージェントに重い仕事をさせましょう。 |
+| **AIなし** | このリポジトリはマーケティングのベストプラクティス、フレームワーク、テンプレートの**包括的なリファレンスライブラリ**です。skillsドキュメントをマーケティングプレイブックとして活用できます。 |
 
 ---
 
@@ -81,7 +98,9 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # リードから顧客へ
 |       |-- crm-workflow.md             # コンタクトライフサイクル
 |
-|-- training/            # 19のインタラクティブトレーニングレッスン
+|-- training/            # 23のインタラクティブトレーニングレッスン（English）
+|-- training-vi/         # ベトナム語トレーニング（Tiếng Việt）
+|-- training-ja/         # 日本語トレーニング
 |-- docs/                # ドキュメントとガイド
 |-- marketplace.json     # セルフホストマーケットプレイス設定
 ```
@@ -313,10 +332,13 @@ AIパワードマーケティングをマスターする**22のインタラク�
 | **プロジェクト** | クライアントAgentKitsのためのMarkitエージェンシー |
 | **所要時間** | 合計5-6時間 |
 | **前提条件** | Claude Code、Cursor、または互換AIアシスタント |
+| **言語** | English、Tiếng Việt（ベトナム語）、日本語 |
 
 ```bash
 # 今すぐトレーニング開始
-/training:start-0-0
+/training:start-0-0           # English
+/training-vi:start-0-0        # Tiếng Việt（ベトナム語）
+/training-ja:start-0-0        # 日本語（推奨）
 ```
 
 ---
@@ -464,6 +486,25 @@ Free User → Paywall CRO → Paid Customer
 
 ---
 
+### 多言語トレーニング
+
+トレーニングは3言語で利用可能。すべてのコンテンツは同一です - お好みの言語を選択してください:
+
+| 言語 | コマンドプレフィックス | 例 |
+|------|---------------------|-----|
+| **English** | `/training:` | `/training:start-0-0` |
+| **Tiếng Việt**（ベトナム語） | `/training-vi:` | `/training-vi:start-0-0` |
+| **日本語**（推奨） | `/training-ja:` | `/training-ja:start-0-0` |
+
+**ローカライズ済みコマンド:**
+- `start-0-0` から `start-0-2`（モジュール0）
+- `start-1-1` から `start-1-7`（モジュール1）
+- `start-2-1` から `start-2-6`（モジュール2）
+- `start-3-1` から `start-3-3`（モジュール3）
+- `help`、`bonus-patterns`、`bonus-secret`、`persona-builder`
+
+---
+
 ### 複利効果
 
 各キャンペーンで次のキャンペーンが速くなる:
@@ -563,8 +604,8 @@ Free User → Paywall CRO → Paid Customer
 
 ### AgentKits
 - [AgentKitsホームページ](https://agentkits.net)
-- [Marketing Kitページ](https://agentkits.net/marketing.html)
-- [ドキュメント](https://docs.agentkits.net)
+- [Marketing Kitページ](https://www.agentkits.net/marketing)
+- [ドキュメント](https://www.agentkits.net/docs)
 - [AgentKits CLI](https://github.com/aitytech/agentkits-cli)
 
 ### AIアシスタント
