@@ -1,4 +1,4 @@
-# /training:persona-builder - 대화형 페르소나 빌더
+# /training-ko:persona-builder - 대화형 페르소나 빌더
 
 ## 언어 및 품질 기준
 
@@ -193,7 +193,7 @@ B2B가 선택된 경우, AskUserQuestion 도구 사용:
 - `/content:blog` - 이 페르소나를 위한 콘텐츠 생성
 - `/campaign:brief` - 그들을 타겟으로 하는 캠페인 계획
 - `/research:persona` - 추가 페르소나 생성
-- `/training:help` - 사용 가능한 모든 교육 보기
+- `/training-ko:help` - 사용 가능한 모든 교육 보기
 
 ---
 

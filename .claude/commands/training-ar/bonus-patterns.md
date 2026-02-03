@@ -1,4 +1,4 @@
-# /training:bonus-patterns - مكتبة أنماط التسويق
+# /training-ar:bonus-patterns - مكتبة أنماط التسويق
 
 ## معايير اللغة والجودة
 

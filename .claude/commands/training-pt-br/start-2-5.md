@@ -1,4 +1,4 @@
-# /training:start-2-5 - Análise Competitiva
+# /training-pt-br:start-2-5 - Análise Competitiva
 
 ## Padrões de Idioma e Qualidade
 
@@ -207,7 +207,7 @@ Create a differentiation summary for sales team:
 Diga a eles:
 - Eles têm inteligência competitiva abrangente
 - Prontos para posicionar e criar mensagens eficazes
-- **Lição final:** `/training:start-2-6` - Otimização de SEO
+- **Lição final:** `/training-pt-br:start-2-6` - Otimização de SEO
 - Domine a otimização para motores de busca
 
 ## Pontos-Chave de Ensino

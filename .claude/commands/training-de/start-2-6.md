@@ -1,4 +1,4 @@
-# /training:start-2-6 - SEO-Optimierung
+# /training-de:start-2-6 - SEO-Optimierung
 
 ## Sprach- & Qualitätsstandards
 
@@ -217,7 +217,7 @@ Sie wissen jetzt, wie man:
 Teilen Sie ihnen mit:
 - Alle Befehle für laufende Arbeiten verwenden
 - `docs/usage-guide.md` als Dokumentations-Referenz nutzen
-- Bonus-Content ansehen: `/training:bonus-patterns`, `/training:bonus-secret`
+- Bonus-Content ansehen: `/training-de:bonus-patterns`, `/training-de:bonus-secret`
 - Weiter auf dem Gelernten aufbauen
 - Jede Kampagne macht die nächste einfacher (Compounding Effect)
 

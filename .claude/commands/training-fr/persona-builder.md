@@ -1,4 +1,4 @@
-# /training:persona-builder - Constructeur de Persona Interactif
+# /training-fr:persona-builder - Constructeur de Persona Interactif
 
 ## Normes de Langue et de Qualité
 
@@ -193,7 +193,7 @@ Ce persona vous aidera à :
 - `/content:blog` - Créer du contenu pour ce persona
 - `/campaign:brief` - Planifier une campagne les ciblant
 - `/research:persona` - Créer des personas supplémentaires
-- `/training:help` - Voir toutes les formations disponibles
+- `/training-fr:help` - Voir toutes les formations disponibles
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-3 - CRO de Popups y Onboarding
+description: /training-es:start-3-3 - CRO de Popups y Onboarding
 argument-hint:
 ---
 
@@ -189,7 +189,7 @@ training/exercises/markit/cro/
 Continúa al Módulo 4: Estrategias de Crecimiento y Lanzamiento
 
 ```bash
-/training:start-4-1
+/training-es:start-4-1
 ```
 
 O explora otras habilidades nuevas:

@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-3 - 팝업 및 온보딩 CRO
+description: /training-ko:start-3-3 - 팝업 및 온보딩 CRO
 argument-hint:
 ---
 
@@ -189,7 +189,7 @@ training/exercises/markit/cro/
 모듈 4로 계속: 성장 및 런칭 전략
 
 ```bash
-/training:start-4-1
+/training-ko:start-4-1
 ```
 
 또는 다른 새로운 스킬 탐색:

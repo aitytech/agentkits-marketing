@@ -1,4 +1,4 @@
-# /training:start-2-4 - Analyser les données de campagne
+# /training-fr:start-2-4 - Analyser les données de campagne
 
 ## Normes de langue et de qualité
 
@@ -173,7 +173,7 @@ Monthly Report Workflow:
 Dites-leur :
 - Ils peuvent maintenant transformer les données en décisions
 - Des rapports que les dirigeants lisent réellement
-- **Suivant :** `/training:start-2-5` - Analyse concurrentielle
+- **Suivant :** `/training-fr:start-2-5` - Analyse concurrentielle
 - Recherchez les concurrents et trouvez des avantages
 
 ## Points d'enseignement clés

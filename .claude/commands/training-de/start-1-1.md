@@ -1,4 +1,4 @@
-# /training:start-1-1 - Willkommen bei Markit
+# /training-de:start-1-1 - Willkommen bei Markit
 
 ## Sprach- und Qualitätsstandards
 
@@ -112,7 +112,7 @@ Zeige, wie Claude automatisch aus dem Kampagnenkontext schöpft.
 Sage ihnen:
 - Sie haben ein professionelles Kampagnenbriefing mit `/campaign:plan` erstellt
 - Claude hat Kontext aus Markenrichtlinien und Personas verwendet
-- **Weiter:** `/training:start-1-2` - Arbeiten mit Marketing-Dateien
+- **Weiter:** `/training-de:start-1-2` - Arbeiten mit Marketing-Dateien
 - Sie werden lernen, Marketing-Assets effizient zu organisieren, zu finden und zu verwalten
 
 ## Wichtige Lehrpunkte

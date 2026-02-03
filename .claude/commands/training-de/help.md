@@ -1,4 +1,4 @@
-# /training:help - Kursbefehl-Referenz
+# /training-de:help - Kursbefehl-Referenz
 
 ## Sprach- & Qualitätsstandards
 
@@ -21,48 +21,48 @@ Zeige alle verfügbaren Befehle und die Kursnavigationshilfe an.
 ### Modul 0: Erste Schritte
 | Befehl | Lektion | Dauer |
 |---------|--------|----------|
-| `/training:start-0-0` | Kurseinführung | 10 Min. |
-| `/training:start-0-1` | Installation & Einrichtung | 15 Min. |
-| `/training:start-0-2` | Ihre erste Marketing-Aufgabe | 15 Min. |
+| `/training-de:start-0-0` | Kurseinführung | 10 Min. |
+| `/training-de:start-0-1` | Installation & Einrichtung | 15 Min. |
+| `/training-de:start-0-2` | Ihre erste Marketing-Aufgabe | 15 Min. |
 
 ### Modul 1: Kernkonzepte
 | Befehl | Lektion | Dauer |
 |---------|--------|----------|
-| `/training:start-1-1` | Willkommen bei Markit | 20 Min. |
-| `/training:start-1-2` | Arbeiten mit Marketing-Dateien | 25 Min. |
-| `/training:start-1-3` | Erste Marketing-Aufgaben | 30 Min. |
-| `/training:start-1-4` | Agenten für Marketing verwenden | 35 Min. |
-| `/training:start-1-5` | Reviewer-Agenten im Detail | 30 Min. |
-| `/training:start-1-6` | Projektspeicher (CLAUDE.md) | 20 Min. |
-| `/training:start-1-7` | Navigation & Suche | 20 Min. |
+| `/training-de:start-1-1` | Willkommen bei Markit | 20 Min. |
+| `/training-de:start-1-2` | Arbeiten mit Marketing-Dateien | 25 Min. |
+| `/training-de:start-1-3` | Erste Marketing-Aufgaben | 30 Min. |
+| `/training-de:start-1-4` | Agenten für Marketing verwenden | 35 Min. |
+| `/training-de:start-1-5` | Reviewer-Agenten im Detail | 30 Min. |
+| `/training-de:start-1-6` | Projektspeicher (CLAUDE.md) | 20 Min. |
+| `/training-de:start-1-7` | Navigation & Suche | 20 Min. |
 
 ### Modul 2: Fortgeschrittene Anwendungen
 | Befehl | Lektion | Dauer |
 |---------|--------|----------|
-| `/training:start-2-1` | Kampagnen-Brief schreiben | 45 Min. |
-| `/training:start-2-2` | Content-Strategie entwickeln | 40 Min. |
-| `/training:start-2-3` | Marketing-Texte erstellen | 35 Min. |
-| `/training:start-2-4` | Kampagnendaten analysieren | 35 Min. |
-| `/training:start-2-5` | Wettbewerbsanalyse | 30 Min. |
-| `/training:start-2-6` | SEO-Optimierung | 40 Min. |
+| `/training-de:start-2-1` | Kampagnen-Brief schreiben | 45 Min. |
+| `/training-de:start-2-2` | Content-Strategie entwickeln | 40 Min. |
+| `/training-de:start-2-3` | Marketing-Texte erstellen | 35 Min. |
+| `/training-de:start-2-4` | Kampagnendaten analysieren | 35 Min. |
+| `/training-de:start-2-5` | Wettbewerbsanalyse | 30 Min. |
+| `/training-de:start-2-6` | SEO-Optimierung | 40 Min. |
 
 ### Modul 3: CRO & Conversion
 | Befehl | Lektion | Dauer |
 |---------|--------|----------|
-| `/training:start-3-1` | CRO-Grundlagen | 20 Min. |
-| `/training:start-3-2` | Formular- & Anmeldungsoptimierung | 20 Min. |
-| `/training:start-3-3` | Popup & Onboarding CRO | 20 Min. |
+| `/training-de:start-3-1` | CRO-Grundlagen | 20 Min. |
+| `/training-de:start-3-2` | Formular- & Anmeldungsoptimierung | 20 Min. |
+| `/training-de:start-3-3` | Popup & Onboarding CRO | 20 Min. |
 
 ### Interaktive Builder (Keine Erfahrung erforderlich)
 | Befehl | Beschreibung | Dauer |
 |---------|-------------|----------|
-| `/training:persona-builder` | Käufer-Persona Schritt für Schritt erstellen | 15 Min. |
+| `/training-de:persona-builder` | Käufer-Persona Schritt für Schritt erstellen | 15 Min. |
 
 ### Bonus-Inhalte
 | Befehl | Beschreibung |
 |---------|-------------|
-| `/training:bonus-patterns` | Musterbibliothek-Vorlagen |
-| `/training:bonus-secret` | Das 10x Marketer Framework |
+| `/training-de:bonus-patterns` | Musterbibliothek-Vorlagen |
+| `/training-de:bonus-secret` | Das 10x Marketer Framework |
 
 ---
 
@@ -192,7 +192,7 @@ Zeige alle verfügbaren Befehle und die Kursnavigationshilfe an.
 
 ## Schnelltipps
 
-**Neu beim Kurs?** Beginnen Sie mit `/training:start-0-0`
+**Neu beim Kurs?** Beginnen Sie mit `/training-de:start-0-0`
 
 **Benötigen Sie einen bestimmten Befehl?** Schauen Sie in den Kategorien oben nach
 
@@ -202,6 +202,6 @@ Zeige alle verfügbaren Befehle und die Kursnavigationshilfe an.
 
 ---
 
-**Bereit zu beginnen?** Geben Sie `/training:start-0-0` ein, um den Kurs zu starten!
+**Bereit zu beginnen?** Geben Sie `/training-de:start-0-0` ein, um den Kurs zu starten!
 
 ---

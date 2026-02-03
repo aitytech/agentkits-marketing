@@ -1,4 +1,4 @@
-# /training:start-1-3 - Primeras Tareas de Marketing
+# /training-es:start-1-3 - Primeras Tareas de Marketing
 
 ## Estándares de Idioma y Calidad
 
@@ -125,7 +125,7 @@ Señala lo que acaban de lograr:
 ### Qué Sigue
 
 Diles:
-- **Siguiente:** `/training:start-1-4` - Usando Agentes para Marketing
+- **Siguiente:** `/training-es:start-1-4` - Usando Agentes para Marketing
 - Aprenderán sobre los 18 agentes especializados y cómo aprovecharlos
 
 ## Puntos Clave de Enseñanza

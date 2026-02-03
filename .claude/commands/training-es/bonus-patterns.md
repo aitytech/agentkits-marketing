@@ -1,4 +1,4 @@
-# /training:bonus-patterns - Biblioteca de Patrones de Marketing
+# /training-es:bonus-patterns - Biblioteca de Patrones de Marketing
 
 ## Estándares de Idioma y Calidad
 

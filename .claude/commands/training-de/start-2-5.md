@@ -1,4 +1,4 @@
-# /training:start-2-5 - Wettbewerbsanalyse
+# /training-de:start-2-5 - Wettbewerbsanalyse
 
 ## Sprach- und Qualitätsstandards
 
@@ -207,7 +207,7 @@ Create a differentiation summary for sales team:
 Teilen Sie ihnen mit:
 - Sie verfügen über umfassende Wettbewerbsinformationen
 - Bereit für effektive Positionierung und Messaging
-- **Abschließende Lektion:** `/training:start-2-6` - SEO-Optimierung
+- **Abschließende Lektion:** `/training-de:start-2-6` - SEO-Optimierung
 - Suchmaschinenoptimierung meistern
 
 ## Wichtige Lehrpunkte

@@ -1,4 +1,4 @@
-# /training:bonus-secret - 10倍营销人员框架
+# /training-zh:bonus-secret - 10倍营销人员框架
 
 ## 语言与质量标准
 
@@ -206,7 +206,7 @@
 
 既然您已完成课程:
 
-- `/training:bonus-patterns` - 构建您的模式库
+- `/training-zh:bonus-patterns` - 构建您的模式库
 - 使用 `/brainstorm` 进行创意会议
 - 串联命令以实现最大效率
 

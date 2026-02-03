@@ -1,4 +1,4 @@
-# /training:start-2-4 - Analizar Datos de Campaña
+# /training-es:start-2-4 - Analizar Datos de Campaña
 
 ## Estándares de Idioma y Calidad
 
@@ -173,7 +173,7 @@ Monthly Report Workflow:
 Diles:
 - Ahora pueden convertir datos en decisiones
 - Reportes que los ejecutivos realmente leen
-- **Siguiente:** `/training:start-2-5` - Análisis Competitivo
+- **Siguiente:** `/training-es:start-2-5` - Análisis Competitivo
 - Investiga competidores y encuentra ventajas
 
 ## Puntos Clave de Enseñanza

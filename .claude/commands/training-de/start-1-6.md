@@ -1,4 +1,4 @@
-# /training:start-1-6 - Projektgedächtnis (CLAUDE.md)
+# /training-de:start-1-6 - Projektgedächtnis (CLAUDE.md)
 
 ## Sprach- und Qualitätsstandards
 
@@ -142,7 +142,7 @@ Erkläre laufende Wartung:
 Sage ihnen:
 - CLAUDE.md gewährleistet Konsistenz ohne Wiederholung
 - **Modul 1 ist fast abgeschlossen!**
-- **Nächstes:** `/training:start-1-7` - Navigation & Suche
+- **Nächstes:** `/training-de:start-1-7` - Navigation & Suche
 - Abschließende Skills vor fortgeschrittenen Anwendungen
 
 ## Wichtige Lehrpunkte

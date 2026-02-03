@@ -1,4 +1,4 @@
-# /training:persona-builder - Constructor Interactivo de Personas
+# /training-es:persona-builder - Constructor Interactivo de Personas
 
 ## Estándares de Idioma y Calidad
 
@@ -193,7 +193,7 @@ Esta persona te ayudará a:
 - `/content:blog` - Crear contenido para esta persona
 - `/campaign:brief` - Planificar una campaña dirigida a ellos
 - `/research:persona` - Crear personas adicionales
-- `/training:help` - Ver toda la capacitación disponible
+- `/training-es:help` - Ver toda la capacitación disponible
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 ---
-description: /training:start-3-1 - أساسيات CRO
+description: /training-ar:start-3-1 - أساسيات CRO
 argument-hint:
 ---
 
@@ -153,4 +153,4 @@ training/exercises/markit/cro/
 تابع إلى الوحدة 3، الدرس 2: تحسين النماذج والتسجيل
 
 ```bash
-/training:start-3-2
+/training-ar:start-3-2

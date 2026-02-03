@@ -1,4 +1,4 @@
-# /training:start-2-6 - تحسين محركات البحث (SEO)
+# /training-ar:start-2-6 - تحسين محركات البحث (SEO)
 
 ## معايير اللغة والجودة
 
@@ -217,7 +217,7 @@ INTERNAL LINKING:
 أخبرهم:
 - استخدم جميع الأوامر للعمل المستمر
 - ارجع إلى `docs/usage-guide.md` للحصول على الوثائق
-- اطلع على المحتوى الإضافي: `/training:bonus-patterns`، `/training:bonus-secret`
+- اطلع على المحتوى الإضافي: `/training-ar:bonus-patterns`، `/training-ar:bonus-secret`
 - استمر في البناء على ما تعلمته
 - كل حملة تجعل التالية أسهل (تأثير التراكم)
 

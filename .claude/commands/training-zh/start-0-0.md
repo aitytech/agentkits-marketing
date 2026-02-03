@@ -1,4 +1,4 @@
-# /training:start-0-0 - 课程介绍
+# /training-zh:start-0-0 - 课程介绍
 
 ## 语言和质量标准
 
@@ -68,8 +68,8 @@
 ### 下一步
 
 告诉他们:
-- **下一课:** `/training:start-0-1` - 安装和设置
-- 他们也可以输入 `/training:help` 查看所有可用命令
+- **下一课:** `/training-zh:start-0-1` - 安装和设置
+- 他们也可以输入 `/training-zh:help` 查看所有可用命令
 
 ### 以鼓励结束
 
@@ -78,7 +78,7 @@
 ## 关键教学要点
 - 这是边做边学,而不是被动阅读
 - Markit 代理 / AgentKits 客户是实践项目
-- 每个 `/training:start-X-X` 命令开始一节课
+- 每个 `/training-zh:start-X-X` 命令开始一节课
 - 真实的营销命令(`/campaign:*`、`/content:*`、`/seo:*`)是他们将要掌握的内容
 
 ---

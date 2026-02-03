@@ -98,9 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # Lead zu Kunde
 |       |-- crm-workflow.md             # Kontakt-Lebenszyklus
 |
-|-- training/            # 23 interaktive Trainings-Lektionen (Englisch)
-|-- training-vi/         # Vietnamesisches Training (Tiếng Việt)
-|-- training-ja/         # Japanisches Training (日本語)
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # Dokumentation und Leitfäden
 |-- marketplace.json     # Self-Hosted Marketplace-Konfiguration
 ```
@@ -332,13 +340,21 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **Projekt** | Markit Agency arbeitet für Kunden AgentKits |
 | **Dauer** | 5-6 Stunden insgesamt |
 | **Voraussetzung** | Claude Code, Cursor oder kompatibler KI-Assistent |
-| **Sprachen** | English, Vietnamese (Tiếng Việt), Japanese (日本語) |
+| **Languages** | 10 languages: EN, 简体中文, 日本語, 한국어, ES, DE, FR, PT, VI, RU, AR |
 
 ```bash
-# Training jetzt starten
-/training:start-0-0           # Englisch
-/training-vi:start-0-0        # Vietnamesisch (Tiếng Việt)
-/training-ja:start-0-0        # Japanisch (日本語)
+# Start training in your language
+/training:start-0-0           # English
+/training-zh:start-0-0        # 简体中文
+/training-ja:start-0-0        # 日本語
+/training-ko:start-0-0        # 한국어
+/training-es:start-0-0        # Español
+/training-de:start-0-0        # Deutsch
+/training-fr:start-0-0        # Français
+/training-pt-br:start-0-0     # Português
+/training-vi:start-0-0        # Tiếng Việt
+/training-ru:start-0-0        # Русский
+/training-ar:start-0-0        # العربية
 ```
 
 ---

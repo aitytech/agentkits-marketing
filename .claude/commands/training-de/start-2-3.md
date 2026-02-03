@@ -1,4 +1,4 @@
-# /training:start-2-3 - Marketing-Texte generieren
+# /training-de:start-2-3 - Marketing-Texte generieren
 
 ## Sprach- & Qualitätsstandards
 
@@ -195,7 +195,7 @@ Score each piece and identify top improvements needed.
 Sage ihnen:
 - Sie haben eine vollständige Text-Bibliothek in einer Sitzung generiert
 - Normalerweise wochenlange Arbeit
-- **Nächstes:** `/training:start-2-4` - Kampagnendaten analysieren
+- **Nächstes:** `/training-de:start-2-4` - Kampagnendaten analysieren
 - Daten in umsetzbare Erkenntnisse verwandeln
 
 ## Wichtige Lehrpunkte

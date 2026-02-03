@@ -1,4 +1,4 @@
-# /training:start-0-1 - Installation & Einrichtung
+# /training-de:start-0-1 - Installation & Einrichtung
 
 ## Sprach- & Qualitätsstandards
 
@@ -105,7 +105,7 @@ Erkläre:
 ### Was kommt als Nächstes
 
 Sage ihnen:
-- **Nächste Lektion:** `/training:start-0-2` - Deine erste Marketing-Aufgabe
+- **Nächste Lektion:** `/training-de:start-0-2` - Deine erste Marketing-Aufgabe
 - Sie haben gerade ihre Einrichtung überprüft und ihren ersten Befehl ausgeführt!
 - So funktioniert der Rest des Kurses genau
 

@@ -1,4 +1,4 @@
-# /training:start-2-2 - Content-Strategie entwickeln
+# /training-de:start-2-2 - Content-Strategie entwickeln
 
 ## Sprach- & Qualitätsstandards
 
@@ -169,7 +169,7 @@ Wichtige zu trackende Metriken:
 Sage ihnen:
 - Sie haben eine vollständige Content-Strategie
 - Von zufälligem Posten zu systematischem Wachstum
-- **Weiter:** `/training:start-2-3` - Marketing-Copy generieren
+- **Weiter:** `/training-de:start-2-3` - Marketing-Copy generieren
 - Copy-Produktion skalieren bei gleichbleibender Qualität
 
 ## Wichtige Lehrpunkte

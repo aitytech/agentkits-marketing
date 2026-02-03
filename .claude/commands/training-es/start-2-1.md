@@ -1,4 +1,4 @@
-# /training:start-2-1 - Escribir un Brief de Campaña
+# /training-es:start-2-1 - Escribir un Brief de Campaña
 
 ## Estándares de Idioma y Calidad
 
@@ -150,7 +150,7 @@ Campaign Brief Workflow:
 Diles:
 - Crearon un brief de campaña profesional en menos de una hora
 - Normalmente esto toma días con múltiples reuniones
-- **Siguiente:** `/training:start-2-2` - Desarrollar Estrategia de Contenido
+- **Siguiente:** `/training-es:start-2-2` - Desarrollar Estrategia de Contenido
 - Construirán planes de contenido integrales
 
 ## Puntos Clave de Enseñanza

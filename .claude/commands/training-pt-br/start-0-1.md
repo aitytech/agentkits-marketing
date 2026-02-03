@@ -1,4 +1,4 @@
-# /training:start-0-1 - Instalação & Configuração
+# /training-pt-br:start-0-1 - Instalação & Configuração
 
 ## Padrões de Idioma & Qualidade
 
@@ -105,7 +105,7 @@ Explique:
 ### O Que Vem a Seguir
 
 Diga a eles:
-- **Próxima lição:** `/training:start-0-2` - Sua Primeira Tarefa de Marketing
+- **Próxima lição:** `/training-pt-br:start-0-2` - Sua Primeira Tarefa de Marketing
 - Eles acabaram de verificar sua configuração e executaram seu primeiro comando!
 - É exatamente assim que o resto do curso funciona
 

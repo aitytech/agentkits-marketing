@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-1 - Основы CRO
+description: /training-ru:start-3-1 - Основы CRO
 argument-hint:
 ---
 
@@ -152,4 +152,4 @@ training/exercises/markit/cro/
 Переходите к Модулю 3, Уроку 2: Оптимизация форм и регистрации
 
 ```bash
-/training:start-3-2
+/training-ru:start-3-2

@@ -1,4 +1,4 @@
-# /training:start-2-4 - 分析营销活动数据
+# /training-zh:start-2-4 - 分析营销活动数据
 
 ## 语言和质量标准
 
@@ -173,7 +173,7 @@ Monthly Report Workflow:
 告诉他们:
 - 他们现在可以将数据转化为决策
 - 制作高管真正会阅读的报告
-- **下一步:** `/training:start-2-5` - 竞争分析
+- **下一步:** `/training-zh:start-2-5` - 竞争分析
 - 研究竞争对手并找到优势
 
 ## 关键教学要点

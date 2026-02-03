@@ -98,9 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # 리드에서 고객까지
 |       |-- crm-workflow.md             # 연락처 라이프사이클
 |
-|-- training/            # 23개 대화형 교육 레슨 (영어)
-|-- training-vi/         # 베트남어 교육 (Tiếng Việt)
-|-- training-ja/         # 일본어 교육 (日本語)
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # 문서 및 가이드
 |-- marketplace.json     # 자체 호스팅 마켓플레이스 구성
 ```
@@ -335,10 +343,18 @@ AI 기반 마케팅을 마스터하기 위한 **22개의 대화형 레슨**. AI 
 | **언어** | 영어, 베트남어 (Tiếng Việt), 일본어 (日本語) |
 
 ```bash
-# 지금 교육 시작
-/training:start-0-0           # 영어
-/training-vi:start-0-0        # 베트남어 (Tiếng Việt)
-/training-ja:start-0-0        # 일본어 (日本語)
+# Start training in your language
+/training:start-0-0           # English
+/training-zh:start-0-0        # 简体中文
+/training-ja:start-0-0        # 日本語
+/training-ko:start-0-0        # 한국어
+/training-es:start-0-0        # Español
+/training-de:start-0-0        # Deutsch
+/training-fr:start-0-0        # Français
+/training-pt-br:start-0-0     # Português
+/training-vi:start-0-0        # Tiếng Việt
+/training-ru:start-0-0        # Русский
+/training-ar:start-0-0        # العربية
 ```
 
 ---

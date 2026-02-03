@@ -1,4 +1,4 @@
-# /training:start-1-3 - 第一批营销任务
+# /training-zh:start-1-3 - 第一批营销任务
 
 ## 语言与质量标准
 
@@ -125,7 +125,7 @@ Review the blog post from three perspectives:
 ### 下一步
 
 告诉他们:
-- **下一步:** `/training:start-1-4` - 在营销中使用代理
+- **下一步:** `/training-zh:start-1-4` - 在营销中使用代理
 - 他们将了解 18 个专业代理以及如何利用它们
 
 ## 重点教学要点

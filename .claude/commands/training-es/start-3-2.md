@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-2 - Optimización de Formularios e Inscripciones
+description: /training-es:start-3-2 - Optimización de Formularios e Inscripciones
 argument-hint:
 ---
 
@@ -171,4 +171,4 @@ Antes de continuar, verifica que puedes:
 Continúa al Módulo 3, Lección 3: CRO de Popups y Onboarding
 
 ```bash
-/training:start-3-3
+/training-es:start-3-3

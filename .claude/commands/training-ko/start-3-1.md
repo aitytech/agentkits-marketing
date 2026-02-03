@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-1 - CRO 기초
+description: /training-ko:start-3-1 - CRO 기초
 argument-hint:
 ---
 
@@ -152,4 +152,4 @@ training/exercises/markit/cro/
 모듈 3, 레슨 2: 폼 및 가입 최적화로 계속 진행하세요
 
 ```bash
-/training:start-3-2
+/training-ko:start-3-2

@@ -98,9 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # От лида к клиенту
 |       |-- crm-workflow.md             # Жизненный цикл контакта
 |
-|-- training/            # 23 интерактивных урока (английский)
-|-- training-vi/         # Обучение на вьетнамском (Tiếng Việt)
-|-- training-ja/         # Обучение на японском (日本語)
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # Документация и руководства
 |-- marketplace.json     # Конфигурация собственного маркетплейса
 ```
@@ -335,10 +343,18 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **Языки** | Английский, вьетнамский (Tiếng Việt), японский (日本語) |
 
 ```bash
-# Начать обучение сейчас
-/training:start-0-0           # Английский
-/training-vi:start-0-0        # Вьетнамский (Tiếng Việt)
-/training-ja:start-0-0        # Японский (日本語)
+# Start training in your language
+/training:start-0-0           # English
+/training-zh:start-0-0        # 简体中文
+/training-ja:start-0-0        # 日本語
+/training-ko:start-0-0        # 한국어
+/training-es:start-0-0        # Español
+/training-de:start-0-0        # Deutsch
+/training-fr:start-0-0        # Français
+/training-pt-br:start-0-0     # Português
+/training-vi:start-0-0        # Tiếng Việt
+/training-ru:start-0-0        # Русский
+/training-ar:start-0-0        # العربية
 ```
 
 ---

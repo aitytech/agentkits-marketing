@@ -1,4 +1,4 @@
-# /training:start-0-2 - Tu Primera Tarea de Marketing
+# /training-es:start-0-2 - Tu Primera Tarea de Marketing
 
 ## Estándares de Idioma y Calidad
 
@@ -107,7 +107,7 @@ Demuestra brevemente otros comandos que dominarán:
 Diles:
 - **¡Felicitaciones!** ¡Módulo 0 completado!
 - Han usado comandos de marketing reales y visto el sistema en acción
-- **Siguiente:** `/training:start-1-1` - Bienvenido a Markit (Comienzan los Conceptos Básicos)
+- **Siguiente:** `/training-es:start-1-1` - Bienvenido a Markit (Comienzan los Conceptos Básicos)
 - Se sumergirán profundamente en agentes, flujos de trabajo y comandos avanzados
 
 ## Puntos Clave de Enseñanza

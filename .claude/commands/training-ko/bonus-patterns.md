@@ -1,4 +1,4 @@
-# /training:bonus-patterns - 마케팅 패턴 라이브러리
+# /training-ko:bonus-patterns - 마케팅 패턴 라이브러리
 
 ## 언어 및 품질 기준
 

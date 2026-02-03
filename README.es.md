@@ -98,9 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # De lead a cliente
 |       |-- crm-workflow.md             # Ciclo de vida de contacto
 |
-|-- training/            # 23 lecciones de formación interactivas (Inglés)
-|-- training-vi/         # Formación en vietnamita (Tiếng Việt)
-|-- training-ja/         # Formación en japonés (日本語)
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # Documentación y guías
 |-- marketplace.json     # Configuración de marketplace auto-alojado
 ```

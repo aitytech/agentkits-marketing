@@ -1,4 +1,4 @@
-# /training:start-2-6 - SEO 최적화
+# /training-ko:start-2-6 - SEO 최적화
 
 ## 언어 및 품질 기준
 
@@ -217,7 +217,7 @@ SEO 성과 추적:
 다음 사항 안내:
 - 지속적인 작업에 모든 명령어 사용
 - 문서는 `docs/usage-guide.md` 참조
-- 보너스 콘텐츠 확인: `/training:bonus-patterns`, `/training:bonus-secret`
+- 보너스 콘텐츠 확인: `/training-ko:bonus-patterns`, `/training-ko:bonus-secret`
 - 학습한 내용을 계속 발전시키기
 - 각 캠페인이 다음 캠페인을 더 쉽게 만듦 (복리 효과)
 

@@ -1,4 +1,4 @@
-# /training:start-1-7 - Navegación y Búsqueda
+# /training-es:start-1-7 - Navegación y Búsqueda
 
 ## Estándares de Lenguaje y Calidad
 
@@ -169,7 +169,7 @@ Ahora sabes cómo:
 Diles:
 - **Módulo 2:** Aplicaciones Avanzadas
 - Trabajo real de campañas: briefs, estrategia, copy, analíticas, SEO
-- **Siguiente:** `/training:start-2-1` - Escribe un Brief de Campaña
+- **Siguiente:** `/training-es:start-2-1` - Escribe un Brief de Campaña
 - O toma un descanso - ¡te lo has ganado!
 
 ## Puntos Clave de Enseñanza

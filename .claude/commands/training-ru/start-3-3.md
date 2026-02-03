@@ -1,6 +1,6 @@
 ---
 ---
-description: /training:start-3-3 - CRO всплывающих окон и онбординга
+description: /training-ru:start-3-3 - CRO всплывающих окон и онбординга
 argument-hint:
 ---
 
@@ -190,7 +190,7 @@ training/exercises/markit/cro/
 Переходите к Модулю 4: Стратегии роста и запуска
 
 ```bash
-/training:start-4-1
+/training-ru:start-4-1
 ```
 
 Или изучите другие новые навыки:

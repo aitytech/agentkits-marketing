@@ -1,4 +1,4 @@
-# /training:help - Referência de Comandos do Curso
+# /training-pt-br:help - Referência de Comandos do Curso
 
 ## Padrões de Idioma e Qualidade
 
@@ -21,48 +21,48 @@ Exiba todos os comandos disponíveis e ajuda de navegação do curso.
 ### Módulo 0: Primeiros Passos
 | Comando | Lição | Duração |
 |---------|--------|----------|
-| `/training:start-0-0` | Introdução ao Curso | 10 min |
-| `/training:start-0-1` | Instalação e Configuração | 15 min |
-| `/training:start-0-2` | Sua Primeira Tarefa de Marketing | 15 min |
+| `/training-pt-br:start-0-0` | Introdução ao Curso | 10 min |
+| `/training-pt-br:start-0-1` | Instalação e Configuração | 15 min |
+| `/training-pt-br:start-0-2` | Sua Primeira Tarefa de Marketing | 15 min |
 
 ### Módulo 1: Conceitos Fundamentais
 | Comando | Lição | Duração |
 |---------|--------|----------|
-| `/training:start-1-1` | Bem-vindo ao Markit | 20 min |
-| `/training:start-1-2` | Trabalhando com Arquivos de Marketing | 25 min |
-| `/training:start-1-3` | Primeiras Tarefas de Marketing | 30 min |
-| `/training:start-1-4` | Usando Agentes para Marketing | 35 min |
-| `/training:start-1-5` | Mergulho Profundo em Agentes Revisores | 30 min |
-| `/training:start-1-6` | Memória do Projeto (CLAUDE.md) | 20 min |
-| `/training:start-1-7` | Navegação e Busca | 20 min |
+| `/training-pt-br:start-1-1` | Bem-vindo ao Markit | 20 min |
+| `/training-pt-br:start-1-2` | Trabalhando com Arquivos de Marketing | 25 min |
+| `/training-pt-br:start-1-3` | Primeiras Tarefas de Marketing | 30 min |
+| `/training-pt-br:start-1-4` | Usando Agentes para Marketing | 35 min |
+| `/training-pt-br:start-1-5` | Mergulho Profundo em Agentes Revisores | 30 min |
+| `/training-pt-br:start-1-6` | Memória do Projeto (CLAUDE.md) | 20 min |
+| `/training-pt-br:start-1-7` | Navegação e Busca | 20 min |
 
 ### Módulo 2: Aplicações Avançadas
 | Comando | Lição | Duração |
 |---------|--------|----------|
-| `/training:start-2-1` | Escrever um Briefing de Campanha | 45 min |
-| `/training:start-2-2` | Desenvolver Estratégia de Conteúdo | 40 min |
-| `/training:start-2-3` | Gerar Copy de Marketing | 35 min |
-| `/training:start-2-4` | Analisar Dados de Campanha | 35 min |
-| `/training:start-2-5` | Análise Competitiva | 30 min |
-| `/training:start-2-6` | Otimização de SEO | 40 min |
+| `/training-pt-br:start-2-1` | Escrever um Briefing de Campanha | 45 min |
+| `/training-pt-br:start-2-2` | Desenvolver Estratégia de Conteúdo | 40 min |
+| `/training-pt-br:start-2-3` | Gerar Copy de Marketing | 35 min |
+| `/training-pt-br:start-2-4` | Analisar Dados de Campanha | 35 min |
+| `/training-pt-br:start-2-5` | Análise Competitiva | 30 min |
+| `/training-pt-br:start-2-6` | Otimização de SEO | 40 min |
 
 ### Módulo 3: CRO e Conversão
 | Comando | Lição | Duração |
 |---------|--------|----------|
-| `/training:start-3-1` | Fundamentos de CRO | 20 min |
-| `/training:start-3-2` | Otimização de Formulários e Cadastros | 20 min |
-| `/training:start-3-3` | CRO para Popups e Onboarding | 20 min |
+| `/training-pt-br:start-3-1` | Fundamentos de CRO | 20 min |
+| `/training-pt-br:start-3-2` | Otimização de Formulários e Cadastros | 20 min |
+| `/training-pt-br:start-3-3` | CRO para Popups e Onboarding | 20 min |
 
 ### Construtores Interativos (Não Precisa de Experiência)
 | Comando | Descrição | Duração |
 |---------|-------------|----------|
-| `/training:persona-builder` | Construir persona de comprador passo a passo | 15 min |
+| `/training-pt-br:persona-builder` | Construir persona de comprador passo a passo | 15 min |
 
 ### Conteúdo Bônus
 | Comando | Descrição |
 |---------|-------------|
-| `/training:bonus-patterns` | Templates de biblioteca de padrões |
-| `/training:bonus-secret` | O Framework do Profissional de Marketing 10x |
+| `/training-pt-br:bonus-patterns` | Templates de biblioteca de padrões |
+| `/training-pt-br:bonus-secret` | O Framework do Profissional de Marketing 10x |
 
 ---
 
@@ -192,7 +192,7 @@ Exiba todos os comandos disponíveis e ajuda de navegação do curso.
 
 ## Dicas Rápidas
 
-**Novo no curso?** Comece com `/training:start-0-0`
+**Novo no curso?** Comece com `/training-pt-br:start-0-0`
 
 **Precisa de um comando específico?** Verifique as categorias acima
 
@@ -202,6 +202,6 @@ Exiba todos os comandos disponíveis e ajuda de navegação do curso.
 
 ---
 
-**Pronto para começar?** Digite `/training:start-0-0` para iniciar o curso!
+**Pronto para começar?** Digite `/training-pt-br:start-0-0` para iniciar o curso!
 
 ---

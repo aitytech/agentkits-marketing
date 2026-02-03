@@ -1,4 +1,4 @@
-# /training:start-2-6 - Optimización SEO
+# /training-es:start-2-6 - Optimización SEO
 
 ## Estándares de Idioma y Calidad
 
@@ -217,7 +217,7 @@ Ahora sabes cómo:
 Diles:
 - Usa todos los comandos para trabajo continuo
 - Consulta `docs/usage-guide.md` para documentación
-- Revisa el contenido bonus: `/training:bonus-patterns`, `/training:bonus-secret`
+- Revisa el contenido bonus: `/training-es:bonus-patterns`, `/training-es:bonus-secret`
 - Continúa construyendo sobre lo que han aprendido
 - Cada campaña hace la siguiente más fácil (Efecto Compuesto)
 

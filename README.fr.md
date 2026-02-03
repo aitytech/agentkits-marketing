@@ -98,9 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # Du lead au client
 |       |-- crm-workflow.md             # Cycle de vie des contacts
 |
-|-- training/            # 23 leçons de formation interactives (anglais)
-|-- training-vi/         # Formation vietnamienne (Tiếng Việt)
-|-- training-ja/         # Formation japonaise (日本語)
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # Documentation et guides
 |-- marketplace.json     # Configuration marketplace auto-hébergée
 ```
@@ -335,10 +343,18 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **Langues** | Anglais, Vietnamien (Tiếng Việt), Japonais (日本語) |
 
 ```bash
-# Commencer la formation maintenant
-/training:start-0-0           # Anglais
-/training-vi:start-0-0        # Vietnamien (Tiếng Việt)
-/training-ja:start-0-0        # Japonais (日本語)
+# Start training in your language
+/training:start-0-0           # English
+/training-zh:start-0-0        # 简体中文
+/training-ja:start-0-0        # 日本語
+/training-ko:start-0-0        # 한국어
+/training-es:start-0-0        # Español
+/training-de:start-0-0        # Deutsch
+/training-fr:start-0-0        # Français
+/training-pt-br:start-0-0     # Português
+/training-vi:start-0-0        # Tiếng Việt
+/training-ru:start-0-0        # Русский
+/training-ar:start-0-0        # العربية
 ```
 
 ---

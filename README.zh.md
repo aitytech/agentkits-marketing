@@ -98,9 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # 潜在客户到客户
 |       |-- crm-workflow.md             # 联系人生命周期
 |
-|-- training/            # 23 个互动培训课程(英语)
-|-- training-vi/         # 越南语培训(Tiếng Việt)
-|-- training-ja/         # 日语培训(日本語)
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # 文档和指南
 |-- marketplace.json     # 自托管市场配置
 ```
@@ -335,10 +343,18 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **语言** | 英语、越南语(Tiếng Việt)、日语(日本語) |
 
 ```bash
-# 立即开始培训
-/training:start-0-0           # 英语
-/training-vi:start-0-0        # 越南语(Tiếng Việt)
-/training-ja:start-0-0        # 日语(日本語)
+# Start training in your language
+/training:start-0-0           # English
+/training-zh:start-0-0        # 简体中文
+/training-ja:start-0-0        # 日本語
+/training-ko:start-0-0        # 한국어
+/training-es:start-0-0        # Español
+/training-de:start-0-0        # Deutsch
+/training-fr:start-0-0        # Français
+/training-pt-br:start-0-0     # Português
+/training-vi:start-0-0        # Tiếng Việt
+/training-ru:start-0-0        # Русский
+/training-ar:start-0-0        # العربية
 ```
 
 ---

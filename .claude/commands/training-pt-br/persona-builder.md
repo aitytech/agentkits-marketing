@@ -1,4 +1,4 @@
-# /training:persona-builder - Construtor Interativo de Persona
+# /training-pt-br:persona-builder - Construtor Interativo de Persona
 
 ## Padrões de Linguagem & Qualidade
 
@@ -193,7 +193,7 @@ Esta persona ajudará você a:
 - `/content:blog` - Criar conteúdo para esta persona
 - `/campaign:brief` - Planejar uma campanha direcionada a ela
 - `/research:persona` - Criar personas adicionais
-- `/training:help` - Ver todos os treinamentos disponíveis
+- `/training-pt-br:help` - Ver todos os treinamentos disponíveis
 
 ---
 

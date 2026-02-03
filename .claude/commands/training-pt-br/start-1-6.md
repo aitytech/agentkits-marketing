@@ -1,4 +1,4 @@
-# /training:start-1-6 - Memória do Projeto (CLAUDE.md)
+# /training-pt-br:start-1-6 - Memória do Projeto (CLAUDE.md)
 
 ## Padrões de Idioma e Qualidade
 
@@ -142,7 +142,7 @@ Explique a manutenção contínua:
 Diga a eles:
 - O CLAUDE.md garante consistência sem repetição
 - **Módulo 1 quase completo!**
-- **Próximo:** `/training:start-1-7` - Navegação e Busca
+- **Próximo:** `/training-pt-br:start-1-7` - Navegação e Busca
 - Skills finais antes de aplicações avançadas
 
 ## Pontos-Chave de Ensino

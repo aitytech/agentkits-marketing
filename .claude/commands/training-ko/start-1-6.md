@@ -1,4 +1,4 @@
-# /training:start-1-6 - 프로젝트 메모리 (CLAUDE.md)
+# /training-ko:start-1-6 - 프로젝트 메모리 (CLAUDE.md)
 
 ## 언어 및 품질 표준
 
@@ -142,7 +142,7 @@ Read .claude/workflows/marketing-rules.md
 학생들에게 알려주세요:
 - CLAUDE.md는 반복 없이 일관성을 보장합니다
 - **모듈 1이 거의 완료되었습니다!**
-- **다음:** `/training:start-1-7` - 탐색 및 검색
+- **다음:** `/training-ko:start-1-7` - 탐색 및 검색
 - 고급 응용 프로그램 전 최종 스킬
 
 ## 주요 교육 포인트

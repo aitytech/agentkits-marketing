@@ -1,4 +1,4 @@
-# /training:start-2-3 - 生成营销文案
+# /training-zh:start-2-3 - 生成营销文案
 
 ## 语言和质量标准
 
@@ -195,7 +195,7 @@ Score each piece and identify top improvements needed.
 告诉他们:
 - 他们在一次会话中生成了完整的文案库
 - 通常需要数周的工作
-- **下一步:** `/training:start-2-4` - 分析活动数据
+- **下一步:** `/training-zh:start-2-4` - 分析活动数据
 - 将数据转化为可执行的洞察
 
 ## 关键教学要点

@@ -1,4 +1,4 @@
-# /training:start-2-3 - Gerar Copy de Marketing
+# /training-pt-br:start-2-3 - Gerar Copy de Marketing
 
 ## Padrões de Idioma & Qualidade
 
@@ -195,7 +195,7 @@ Score each piece and identify top improvements needed.
 Diga a eles:
 - Eles geraram uma biblioteca completa de copy em uma sessão
 - Normalmente semanas de trabalho
-- **Próximo:** `/training:start-2-4` - Analisar Dados de Campanha
+- **Próximo:** `/training-pt-br:start-2-4` - Analisar Dados de Campanha
 - Transformar dados em insights acionáveis
 
 ## Pontos de Ensino Principais

@@ -1,4 +1,4 @@
-# /training:start-2-1 - Rédiger un Brief de Campagne
+# /training-fr:start-2-1 - Rédiger un Brief de Campagne
 
 ## Normes de Langue et de Qualité
 
@@ -150,7 +150,7 @@ Campaign Brief Workflow:
 Dites-leur :
 - Ils ont créé un brief de campagne professionnel en moins d'une heure
 - Normalement, cela prend des jours avec plusieurs réunions
-- **Suivant :** `/training:start-2-2` - Développer une Stratégie de Contenu
+- **Suivant :** `/training-fr:start-2-2` - Développer une Stratégie de Contenu
 - Ils vont créer des plans de contenu complets
 
 ## Points d'Enseignement Clés

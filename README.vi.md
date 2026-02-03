@@ -98,9 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # Lead đến khách hàng
 |       |-- crm-workflow.md             # Vòng đời contact
 |
-|-- training/            # 23 bài học đào tạo tương tác (English)
-|-- training-vi/         # Đào tạo tiếng Việt
-|-- training-ja/         # Đào tạo tiếng Nhật (日本語)
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # Tài liệu và hướng dẫn
 |-- marketplace.json     # Cấu hình marketplace tự host
 ```
@@ -332,13 +340,21 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **Dự án** | Agency Markit làm việc cho khách hàng AgentKits |
 | **Thời lượng** | 5-6 giờ tổng cộng |
 | **Điều kiện tiên quyết** | Claude Code, Cursor hoặc trợ lý AI tương thích |
-| **Ngôn ngữ** | English, Vietnamese (Tiếng Việt), Japanese (日本語) |
+| **Languages** | 10 languages: EN, 简体中文, 日本語, 한국어, ES, DE, FR, PT, VI, RU, AR |
 
 ```bash
-# Bắt đầu đào tạo ngay
+# Start training in your language
 /training:start-0-0           # English
-/training-vi:start-0-0        # Vietnamese (Tiếng Việt)
-/training-ja:start-0-0        # Japanese (日本語)
+/training-zh:start-0-0        # 简体中文
+/training-ja:start-0-0        # 日本語
+/training-ko:start-0-0        # 한국어
+/training-es:start-0-0        # Español
+/training-de:start-0-0        # Deutsch
+/training-fr:start-0-0        # Français
+/training-pt-br:start-0-0     # Português
+/training-vi:start-0-0        # Tiếng Việt
+/training-ru:start-0-0        # Русский
+/training-ar:start-0-0        # العربية
 ```
 
 ---

@@ -1,4 +1,4 @@
-# /training:start-1-7 - 导航与搜索
+# /training-zh:start-1-7 - 导航与搜索
 
 ## 语言与质量标准
 
@@ -169,7 +169,7 @@ Show me the content style guide
 告诉他们:
 - **模块 2:**高级应用
 - 实际营销活动工作:简报、策略、文案、分析、SEO
-- **下一课:** `/training:start-2-1` - 撰写营销活动简报
+- **下一课:** `/training-zh:start-2-1` - 撰写营销活动简报
 - 或者休息一下 - 他们已经赢得了!
 
 ## 关键教学要点

@@ -1,4 +1,4 @@
-# /training:start-1-4 - Uso de Agentes para Marketing
+# /training-es:start-1-4 - Uso de Agentes para Marketing
 
 ## Estándares de Idioma y Calidad
 
@@ -140,7 +140,7 @@ Comparte estos consejos:
 
 Diles:
 - Ahora entienden el sistema de 18 agentes
-- **Siguiente:** `/training:start-1-5` - Sub-Agentes de Marketing Personalizados
+- **Siguiente:** `/training-es:start-1-5` - Sub-Agentes de Marketing Personalizados
 - Aprenderán sobre revisores de personas y cómo obtener retroalimentación específica
 
 ## Puntos Clave de Enseñanza

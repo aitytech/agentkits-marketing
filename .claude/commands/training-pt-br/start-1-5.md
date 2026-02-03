@@ -1,4 +1,4 @@
-# /training:start-1-5 - Mergulho Profundo em Agentes Revisores
+# /training-pt-br:start-1-5 - Mergulho Profundo em Agentes Revisores
 
 ## Padrões de Linguagem e Qualidade
 
@@ -160,7 +160,7 @@ Forneça orientação:
 Diga a eles:
 - Eles agora têm um sistema de revisão reutilizável
 - Esses revisores garantem qualidade consistente
-- **Próximo:** `/training:start-1-6` - Memória do Projeto (CLAUDE.md)
+- **Próximo:** `/training-pt-br:start-1-6` - Memória do Projeto (CLAUDE.md)
 - Eles aprenderão como manter contexto persistente
 
 ## Pontos-Chave de Ensino

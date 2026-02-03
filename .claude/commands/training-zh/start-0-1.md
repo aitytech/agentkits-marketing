@@ -1,4 +1,4 @@
-# /training:start-0-1 - 安装与设置
+# /training-zh:start-0-1 - 安装与设置
 
 ## 语言和质量标准
 
@@ -105,7 +105,7 @@ Read docs/usage-guide.md (first 50 lines)
 ### 接下来是什么
 
 告诉他们:
-- **下一课:** `/training:start-0-2` - 您的第一个营销任务
+- **下一课:** `/training-zh:start-0-2` - 您的第一个营销任务
 - 他们刚刚验证了设置并运行了第一个命令!
 - 课程的其余部分就是这样进行的
 

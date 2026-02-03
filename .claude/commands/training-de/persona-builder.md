@@ -1,4 +1,4 @@
-# /training:persona-builder - Interaktiver Persona-Builder
+# /training-de:persona-builder - Interaktiver Persona-Builder
 
 ## Sprach- und Qualitätsstandards
 
@@ -193,7 +193,7 @@ Diese Persona wird dir helfen:
 - `/content:blog` - Content für diese Persona erstellen
 - `/campaign:brief` - Eine Kampagne für diese Zielgruppe planen
 - `/research:persona` - Zusätzliche Personas erstellen
-- `/training:help` - Alle verfügbaren Trainings anzeigen
+- `/training-de:help` - Alle verfügbaren Trainings anzeigen
 
 ---
 

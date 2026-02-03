@@ -1,4 +1,4 @@
-# /training:bonus-patterns - Bibliothèque de Modèles Marketing
+# /training-fr:bonus-patterns - Bibliothèque de Modèles Marketing
 
 ## Normes de Langue et de Qualité
 

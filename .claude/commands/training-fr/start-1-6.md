@@ -1,4 +1,4 @@
-# /training:start-1-6 - Mémoire de Projet (CLAUDE.md)
+# /training-fr:start-1-6 - Mémoire de Projet (CLAUDE.md)
 
 ## Normes de Langue et de Qualité
 
@@ -142,7 +142,7 @@ Expliquez la maintenance continue :
 Dites-leur :
 - CLAUDE.md assure la cohérence sans répétition
 - **Module 1 presque terminé !**
-- **Suivant :** `/training:start-1-7` - Navigation et Recherche
+- **Suivant :** `/training-fr:start-1-7` - Navigation et Recherche
 - Compétences finales avant les applications avancées
 
 ## Points d'Enseignement Clés

@@ -1,4 +1,4 @@
-# /training:start-1-3 - Premières Tâches Marketing
+# /training-fr:start-1-3 - Premières Tâches Marketing
 
 ## Normes de Langue et de Qualité
 
@@ -125,7 +125,7 @@ Soulignez ce qu'ils viennent d'accomplir :
 ### Prochaine Étape
 
 Dites-leur :
-- **Suivant :** `/training:start-1-4` - Utiliser les Agents pour le Marketing
+- **Suivant :** `/training-fr:start-1-4` - Utiliser les Agents pour le Marketing
 - Ils apprendront les 18 agents spécialisés et comment les exploiter
 
 ## Points Clés d'Enseignement

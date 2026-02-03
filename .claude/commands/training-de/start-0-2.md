@@ -1,4 +1,4 @@
-# /training:start-0-2 - Ihre erste Marketing-Aufgabe
+# /training-de:start-0-2 - Ihre erste Marketing-Aufgabe
 
 ## Sprach- & Qualitätsstandards
 
@@ -107,7 +107,7 @@ Demonstrieren Sie kurz andere Befehle, die sie beherrschen werden:
 Sagen Sie ihnen:
 - **Glückwunsch!** Modul 0 abgeschlossen!
 - Sie haben echte Marketing-Befehle verwendet und das System in Aktion gesehen
-- **Weiter:** `/training:start-1-1` - Willkommen bei Markit (Kernkonzepte beginnen)
+- **Weiter:** `/training-de:start-1-1` - Willkommen bei Markit (Kernkonzepte beginnen)
 - Sie werden tief in Agents, Workflows und erweiterte Befehle eintauchen
 
 ## Wichtige Lehrpunkte

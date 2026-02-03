@@ -1,4 +1,4 @@
-# /training:start-1-2 - Travailler avec les Fichiers Marketing
+# /training-fr:start-1-2 - Travailler avec les Fichiers Marketing
 
 ## Normes de Langue et de Qualité
 
@@ -132,7 +132,7 @@ Partagez les modèles de commandes essentiels :
 Dites-leur :
 - Ils savent maintenant comment naviguer dans la documentation du kit marketing
 - Les commandes sont organisées par fonction marketing
-- **Suivant :** `/training:start-1-3` - Premières Tâches Marketing (génération de contenu, analyse)
+- **Suivant :** `/training-fr:start-1-3` - Premières Tâches Marketing (génération de contenu, analyse)
 
 ## Points Clés d'Enseignement
 - Une bonne organisation de la documentation accélère tout

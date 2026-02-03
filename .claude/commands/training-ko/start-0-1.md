@@ -1,4 +1,4 @@
-# /training:start-0-1 - 설치 및 설정
+# /training-ko:start-0-1 - 설치 및 설정
 
 ## 언어 및 품질 기준
 
@@ -105,7 +105,7 @@ Read docs/usage-guide.md (first 50 lines)
 ### 다음 단계
 
 다음과 같이 안내하세요:
-- **다음 레슨:** `/training:start-0-2` - 첫 번째 마케팅 작업
+- **다음 레슨:** `/training-ko:start-0-2` - 첫 번째 마케팅 작업
 - 방금 설정을 확인하고 첫 번째 커맨드를 실행했습니다!
 - 나머지 과정도 정확히 이런 방식으로 진행됩니다
 

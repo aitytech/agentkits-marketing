@@ -1,4 +1,4 @@
-# /training:bonus-patterns - 营销模式库
+# /training-zh:bonus-patterns - 营销模式库
 
 ## 语言和质量标准
 

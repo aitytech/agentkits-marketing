@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-2 - Optimisation des Formulaires et Inscriptions
+description: /training-fr:start-3-2 - Optimisation des Formulaires et Inscriptions
 argument-hint:
 ---
 
@@ -171,4 +171,4 @@ Avant de continuer, vérifiez que vous pouvez :
 Continuez avec le Module 3, Leçon 3 : Optimisation des Popups et de l'Onboarding
 
 ```bash
-/training:start-3-3
+/training-fr:start-3-3

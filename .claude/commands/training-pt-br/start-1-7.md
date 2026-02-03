@@ -1,4 +1,4 @@
-# /training:start-1-7 - Navegação e Busca
+# /training-pt-br:start-1-7 - Navegação e Busca
 
 ## Padrões de Idioma e Qualidade
 
@@ -169,7 +169,7 @@ Agora você sabe como:
 Informe a eles:
 - **Módulo 2:** Aplicações Avançadas
 - Trabalho real de campanha: briefings, estratégia, copy, analytics, SEO
-- **Próximo:** `/training:start-2-1` - Escrever um Briefing de Campanha
+- **Próximo:** `/training-pt-br:start-2-1` - Escrever um Briefing de Campanha
 - Ou faça uma pausa - você merece!
 
 ## Pontos-Chave de Ensino

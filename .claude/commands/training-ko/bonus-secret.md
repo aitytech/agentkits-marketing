@@ -1,4 +1,4 @@
-# /training:bonus-secret - 10배 마케터 프레임워크
+# /training-ko:bonus-secret - 10배 마케터 프레임워크
 
 ## 언어 및 품질 기준
 
@@ -206,7 +206,7 @@
 
 이제 과정을 완료했으므로:
 
-- `/training:bonus-patterns` - 패턴 라이브러리 구축
+- `/training-ko:bonus-patterns` - 패턴 라이브러리 구축
 - `/brainstorm` 사용하여 창의적 세션 진행
 - 최대 효율을 위해 명령어 체인 사용
 

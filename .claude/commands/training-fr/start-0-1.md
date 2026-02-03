@@ -1,4 +1,4 @@
-# /training:start-0-1 - Installation et Configuration
+# /training-fr:start-0-1 - Installation et Configuration
 
 ## Normes de Langue et de Qualité
 
@@ -105,7 +105,7 @@ Expliquez :
 ### Et Ensuite
 
 Dites-leur :
-- **Prochaine leçon :** `/training:start-0-2` - Votre Première Tâche Marketing
+- **Prochaine leçon :** `/training-fr:start-0-2` - Votre Première Tâche Marketing
 - Ils viennent de vérifier leur configuration et d'exécuter leur première commande !
 - C'est exactement ainsi que fonctionne le reste du cours
 

@@ -1,4 +1,4 @@
-# /training:start-0-2 - 你的第一个营销任务
+# /training-zh:start-0-2 - 你的第一个营销任务
 
 ## 语言和质量标准
 
@@ -107,7 +107,7 @@ Show me what the brand:voice command created
 告诉他们:
 - **恭喜!** 模块 0 完成!
 - 他们已经使用了真实的营销命令并看到了系统的实际运作
-- **下一步:** `/training:start-1-1` - 欢迎来到 Markit(核心概念开始)
+- **下一步:** `/training-zh:start-1-1` - 欢迎来到 Markit(核心概念开始)
 - 他们将深入学习代理、工作流和高级命令
 
 ## 关键教学要点

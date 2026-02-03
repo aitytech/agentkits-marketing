@@ -1,4 +1,4 @@
-# /training:bonus-secret - Le Framework du Marketeur 10x
+# /training-fr:bonus-secret - Le Framework du Marketeur 10x
 
 ## Standards de Langue et de Qualité
 
@@ -206,7 +206,7 @@ Le travail se capitalise. La connaissance se capitalise. Les résultats se capit
 
 Maintenant que vous avez terminé le cours :
 
-- `/training:bonus-patterns` - Construire votre bibliothèque de patterns
+- `/training-fr:bonus-patterns` - Construire votre bibliothèque de patterns
 - Utiliser `/brainstorm` pour des sessions créatives
 - Enchaîner les commandes pour une efficacité maximale
 

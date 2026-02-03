@@ -1,4 +1,4 @@
-# /training:start-2-3 - 마케팅 카피 생성
+# /training-ko:start-2-3 - 마케팅 카피 생성
 
 ## 언어 및 품질 기준
 
@@ -195,7 +195,7 @@ Score each piece and identify top improvements needed.
 다음과 같이 안내하세요:
 - 한 세션에서 완전한 카피 라이브러리를 생성했습니다
 - 일반적으로 몇 주간의 작업
-- **다음:** `/training:start-2-4` - 캠페인 데이터 분석
+- **다음:** `/training-ko:start-2-4` - 캠페인 데이터 분석
 - 데이터를 실행 가능한 인사이트로 전환
 
 ## 주요 교육 포인트

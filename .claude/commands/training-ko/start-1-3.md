@@ -1,4 +1,4 @@
-# /training:start-1-3 - 첫 번째 마케팅 작업
+# /training-ko:start-1-3 - 첫 번째 마케팅 작업
 
 ## 언어 및 품질 기준
 
@@ -125,7 +125,7 @@ Review the blog post from three perspectives:
 ### 다음 단계
 
 학생들에게 알려주세요:
-- **다음:** `/training:start-1-4` - 마케팅을 위한 에이전트 사용하기
+- **다음:** `/training-ko:start-1-4` - 마케팅을 위한 에이전트 사용하기
 - 18개의 전문 에이전트와 이를 활용하는 방법에 대해 배우게 됩니다
 
 ## 주요 교육 포인트

@@ -1,4 +1,4 @@
-# /training:start-1-3 - Primeiras Tarefas de Marketing
+# /training-pt-br:start-1-3 - Primeiras Tarefas de Marketing
 
 ## Padrões de Linguagem e Qualidade
 
@@ -125,7 +125,7 @@ Aponte o que eles acabaram de realizar:
 ### O Que Vem a Seguir
 
 Diga a eles:
-- **Próximo:** `/training:start-1-4` - Usando Agentes para Marketing
+- **Próximo:** `/training-pt-br:start-1-4` - Usando Agentes para Marketing
 - Eles aprenderão sobre os 18 agentes especializados e como aproveitá-los
 
 ## Pontos-Chave de Ensino

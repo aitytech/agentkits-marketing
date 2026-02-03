@@ -1,4 +1,4 @@
-# /training:start-2-1 - Einen Kampagnen-Brief erstellen
+# /training-de:start-2-1 - Einen Kampagnen-Brief erstellen
 
 ## Sprach- und Qualitätsstandards
 
@@ -150,7 +150,7 @@ Campaign Brief Workflow:
 Teilen Sie ihnen mit:
 - Sie haben in weniger als einer Stunde einen professionellen Kampagnen-Brief erstellt
 - Normalerweise dauert dies Tage mit mehreren Meetings
-- **Als Nächstes:** `/training:start-2-2` - Content-Strategie entwickeln
+- **Als Nächstes:** `/training-de:start-2-2` - Content-Strategie entwickeln
 - Sie werden umfassende Content-Pläne erstellen
 
 ## Wichtige Lehrpunkte

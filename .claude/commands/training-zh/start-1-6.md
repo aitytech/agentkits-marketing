@@ -1,4 +1,4 @@
-# /training:start-1-6 - 项目记忆 (CLAUDE.md)
+# /training-zh:start-1-6 - 项目记忆 (CLAUDE.md)
 
 ## 语言和质量标准
 
@@ -142,7 +142,7 @@ Read .claude/workflows/marketing-rules.md
 告诉他们：
 - CLAUDE.md 确保了一致性而无需重复
 - **模块 1 即将完成！**
-- **下一步：** `/training:start-1-7` - 导航与搜索
+- **下一步：** `/training-zh:start-1-7` - 导航与搜索
 - 在高级应用之前的最后技能
 
 ## 关键教学要点

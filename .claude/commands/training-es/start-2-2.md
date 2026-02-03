@@ -1,4 +1,4 @@
-# /training:start-2-2 - Desarrollar Estrategia de Contenido
+# /training-es:start-2-2 - Desarrollar Estrategia de Contenido
 
 ## Estándares de Idioma y Calidad
 
@@ -169,7 +169,7 @@ Métricas clave a seguir:
 Diles:
 - Tienen una estrategia de contenido completa
 - De publicaciones aleatorias a crecimiento sistemático
-- **Siguiente:** `/training:start-2-3` - Generar Copy de Marketing
+- **Siguiente:** `/training-es:start-2-3` - Generar Copy de Marketing
 - Escalar la producción de copy mientras se mantiene la calidad
 
 ## Puntos Clave de Enseñanza

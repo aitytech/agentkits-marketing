@@ -1,4 +1,4 @@
-# /training:start-2-3 - Generar Contenido de Marketing
+# /training-es:start-2-3 - Generar Contenido de Marketing
 
 ## Estándares de Idioma y Calidad
 
@@ -195,7 +195,7 @@ Score each piece and identify top improvements needed.
 Diles:
 - Generaron una biblioteca completa de contenido en una sola sesión
 - Normalmente semanas de trabajo
-- **Siguiente:** `/training:start-2-4` - Analizar Datos de Campaña
+- **Siguiente:** `/training-es:start-2-4` - Analizar Datos de Campaña
 - Convertir datos en insights accionables
 
 ## Puntos Clave de Enseñanza

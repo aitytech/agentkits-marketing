@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-2 - Оптимизация форм и регистрации
+description: /training-ru:start-3-2 - Оптимизация форм и регистрации
 argument-hint:
 ---
 
@@ -171,4 +171,4 @@ training/exercises/markit/cro/form-audit.md
 Переходите к Модулю 3, Уроку 3: CRO для всплывающих окон и онбординга
 
 ```bash
-/training:start-3-3
+/training-ru:start-3-3

@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-1 - CRO 基础知识
+description: /training-zh:start-3-1 - CRO 基础知识
 argument-hint:
 ---
 
@@ -152,4 +152,4 @@ training/exercises/markit/cro/
 继续学习模块 3，第 2 课：表单和注册优化
 
 ```bash
-/training:start-3-2
+/training-zh:start-3-2

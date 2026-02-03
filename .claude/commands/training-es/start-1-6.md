@@ -1,4 +1,4 @@
-# /training:start-1-6 - Memoria del Proyecto (CLAUDE.md)
+# /training-es:start-1-6 - Memoria del Proyecto (CLAUDE.md)
 
 ## Estándares de Idioma y Calidad
 
@@ -142,7 +142,7 @@ Explica el mantenimiento continuo:
 Diles:
 - CLAUDE.md asegura consistencia sin repetición
 - **¡Módulo 1 casi completo!**
-- **Siguiente:** `/training:start-1-7` - Navegación y Búsqueda
+- **Siguiente:** `/training-es:start-1-7` - Navegación y Búsqueda
 - Skills finales antes de aplicaciones avanzadas
 
 ## Puntos Clave de Enseñanza

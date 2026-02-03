@@ -1,4 +1,4 @@
-# /training:start-1-1 - Bienvenue chez Markit
+# /training-fr:start-1-1 - Bienvenue chez Markit
 
 ## Normes de Langue et de Qualité
 
@@ -112,7 +112,7 @@ Montrez comment Claude puise automatiquement dans le contexte de la campagne.
 Dites-leur :
 - Ils ont créé un brief de campagne professionnel en utilisant `/campaign:plan`
 - Claude a utilisé le contexte des directives de marque et des personas
-- **Ensuite :** `/training:start-1-2` - Travailler avec les Fichiers Marketing
+- **Ensuite :** `/training-fr:start-1-2` - Travailler avec les Fichiers Marketing
 - Ils apprendront à organiser, trouver et gérer efficacement les ressources marketing
 
 ## Points d'Enseignement Clés

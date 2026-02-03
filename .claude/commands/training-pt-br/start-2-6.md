@@ -1,4 +1,4 @@
-# /training:start-2-6 - Otimização de SEO
+# /training-pt-br:start-2-6 - Otimização de SEO
 
 ## Padrões de Idioma e Qualidade
 
@@ -217,7 +217,7 @@ Agora você sabe como:
 Diga a eles:
 - Use todos os comandos para trabalho contínuo
 - Consulte `docs/usage-guide.md` para documentação
-- Confira o conteúdo bônus: `/training:bonus-patterns`, `/training:bonus-secret`
+- Confira o conteúdo bônus: `/training-pt-br:bonus-patterns`, `/training-pt-br:bonus-secret`
 - Continue construindo sobre o que aprenderam
 - Cada campanha torna a próxima mais fácil (Efeito Composto)
 

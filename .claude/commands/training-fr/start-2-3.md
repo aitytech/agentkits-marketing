@@ -1,4 +1,4 @@
-# /training:start-2-3 - Générer du Contenu Marketing
+# /training-fr:start-2-3 - Générer du Contenu Marketing
 
 ## Normes de Langue et de Qualité
 
@@ -195,7 +195,7 @@ Score each piece and identify top improvements needed.
 Dites-leur :
 - Ils ont généré une bibliothèque de contenu complète en une seule session
 - Normalement des semaines de travail
-- **Suivant :** `/training:start-2-4` - Analyser les Données de Campagne
+- **Suivant :** `/training-fr:start-2-4` - Analyser les Données de Campagne
 - Transformer les données en insights actionnables
 
 ## Points Clés d'Enseignement

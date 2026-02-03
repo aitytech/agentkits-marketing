@@ -1,4 +1,4 @@
-# /training:bonus-patterns - Marketing-Musterbibliothek
+# /training-de:bonus-patterns - Marketing-Musterbibliothek
 
 ## Sprach- und Qualitätsstandards
 

@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-2 - تحسين النماذج والتسجيل
+description: /training-ar:start-3-2 - تحسين النماذج والتسجيل
 argument-hint:
 ---
 
@@ -171,4 +171,4 @@ training/exercises/markit/cro/form-audit.md
 تابع إلى الوحدة 3، الدرس 3: تحسين معدل التحويل للنوافذ المنبثقة والإعداد
 
 ```bash
-/training:start-3-3
+/training-ar:start-3-3

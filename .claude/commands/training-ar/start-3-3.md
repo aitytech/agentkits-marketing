@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-3 - تحسين معدل التحويل للنوافذ المنبثقة والإعداد الأولي
+description: /training-ar:start-3-3 - تحسين معدل التحويل للنوافذ المنبثقة والإعداد الأولي
 argument-hint:
 ---
 
@@ -189,7 +189,7 @@ training/exercises/markit/cro/
 تابع إلى الوحدة 4: استراتيجيات النمو والإطلاق
 
 ```bash
-/training:start-4-1
+/training-ar:start-4-1
 ```
 
 أو استكشف مهارات جديدة أخرى:

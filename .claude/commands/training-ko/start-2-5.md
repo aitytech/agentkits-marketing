@@ -1,4 +1,4 @@
-# /training:start-2-5 - 경쟁사 분석
+# /training-ko:start-2-5 - 경쟁사 분석
 
 ## 언어 및 품질 기준
 
@@ -207,7 +207,7 @@ Create a differentiation summary for sales team:
 알려주세요:
 - 포괄적인 경쟁 인텔리전스를 확보했습니다
 - 효과적인 포지셔닝과 메시징을 할 준비가 되었습니다
-- **최종 레슨:** `/training:start-2-6` - SEO 최적화
+- **최종 레슨:** `/training-ko:start-2-6` - SEO 최적화
 - 검색 엔진 최적화 마스터하기
 
 ## 핵심 교육 포인트

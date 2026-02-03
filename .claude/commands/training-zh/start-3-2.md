@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-2 - 表单与注册优化
+description: /training-zh:start-3-2 - 表单与注册优化
 argument-hint:
 ---
 
@@ -171,7 +171,7 @@ training/exercises/markit/cro/form-audit.md
 继续学习模块 3，课程 3：弹窗与入门引导转化率优化
 
 ```bash
-/training:start-3-3
+/training-zh:start-3-3
 ```
 
 ---

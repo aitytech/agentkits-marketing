@@ -1,4 +1,4 @@
-# /training:start-1-7 - 탐색 및 검색
+# /training-ko:start-1-7 - 탐색 및 검색
 
 ## 언어 및 품질 기준
 
@@ -169,7 +169,7 @@ Show me the content style guide
 안내사항:
 - **모듈 2:** 고급 응용
 - 실제 캠페인 작업: 브리프, 전략, 카피, 분석, SEO
-- **다음:** `/training:start-2-1` - 캠페인 브리프 작성
+- **다음:** `/training-ko:start-2-1` - 캠페인 브리프 작성
 - 또는 휴식을 취하세요 - 충분히 받을 자격이 있습니다!
 
 ## 주요 교육 포인트

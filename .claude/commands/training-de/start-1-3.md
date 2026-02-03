@@ -1,4 +1,4 @@
-# /training:start-1-3 - Erste Marketing-Aufgaben
+# /training-de:start-1-3 - Erste Marketing-Aufgaben
 
 ## Sprach- und Qualitätsstandards
 
@@ -125,7 +125,7 @@ Weisen Sie darauf hin, was sie gerade erreicht haben:
 ### Was kommt als Nächstes
 
 Sagen Sie ihnen:
-- **Nächste:** `/training:start-1-4` - Agenten für Marketing nutzen
+- **Nächste:** `/training-de:start-1-4` - Agenten für Marketing nutzen
 - Sie lernen die 18 spezialisierten Agenten kennen und wie man sie einsetzt
 
 ## Wichtige Lehrpunkte

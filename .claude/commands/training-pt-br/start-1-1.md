@@ -1,4 +1,4 @@
-# /training:start-1-1 - Bem-vindo ao Markit
+# /training-pt-br:start-1-1 - Bem-vindo ao Markit
 
 ## Padrões de Idioma e Qualidade
 
@@ -112,7 +112,7 @@ Mostre como Claude extrai do contexto da campanha automaticamente.
 Diga a eles:
 - Eles criaram um brief de campanha profissional usando `/campaign:plan`
 - Claude usou contexto das diretrizes de marca e personas
-- **Próximo:** `/training:start-1-2` - Trabalhando com Arquivos de Marketing
+- **Próximo:** `/training-pt-br:start-1-2` - Trabalhando com Arquivos de Marketing
 - Eles aprenderão a organizar, encontrar e gerenciar ativos de marketing de forma eficiente
 
 ## Pontos-Chave de Ensino

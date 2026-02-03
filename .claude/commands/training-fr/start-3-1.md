@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-1 - Fondamentaux du CRO
+description: /training-fr:start-3-1 - Fondamentaux du CRO
 argument-hint:
 ---
 
@@ -152,4 +152,4 @@ Avant de continuer, vérifiez que vous pouvez :
 Continuez vers le Module 3, Leçon 2 : Optimisation des formulaires et de l'inscription
 
 ```bash
-/training:start-3-2
+/training-fr:start-3-2

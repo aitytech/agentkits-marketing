@@ -1,4 +1,4 @@
-# /training:start-1-2 - Trabalhando com Arquivos de Marketing
+# /training-pt-br:start-1-2 - Trabalhando com Arquivos de Marketing
 
 ## Padrões de Linguagem e Qualidade
 
@@ -132,7 +132,7 @@ Compartilhe padrões de comandos essenciais:
 Diga a eles:
 - Agora eles sabem como navegar pela documentação do kit de marketing
 - Os comandos estão organizados por função de marketing
-- **Próximo:** `/training:start-1-3` - Primeiras Tarefas de Marketing (geração de conteúdo, análise)
+- **Próximo:** `/training-pt-br:start-1-3` - Primeiras Tarefas de Marketing (geração de conteúdo, análise)
 
 ## Pontos-Chave de Ensino
 - Boa organização da documentação torna tudo mais rápido

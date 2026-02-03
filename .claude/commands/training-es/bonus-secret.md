@@ -1,4 +1,4 @@
-# /training:bonus-secret - El Framework del Marketer 10x
+# /training-es:bonus-secret - El Framework del Marketer 10x
 
 ## Estándares de Idioma y Calidad
 
@@ -206,7 +206,7 @@ El trabajo se compone. El conocimiento se compone. Los resultados se componen.
 
 Ahora que has completado el curso:
 
-- `/training:bonus-patterns` - Construye tu biblioteca de patrones
+- `/training-es:bonus-patterns` - Construye tu biblioteca de patrones
 - Usa `/brainstorm` para sesiones creativas
 - Encadena comandos para máxima eficiencia
 

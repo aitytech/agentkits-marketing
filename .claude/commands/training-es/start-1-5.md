@@ -1,4 +1,4 @@
-# /training:start-1-5 - Inmersión Profunda en Agentes Revisores
+# /training-es:start-1-5 - Inmersión Profunda en Agentes Revisores
 
 ## Estándares de Idioma y Calidad
 
@@ -160,7 +160,7 @@ Proporciona orientación:
 Diles:
 - Ahora tienen un sistema de revisión reutilizable
 - Estos revisores aseguran calidad consistente
-- **Siguiente:** `/training:start-1-6` - Memoria del Proyecto (CLAUDE.md)
+- **Siguiente:** `/training-es:start-1-6` - Memoria del Proyecto (CLAUDE.md)
 - Aprenderán cómo mantener contexto persistente
 
 ## Puntos Clave de Enseñanza

@@ -1,4 +1,4 @@
-# /training:start-1-1 - 欢迎来到 Markit
+# /training-zh:start-1-1 - 欢迎来到 Markit
 
 ## 语言和质量标准
 
@@ -112,7 +112,7 @@ Expand the target audience section with day-in-the-life scenarios for each perso
 告诉他们：
 - 他们使用 `/campaign:plan` 创建了专业的营销活动简报
 - Claude 使用了品牌指南和角色的上下文
-- **下一步：** `/training:start-1-2` - 处理营销文件
+- **下一步：** `/training-zh:start-1-2` - 处理营销文件
 - 他们将学习如何高效地组织、查找和管理营销资产
 
 ## 关键教学要点

@@ -1,4 +1,4 @@
-# /training:start-2-6 - Optimisation SEO
+# /training-fr:start-2-6 - Optimisation SEO
 
 ## Normes de Langue et de Qualité
 
@@ -217,7 +217,7 @@ Vous savez maintenant comment :
 Dites-leur :
 - Utilisez toutes les commandes pour le travail continu
 - Consultez `docs/usage-guide.md` pour la documentation
-- Découvrez le contenu bonus : `/training:bonus-patterns`, `/training:bonus-secret`
+- Découvrez le contenu bonus : `/training-fr:bonus-patterns`, `/training-fr:bonus-secret`
 - Continuez à développer ce que vous avez appris
 - Chaque campagne rend la suivante plus facile (Effet Cumulatif)
 

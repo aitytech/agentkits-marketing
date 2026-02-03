@@ -1,4 +1,4 @@
-# /training:start-1-2 - Arbeiten mit Marketing-Dateien
+# /training-de:start-1-2 - Arbeiten mit Marketing-Dateien
 
 ## Sprach- & Qualitätsstandards
 
@@ -132,7 +132,7 @@ Teile wesentliche Befehlsmuster:
 Sage ihnen:
 - Sie wissen jetzt, wie man in der Marketing-Kit-Dokumentation navigiert
 - Befehle sind nach Marketing-Funktion organisiert
-- **Als Nächstes:** `/training:start-1-3` - Erste Marketing-Aufgaben (Content-Generierung, Analyse)
+- **Als Nächstes:** `/training-de:start-1-3` - Erste Marketing-Aufgaben (Content-Generierung, Analyse)
 
 ## Zentrale Lehrpunkte
 - Gute Dokumentationsorganisation macht alles schneller

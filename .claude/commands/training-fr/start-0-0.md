@@ -1,4 +1,4 @@
-# /training:start-0-0 - Introduction au cours
+# /training-fr:start-0-0 - Introduction au cours
 
 ## Normes de langue et de qualité
 
@@ -68,8 +68,8 @@ Expliquez brièvement les composants du kit marketing :
 ### Et ensuite
 
 Dites-leur :
-- **Prochaine leçon :** `/training:start-0-1` - Installation et configuration
-- Ils peuvent également taper `/training:help` pour voir toutes les commandes disponibles
+- **Prochaine leçon :** `/training-fr:start-0-1` - Installation et configuration
+- Ils peuvent également taper `/training-fr:help` pour voir toutes les commandes disponibles
 
 ### Terminez avec des encouragements
 
@@ -78,7 +78,7 @@ Rappelez-leur qu'aucune expérience en programmation n'est nécessaire - s'ils p
 ## Points d'enseignement clés
 - Il s'agit d'apprendre en faisant, pas de lecture passive
 - L'agence Markit / le client AgentKits est le projet pratique
-- Chaque commande `/training:start-X-X` commence une leçon
+- Chaque commande `/training-fr:start-X-X` commence une leçon
 - Les vraies commandes marketing (`/campaign:*`, `/content:*`, `/seo:*`) sont ce qu'ils maîtriseront
 
 ---

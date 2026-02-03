@@ -1,4 +1,4 @@
-# /training:help - 코스 명령어 참조
+# /training-ko:help - 코스 명령어 참조
 
 ## 언어 및 품질 기준
 
@@ -21,48 +21,48 @@
 ### 모듈 0: 시작하기
 | 명령어 | 레슨 | 소요 시간 |
 |---------|--------|----------|
-| `/training:start-0-0` | 코스 소개 | 10분 |
-| `/training:start-0-1` | 설치 및 설정 | 15분 |
-| `/training:start-0-2` | 첫 번째 마케팅 작업 | 15분 |
+| `/training-ko:start-0-0` | 코스 소개 | 10분 |
+| `/training-ko:start-0-1` | 설치 및 설정 | 15분 |
+| `/training-ko:start-0-2` | 첫 번째 마케팅 작업 | 15분 |
 
 ### 모듈 1: 핵심 개념
 | 명령어 | 레슨 | 소요 시간 |
 |---------|--------|----------|
-| `/training:start-1-1` | Markit에 오신 것을 환영합니다 | 20분 |
-| `/training:start-1-2` | 마케팅 파일 작업하기 | 25분 |
-| `/training:start-1-3` | 첫 번째 마케팅 작업들 | 30분 |
-| `/training:start-1-4` | 마케팅을 위한 에이전트 사용하기 | 35분 |
-| `/training:start-1-5` | 리뷰어 에이전트 심화 학습 | 30분 |
-| `/training:start-1-6` | 프로젝트 메모리 (CLAUDE.md) | 20분 |
-| `/training:start-1-7` | 탐색 및 검색 | 20분 |
+| `/training-ko:start-1-1` | Markit에 오신 것을 환영합니다 | 20분 |
+| `/training-ko:start-1-2` | 마케팅 파일 작업하기 | 25분 |
+| `/training-ko:start-1-3` | 첫 번째 마케팅 작업들 | 30분 |
+| `/training-ko:start-1-4` | 마케팅을 위한 에이전트 사용하기 | 35분 |
+| `/training-ko:start-1-5` | 리뷰어 에이전트 심화 학습 | 30분 |
+| `/training-ko:start-1-6` | 프로젝트 메모리 (CLAUDE.md) | 20분 |
+| `/training-ko:start-1-7` | 탐색 및 검색 | 20분 |
 
 ### 모듈 2: 고급 응용
 | 명령어 | 레슨 | 소요 시간 |
 |---------|--------|----------|
-| `/training:start-2-1` | 캠페인 브리프 작성하기 | 45분 |
-| `/training:start-2-2` | 콘텐츠 전략 개발하기 | 40분 |
-| `/training:start-2-3` | 마케팅 카피 생성하기 | 35분 |
-| `/training:start-2-4` | 캠페인 데이터 분석하기 | 35분 |
-| `/training:start-2-5` | 경쟁사 분석 | 30분 |
-| `/training:start-2-6` | SEO 최적화 | 40분 |
+| `/training-ko:start-2-1` | 캠페인 브리프 작성하기 | 45분 |
+| `/training-ko:start-2-2` | 콘텐츠 전략 개발하기 | 40분 |
+| `/training-ko:start-2-3` | 마케팅 카피 생성하기 | 35분 |
+| `/training-ko:start-2-4` | 캠페인 데이터 분석하기 | 35분 |
+| `/training-ko:start-2-5` | 경쟁사 분석 | 30분 |
+| `/training-ko:start-2-6` | SEO 최적화 | 40분 |
 
 ### 모듈 3: CRO 및 전환
 | 명령어 | 레슨 | 소요 시간 |
 |---------|--------|----------|
-| `/training:start-3-1` | CRO 기본 개념 | 20분 |
-| `/training:start-3-2` | 폼 및 가입 최적화 | 20분 |
-| `/training:start-3-3` | 팝업 및 온보딩 CRO | 20분 |
+| `/training-ko:start-3-1` | CRO 기본 개념 | 20분 |
+| `/training-ko:start-3-2` | 폼 및 가입 최적화 | 20분 |
+| `/training-ko:start-3-3` | 팝업 및 온보딩 CRO | 20분 |
 
 ### 인터랙티브 빌더 (경험 불필요)
 | 명령어 | 설명 | 소요 시간 |
 |---------|-------------|----------|
-| `/training:persona-builder` | 단계별 구매자 페르소나 구축 | 15분 |
+| `/training-ko:persona-builder` | 단계별 구매자 페르소나 구축 | 15분 |
 
 ### 보너스 콘텐츠
 | 명령어 | 설명 |
 |---------|-------------|
-| `/training:bonus-patterns` | 패턴 라이브러리 템플릿 |
-| `/training:bonus-secret` | 10배 마케터 프레임워크 |
+| `/training-ko:bonus-patterns` | 패턴 라이브러리 템플릿 |
+| `/training-ko:bonus-secret` | 10배 마케터 프레임워크 |
 
 ---
 
@@ -192,7 +192,7 @@
 
 ## 빠른 팁
 
-**코스를 처음 시작하시나요?** `/training:start-0-0`으로 시작하세요
+**코스를 처음 시작하시나요?** `/training-ko:start-0-0`으로 시작하세요
 
 **특정 명령어가 필요하신가요?** 위의 카테고리를 확인하세요
 
@@ -202,6 +202,6 @@
 
 ---
 
-**시작할 준비가 되셨나요?** `/training:start-0-0`을 입력하여 코스를 시작하세요!
+**시작할 준비가 되셨나요?** `/training-ko:start-0-0`을 입력하여 코스를 시작하세요!
 
 ---

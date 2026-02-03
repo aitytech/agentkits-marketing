@@ -1,4 +1,4 @@
-# /training:start-2-5 - Análisis Competitivo
+# /training-es:start-2-5 - Análisis Competitivo
 
 ## Estándares de Idioma y Calidad
 
@@ -207,7 +207,7 @@ Create a differentiation summary for sales team:
 Diles:
 - Tienen inteligencia competitiva integral
 - Listos para posicionar y comunicar efectivamente
-- **Lección final:** `/training:start-2-6` - Optimización SEO
+- **Lección final:** `/training-es:start-2-6` - Optimización SEO
 - Domina la optimización para motores de búsqueda
 
 ## Puntos Clave de Enseñanza

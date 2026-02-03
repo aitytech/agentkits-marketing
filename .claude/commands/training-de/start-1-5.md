@@ -1,4 +1,4 @@
-# /training:start-1-5 - Reviewer-Agenten im Detail
+# /training-de:start-1-5 - Reviewer-Agenten im Detail
 
 ## Sprach- und Qualitätsstandards
 
@@ -160,7 +160,7 @@ Gib Orientierung:
 Sage ihnen:
 - Sie haben jetzt ein wiederverwendbares Review-System
 - Diese Reviewer gewährleisten konsistente Qualität
-- **Weiter:** `/training:start-1-6` - Projekt-Gedächtnis (CLAUDE.md)
+- **Weiter:** `/training-de:start-1-6` - Projekt-Gedächtnis (CLAUDE.md)
 - Sie lernen, wie man persistenten Kontext aufrechterhält
 
 ## Wichtige Lehrpunkte

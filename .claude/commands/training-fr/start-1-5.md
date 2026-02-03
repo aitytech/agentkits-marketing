@@ -1,4 +1,4 @@
-# /training:start-1-5 - Plongée Approfondie dans les Agents Réviseurs
+# /training-fr:start-1-5 - Plongée Approfondie dans les Agents Réviseurs
 
 ## Normes de Langue et de Qualité
 
@@ -160,7 +160,7 @@ Fournissez des conseils :
 Dites-leur :
 - Ils ont maintenant un système de révision réutilisable
 - Ces réviseurs assurent une qualité constante
-- **Suivant :** `/training:start-1-6` - Mémoire de Projet (CLAUDE.md)
+- **Suivant :** `/training-fr:start-1-6` - Mémoire de Projet (CLAUDE.md)
 - Ils apprendront comment maintenir un contexte persistant
 
 ## Points d'Enseignement Clés

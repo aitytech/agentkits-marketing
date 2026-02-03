@@ -1,4 +1,4 @@
-# /training:start-1-7 - Navigation & Suche
+# /training-de:start-1-7 - Navigation & Suche
 
 ## Sprach- & Qualitätsstandards
 
@@ -169,7 +169,7 @@ Du weißt jetzt, wie man:
 Sage ihnen:
 - **Modul 2:** Fortgeschrittene Anwendungen
 - Echte Kampagnenarbeit: Briefs, Strategie, Copy, Analytics, SEO
-- **Weiter:** `/training:start-2-1` - Schreibe ein Kampagnen-Brief
+- **Weiter:** `/training-de:start-2-1` - Schreibe ein Kampagnen-Brief
 - Oder mache eine Pause - du hast es dir verdient!
 
 ## Wichtige Lehrpunkte

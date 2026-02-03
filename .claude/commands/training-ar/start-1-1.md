@@ -1,4 +1,4 @@
-# /training:start-1-1 - مرحباً بك في Markit
+# /training-ar:start-1-1 - مرحباً بك في Markit
 
 ## معايير اللغة والجودة
 
@@ -112,7 +112,7 @@ Expand the target audience section with day-in-the-life scenarios for each perso
 أخبرهم:
 - لقد أنشأوا موجز حملة احترافي باستخدام `/campaign:plan`
 - استخدم Claude السياق من إرشادات العلامة التجارية والشخصيات
-- **التالي:** `/training:start-1-2` - العمل مع ملفات التسويق
+- **التالي:** `/training-ar:start-1-2` - العمل مع ملفات التسويق
 - سيتعلمون تنظيم وإيجاد وإدارة الأصول التسويقية بكفاءة
 
 ## نقاط التعليم الرئيسية

@@ -1,4 +1,4 @@
-# /training:start-2-4 - Kampagnendaten analysieren
+# /training-de:start-2-4 - Kampagnendaten analysieren
 
 ## Sprach- & Qualitätsstandards
 
@@ -173,7 +173,7 @@ Monthly Report Workflow:
 Sagen Sie ihnen:
 - Sie können jetzt Daten in Entscheidungen verwandeln
 - Berichte, die Führungskräfte tatsächlich lesen
-- **Nächstes:** `/training:start-2-5` - Wettbewerbsanalyse
+- **Nächstes:** `/training-de:start-2-5` - Wettbewerbsanalyse
 - Wettbewerber recherchieren und Vorteile finden
 
 ## Wichtige Lehrpunkte

@@ -1,4 +1,4 @@
-# /training:persona-builder - 交互式人物画像构建器
+# /training-zh:persona-builder - 交互式人物画像构建器
 
 ## 语言和质量标准
 
@@ -193,7 +193,7 @@
 - `/content:blog` - 为此人物画像创建内容
 - `/campaign:brief` - 规划针对他们的营销活动
 - `/research:persona` - 创建额外的人物画像
-- `/training:help` - 查看所有可用的培训
+- `/training-zh:help` - 查看所有可用的培训
 
 ---
 

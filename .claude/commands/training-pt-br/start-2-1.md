@@ -1,4 +1,4 @@
-# /training:start-2-1 - Escreva um Brief de Campanha
+# /training-pt-br:start-2-1 - Escreva um Brief de Campanha
 
 ## Padrões de Idioma e Qualidade
 
@@ -150,7 +150,7 @@ Fluxo de Trabalho do Brief de Campanha:
 Diga a eles:
 - Eles criaram um brief de campanha profissional em menos de uma hora
 - Normalmente isso leva dias com múltiplas reuniões
-- **Próximo:** `/training:start-2-2` - Desenvolva Estratégia de Conteúdo
+- **Próximo:** `/training-pt-br:start-2-2` - Desenvolva Estratégia de Conteúdo
 - Eles vão construir planos de conteúdo abrangentes
 
 ## Pontos de Ensino Principais

@@ -1,4 +1,4 @@
-# /training:start-2-2 - Développer une Stratégie de Contenu
+# /training-fr:start-2-2 - Développer une Stratégie de Contenu
 
 ## Normes de Langue et de Qualité
 
@@ -169,7 +169,7 @@ Indicateurs clés à suivre :
 Dites-leur :
 - Ils ont une stratégie de contenu complète
 - De la publication aléatoire à la croissance systématique
-- **Suivant :** `/training:start-2-3` - Générer du Texte Marketing
+- **Suivant :** `/training-fr:start-2-3` - Générer du Texte Marketing
 - Augmenter la production de textes tout en maintenant la qualité
 
 ## Points d'Enseignement Clés

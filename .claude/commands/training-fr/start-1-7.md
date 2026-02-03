@@ -1,4 +1,4 @@
-# /training:start-1-7 - Navigation & Recherche
+# /training-fr:start-1-7 - Navigation & Recherche
 
 ## Normes de Langue & Qualité
 
@@ -169,7 +169,7 @@ Vous savez maintenant comment :
 Dites-leur :
 - **Module 2 :** Applications Avancées
 - Travail de campagne réel : briefs, stratégie, rédaction, analytics, SEO
-- **Suivant :** `/training:start-2-1` - Rédiger un Brief de Campagne
+- **Suivant :** `/training-fr:start-2-1` - Rédiger un Brief de Campagne
 - Ou faites une pause - vous l'avez bien mérité !
 
 ## Points d'Enseignement Clés

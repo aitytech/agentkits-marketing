@@ -1,4 +1,4 @@
-# /training:bonus-patterns - Biblioteca de Padrões de Marketing
+# /training-pt-br:bonus-patterns - Biblioteca de Padrões de Marketing
 
 ## Padrões de Linguagem e Qualidade
 

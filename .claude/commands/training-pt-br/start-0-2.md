@@ -1,4 +1,4 @@
-# /training:start-0-2 - Sua Primeira Tarefa de Marketing
+# /training-pt-br:start-0-2 - Sua Primeira Tarefa de Marketing
 
 ## Padrões de Idioma e Qualidade
 
@@ -107,7 +107,7 @@ Demonstre brevemente outros comandos que eles vão dominar:
 Diga a eles:
 - **Parabéns!** Módulo 0 completo!
 - Eles usaram comandos reais de marketing e viram o sistema em ação
-- **Próximo:** `/training:start-1-1` - Bem-vindo ao Markit (Conceitos Fundamentais começam)
+- **Próximo:** `/training-pt-br:start-1-1` - Bem-vindo ao Markit (Conceitos Fundamentais começam)
 - Eles vão mergulhar profundamente em agentes, fluxos de trabalho e comandos avançados
 
 ## Pontos-Chave de Ensino

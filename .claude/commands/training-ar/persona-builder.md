@@ -1,4 +1,4 @@
-# /training:persona-builder - أداة بناء الشخصيات التفاعلية
+# /training-ar:persona-builder - أداة بناء الشخصيات التفاعلية
 
 ## معايير اللغة والجودة
 
@@ -193,7 +193,7 @@
 - `/content:blog` - إنشاء محتوى لهذه الشخصية
 - `/campaign:brief` - تخطيط حملة تستهدفهم
 - `/research:persona` - إنشاء شخصيات إضافية
-- `/training:help` - رؤية جميع التدريبات المتاحة
+- `/training-ar:help` - رؤية جميع التدريبات المتاحة
 
 ---
 

@@ -1,4 +1,4 @@
-# /training:bonus-secret - Das 10x Marketer Framework
+# /training-de:bonus-secret - Das 10x Marketer Framework
 
 ## Sprach- & Qualitätsstandards
 
@@ -206,7 +206,7 @@ Die Arbeit akkumuliert. Das Wissen akkumuliert. Die Ergebnisse akkumulieren.
 
 Jetzt, da du den Kurs abgeschlossen hast:
 
-- `/training:bonus-patterns` - Baue deine Musterbibliothek auf
+- `/training-de:bonus-patterns` - Baue deine Musterbibliothek auf
 - Nutze `/brainstorm` für kreative Sitzungen
 - Verkette Befehle für maximale Effizienz
 

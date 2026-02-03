@@ -1,4 +1,4 @@
-# /training:start-2-5 - Analyse Concurrentielle
+# /training-fr:start-2-5 - Analyse Concurrentielle
 
 ## Normes de Langue et de Qualité
 
@@ -207,7 +207,7 @@ Create a differentiation summary for sales team:
 Dites-leur :
 - Ils disposent d'une intelligence concurrentielle complète
 - Prêts à positionner et communiquer efficacement
-- **Leçon finale :** `/training:start-2-6` - Optimisation SEO
+- **Leçon finale :** `/training-fr:start-2-6` - Optimisation SEO
 - Maîtriser l'optimisation pour les moteurs de recherche
 
 ## Points d'Enseignement Clés

@@ -1,4 +1,4 @@
-# /training:start-1-2 - Trabajando con Archivos de Marketing
+# /training-es:start-1-2 - Trabajando con Archivos de Marketing
 
 ## Estándares de Lenguaje y Calidad
 
@@ -132,7 +132,7 @@ Comparte patrones de comandos esenciales:
 Diles:
 - Ahora saben cómo navegar la documentación del kit de marketing
 - Los comandos están organizados por función de marketing
-- **Siguiente:** `/training:start-1-3` - Primeras Tareas de Marketing (generación de contenido, análisis)
+- **Siguiente:** `/training-es:start-1-3` - Primeras Tareas de Marketing (generación de contenido, análisis)
 
 ## Puntos Clave de Enseñanza
 - Una buena organización de documentación hace todo más rápido

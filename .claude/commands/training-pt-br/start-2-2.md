@@ -1,4 +1,4 @@
-# /training:start-2-2 - Desenvolver Estratégia de Conteúdo
+# /training-pt-br:start-2-2 - Desenvolver Estratégia de Conteúdo
 
 ## Padrões de Idioma e Qualidade
 
@@ -169,7 +169,7 @@ Métricas-chave para rastrear:
 Diga a eles:
 - Eles têm uma estratégia de conteúdo completa
 - De postagens aleatórias para crescimento sistemático
-- **Próximo:** `/training:start-2-3` - Gerar Copy de Marketing
+- **Próximo:** `/training-pt-br:start-2-3` - Gerar Copy de Marketing
 - Escalar a produção de copy mantendo a qualidade
 
 ## Pontos-Chave de Ensino

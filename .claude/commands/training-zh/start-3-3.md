@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-3 - 弹窗与新手引导 CRO
+description: /training-zh:start-3-3 - 弹窗与新手引导 CRO
 argument-hint:
 ---
 
@@ -189,7 +189,7 @@ training/exercises/markit/cro/
 继续学习模块 4:增长与发布策略
 
 ```bash
-/training:start-4-1
+/training-zh:start-4-1
 ```
 
 或探索其他新技能:

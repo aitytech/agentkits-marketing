@@ -1,4 +1,4 @@
-# /training:start-1-4 - 마케팅을 위한 에이전트 활용
+# /training-ko:start-1-4 - 마케팅을 위한 에이전트 활용
 
 ## 언어 및 품질 기준
 
@@ -140,7 +140,7 @@ SCENARIO: A competitor just announced a "team focus" feature. Use agents to resp
 
 다음과 같이 알려주세요:
 - 이제 18개 에이전트 시스템을 이해했습니다
-- **다음:** `/training:start-1-5` - 맞춤형 마케팅 서브 에이전트
+- **다음:** `/training-ko:start-1-5` - 맞춤형 마케팅 서브 에이전트
 - 페르소나 리뷰어와 타겟팅된 피드백을 받는 방법을 배우게 됩니다
 
 ## 주요 교육 포인트

@@ -1,4 +1,4 @@
-# /training:start-0-1 - Instalación y Configuración
+# /training-es:start-0-1 - Instalación y Configuración
 
 ## Estándares de Lenguaje y Calidad
 
@@ -105,7 +105,7 @@ Explica:
 ### Qué Sigue
 
 Diles:
-- **Próxima lección:** `/training:start-0-2` - Tu Primera Tarea de Marketing
+- **Próxima lección:** `/training-es:start-0-2` - Tu Primera Tarea de Marketing
 - ¡Acaban de verificar su configuración y ejecutar su primer comando!
 - Así es exactamente como funciona el resto del curso
 

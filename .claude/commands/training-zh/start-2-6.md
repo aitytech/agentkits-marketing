@@ -1,4 +1,4 @@
-# /training:start-2-6 - SEO优化
+# /training-zh:start-2-6 - SEO优化
 
 ## 语言与质量标准
 
@@ -217,7 +217,7 @@ INTERNAL LINKING:
 告诉他们：
 - 在日常工作中使用所有命令
 - 参考`docs/usage-guide.md`获取文档
-- 查看额外内容：`/training:bonus-patterns`、`/training:bonus-secret`
+- 查看额外内容：`/training-zh:bonus-patterns`、`/training-zh:bonus-secret`
 - 继续在所学基础上深化
 - 每个活动都会使下一个活动更容易（复利效应）
 

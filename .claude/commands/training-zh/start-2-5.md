@@ -1,4 +1,4 @@
-# /training:start-2-5 - 竞争分析
+# /training-zh:start-2-5 - 竞争分析
 
 ## 语言与质量标准
 
@@ -207,7 +207,7 @@ Create a differentiation summary for sales team:
 告诉他们：
 - 他们已经掌握了全面的竞争情报
 - 准备好有效地进行定位和消息传递
-- **最后一课：** `/training:start-2-6` - SEO 优化
+- **最后一课：** `/training-zh:start-2-6` - SEO 优化
 - 掌握搜索引擎优化
 
 ## 关键教学要点

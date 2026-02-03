@@ -1,4 +1,4 @@
-# /training:help - 课程命令参考
+# /training-zh:help - 课程命令参考
 
 ## 语言与质量标准
 
@@ -21,48 +21,48 @@
 ### 模块 0：入门指南
 | 命令 | 课程 | 时长 |
 |---------|--------|----------|
-| `/training:start-0-0` | 课程介绍 | 10 分钟 |
-| `/training:start-0-1` | 安装与设置 | 15 分钟 |
-| `/training:start-0-2` | 你的第一个营销任务 | 15 分钟 |
+| `/training-zh:start-0-0` | 课程介绍 | 10 分钟 |
+| `/training-zh:start-0-1` | 安装与设置 | 15 分钟 |
+| `/training-zh:start-0-2` | 你的第一个营销任务 | 15 分钟 |
 
 ### 模块 1：核心概念
 | 命令 | 课程 | 时长 |
 |---------|--------|----------|
-| `/training:start-1-1` | 欢迎使用 Markit | 20 分钟 |
-| `/training:start-1-2` | 处理营销文件 | 25 分钟 |
-| `/training:start-1-3` | 首批营销任务 | 30 分钟 |
-| `/training:start-1-4` | 使用智能体进行营销 | 35 分钟 |
-| `/training:start-1-5` | 审阅智能体深入探讨 | 30 分钟 |
-| `/training:start-1-6` | 项目记忆 (CLAUDE.md) | 20 分钟 |
-| `/training:start-1-7` | 导航与搜索 | 20 分钟 |
+| `/training-zh:start-1-1` | 欢迎使用 Markit | 20 分钟 |
+| `/training-zh:start-1-2` | 处理营销文件 | 25 分钟 |
+| `/training-zh:start-1-3` | 首批营销任务 | 30 分钟 |
+| `/training-zh:start-1-4` | 使用智能体进行营销 | 35 分钟 |
+| `/training-zh:start-1-5` | 审阅智能体深入探讨 | 30 分钟 |
+| `/training-zh:start-1-6` | 项目记忆 (CLAUDE.md) | 20 分钟 |
+| `/training-zh:start-1-7` | 导航与搜索 | 20 分钟 |
 
 ### 模块 2：高级应用
 | 命令 | 课程 | 时长 |
 |---------|--------|----------|
-| `/training:start-2-1` | 编写营销活动简报 | 45 分钟 |
-| `/training:start-2-2` | 制定内容策略 | 40 分钟 |
-| `/training:start-2-3` | 生成营销文案 | 35 分钟 |
-| `/training:start-2-4` | 分析营销活动数据 | 35 分钟 |
-| `/training:start-2-5` | 竞争分析 | 30 分钟 |
-| `/training:start-2-6` | SEO 优化 | 40 分钟 |
+| `/training-zh:start-2-1` | 编写营销活动简报 | 45 分钟 |
+| `/training-zh:start-2-2` | 制定内容策略 | 40 分钟 |
+| `/training-zh:start-2-3` | 生成营销文案 | 35 分钟 |
+| `/training-zh:start-2-4` | 分析营销活动数据 | 35 分钟 |
+| `/training-zh:start-2-5` | 竞争分析 | 30 分钟 |
+| `/training-zh:start-2-6` | SEO 优化 | 40 分钟 |
 
 ### 模块 3：转化率优化与转化
 | 命令 | 课程 | 时长 |
 |---------|--------|----------|
-| `/training:start-3-1` | CRO 基础 | 20 分钟 |
-| `/training:start-3-2` | 表单与注册优化 | 20 分钟 |
-| `/training:start-3-3` | 弹窗与引导 CRO | 20 分钟 |
+| `/training-zh:start-3-1` | CRO 基础 | 20 分钟 |
+| `/training-zh:start-3-2` | 表单与注册优化 | 20 分钟 |
+| `/training-zh:start-3-3` | 弹窗与引导 CRO | 20 分钟 |
 
 ### 交互式构建器（无需经验）
 | 命令 | 描述 | 时长 |
 |---------|-------------|----------|
-| `/training:persona-builder` | 逐步构建买家画像 | 15 分钟 |
+| `/training-zh:persona-builder` | 逐步构建买家画像 | 15 分钟 |
 
 ### 附加内容
 | 命令 | 描述 |
 |---------|-------------|
-| `/training:bonus-patterns` | 模式库模板 |
-| `/training:bonus-secret` | 10 倍营销人员框架 |
+| `/training-zh:bonus-patterns` | 模式库模板 |
+| `/training-zh:bonus-secret` | 10 倍营销人员框架 |
 
 ---
 
@@ -192,7 +192,7 @@
 
 ## 快速提示
 
-**课程新手？** 从 `/training:start-0-0` 开始
+**课程新手？** 从 `/training-zh:start-0-0` 开始
 
 **需要特定命令？** 查看上方的分类
 
@@ -202,6 +202,6 @@
 
 ---
 
-**准备开始了吗？** 输入 `/training:start-0-0` 开始课程！
+**准备开始了吗？** 输入 `/training-zh:start-0-0` 开始课程！
 
 ---

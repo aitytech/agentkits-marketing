@@ -1,4 +1,4 @@
-# /training:start-0-2 - Votre première tâche marketing
+# /training-fr:start-0-2 - Votre première tâche marketing
 
 ## Normes de langue et de qualité
 
@@ -107,7 +107,7 @@ Démontrez brièvement d'autres commandes qu'ils maîtriseront :
 Dites-leur :
 - **Félicitations !** Module 0 terminé !
 - Ils ont utilisé de vraies commandes marketing et vu le système en action
-- **Ensuite :** `/training:start-1-1` - Bienvenue chez Markit (les concepts de base commencent)
+- **Ensuite :** `/training-fr:start-1-1` - Bienvenue chez Markit (les concepts de base commencent)
 - Ils plongeront en profondeur dans les agents, les workflows et les commandes avancées
 
 ## Points d'enseignement clés

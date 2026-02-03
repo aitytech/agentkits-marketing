@@ -1,4 +1,4 @@
-# /training:bonus-secret - O Framework do Profissional de Marketing 10x
+# /training-pt-br:bonus-secret - O Framework do Profissional de Marketing 10x
 
 ## Padrões de Idioma e Qualidade
 
@@ -206,7 +206,7 @@ O trabalho se compõe. O conhecimento se compõe. Os resultados se compõem.
 
 Agora que você completou o curso:
 
-- `/training:bonus-patterns` - Construa sua biblioteca de padrões
+- `/training-pt-br:bonus-patterns` - Construa sua biblioteca de padrões
 - Use `/brainstorm` para sessões criativas
 - Encadeie comandos para máxima eficiência
 

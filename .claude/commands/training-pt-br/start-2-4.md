@@ -1,4 +1,4 @@
-# /training:start-2-4 - Analisar Dados de Campanha
+# /training-pt-br:start-2-4 - Analisar Dados de Campanha
 
 ## Padrões de Idioma e Qualidade
 
@@ -173,7 +173,7 @@ Monthly Report Workflow:
 Diga a eles:
 - Eles agora podem transformar dados em decisões
 - Relatórios que executivos realmente leem
-- **Próximo:** `/training:start-2-5` - Análise Competitiva
+- **Próximo:** `/training-pt-br:start-2-5` - Análise Competitiva
 - Pesquise concorrentes e encontre vantagens
 
 ## Pontos-Chave de Ensino

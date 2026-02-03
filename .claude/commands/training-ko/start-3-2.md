@@ -1,5 +1,5 @@
 ---
-description: /training:start-3-2 - 폼 및 가입 최적화
+description: /training-ko:start-3-2 - 폼 및 가입 최적화
 argument-hint:
 ---
 
@@ -171,4 +171,4 @@ form-cro 스킬을 사용하여 검증하세요:
 모듈 3, 레슨 3: 팝업 및 온보딩 CRO로 계속하세요
 
 ```bash
-/training:start-3-3
+/training-ko:start-3-3

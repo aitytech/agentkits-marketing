@@ -1,4 +1,4 @@
-# /training:start-1-4 - Verwendung von Agenten für Marketing
+# /training-de:start-1-4 - Verwendung von Agenten für Marketing
 
 ## Sprach- und Qualitätsstandards
 
@@ -140,7 +140,7 @@ Teilen Sie diese Tipps:
 
 Teilen Sie ihnen mit:
 - Sie verstehen jetzt das 18-Agenten-System
-- **Nächster Schritt:** `/training:start-1-5` - Benutzerdefinierte Marketing-Sub-Agenten
+- **Nächster Schritt:** `/training-de:start-1-5` - Benutzerdefinierte Marketing-Sub-Agenten
 - Sie werden über Persona-Reviewer lernen und wie man gezieltes Feedback erhält
 
 ## Wichtige Lehrpunkte
