@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/aitytech/agentkits-marketing/compare/v1.4.0...v1.5.0) (2026-02-04)
+
+### 🚀 Features
+
+* update marketplace configurations ([bed1fac](https://github.com/aitytech/agentkits-marketing/commit/bed1fac321c0ebadce44dced8a542e30ec560fbf))
+
 ## [1.4.0](https://github.com/aitytech/agentkits-marketing/compare/v1.3.0...v1.4.0) (2026-02-04)
 
 ### 🚀 Features
