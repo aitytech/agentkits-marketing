@@ -117,7 +117,31 @@ agentkits-marketing/
 
 ## インストール
 
-### オプション1: npx経由でインストール（推奨）
+### オプション1: Claude Codeプラグインマーケットプレイス（Claude Code推奨）
+
+Claude Codeのプラグインシステム経由で直接インストール — 手動設定不要:
+
+```bash
+# マーケットプレイスを追加
+/plugin marketplace add aitytech/agentkits-marketing
+
+# フルスイートをインストール（18エージェント、28スキル、93コマンド）
+/plugin install agentkits-marketing@aitytech
+```
+
+個別コンポーネントもインストール可能:
+
+```bash
+/plugin install agentkits-marketing-skills@aitytech    # スキルのみ
+/plugin install agentkits-marketing-agents@aitytech    # エージェントのみ
+/plugin install agentkits-marketing-commands@aitytech  # コマンドのみ
+```
+
+インストール後、Claude Codeを再起動してください。
+
+---
+
+### オプション2: npx経由でインストール（全プラットフォーム）
 
 1つのコマンドで18エージェント、28スキル、93コマンドをインストール:
 
@@ -147,7 +171,7 @@ npx @aitytech/agentkits-marketing update        # 既存のインストールを
 
 ---
 
-### オプション2: クローンして使用
+### オプション3: クローンして使用
 
 リポジトリをクローンしてその中で作業:
 
@@ -155,22 +179,6 @@ npx @aitytech/agentkits-marketing update        # 既存のインストールを
 git clone https://github.com/aitytech/agentkits-marketing.git
 cd agentkits-marketing
 claude
-```
-
----
-
-### オプション3: プラグインとしてインストール（近日公開）
-
-> **注意:** プラグインマーケットプレイスへの提出は承認待ちです。
-
-承認されたら、Claude Codeのプラグインシステム経由で直接インストール:
-
-```bash
-# このリポジトリをマーケットプレイスとして追加
-/plugin marketplace add aitytech/agentkits-marketing
-
-# プラグインをインストール
-/plugin install agentkits-marketing@agentkits-marketing
 ```
 
 ---

@@ -117,7 +117,31 @@ agentkits-marketing/
 
 ## Installation
 
-### Option 1 : Installation via npx (Recommandé)
+### Option 1 : Marketplace de Plugins Claude Code (Recommandé pour Claude Code)
+
+Installez directement via le système de plugins de Claude Code — aucune configuration manuelle nécessaire :
+
+```bash
+# Ajouter le marketplace
+/plugin marketplace add aitytech/agentkits-marketing
+
+# Installer la suite complète (18 agents, 28 compétences, 93 commandes)
+/plugin install agentkits-marketing@aitytech
+```
+
+Vous pouvez également installer des composants individuels :
+
+```bash
+/plugin install agentkits-marketing-skills@aitytech    # Compétences uniquement
+/plugin install agentkits-marketing-agents@aitytech    # Agents uniquement
+/plugin install agentkits-marketing-commands@aitytech  # Commandes uniquement
+```
+
+Redémarrez Claude Code après l'installation.
+
+---
+
+### Option 2 : Installation via npx (Toutes les plateformes)
 
 Une seule commande pour installer 18 agents, 28 compétences, 93 commandes :
 
@@ -147,7 +171,7 @@ npx @aitytech/agentkits-marketing update        # Mettre à jour l'installation 
 
 ---
 
-### Option 2 : Cloner et utiliser
+### Option 3 : Cloner et utiliser
 
 Clonez le dépôt et travaillez directement dedans :
 
@@ -155,22 +179,6 @@ Clonez le dépôt et travaillez directement dedans :
 git clone https://github.com/aitytech/agentkits-marketing.git
 cd agentkits-marketing
 claude
-```
-
----
-
-### Option 3 : Installer comme plugin (Bientôt disponible)
-
-> **Note :** La soumission au marketplace des plugins est en attente d'approbation.
-
-Une fois approuvé, installez directement via le système de plugins de Claude Code :
-
-```bash
-# Ajouter ce dépôt comme marketplace
-/plugin marketplace add aitytech/agentkits-marketing
-
-# Installer le plugin
-/plugin install agentkits-marketing@agentkits-marketing
 ```
 
 ---

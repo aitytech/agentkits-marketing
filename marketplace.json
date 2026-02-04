@@ -1,11 +1,11 @@
 {
-  "name": "agentkits-marketing",
+  "name": "aitytech",
   "owner": {
-    "name": "AgentKits Team",
+    "name": "AityTech",
     "email": "contact@agentkits.net"
   },
   "metadata": {
-    "description": "Enterprise-grade AI marketing automation framework for Claude Code"
+    "description": "AI marketing agent tools by AityTech"
   },
   "plugins": [
     {
@@ -13,9 +13,9 @@
       "source": "./",
       "description": "Full marketing automation suite with 18 agents, 90+ commands, 28 skills",
       "author": {
-        "name": "AgentKits Team"
+        "name": "AityTech"
       },
-      "homepage": "https://agentkits.net",
+      "homepage": "https://www.agentkits.net/marketing",
       "repository": "https://github.com/aitytech/agentkits-marketing",
       "license": "MIT",
       "keywords": [

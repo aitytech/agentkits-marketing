@@ -117,7 +117,31 @@ agentkits-marketing/
 
 ## Cài đặt
 
-### Tùy chọn 1: Cài đặt qua npx (Khuyến nghị)
+### Tùy chọn 1: Chợ Plugin Claude Code (Khuyến nghị cho Claude Code)
+
+Cài đặt trực tiếp qua hệ thống plugin của Claude Code — không cần cấu hình thủ công:
+
+```bash
+# Thêm marketplace
+/plugin marketplace add aitytech/agentkits-marketing
+
+# Cài đặt bộ đầy đủ (18 agents, 28 skills, 93 commands)
+/plugin install agentkits-marketing@aitytech
+```
+
+Bạn cũng có thể cài đặt từng thành phần riêng lẻ:
+
+```bash
+/plugin install agentkits-marketing-skills@aitytech    # Chỉ Skills
+/plugin install agentkits-marketing-agents@aitytech    # Chỉ Agents
+/plugin install agentkits-marketing-commands@aitytech  # Chỉ Commands
+```
+
+Khởi động lại Claude Code sau khi cài đặt.
+
+---
+
+### Tùy chọn 2: Cài đặt qua npx (Tất cả Nền tảng)
 
 Một lệnh để cài đặt 18 agents, 28 skills, 93 commands:
 
@@ -147,7 +171,7 @@ npx @aitytech/agentkits-marketing update        # Cập nhật cài đặt hiệ
 
 ---
 
-### Tùy chọn 2: Clone và Sử dụng
+### Tùy chọn 3: Clone và Sử dụng
 
 Clone repository và làm việc trong đó:
 
@@ -155,22 +179,6 @@ Clone repository và làm việc trong đó:
 git clone https://github.com/aitytech/agentkits-marketing.git
 cd agentkits-marketing
 claude
-```
-
----
-
-### Tùy chọn 3: Cài đặt dưới dạng Plugin (Sắp ra mắt)
-
-> **Lưu ý:** Việc gửi plugin marketplace đang chờ phê duyệt.
-
-Sau khi được phê duyệt, cài đặt trực tiếp qua hệ thống plugin của Claude Code:
-
-```bash
-# Thêm repo này như một marketplace
-/plugin marketplace add aitytech/agentkits-marketing
-
-# Cài đặt plugin
-/plugin install agentkits-marketing@agentkits-marketing
 ```
 
 ---

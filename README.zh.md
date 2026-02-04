@@ -117,7 +117,31 @@ agentkits-marketing/
 
 ## 安装
 
-### 选项 1:通过 npx 安装(推荐)
+### 选项 1:Claude Code 插件市场(推荐用于 Claude Code)
+
+通过 Claude Code 的插件系统直接安装 — 无需手动配置:
+
+```bash
+# 添加市场
+/plugin marketplace add aitytech/agentkits-marketing
+
+# 安装完整套件(18 个 agents、28 个 skills、93 个 commands)
+/plugin install agentkits-marketing@aitytech
+```
+
+你也可以单独安装各个组件:
+
+```bash
+/plugin install agentkits-marketing-skills@aitytech    # 仅 Skills
+/plugin install agentkits-marketing-agents@aitytech    # 仅 Agents
+/plugin install agentkits-marketing-commands@aitytech  # 仅 Commands
+```
+
+安装后重启 Claude Code。
+
+---
+
+### 选项 2:通过 npx 安装(所有平台)
 
 一条命令安装 18 个 agents、28 个 skills、93 个 commands:
 
@@ -147,7 +171,7 @@ npx @aitytech/agentkits-marketing update        # 更新现有安装
 
 ---
 
-### 选项 2:克隆并使用
+### 选项 3:克隆并使用
 
 克隆仓库并在其中工作:
 
@@ -155,22 +179,6 @@ npx @aitytech/agentkits-marketing update        # 更新现有安装
 git clone https://github.com/aitytech/agentkits-marketing.git
 cd agentkits-marketing
 claude
-```
-
----
-
-### 选项 3:作为插件安装(即将推出)
-
-> **注意:** 插件市场提交正在等待批准。
-
-批准后,可直接通过 Claude Code 的插件系统安装:
-
-```bash
-# 添加此仓库作为市场
-/plugin marketplace add aitytech/agentkits-marketing
-
-# 安装插件
-/plugin install agentkits-marketing@agentkits-marketing
 ```
 
 ---

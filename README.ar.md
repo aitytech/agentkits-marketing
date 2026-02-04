@@ -117,7 +117,31 @@ agentkits-marketing/
 
 ## التثبيت
 
-### الخيار 1: التثبيت عبر npx (موصى به)
+### الخيار 1: سوق إضافات Claude Code (موصى به لـ Claude Code)
+
+ثبّت مباشرة عبر نظام الإضافات في Claude Code — بدون تهيئة يدوية:
+
+```bash
+# إضافة السوق
+/plugin marketplace add aitytech/agentkits-marketing
+
+# تثبيت المجموعة الكاملة (18 وكيل، 28 مهارة، 93 أمر)
+/plugin install agentkits-marketing@aitytech
+```
+
+يمكنك أيضًا تثبيت المكونات بشكل فردي:
+
+```bash
+/plugin install agentkits-marketing-skills@aitytech    # المهارات فقط
+/plugin install agentkits-marketing-agents@aitytech    # الوكلاء فقط
+/plugin install agentkits-marketing-commands@aitytech  # الأوامر فقط
+```
+
+أعد تشغيل Claude Code بعد التثبيت.
+
+---
+
+### الخيار 2: التثبيت عبر npx (جميع المنصات)
 
 أمر واحد لتثبيت 18 وكيل، 28 مهارة، 93 أمر:
 
@@ -147,7 +171,7 @@ npx @aitytech/agentkits-marketing update        # تحديث التثبيت ال
 
 ---
 
-### الخيار 2: الاستنساخ والاستخدام
+### الخيار 3: الاستنساخ والاستخدام
 
 استنسخ المستودع واعمل ضمنه:
 
@@ -155,22 +179,6 @@ npx @aitytech/agentkits-marketing update        # تحديث التثبيت ال
 git clone https://github.com/aitytech/agentkits-marketing.git
 cd agentkits-marketing
 claude
-```
-
----
-
-### الخيار 3: التثبيت كإضافة (قريبًا)
-
-> **ملاحظة:** إرسال سوق الإضافات قيد الموافقة.
-
-بمجرد الموافقة، قم بالتثبيت مباشرة عبر نظام الإضافات في Claude Code:
-
-```bash
-# أضف هذا المستودع كسوق
-/plugin marketplace add aitytech/agentkits-marketing
-
-# ثبّت الإضافة
-/plugin install agentkits-marketing@agentkits-marketing
 ```
 
 ---

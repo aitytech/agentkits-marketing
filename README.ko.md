@@ -117,7 +117,31 @@ agentkits-marketing/
 
 ## 설치
 
-### 옵션 1: npx를 통한 설치 (권장)
+### 옵션 1: Claude Code 플러그인 마켓플레이스 (Claude Code 권장)
+
+Claude Code의 플러그인 시스템을 통해 직접 설치 — 수동 설정 불필요:
+
+```bash
+# 마켓플레이스 추가
+/plugin marketplace add aitytech/agentkits-marketing
+
+# 전체 스위트 설치 (18개 에이전트, 28개 스킬, 93개 커맨드)
+/plugin install agentkits-marketing@aitytech
+```
+
+개별 컴포넌트도 설치 가능:
+
+```bash
+/plugin install agentkits-marketing-skills@aitytech    # 스킬만
+/plugin install agentkits-marketing-agents@aitytech    # 에이전트만
+/plugin install agentkits-marketing-commands@aitytech  # 커맨드만
+```
+
+설치 후 Claude Code를 재시작하세요.
+
+---
+
+### 옵션 2: npx를 통한 설치 (모든 플랫폼)
 
 18개 에이전트, 28개 스킬, 93개 커맨드를 설치하는 하나의 명령어:
 
@@ -147,7 +171,7 @@ npx @aitytech/agentkits-marketing update        # 기존 설치 업데이트
 
 ---
 
-### 옵션 2: 클론 및 사용
+### 옵션 3: 클론 및 사용
 
 저장소를 클론하고 그 안에서 작업하기:
 
@@ -155,22 +179,6 @@ npx @aitytech/agentkits-marketing update        # 기존 설치 업데이트
 git clone https://github.com/aitytech/agentkits-marketing.git
 cd agentkits-marketing
 claude
-```
-
----
-
-### 옵션 3: 플러그인으로 설치 (곧 출시)
-
-> **참고:** 플러그인 마켓플레이스 제출이 승인 대기 중입니다.
-
-승인되면 Claude Code의 플러그인 시스템을 통해 직접 설치:
-
-```bash
-# 이 저장소를 마켓플레이스로 추가
-/plugin marketplace add aitytech/agentkits-marketing
-
-# 플러그인 설치
-/plugin install agentkits-marketing@agentkits-marketing
 ```
 
 ---
