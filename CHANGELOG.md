@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/aitytech/agentkits-marketing/compare/v1.5.0...v1.5.1) (2026-02-10)
+
+### 🐞 Bug Fixes
+
+* strip invalid fields from plugin.json manifest ([a72edb7](https://github.com/aitytech/agentkits-marketing/commit/a72edb7e22a6e3f40f482b2da8d04311c60165e4)), closes [#8](https://github.com/aitytech/agentkits-marketing/issues/8)
+
 ## [1.5.0](https://github.com/aitytech/agentkits-marketing/compare/v1.4.0...v1.5.0) (2026-02-04)
 
 ### 🚀 Features
