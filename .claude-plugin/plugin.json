@@ -1,14 +1,13 @@
 {
   "name": "agentkits-marketing",
   "version": "3.0.0",
-  "description": "Enterprise-grade AI marketing automation framework - 18 agents, 100+ commands, 32 skills with semantic registry, dependency graphs, and MCP mappings",
+  "description": "Enterprise-grade AI marketing automation framework - 18 agents, 90+ commands, 28 skills for campaigns, content, SEO, and conversion optimization",
   "author": {
-    "name": "AgentKits Team (AityTech)",
-    "url": "https://agentkits.net"
+    "name": "AityTech",
+    "url": "https://www.agentkits.net"
   },
-  "homepage": "https://agentkits.net",
+  "homepage": "https://www.agentkits.net/marketing",
   "repository": "https://github.com/aitytech/agentkits-marketing",
-  "documentation": "https://docs.agentkits.net",
   "license": "MIT",
   "keywords": [
     "claude-code",
@@ -26,90 +25,5 @@
     "sales-enablement",
     "brand-building",
     "analytics"
-  ],
-  "category": "marketing",
-  "tags": [
-    "marketing",
-    "content",
-    "seo",
-    "cro",
-    "email",
-    "sales",
-    "campaigns",
-    "automation"
-  ],
-  "agents": "./.claude/agents",
-  "commands": "./.claude/commands",
-  "skills": "./.claude/skills",
-  "workflows": "./.claude/workflows",
-  "hooks": "./.claude/hooks",
-  "main": "CLAUDE.md",
-  "components": {
-    "agents": {
-      "path": "./.claude/agents",
-      "count": 18,
-      "categories": {
-        "core": ["attraction-specialist", "lead-qualifier", "email-wizard", "sales-enabler", "continuity-specialist", "upsell-maximizer"],
-        "supporting": ["researcher", "brainstormer", "planner", "project-manager", "copywriter", "docs-manager", "mcp-manager", "game-market-analyst"],
-        "reviewers": ["brand-voice-guardian", "conversion-optimizer", "seo-specialist", "solopreneur", "startup-founder"]
-      }
-    },
-    "commands": {
-      "path": "./.claude/commands",
-      "count": 93,
-      "categories": ["campaign", "content", "seo", "cro", "social", "sequence", "analytics", "report", "sales", "leads", "crm", "brand", "ops", "research", "competitor", "growth", "pricing", "marketing", "test", "audit", "game", "training"]
-    },
-    "skills": {
-      "path": "./.claude/skills",
-      "count": 32,
-      "registry": "./.claude/skills/skills-registry.json",
-      "schema": "./.claude/skills/schemas/skills-registry.schema.json",
-      "dependencyGraph": "./.claude/skills/dependency-graph.md",
-      "categories": {
-        "core": ["marketing-fundamentals", "marketing-psychology", "marketing-ideas", "seo-mastery", "social-media", "email-marketing", "paid-advertising", "content-strategy", "analytics-attribution", "brand-building", "problem-solving"],
-        "cro": ["page-cro", "form-cro", "popup-cro", "signup-flow-cro", "onboarding-cro", "paywall-upgrade-cro", "ab-test-setup"],
-        "content": ["copywriting", "copy-editing", "email-sequence"],
-        "seo-growth": ["programmatic-seo", "schema-markup", "competitor-alternatives", "launch-strategy", "pricing-strategy", "referral-program", "free-tool-strategy"],
-        "document": ["document-skills/docx", "document-skills/pdf", "document-skills/pptx", "document-skills/xlsx"]
-      },
-      "common": {
-        "data": [
-          "benchmark-metrics.yaml",
-          "conversion-formulas.yaml",
-          "mcp-mapping-matrix.yaml"
-        ],
-        "templates": [
-          "headline-formulas.md",
-          "cta-library.md",
-          "email-subject-lines.md"
-        ],
-        "schemas": [
-          "skills-registry.schema.json",
-          "output-schemas.yaml"
-        ]
-      }
-    },
-    "workflows": {
-      "path": "./.claude/workflows",
-      "files": ["primary-workflow.md", "sales-workflow.md", "crm-workflow.md", "marketing-rules.md", "orchestration-protocol.md", "documentation-management.md", "data-reliability-rules.md", "game-marketing-workflow.md"]
-    }
-  },
-  "features": {
-    "multiLanguage": true,
-    "mcpIntegrations": ["sensortower", "google-search-console", "google-analytics", "semrush", "dataforseo", "meta-ads", "hubspot", "slack", "notion", "asana", "twitter"],
-    "training": true,
-    "trainingModules": 19,
-    "enterpriseFeatures": {
-      "skillsRegistry": true,
-      "dependencyGraph": true,
-      "semanticMatching": true,
-      "mcpMappingMatrix": true,
-      "outputSchemas": true,
-      "benchmarkData": true,
-      "copyTemplates": true
-    }
-  },
-  "requirements": {
-    "claudeCode": ">=1.0.0"
-  }
+  ]
 }

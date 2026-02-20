@@ -1,40 +1,21 @@
 {
   "name": "agentkits-marketing",
   "owner": {
-    "name": "AgentKits Team (AityTech)",
+    "name": "AityTech",
     "email": "contact@agentkits.net",
     "url": "https://agentkits.net"
   },
   "metadata": {
-    "description": "Enterprise-grade AI marketing automation framework for Claude Code",
+    "description": "AI marketing agent tools by AityTech",
     "longDescription": "Complete marketing automation suite with 18 specialized agents, 90+ slash commands, 28 marketing skills, and interactive training. Covers campaigns, content, SEO, CRO, email, sales enablement, and analytics.",
     "version": "3.0.0",
-    "updatedAt": "2025-01-24"
+    "updatedAt": "2026-02-04"
   },
   "plugins": [
     {
       "name": "agentkits-marketing",
       "source": "./",
       "description": "Full marketing automation suite - agents, commands, skills, workflows, and training",
-      "author": {
-        "name": "AgentKits Team (AityTech)"
-      },
-      "homepage": "https://agentkits.net",
-      "repository": "https://github.com/aitytech/agentkits-marketing",
-      "documentation": "https://docs.agentkits.net",
-      "license": "MIT",
-      "keywords": [
-        "marketing",
-        "ai-agents",
-        "content",
-        "seo",
-        "cro",
-        "email",
-        "campaigns",
-        "automation",
-        "sales",
-        "copywriting"
-      ],
       "category": "marketing",
       "tags": [
         "marketing",
@@ -45,25 +26,12 @@
         "sales",
         "campaigns",
         "automation"
-      ],
-      "featured": true,
-      "verified": true
+      ]
     },
     {
       "name": "agentkits-marketing-skills",
       "source": "./.claude/skills",
       "description": "28 marketing skills including CRO, SEO, copywriting, psychology, and growth",
-      "author": {
-        "name": "AgentKits Team (AityTech)"
-      },
-      "license": "MIT",
-      "keywords": [
-        "marketing-skills",
-        "cro",
-        "seo",
-        "copywriting",
-        "psychology"
-      ],
       "category": "skills",
       "tags": ["skills", "marketing"]
     },
@@ -71,15 +39,6 @@
       "name": "agentkits-marketing-agents",
       "source": "./.claude/agents",
       "description": "18 specialized marketing agents for campaigns, content, and optimization",
-      "author": {
-        "name": "AgentKits Team (AityTech)"
-      },
-      "license": "MIT",
-      "keywords": [
-        "marketing-agents",
-        "ai-agents",
-        "automation"
-      ],
       "category": "agents",
       "tags": ["agents", "marketing"]
     },
@@ -87,14 +46,6 @@
       "name": "agentkits-marketing-commands",
       "source": "./.claude/commands",
       "description": "90+ marketing slash commands for campaigns, content, SEO, CRO, and analytics",
-      "author": {
-        "name": "AgentKits Team (AityTech)"
-      },
-      "license": "MIT",
-      "keywords": [
-        "marketing-commands",
-        "slash-commands"
-      ],
       "category": "commands",
       "tags": ["commands", "marketing"]
     }
