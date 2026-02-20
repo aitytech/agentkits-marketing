@@ -8,7 +8,7 @@
   "metadata": {
     "description": "AI marketing agent tools by AityTech",
     "longDescription": "Complete marketing automation suite with 18 specialized agents, 90+ slash commands, 28 marketing skills, and interactive training. Covers campaigns, content, SEO, CRO, email, sales enablement, and analytics.",
-    "version": "3.0.0",
+    "version": "2.1.0",
     "updatedAt": "2026-02-04"
   },
   "plugins": [

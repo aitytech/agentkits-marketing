@@ -1,6 +1,6 @@
 {
   "name": "@aitytech/agentkits-marketing",
-  "version": "3.0.0",
+  "version": "2.1.0",
   "description": "Enterprise-grade AI marketing automation for Claude Code, Cursor, GitHub Copilot, Windsurf, Cline. 18 agents, 93 commands, 28 skills. One command: npx agentkits-marketing install",
   "main": "bin/agentkits.js",
   "bin": {
