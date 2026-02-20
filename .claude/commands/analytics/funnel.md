@@ -1,6 +1,25 @@
 ---
 description: Analyze conversion funnel performance
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [funnel-name-or-url]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Funnel name or URL to analyze
+- [ ] Analytics tracking configured for funnel stages
+- [ ] MCP configured: `google-analytics`, `hubspot`
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/analytics-setup.md` - Tracking configuration
+3. `.claude/skills/analytics-attribution/SKILL.md` - Attribution frameworks
+4. `.claude/workflows/crm-workflow.md` - CRM funnel benchmarks
+
 ---
 
 ## Language & Quality Standards
@@ -216,3 +235,23 @@ echo "Analysis Date: $CURRENT_DATE"
 ## Output Location
 
 Save analysis to: `./docs/analytics/funnel/[funnel-name]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering funnel analysis:
+- [ ] All stages clearly defined
+- [ ] Conversion rates calculated from MCP data
+- [ ] Drop-off points identified with causes
+- [ ] Benchmarks cited with sources
+- [ ] Optimization recommendations prioritized
+
+---
+
+## Next Steps
+
+After funnel analysis, consider:
+- `/cro:page` - Optimize high drop-off pages
+- `/cro:form` - Optimize form conversion
+- `/test:ab-setup` - Plan A/B tests for improvements

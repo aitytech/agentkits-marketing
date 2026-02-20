@@ -1,6 +1,24 @@
 ---
 description: Plan product launch, feature announcement, or release strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-feature-to-launch]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Product or feature name to launch
+- [ ] Launch date (or flexible timeline)
+- [ ] Target audience defined
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand-guidelines.md` - Brand voice for launch messaging
+3. `.claude/skills/launch-strategy/SKILL.md` - Launch frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -200,3 +218,23 @@ argument-hint: [product-or-feature-to-launch]
 ## Output Location
 
 Save launch plan to: `./docs/growth/launch-[product]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering launch plan:
+- [ ] All phases have clear timelines
+- [ ] Channel strategy defined (ORB)
+- [ ] Assets list complete
+- [ ] Success metrics established
+- [ ] Contingency plans included
+
+---
+
+## Next Steps
+
+After launch planning, consider:
+- `/content:landing` - Create launch landing page
+- `/sequence:welcome` - Create onboarding emails
+- `/social:viral` - Plan social launch content

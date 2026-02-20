@@ -1,6 +1,24 @@
 ---
 description: Create or analyze customer segment
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [segment-criteria-or-name]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Segment criteria or name defined
+- [ ] Use case for segment identified
+- [ ] MCP configured: `hubspot` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Buyer personas
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Segmentation frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -166,6 +184,26 @@ argument-hint: [segment-criteria-or-name]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering segment:
+- [ ] Criteria clearly defined
+- [ ] Size estimated
+- [ ] Use case alignment confirmed
+- [ ] Exclusions documented
+- [ ] Entry/exit conditions set
+
+---
+
 ## Output Location
 
 Save segment to: `./docs/crm/segment-[name]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After segment creation, consider:
+- `/crm:sequence` - Create segment-specific sequence
+- `/leads:nurture` - Design nurture for segment
+- `/content:email` - Create targeted email copy

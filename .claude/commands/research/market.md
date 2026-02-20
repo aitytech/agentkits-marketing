@@ -1,6 +1,23 @@
 ---
 description: Conduct market research analysis
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [market-or-industry]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Market or industry clearly defined
+- [ ] Research questions identified
+- [ ] MCP configured: `semrush`, `sensortower` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context for positioning
+2. `.claude/skills/marketing-fundamentals/SKILL.md` - Research frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -182,3 +199,23 @@ argument-hint: [market-or-industry]
 ## Output Location
 
 Save research to: `./docs/research/market-[industry]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering market research:
+- [ ] All data points have citations
+- [ ] Market size methodology explained
+- [ ] Competitive landscape complete
+- [ ] Trends identified with confidence levels
+- [ ] Strategic recommendations actionable
+
+---
+
+## Next Steps
+
+After market research, consider:
+- `/research:persona` - Create buyer personas
+- `/research:trend` - Deep dive on trends
+- `/competitor:deep` - Detailed competitor analysis

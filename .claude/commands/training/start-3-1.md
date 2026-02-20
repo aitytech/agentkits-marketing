@@ -1,9 +1,27 @@
 ---
 description: /training:start-3-1 - CRO Fundamentals
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint:
 ---
 
 # Module 3, Lesson 1: CRO Fundamentals
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed Module 2 (Advanced Applications)
+- [ ] Understand campaign, content, and SEO workflows
+- [ ] Ready to learn conversion optimization
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/skills/page-cro/SKILL.md` - Page CRO framework
+2. `./.claude/skills/marketing-psychology/SKILL.md` - Psychology models
+3. `./docs/campaign-playbooks.md` - CRO templates
+
+---
 
 ## Welcome to Conversion Rate Optimization
 

@@ -1,6 +1,33 @@
 ---
 name: schema-markup
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: seo-growth
+difficulty: intermediate
 description: When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.org," "FAQ schema," "product schema," "review schema," or "breadcrumb schema." For broader SEO issues, see seo-audit.
+triggers:
+  - schema
+  - structured data
+  - JSON-LD
+  - rich snippets
+  - schema.org
+  - FAQ schema
+  - product schema
+  - review schema
+prerequisites:
+  - seo-mastery
+related_skills:
+  - seo-mastery
+  - programmatic-seo
+agents:
+  - seo-specialist
+  - attraction-specialist
+mcp_integrations:
+  optional:
+    - google-search-console
+success_metrics:
+  - rich_snippet_appearance
+  - CTR_improvement
 ---
 
 # Schema Markup

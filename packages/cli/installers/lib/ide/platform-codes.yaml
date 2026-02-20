@@ -1,0 +1,456 @@
+# AgentKits Platform Codes Configuration
+# Central configuration for all platform/IDE codes used in the AgentKits system
+#
+# AgentKits Marketing by AityTech
+#
+# Format:
+#   code: Platform identifier used internally
+#   name: Display name shown to users
+#   preferred: Whether this platform is shown as a recommended option on install
+#   category: Type of platform (ide, cli, tool, service)
+#   description: Brief description of the platform
+#   installer: Installation configuration
+
+platforms:
+  # ============================================================================
+  # PREFERRED PLATFORMS (Shown First)
+  # ============================================================================
+
+  claude-code:
+    name: "Claude Code"
+    preferred: true
+    category: cli
+    description: "Anthropic's official CLI for Claude - Primary platform"
+    installer:
+      target_dir: .claude/commands
+      template_type: claude
+      artifacts:
+        agents: true
+        skills: true
+        commands: true
+        journeys: true
+        memory: true
+
+  cursor:
+    name: "Cursor"
+    preferred: true
+    category: ide
+    description: "AI-first code editor with Composer"
+    installer:
+      target_dir: .cursor/commands
+      template_type: default
+      artifacts:
+        agents: true
+        skills: false
+        commands: true
+        journeys: false
+        memory: false
+
+  windsurf:
+    name: "Windsurf"
+    preferred: true
+    category: ide
+    description: "AI-powered IDE with cascade flows"
+    installer:
+      target_dir: .windsurf/workflows
+      template_type: windsurf
+      artifacts:
+        agents: true
+        skills: false
+        commands: true
+        journeys: false
+        memory: false
+
+  # ============================================================================
+  # OTHER SUPPORTED PLATFORMS
+  # ============================================================================
+
+  github-copilot:
+    name: "GitHub Copilot"
+    preferred: false
+    category: ide
+    description: "GitHub's AI pair programmer with Agent Mode"
+    installer:
+      targets:
+        - target_dir: .github/agents
+          template_type: copilot_agents
+          artifact_types: [agents]
+          # Creates: .github/agents/{name}.agent.md
+        - target_dir: .github/instructions
+          template_type: copilot_instructions
+          artifact_types: [instructions]
+          # Creates: .github/instructions/{name}.instructions.md
+        - target_dir: .github
+          template_type: copilot_main
+          artifact_types: [main_instructions]
+          # Creates: .github/copilot-instructions.md
+
+  gemini:
+    name: "Gemini CLI"
+    preferred: false
+    category: cli
+    description: "Google's CLI for Gemini"
+    installer:
+      target_dir: .gemini/commands
+      template_type: gemini
+      file_extension: .toml
+
+  cline:
+    name: "Cline"
+    preferred: false
+    category: ide
+    description: "AI coding assistant for VS Code"
+    installer:
+      target_dir: .clinerules
+      template_type: cline
+      file_extension: .md
+      naming_convention: numbered  # 01-name.md, 02-name.md format
+
+  roo:
+    name: "Roo Code"
+    preferred: false
+    category: ide
+    description: "AI coding suite with custom modes"
+    installer:
+      targets:
+        - target_dir: .roo/rules-agentkits
+          template_type: roo_rules
+          artifact_types: [rules]
+          # Creates: .roo/rules-agentkits/*.md
+        - target_dir: .
+          template_type: roo_modes
+          artifact_types: [modes]
+          single_file: .roomodes
+          # Creates: .roomodes file
+
+  trae:
+    name: "Trae"
+    preferred: false
+    category: ide
+    description: "AI coding tool"
+    installer:
+      target_dir: .trae/rules
+      template_type: trae
+
+  opencode:
+    name: "OpenCode"
+    preferred: false
+    category: cli
+    description: "Terminal-based AI coding assistant"
+    installer:
+      targets:
+        - target_dir: .opencode/commands
+          template_type: default
+          artifact_types: [commands]
+          # Creates: .opencode/commands/agentkits-{name}.md
+        - target_dir: .
+          template_type: agents_md
+          artifact_types: [main]
+          single_file: AGENTS.md
+          # Creates/Updates: AGENTS.md
+
+  auggie:
+    name: "Auggie"
+    preferred: false
+    category: cli
+    description: "Augment AI development tool"
+    installer:
+      target_dir: .augment/commands
+      template_type: default
+
+  qwen:
+    name: "QwenCoder"
+    preferred: false
+    category: ide
+    description: "Qwen AI coding assistant"
+    installer:
+      target_dir: .qwen/commands
+      template_type: default
+
+  kilo:
+    name: "Kilo Code"
+    preferred: false
+    category: ide
+    description: "AI coding agent for VS Code"
+    installer:
+      target_dir: .
+      template_type: kilo
+      single_file: .kilocodemodes
+      file_extension: .yaml
+
+  codex:
+    name: "Codex CLI"
+    preferred: false
+    category: cli
+    description: "OpenAI terminal coding agent"
+    installer:
+      targets:
+        - target_dir: .
+          template_type: agents_md
+          artifact_types: [main]
+          single_file: AGENTS.md
+          # Creates/Updates: AGENTS.md
+
+  rovo-dev:
+    name: "Rovo Dev"
+    preferred: false
+    category: ide
+    description: "Atlassian's Rovo development environment"
+    installer:
+      target_dir: .rovodev/workflows
+      template_type: default
+
+  antigravity:
+    name: "Google Antigravity"
+    preferred: false
+    category: ide
+    description: "Google's AI development environment"
+    installer:
+      target_dir: .agent/workflows
+      template_type: default
+
+  crush:
+    name: "Crush"
+    preferred: false
+    category: ide
+    description: "AI development assistant"
+    installer:
+      target_dir: .crush/commands
+      template_type: default
+
+  iflow:
+    name: "iFlow"
+    preferred: false
+    category: ide
+    description: "AI workflow automation"
+    installer:
+      target_dir: .iflow/commands
+      template_type: default
+
+  kiro:
+    name: "Kiro"
+    preferred: false
+    category: ide
+    description: "AWS agentic IDE with specs and steering"
+    installer:
+      target_dir: .kiro/steering
+      template_type: kiro
+      file_extension: .md
+
+# ============================================================================
+# Platform Categories
+# ============================================================================
+
+categories:
+  ide:
+    name: "Integrated Development Environment"
+    description: "Full-featured code editors with AI assistance"
+
+  cli:
+    name: "Command Line Interface"
+    description: "Terminal-based tools"
+
+  tool:
+    name: "Development Tool"
+    description: "Standalone development utilities"
+
+  service:
+    name: "Cloud Service"
+    description: "Cloud-based development platforms"
+
+# ============================================================================
+# AgentKits Marketing Modules Configuration
+# ============================================================================
+
+modules:
+  core:
+    name: "Marketing Core"
+    required: true
+    description: "18 marketing agents, essential skills, base commands"
+    includes:
+      - agents/core/*
+      - agents/supporting/*
+      - agents/reviewers/*
+      - skills/core/*
+      - commands/campaign/*
+      - commands/content/*
+      - workflows/*
+      - memory/*
+
+  seo:
+    name: "SEO Mastery"
+    required: false
+    description: "Keyword research, competitor analysis, content optimization"
+    includes:
+      - skills/seo-mastery/*
+      - commands/seo/*
+      - skills/programmatic-seo/*
+      - skills/schema-markup/*
+
+  cro:
+    name: "CRO Excellence"
+    required: false
+    description: "Page, form, signup, popup, and onboarding optimization"
+    includes:
+      - skills/page-cro/*
+      - skills/form-cro/*
+      - skills/signup-flow-cro/*
+      - skills/popup-cro/*
+      - skills/onboarding-cro/*
+      - skills/paywall-upgrade-cro/*
+      - commands/cro/*
+      - commands/test/*
+
+  content:
+    name: "Content Marketing"
+    required: false
+    description: "Blog, social, landing pages, copywriting, editing"
+    includes:
+      - skills/copywriting/*
+      - skills/copy-editing/*
+      - skills/content-strategy/*
+      - commands/content/*
+      - commands/brand/*
+
+  email:
+    name: "Email Marketing"
+    required: false
+    description: "Welcome, nurture, re-engagement sequences"
+    includes:
+      - skills/email-marketing/*
+      - skills/email-sequence/*
+      - commands/sequence/*
+
+  analytics:
+    name: "Analytics & Reporting"
+    required: false
+    description: "Campaign ROI, funnel analysis, attribution modeling"
+    includes:
+      - skills/analytics-attribution/*
+      - commands/analytics/*
+      - commands/report/*
+
+  training:
+    name: "Marketing Training"
+    required: false
+    description: "23 interactive modules, pattern library, best practices"
+    includes:
+      - commands/training/*
+      - skills/marketing-psychology/*
+      - skills/marketing-ideas/*
+
+# ============================================================================
+# Template Types
+# ============================================================================
+
+template_types:
+  claude:
+    description: "Claude Code native format"
+    file_extension: .md
+    frontmatter: yaml
+    supports_skills: true
+    supports_agents: true
+
+  default:
+    description: "Standard markdown launcher"
+    file_extension: .md
+    frontmatter: yaml
+    supports_skills: false
+    supports_agents: true
+
+  windsurf:
+    description: "Windsurf workflow format"
+    file_extension: .md
+    frontmatter: yaml
+    supports_skills: false
+    supports_agents: true
+
+  gemini:
+    description: "Gemini TOML format"
+    file_extension: .toml
+    frontmatter: toml
+    supports_skills: false
+    supports_agents: true
+
+  copilot_agents:
+    description: "GitHub Copilot custom agents"
+    file_extension: .agent.md
+    frontmatter: yaml
+    supports_skills: false
+    supports_agents: true
+
+  copilot_instructions:
+    description: "GitHub Copilot custom instructions"
+    file_extension: .instructions.md
+    frontmatter: yaml
+    supports_skills: false
+    supports_agents: false
+
+  copilot_main:
+    description: "GitHub Copilot main instructions"
+    file_extension: .md
+    single_file: copilot-instructions.md
+    frontmatter: none
+    supports_skills: false
+    supports_agents: false
+
+  cline:
+    description: "Cline rules format with YAML frontmatter"
+    file_extension: .md
+    frontmatter: yaml
+    supports_skills: false
+    supports_agents: true
+    naming_convention: numbered
+
+  roo_rules:
+    description: "Roo Code rules directory"
+    file_extension: .md
+    frontmatter: none
+    supports_skills: false
+    supports_agents: true
+
+  roo_modes:
+    description: "Roo Code modes configuration"
+    file_extension: .yaml
+    single_file: .roomodes
+    frontmatter: none
+    supports_skills: false
+    supports_agents: true
+
+  kiro:
+    description: "Kiro steering files with YAML frontmatter"
+    file_extension: .md
+    frontmatter: yaml
+    supports_skills: false
+    supports_agents: true
+
+  agents_md:
+    description: "AGENTS.md standard format"
+    file_extension: .md
+    single_file: AGENTS.md
+    frontmatter: none
+    supports_skills: false
+    supports_agents: true
+
+  kilo:
+    description: "Kilo Code modes configuration"
+    file_extension: .yaml
+    single_file: .kilocodemodes
+    frontmatter: none
+    supports_skills: false
+    supports_agents: true
+
+# ============================================================================
+# Naming Conventions
+# ============================================================================
+
+conventions:
+  code_format: "lowercase-kebab-case"
+  name_format: "Title Case"
+  max_code_length: 20
+  allowed_characters: "a-z0-9-"
+  launcher_prefix: "agentkits-"
+
+# ============================================================================
+# AgentKits Marketing by AityTech
+# ============================================================================

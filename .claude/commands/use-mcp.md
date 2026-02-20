@@ -1,5 +1,7 @@
 ---
 description: Utilize tools of Model Context Protocol (MCP) servers
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [task]
 ---
 

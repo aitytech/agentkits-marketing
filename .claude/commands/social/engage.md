@@ -1,6 +1,24 @@
 ---
 description: Develop social engagement strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [platform]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Target platform identified
+- [ ] Current engagement status known
+- [ ] Brand voice guidelines available
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand/` - Brand voice guidelines
+3. `.claude/skills/social-media/SKILL.md` - Social frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -172,6 +190,26 @@ argument-hint: [platform]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering engagement strategy:
+- [ ] Response framework clear
+- [ ] Templates ready to use
+- [ ] Community initiatives defined
+- [ ] Escalation protocols set
+- [ ] Metrics targets defined
+
+---
+
 ## Output Location
 
 Save strategy to: `./docs/social/engage-[platform]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After engagement strategy, consider:
+- `/social:schedule` - Create posting schedule
+- `/social:viral` - Create viral content
+- `/content:social` - Write social content

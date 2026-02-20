@@ -1,6 +1,24 @@
 ---
 description: Generate personalized outreach sequence
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [prospect-info] [sequence-type]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Prospect information available
+- [ ] Target persona defined
+- [ ] Outreach channels identified
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Target buyer profiles
+3. `.claude/skills/email-sequence/SKILL.md` - Sequence frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -167,6 +185,26 @@ argument-hint: [prospect-info] [sequence-type]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering outreach sequence:
+- [ ] Personalization tokens clear
+- [ ] Subject lines compelling
+- [ ] CTAs specific and clear
+- [ ] Timing and cadence appropriate
+- [ ] Breakup message included
+
+---
+
 ## Output Location
 
 Save outreach to: `./docs/sales/outreach-[prospect]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After outreach sequence, consider:
+- `/sales:pitch` - Create sales pitch for demos
+- `/sales:qualify` - Qualify leads as they respond
+- `/crm:sequence` - Set up CRM automation

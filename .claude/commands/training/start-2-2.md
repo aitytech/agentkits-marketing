@@ -1,4 +1,26 @@
+---
+description: "Develop Content Strategy"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-2 - Develop Content Strategy
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-2-1` (Campaign Brief)
+- [ ] Understand campaign planning
+- [ ] Ready to build content strategy
+
+## Context Loading
+
+Reference these files:
+1. `./docs/content-style-guide.md` - Writing standards
+2. `./docs/channel-strategies.md` - Platform tactics
+3. `./.claude/skills/content-strategy/SKILL.md` - Content frameworks
+
+---
 
 ## Language & Quality Standards
 

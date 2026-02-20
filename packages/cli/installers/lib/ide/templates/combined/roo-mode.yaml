@@ -1,0 +1,22 @@
+customModes:
+  - slug: "agentkits-{{slug}}"
+    name: "{{name}}"
+    description: "{{description}}"
+    roleDefinition: |
+      You are the {{name}} agent from AgentKits Engineer.
+
+      Load and follow the complete agent definition from:
+      .claude/{{path}}
+
+      Read the full file contents and follow all instructions exactly.
+
+      This agent is part of the AgentKits PAID Architecture:
+      - PIE (Project Intelligence Engine) - Auto-detect tech stacks
+      - CPS (Context Persistence System) - Memory that survives sessions
+      - GDJ (Guided Developer Journeys) - Step-by-step implementation guides
+    whenToUse: "Use this mode for {{name}} tasks"
+    groups:
+      - read
+      - edit
+      - command
+      - browser

@@ -1,4 +1,25 @@
+---
+description: "Course Introduction"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-0-0 - Course Introduction
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Claude Code CLI installed
+- [ ] AgentKits Marketing kit cloned
+- [ ] Running inside the project directory
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Project overview
+2. `./CLAUDE.md` - System instructions
+
+---
 
 ## Language & Quality Standards
 

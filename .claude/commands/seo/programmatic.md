@@ -1,6 +1,24 @@
 ---
 description: Build SEO pages at scale using templates and data
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [keyword-pattern-or-context]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Keyword pattern identified
+- [ ] Data source available or identified
+- [ ] Scale target determined
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/seo/` - Existing SEO research
+3. `.claude/skills/programmatic-seo/SKILL.md` - pSEO frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -190,6 +208,26 @@ argument-hint: [keyword-pattern-or-context]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering programmatic SEO plan:
+- [ ] Unique value per page defined
+- [ ] Data source reliable
+- [ ] Template structure complete
+- [ ] Quality controls in place
+- [ ] Indexation strategy clear
+
+---
+
 ## Output Location
 
 Save plan to: `./docs/seo/programmatic-[pattern]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After programmatic SEO plan, consider:
+- `/seo:schema` - Add schema markup to templates
+- `/seo:keywords` - Validate keyword demand
+- `/seo:audit` - Audit after launch

@@ -1,6 +1,24 @@
 ---
 description: Qualify a lead using BANT/MEDDIC frameworks
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [lead-info-or-company]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Lead/company information available
+- [ ] Engagement history (if any)
+- [ ] Deal size expectations
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Target buyer profiles
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Qualification frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -187,6 +205,26 @@ argument-hint: [lead-info-or-company]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering qualification:
+- [ ] Framework consistently applied
+- [ ] Score justified with evidence
+- [ ] Temperature assignment correct
+- [ ] Next actions clear
+- [ ] Talking points relevant
+
+---
+
 ## Output Location
 
 Save qualification to: `./docs/sales/qualify-[company]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After lead qualification, consider:
+- `/sales:pitch` - Create pitch for qualified leads
+- `/sales:outreach` - Generate outreach sequence
+- `/crm:lifecycle` - Update lead lifecycle stage

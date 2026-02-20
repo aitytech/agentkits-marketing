@@ -1,0 +1,385 @@
+# MCP Integration Mapping Matrix
+# Maps MCP servers to skills, agents, and data types
+# Use this for skill-to-data-source resolution
+
+version: "1.0.0"
+lastUpdated: "2026-02-01"
+
+# Quick Reference
+overview:
+  total_integrations: 14
+  categories:
+    - seo
+    - analytics
+    - advertising
+    - crm
+    - communication
+    - project_management
+    - social
+
+# MCP Server Definitions
+integrations:
+  # SEO Category
+  google-search-console:
+    category: seo
+    description: "Google Search Console data for organic search performance"
+    status: active
+    data_types:
+      - rankings
+      - impressions
+      - clicks
+      - ctr
+      - crawl_errors
+      - index_coverage
+    skills:
+      primary:
+        - seo-mastery
+        - programmatic-seo
+        - schema-markup
+      secondary:
+        - analytics-attribution
+        - free-tool-strategy
+    agents:
+      - seo-specialist
+      - attraction-specialist
+    use_cases:
+      - "Check keyword rankings"
+      - "Analyze organic CTR"
+      - "Identify crawl issues"
+      - "Monitor index status"
+
+  semrush:
+    category: seo
+    description: "Comprehensive SEO and competitive intelligence"
+    status: active
+    data_types:
+      - keywords
+      - backlinks
+      - domain_metrics
+      - competitor_data
+      - content_gaps
+      - serp_data
+    skills:
+      primary:
+        - seo-mastery
+        - programmatic-seo
+        - competitor-alternatives
+      secondary:
+        - content-strategy
+    agents:
+      - seo-specialist
+      - attraction-specialist
+      - researcher
+    use_cases:
+      - "Keyword research"
+      - "Backlink analysis"
+      - "Competitor SEO audit"
+      - "Content gap analysis"
+
+  dataforseo:
+    category: seo
+    description: "SERP and keyword data API"
+    status: active
+    data_types:
+      - serp_data
+      - keyword_metrics
+      - backlinks
+      - on_page_seo
+    skills:
+      primary:
+        - seo-mastery
+        - programmatic-seo
+        - competitor-alternatives
+    agents:
+      - seo-specialist
+      - attraction-specialist
+    use_cases:
+      - "Real-time SERP tracking"
+      - "Bulk keyword data"
+      - "Competitor monitoring"
+
+  # Analytics Category
+  google-analytics:
+    category: analytics
+    description: "Web analytics and user behavior data"
+    status: active
+    data_types:
+      - traffic
+      - conversions
+      - user_behavior
+      - goals
+      - events
+      - audience_data
+    skills:
+      primary:
+        - analytics-attribution
+        - page-cro
+        - ab-test-setup
+      secondary:
+        - form-cro
+        - popup-cro
+        - signup-flow-cro
+        - onboarding-cro
+        - paywall-upgrade-cro
+        - paid-advertising
+        - free-tool-strategy
+        - marketing-fundamentals
+    agents:
+      - conversion-optimizer
+      - attraction-specialist
+      - project-manager
+    use_cases:
+      - "Track conversions"
+      - "Analyze user journeys"
+      - "Measure campaign performance"
+      - "Monitor page metrics"
+
+  # Advertising Category
+  meta-ads:
+    category: advertising
+    description: "Facebook and Instagram advertising data"
+    status: active
+    data_types:
+      - ad_performance
+      - audiences
+      - creatives
+      - spend
+      - conversions
+    skills:
+      primary:
+        - paid-advertising
+    agents:
+      - attraction-specialist
+    use_cases:
+      - "Campaign performance"
+      - "Audience insights"
+      - "Creative testing results"
+      - "ROAS tracking"
+
+  # CRM Category
+  hubspot:
+    category: crm
+    description: "CRM, marketing automation, and sales data"
+    status: active
+    data_types:
+      - contacts
+      - deals
+      - email_metrics
+      - form_submissions
+      - workflows
+      - lists
+    skills:
+      primary:
+        - email-marketing
+        - email-sequence
+      secondary:
+        - form-cro
+    agents:
+      - email-wizard
+      - lead-qualifier
+      - sales-enabler
+    use_cases:
+      - "Email performance"
+      - "Lead tracking"
+      - "Form analytics"
+      - "Automation metrics"
+
+  # Communication Category
+  slack:
+    category: communication
+    description: "Team communication and notifications"
+    status: active
+    data_types:
+      - notifications
+      - messages
+      - channels
+    skills:
+      primary:
+        - launch-strategy
+    agents:
+      - project-manager
+    use_cases:
+      - "Launch announcements"
+      - "Team notifications"
+      - "Campaign updates"
+
+  # Project Management Category
+  notion:
+    category: project_management
+    description: "Collaborative workspace and documentation"
+    status: active
+    data_types:
+      - pages
+      - databases
+      - projects
+    skills:
+      primary:
+        - content-strategy
+    agents:
+      - planner
+      - project-manager
+    use_cases:
+      - "Content calendars"
+      - "Campaign planning"
+      - "Documentation"
+
+  asana:
+    category: project_management
+    description: "Task and project management"
+    status: active
+    data_types:
+      - tasks
+      - projects
+      - timelines
+    skills:
+      primary:
+        - content-strategy
+    agents:
+      - project-manager
+      - planner
+    use_cases:
+      - "Campaign tasks"
+      - "Content workflow"
+      - "Team coordination"
+
+  # Social Category
+  twitter:
+    category: social
+    description: "Twitter/X social data and posting"
+    status: active
+    data_types:
+      - tweets
+      - engagement
+      - trends
+      - mentions
+    skills:
+      primary:
+        - social-media
+        - launch-strategy
+    agents:
+      - attraction-specialist
+      - copywriter
+    use_cases:
+      - "Social monitoring"
+      - "Trend analysis"
+      - "Launch amplification"
+
+# Skill-to-MCP Quick Lookup
+skill_mcp_map:
+  analytics-attribution:
+    required: []
+    optional: [google-analytics, google-search-console]
+  seo-mastery:
+    required: []
+    optional: [google-search-console, semrush, dataforseo]
+  programmatic-seo:
+    required: []
+    optional: [google-search-console, semrush, dataforseo]
+  schema-markup:
+    required: []
+    optional: [google-search-console]
+  competitor-alternatives:
+    required: []
+    optional: [semrush, dataforseo]
+  page-cro:
+    required: []
+    optional: [google-analytics]
+  form-cro:
+    required: []
+    optional: [google-analytics, hubspot]
+  popup-cro:
+    required: []
+    optional: [google-analytics]
+  signup-flow-cro:
+    required: []
+    optional: [google-analytics]
+  onboarding-cro:
+    required: []
+    optional: [google-analytics]
+  paywall-upgrade-cro:
+    required: []
+    optional: [google-analytics]
+  ab-test-setup:
+    required: []
+    optional: [google-analytics]
+  email-marketing:
+    required: []
+    optional: [hubspot]
+  email-sequence:
+    required: []
+    optional: [hubspot]
+  paid-advertising:
+    required: []
+    optional: [meta-ads, google-analytics]
+  social-media:
+    required: []
+    optional: [twitter]
+  content-strategy:
+    required: []
+    optional: [notion, asana]
+  launch-strategy:
+    required: []
+    optional: [slack, twitter]
+  free-tool-strategy:
+    required: []
+    optional: [google-search-console, google-analytics]
+
+# Agent-to-MCP Quick Lookup
+agent_mcp_map:
+  conversion-optimizer:
+    primary: [google-analytics]
+    secondary: []
+  seo-specialist:
+    primary: [google-search-console, semrush]
+    secondary: [dataforseo]
+  attraction-specialist:
+    primary: [google-analytics, google-search-console]
+    secondary: [semrush, meta-ads, twitter]
+  email-wizard:
+    primary: [hubspot]
+    secondary: []
+  lead-qualifier:
+    primary: [hubspot]
+    secondary: []
+  sales-enabler:
+    primary: [hubspot]
+    secondary: []
+  project-manager:
+    primary: [notion, asana]
+    secondary: [slack]
+  planner:
+    primary: [notion, asana]
+    secondary: []
+  researcher:
+    primary: [semrush]
+    secondary: [google-analytics, google-search-console]
+  copywriter:
+    primary: []
+    secondary: [twitter]
+
+# Data Availability Fallbacks
+fallbacks:
+  no_mcp_available:
+    message: "MCP integration not configured"
+    action: "Request manual data input"
+    format: |
+      **Data Required**
+      - [metric]: Please provide current value
+      - [metric]: Please provide benchmark
+
+  mcp_error:
+    message: "MCP server returned error"
+    action: "Retry or use manual input"
+
+  partial_data:
+    message: "Some metrics unavailable"
+    action: "Proceed with available data, note gaps"
+
+# Data Reliability Rules
+reliability_rules:
+  - "NEVER fabricate metrics or data"
+  - "Always cite data source"
+  - "Mark unavailable data as NOT AVAILABLE"
+  - "Use MCP when available, fallback to manual"
+  - "Include data freshness when known"
+  - "Flag estimated vs actual values"

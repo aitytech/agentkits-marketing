@@ -1,4 +1,26 @@
+---
+description: "Marketing Pattern Library"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:bonus-patterns - Marketing Pattern Library
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed most course modules
+- [ ] Run several campaigns with results
+- [ ] Ready to document winning patterns
+
+## Context Loading
+
+Reference these files:
+1. `./docs/content-style-guide.md` - Content guidelines
+2. `./docs/campaign-playbooks.md` - Campaign templates
+3. `./.claude/skills/common/templates/` - Pattern templates
+
+---
 
 ## Language & Quality Standards
 

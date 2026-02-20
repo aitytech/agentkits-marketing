@@ -1,6 +1,24 @@
 ---
 description: Create automated email sequence
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [sequence-type] [target-segment]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Sequence type defined
+- [ ] Target segment identified
+- [ ] Entry trigger determined
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/sequences/` - Existing sequences
+3. `.claude/skills/email-sequence/SKILL.md` - Sequence frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -169,6 +187,26 @@ argument-hint: [sequence-type] [target-segment]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering sequence:
+- [ ] Entry triggers defined
+- [ ] Email timing appropriate
+- [ ] Exit conditions set
+- [ ] Subject lines compelling
+- [ ] CTAs clear and specific
+
+---
+
 ## Output Location
 
 Save sequence to: `./docs/sequences/[type]-[segment]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After sequence creation, consider:
+- `/content:email` - Write detailed email copy
+- `/crm:segment` - Refine target segment
+- `/test:ab-setup` - Plan A/B tests for sequence

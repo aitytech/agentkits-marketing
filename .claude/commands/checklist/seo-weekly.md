@@ -1,6 +1,24 @@
 ---
 description: Weekly SEO maintenance and optimization checklist
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [website-or-domain]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Website or domain identified
+- [ ] Access to SEO tools
+- [ ] MCP configured: `google-search-console`, `semrush` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/seo/` - Previous SEO work
+3. `.claude/skills/seo-mastery/SKILL.md` - SEO frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -212,6 +230,26 @@ argument-hint: [website-or-domain]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering SEO checklist:
+- [ ] All daily tasks included
+- [ ] Metrics dashboard ready
+- [ ] Tool requirements listed
+- [ ] Reporting needs addressed
+- [ ] Weekly schedule complete
+
+---
+
 ## Output Location
 
 Save checklist to: `./docs/seo/weekly-[week]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After SEO weekly checklist, consider:
+- `/seo:audit` - Comprehensive SEO audit
+- `/seo:keywords` - Keyword research
+- `/seo:optimize` - Content optimization

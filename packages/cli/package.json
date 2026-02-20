@@ -1,0 +1,71 @@
+{
+  "name": "@aitytech/agentkits-marketing",
+  "version": "1.0.0",
+  "description": "Install 18 marketing AI agents, 40+ enterprise marketing skills, 76 commands with persistent SQLite memory. One command: npx @aitytech/agentkits-marketing. Cross-platform: Claude Code, Cursor, Copilot, Windsurf, Cline.",
+  "main": "bin/agentkits.js",
+  "bin": {
+    "agentkits-marketing": "./bin/agentkits.js",
+    "markit": "./bin/agentkits.js"
+  },
+  "scripts": {
+    "build": "echo \"CLI is JavaScript - no build needed\"",
+    "start": "node bin/agentkits.js",
+    "install-local": "node bin/agentkits.js install",
+    "test": "echo \"CLI tests pending\" && exit 0",
+    "lint": "echo \"CLI lint pending\" && exit 0",
+    "publish:npm": "npm publish --access public"
+  },
+  "keywords": [
+    "agentkits",
+    "marketing",
+    "ai-agents",
+    "enterprise-grade",
+    "claude-code",
+    "cursor",
+    "windsurf",
+    "copilot",
+    "cline",
+    "seo",
+    "content-marketing",
+    "email-marketing",
+    "social-media",
+    "analytics",
+    "cro",
+    "conversion-optimization",
+    "copywriting",
+    "campaigns",
+    "lead-generation",
+    "brand-building",
+    "sqlite-memory",
+    "vector-search",
+    "mcp-server",
+    "cli"
+  ],
+  "author": "AityTech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aitytech/agentkits-marketing",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://agentkits.net",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@agentkits/memory": "^1.0.0",
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "yaml": "^2.4.0"
+  },
+  "files": [
+    "bin/",
+    "installers/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,6 +1,24 @@
 ---
 description: Analyze competitor SEO strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [competitor-url]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Competitor URL(s) identified
+- [ ] Your current SEO state understood
+- [ ] MCP configured: `semrush` (for traffic/keywords)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/seo/` - Existing SEO research
+3. `.claude/skills/seo-mastery/SKILL.md` - SEO frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -188,6 +206,26 @@ argument-hint: [competitor-url]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering competitor SEO analysis:
+- [ ] Data from verified sources
+- [ ] Gap opportunities prioritized
+- [ ] Actionable recommendations
+- [ ] Content opportunities identified
+- [ ] Link building opportunities noted
+
+---
+
 ## Output Location
 
 Save analysis to: `./docs/seo/competitor-[name]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After competitor SEO analysis, consider:
+- `/seo:keywords` - Research identified keyword gaps
+- `/content:blog` - Create competing content
+- `/competitor:deep` - Full competitive analysis

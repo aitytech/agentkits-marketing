@@ -1,4 +1,24 @@
+---
+description: "Course Command Reference"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:help - Course Command Reference
+
+## Prerequisites
+
+Before using this reference:
+- [ ] Basic understanding of AgentKits Marketing
+- [ ] Familiar with slash command structure
+
+## Context Loading
+
+Reference these files:
+1. `./CLAUDE.md` - Full command catalog
+2. `./docs/usage-guide.md` - Detailed usage documentation
+
+---
 
 ## Language & Quality Standards
 

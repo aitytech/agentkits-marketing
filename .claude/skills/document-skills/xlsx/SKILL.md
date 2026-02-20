@@ -1,7 +1,26 @@
 ---
-name: xlsx
+name: document-skills/xlsx
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: document
+difficulty: intermediate
 description: "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas"
 license: Proprietary. LICENSE.txt has complete terms
+triggers:
+  - Excel
+  - XLSX
+  - spreadsheet
+  - create spreadsheet
+  - edit Excel
+prerequisites: []
+related_skills:
+  - analytics-attribution
+agents:
+  - docs-manager
+  - project-manager
+mcp_integrations:
+  optional: []
+success_metrics: []
 ---
 
 # XLSX Spreadsheet Processing

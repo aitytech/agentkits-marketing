@@ -1,6 +1,24 @@
 ---
 description: A/B testing framework for marketing optimization
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [test-type] [element-to-test]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Test channel identified
+- [ ] Element to test chosen
+- [ ] Statistical rigor level determined
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/tests/` - Previous test results
+3. `.claude/skills/ab-test-setup/SKILL.md` - Testing frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -231,6 +249,26 @@ argument-hint: [test-type] [element-to-test]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering A/B testing framework:
+- [ ] Hypothesis documented
+- [ ] Variants clearly defined
+- [ ] Sample size calculated
+- [ ] Testing rules included
+- [ ] Analysis framework ready
+
+---
+
 ## Output Location
 
 Save test plan to: `./docs/testing/ab-[test-name]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After A/B testing framework, consider:
+- `/test:ab-setup` - Plan specific test
+- `/cro:page` - Optimize page elements
+- `/analytics:funnel` - Analyze conversion funnel

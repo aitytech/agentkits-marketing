@@ -1,6 +1,29 @@
 ---
 description: Create email copy with sequences
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [email-type] [objective]
+---
+
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Email type/objective is clear
+- [ ] Target audience segment defined
+- [ ] Any offers or promotions specified
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product context
+2. **Brand**: Read `./docs/brand-guidelines.md` for voice
+3. **Email Skill**: Load `.claude/skills/email-marketing/SKILL.md`
+4. **Sequence Skill**: Load `.claude/skills/email-sequence/SKILL.md`
+5. **Subject Lines**: Check `.claude/skills/common/templates/email-subject-lines.md`
+6. **Prior Emails**: Check `./docs/content/email/` for consistency
+
 ---
 
 ## Language & Quality Standards
@@ -195,3 +218,30 @@ argument-hint: [email-type] [objective]
 ## Output Location
 
 Save email to: `./docs/content/email/[type]-[audience]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering email content:
+
+- [ ] **Subject Strong**: 5+ variations, under 50 chars
+- [ ] **Preview Extends**: Adds to subject, not redundant
+- [ ] **Hook Compelling**: First line earns the read
+- [ ] **CTA Clear**: One primary action, obvious
+- [ ] **Personalization**: Name and relevant tokens used
+- [ ] **Compliance**: Unsubscribe link noted
+- [ ] **Mobile Friendly**: Short paragraphs, scannable
+- [ ] **Brand Voice**: Matches guidelines
+
+---
+
+## Next Steps After Delivery
+
+1. **Review**: Stakeholder approval on copy
+2. **Setup**: Import to email platform (HubSpot, etc.)
+3. **Segment**: Configure audience targeting
+4. **Test**: Send test email, check rendering
+5. **Schedule**: Set optimal send time
+6. **Monitor**: Track open/click rates post-send
+7. **Iterate**: Adjust based on performance

@@ -1,6 +1,35 @@
 ---
 name: form-cro
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: cro
+difficulty: intermediate
 description: When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions "form optimization," "lead form conversions," "form friction," "form fields," "form completion rate," or "contact form." For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro.
+triggers:
+  - form optimization
+  - lead form
+  - contact form
+  - demo request
+  - form fields
+  - form completion rate
+  - form friction
+  - form conversions
+prerequisites:
+  - page-cro
+related_skills:
+  - page-cro
+  - signup-flow-cro
+  - popup-cro
+agents:
+  - conversion-optimizer
+mcp_integrations:
+  optional:
+    - google-analytics
+    - hubspot
+success_metrics:
+  - form_completion_rate
+  - field_drop_off
+output_schema: cro-analysis
 ---
 
 # Form CRO

@@ -1,6 +1,31 @@
 ---
 description: Create comprehensive marketing campaign plan
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [campaign-name]
+---
+
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Campaign name or initiative provided as argument
+- [ ] Budget range is known or can be estimated
+- [ ] Timeline constraints are understood
+- [ ] Key stakeholders/approvers identified
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product and audience context
+2. **Brand**: Read `./docs/brand-guidelines.md` for positioning
+3. **Existing Plans**: Check `./plans/campaigns/` for prior campaign work
+4. **Marketing Skill**: Load `.claude/skills/marketing-fundamentals/SKILL.md`
+5. **Content Skill**: Load `.claude/skills/content-strategy/SKILL.md`
+6. **Analytics Skill**: Load `.claude/skills/analytics-attribution/SKILL.md`
+7. **Benchmarks**: Load `.claude/skills/common/data/benchmark-metrics.yaml`
+
 ---
 
 ## Language & Quality Standards
@@ -229,3 +254,31 @@ NEXT_QUARTER_START=$(date -v+1m +%Y-%m-01 2>/dev/null || date -d "+1 month" +%Y-
 ## Output Location
 
 Save plan to: `./plans/campaigns/[campaign-name]/campaign-plan.md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering campaign plan:
+
+- [ ] **Goals SMART**: Specific, measurable, achievable, relevant, time-bound
+- [ ] **Audience Defined**: Clear target personas with pain points
+- [ ] **Timeline Realistic**: Milestones achievable with stated resources
+- [ ] **Budget Allocated**: Clear distribution across channels/tactics
+- [ ] **KPIs Measurable**: Metrics have baselines and targets
+- [ ] **Risks Identified**: Potential issues with mitigation strategies
+- [ ] **Dependencies Clear**: Blockers and sequencing documented
+- [ ] **Next Steps Actionable**: Immediate actions identified
+
+---
+
+## Next Steps After Delivery
+
+1. **Review**: Stakeholder review and feedback
+2. **Approve**: Get budget and timeline sign-off
+3. **Brief**: Run `/campaign:brief` for creative execution
+4. **Content**: Run `/content:*` commands for asset creation
+5. **Calendar**: Run `/campaign:calendar` for scheduling
+6. **Launch**: Execute per timeline
+7. **Monitor**: Run `/campaign:analyze` weekly during campaign
+8. **Report**: Run `/report:*` for performance reporting

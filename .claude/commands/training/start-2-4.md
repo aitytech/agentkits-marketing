@@ -1,4 +1,26 @@
+---
+description: "Analyze Campaign Data"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-4 - Analyze Campaign Data
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-2-3` (Marketing Copy)
+- [ ] Understand content creation
+- [ ] Ready for data analysis
+
+## Context Loading
+
+Reference these files:
+1. `./docs/analytics-setup.md` - Analytics configuration
+2. `./.claude/skills/analytics-attribution/SKILL.md` - Attribution models
+3. `./.claude/workflows/data-reliability-rules.md` - Data standards
+
+---
 
 ## Language & Quality Standards
 

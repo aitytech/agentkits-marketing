@@ -1,6 +1,24 @@
 ---
 description: Content approval workflow for team collaboration
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [content-type] [approvers]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Content type defined
+- [ ] Team structure known
+- [ ] Compliance requirements understood
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand/` - Brand guidelines
+3. `./docs/workflows/` - Existing workflows
+
 ---
 
 ## Language & Quality Standards
@@ -213,6 +231,26 @@ Draft → Review → Revisions → Approval → Publish
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering approval workflow:
+- [ ] All stages defined
+- [ ] Reviewer roles assigned
+- [ ] SLAs documented
+- [ ] Escalation path clear
+- [ ] Quality standards included
+
+---
+
 ## Output Location
 
 Save workflow to: `./docs/workflows/approval-[content-type]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After approval workflow, consider:
+- `/content:blog` - Create content using workflow
+- `/brand:voice` - Define brand voice guidelines
+- `/docs-manager` - Document management

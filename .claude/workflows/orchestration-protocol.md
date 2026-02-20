@@ -135,3 +135,129 @@ Spawn multiple agents simultaneously for independent tasks:
 - [ ] Assets organized
 - [ ] Dependencies identified
 - [ ] Success criteria defined
+
+---
+
+## Skill Selection Protocol
+
+### Overview
+
+Skills are specialized knowledge modules that agents load for specific tasks. Use the skills registry for intelligent selection.
+
+### Skill Selection Algorithm
+
+1. **Parse User Intent**
+   - Extract keywords from request
+   - Identify domain (CRO, SEO, content, etc.)
+   - Determine primary goal
+
+2. **Query Skills Registry**
+   - Read `.claude/skills/skills-registry.json`
+   - Match against skill triggers
+   - Score relevance (0-1)
+
+3. **Load Prerequisites**
+   - Check `dependencyGraph` for requirements
+   - Load foundation skills first
+   - Maintain depth-first order
+
+4. **Limit Context**
+   - Maximum 5 skills per request
+   - Prioritize: Direct match > Prerequisites > Related
+   - Avoid context overload
+
+5. **Activate Skills**
+   - Read SKILL.md files for selected skills
+   - Load references on-demand
+   - Apply skill instructions
+
+### Skill Categories
+
+| Category | Skills | Primary Use |
+|----------|--------|-------------|
+| core | marketing-fundamentals, marketing-psychology, marketing-ideas, seo-mastery, social-media, email-marketing, paid-advertising, content-strategy, analytics-attribution, brand-building, problem-solving | Foundation knowledge |
+| cro | page-cro, form-cro, popup-cro, signup-flow-cro, onboarding-cro, paywall-upgrade-cro, ab-test-setup | Conversion optimization |
+| content | copywriting, copy-editing, email-sequence | Content creation |
+| seo-growth | programmatic-seo, schema-markup, competitor-alternatives, launch-strategy, pricing-strategy, referral-program, free-tool-strategy | Growth strategies |
+| document | docx, pdf, pptx, xlsx | Document creation |
+
+### Skill-to-Agent Mapping
+
+| Agent | Primary Skills |
+|-------|---------------|
+| conversion-optimizer | page-cro, form-cro, popup-cro, signup-flow-cro, onboarding-cro, paywall-upgrade-cro, ab-test-setup |
+| attraction-specialist | seo-mastery, programmatic-seo, schema-markup, content-strategy, paid-advertising, competitor-alternatives |
+| copywriter | copywriting, copy-editing, email-sequence |
+| email-wizard | email-marketing, email-sequence |
+| seo-specialist | seo-mastery, programmatic-seo, schema-markup |
+| brand-voice-guardian | brand-building, copywriting, copy-editing |
+| brainstormer | marketing-ideas, marketing-psychology, problem-solving |
+
+### MCP Integration Resolution
+
+Before executing skills that require data:
+
+1. Check `mcp-mapping-matrix.yaml` for skill-MCP mappings
+2. Verify MCP server availability
+3. If unavailable, request manual data input
+4. Never fabricate metrics
+
+### Skill Loading Examples
+
+**Example 1: CRO Request**
+```
+User: "Optimize our signup form"
+→ Match: signup-flow-cro (0.9)
+→ Prerequisites: form-cro → page-cro
+→ Load order: page-cro, form-cro, signup-flow-cro
+```
+
+**Example 2: Content Request**
+```
+User: "Write landing page copy"
+→ Match: copywriting (0.9), page-cro (0.6)
+→ Prerequisites: none
+→ Load order: copywriting, page-cro
+```
+
+**Example 3: Launch Request**
+```
+User: "Plan Product Hunt launch"
+→ Match: launch-strategy (0.95)
+→ Prerequisites: content-strategy, social-media
+→ Load order: content-strategy, social-media, launch-strategy
+```
+
+### Reference Data Access
+
+Skills can reference common data files:
+
+- `.claude/skills/common/data/benchmark-metrics.yaml` - Industry benchmarks
+- `.claude/skills/common/data/conversion-formulas.yaml` - Metric calculations
+- `.claude/skills/common/data/mcp-mapping-matrix.yaml` - Data source mappings
+- `.claude/skills/common/templates/` - Copy templates and formulas
+
+### Output Standardization
+
+Use output schemas from `.claude/skills/schemas/output-schemas.yaml`:
+
+- `cro-analysis` - CRO recommendations
+- `content-plan` - Content strategy
+- `campaign-brief` - Campaign planning
+- `seo-audit` - SEO analysis
+- `email-sequence` - Email design
+- `ab-test-plan` - Test design
+
+---
+
+## Skill Commands
+
+### /skills:select [task]
+Intelligently select optimal skills for a task.
+
+### Usage
+When task complexity warrants multiple skills:
+1. Invoke skill selector
+2. Review recommended skills
+3. Confirm or adjust selection
+4. Execute with selected skills

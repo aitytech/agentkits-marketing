@@ -1,6 +1,38 @@
 ---
 name: paid-advertising
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: core
+difficulty: intermediate
 description: Paid media strategy and optimization across platforms. Use when planning paid campaigns, optimizing ad performance, managing budgets, or setting up tracking for paid channels.
+triggers:
+  - paid ads
+  - PPC
+  - Google Ads
+  - Facebook Ads
+  - Meta Ads
+  - LinkedIn Ads
+  - ROAS
+  - CPC
+  - CPL
+  - ad campaign
+prerequisites:
+  - analytics-attribution
+related_skills:
+  - analytics-attribution
+  - copywriting
+  - page-cro
+agents:
+  - attraction-specialist
+mcp_integrations:
+  optional:
+    - meta-ads
+    - google-analytics
+success_metrics:
+  - ROAS
+  - CPC
+  - CPA
+  - conversion_rate
 ---
 
 # Paid Advertising

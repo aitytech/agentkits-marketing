@@ -1,6 +1,29 @@
 ---
 description: Optimize lead capture, contact, demo request, or any non-signup form
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [url-or-form-description]
+---
+
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Form URL or description provided
+- [ ] Form type identified (lead, contact, demo, etc.)
+- [ ] Current conversion rate known (if available)
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product context
+2. **Brand**: Read `./docs/brand-guidelines.md` for voice
+3. **Form CRO Skill**: Load `.claude/skills/form-cro/SKILL.md`
+4. **Form Guide**: Load `.claude/skills/form-cro/references/form-optimization-guide.md`
+5. **Benchmarks**: Load `.claude/skills/common/data/benchmark-metrics.yaml`
+6. **Prior Analyses**: Check `./docs/cro/` for related work
+
 ---
 
 ## Language & Quality Standards
@@ -188,3 +211,28 @@ After: [optimized CTA]
 ## Output Location
 
 Save form audit to: `./docs/cro/form-[name]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering form optimization:
+
+- [ ] **Fields Minimized**: Only essential fields remain
+- [ ] **Labels Clear**: No jargon, scannable
+- [ ] **CTA Improved**: Value-focused button text
+- [ ] **Trust Added**: Privacy messaging included
+- [ ] **Mobile Checked**: Works on small screens
+- [ ] **Benchmarks Referenced**: Industry standards cited
+- [ ] **Fixes Prioritized**: Quick wins identified
+- [ ] **A/B Ideas**: Test recommendations provided
+
+---
+
+## Next Steps After Delivery
+
+1. **Prioritize**: Implement quick wins first
+2. **Implement**: Make field and copy changes
+3. **Test**: Run `/test:ab-setup` for variants
+4. **Measure**: Track conversion rate changes
+5. **Iterate**: Re-run audit after changes

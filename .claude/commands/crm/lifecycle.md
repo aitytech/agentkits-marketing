@@ -1,6 +1,24 @@
 ---
 description: Manage contact lifecycle stage transitions
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [contact-or-segment] [action]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Contact or segment identified
+- [ ] Current lifecycle stage known
+- [ ] MCP configured: `hubspot` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/crm/` - CRM documentation
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Lifecycle frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -171,6 +189,26 @@ Subscriber → Lead → MQL → SQL → Opportunity → Customer → Advocate
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering lifecycle management:
+- [ ] Current stage accurately assessed
+- [ ] Transition criteria clear
+- [ ] Next actions defined
+- [ ] Automation triggers identified
+- [ ] Success metrics set
+
+---
+
 ## Output Location
 
 Save lifecycle to: `./docs/crm/lifecycle-[contact]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After lifecycle management, consider:
+- `/crm:sequence` - Create automation sequence
+- `/crm:score` - Update lead score
+- `/leads:nurture` - Design nurture campaign

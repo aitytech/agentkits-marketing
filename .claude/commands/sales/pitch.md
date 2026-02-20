@@ -1,6 +1,24 @@
 ---
 description: Generate customized sales pitch
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [prospect-company] [use-case]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Prospect company identified
+- [ ] Use case or pain point known
+- [ ] Pitch format determined
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Target buyer profiles
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Value propositions
+
 ---
 
 ## Language & Quality Standards
@@ -170,6 +188,26 @@ argument-hint: [prospect-company] [use-case]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering sales pitch:
+- [ ] Hook is attention-grabbing
+- [ ] Value proposition clear
+- [ ] Proof points included
+- [ ] Objection responses ready
+- [ ] CTA is specific and clear
+
+---
+
 ## Output Location
 
 Save pitch to: `./docs/sales/pitch-[prospect]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After sales pitch, consider:
+- `/sales:battlecard` - Create competitive battlecard
+- `/sales:outreach` - Generate follow-up sequence
+- `/sales:qualify` - Qualify the lead

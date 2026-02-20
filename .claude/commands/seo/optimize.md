@@ -1,6 +1,24 @@
 ---
 description: Optimize content for target keywords
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [content-file] [target-keyword]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Content to optimize identified
+- [ ] Target keyword(s) defined
+- [ ] Current ranking known (if applicable)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/seo/keywords/` - Keyword research
+3. `.claude/skills/seo-mastery/SKILL.md` - On-page SEO
+
 ---
 
 ## Language & Quality Standards
@@ -174,6 +192,26 @@ After: [optimized]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering SEO optimization:
+- [ ] Title tag within 60 chars
+- [ ] Meta description within 155 chars
+- [ ] Keyword placement natural
+- [ ] Heading structure logical
+- [ ] Internal links suggested
+
+---
+
 ## Output Location
 
 Save optimization to: `./docs/seo/optimize-[content-name]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After SEO optimization, consider:
+- `/seo:schema` - Add schema markup
+- `/seo:audit` - Full site audit
+- `/content:cro` - Optimize for conversions

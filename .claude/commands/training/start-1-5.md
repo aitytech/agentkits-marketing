@@ -1,4 +1,26 @@
+---
+description: "Reviewer Agents Deep Dive"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-5 - Reviewer Agents Deep Dive
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-1-4` (Using Agents for Marketing)
+- [ ] Understand the 18-agent system
+- [ ] Ready to practice with reviewer agents
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/agents/reviewers/` - Reviewer agent definitions
+2. `./docs/reviewer-agents-update.md` - Reviewer agent details
+3. `./docs/brand-guidelines.md` - For brand review context
+
+---
 
 ## Language & Quality Standards
 

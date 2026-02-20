@@ -1,6 +1,26 @@
 ---
 description: Design pricing, packaging, and monetization strategy
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-pricing-challenge]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Product/service clearly defined
+- [ ] Target market identified
+- [ ] Competitor pricing researched (or will be)
+- [ ] Current pricing structure (if exists)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Target customer profiles
+3. `.claude/skills/pricing-strategy/SKILL.md` - Pricing frameworks
+4. `.claude/skills/marketing-psychology/SKILL.md` - Pricing psychology
+
 ---
 
 ## Language & Quality Standards
@@ -191,3 +211,23 @@ argument-hint: [product-or-pricing-challenge]
 ## Output Location
 
 Save strategy to: `./docs/pricing/strategy-[product]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering pricing strategy:
+- [ ] Value metric aligned with customer value
+- [ ] Tier structure supports growth
+- [ ] Psychology principles applied
+- [ ] Competitive positioning clear
+- [ ] Rollout plan included (Complete scope)
+
+---
+
+## Next Steps
+
+After pricing strategy, consider:
+- `/cro:page` - Optimize pricing page
+- `/cro:paywall` - Design upgrade screens
+- `/marketing:psychology` - Apply pricing psychology

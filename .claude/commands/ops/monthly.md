@@ -1,6 +1,24 @@
 ---
 description: Monthly marketing performance review and strategy adjustment
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [month-year] - Interactive mode, user will be asked for all parameters
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Month to review identified
+- [ ] Access to analytics platforms
+- [ ] MCP configured: `google-analytics`, `hubspot` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/ops/monthly/` - Previous monthly reviews
+3. `./docs/reports/` - Historical performance data
+
 ---
 
 ## Language & Quality Standards
@@ -199,6 +217,26 @@ Use MCP for all metrics; if unavailable show "⚠️ NOT AVAILABLE":
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering monthly review:
+- [ ] Key metrics vs targets shown
+- [ ] Funnel analysis complete
+- [ ] Wins and learnings highlighted
+- [ ] Next month goals defined
+- [ ] Budget recommendations included
+
+---
+
 ## Output Location
 
 Save review to: `./docs/ops/monthly/[YYYY-MM].md`
+
+---
+
+## Next Steps
+
+After monthly review, consider:
+- `/report:monthly` - Client-ready report
+- `/campaign:plan` - Next month campaigns
+- `/analytics:roi` - Deep ROI analysis

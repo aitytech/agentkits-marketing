@@ -1,5 +1,7 @@
 ---
 description: Optimize post-signup onboarding, activation, and first-run experience
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-flow-description]
 ---
 

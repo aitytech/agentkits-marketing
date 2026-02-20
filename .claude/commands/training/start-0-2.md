@@ -1,4 +1,26 @@
+---
+description: "Your First Marketing Task"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-0-2 - Your First Marketing Task
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-0-1` (Installation & Setup)
+- [ ] Verified Claude Code is working
+- [ ] Marketing kit files are accessible
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Product context
+2. `./docs/brand-guidelines.md` - Brand standards template
+3. `./docs/content-style-guide.md` - Content guidelines
+
+---
 
 ## Language & Quality Standards
 

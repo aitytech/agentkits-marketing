@@ -1,6 +1,24 @@
 ---
 description: Perform comprehensive SEO audit
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [url-or-sitemap]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Target URL or sitemap available
+- [ ] Access to site (or public pages)
+- [ ] MCP configured: `google-search-console`, `semrush` (optional)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/seo/` - Previous SEO audits
+3. `.claude/skills/seo-mastery/SKILL.md` - SEO frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -214,6 +232,26 @@ echo "SEO Audit Date: $CURRENT_DATE"
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering SEO audit:
+- [ ] All issues categorized by severity
+- [ ] Quick wins clearly identified
+- [ ] Metrics from verified sources
+- [ ] Actionable recommendations
+- [ ] Priority roadmap included
+
+---
+
 ## Output Location
 
 Save audit to: `./docs/seo/audits/[domain]-audit-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After SEO audit, consider:
+- `/seo:optimize` - Optimize specific pages
+- `/seo:schema` - Add schema markup
+- `/seo:keywords` - Conduct keyword research

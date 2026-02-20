@@ -1,6 +1,24 @@
 ---
 description: Conduct keyword research for topic/niche
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [topic-or-seed-keyword]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Seed topic or keyword defined
+- [ ] Target market/geography known
+- [ ] MCP configured: `semrush`, `dataforseo` (for metrics)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/seo/` - Existing SEO research
+3. `.claude/skills/seo-mastery/SKILL.md` - SEO frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -236,6 +254,26 @@ argument-hint: [topic-or-seed-keyword]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering keyword research:
+- [ ] Keywords relevant to business goals
+- [ ] Search volume from verified source (or marked N/A)
+- [ ] Intent classification accurate
+- [ ] Difficulty assessment realistic
+- [ ] Quick wins identified
+
+---
+
 ## Output Location
 
 Save research to: `./docs/seo/keywords/[topic]-research.md`
+
+---
+
+## Next Steps
+
+After keyword research, consider:
+- `/seo:optimize` - Optimize content for keywords
+- `/content:blog` - Create keyword-targeted content
+- `/seo:programmatic` - Build pages at scale

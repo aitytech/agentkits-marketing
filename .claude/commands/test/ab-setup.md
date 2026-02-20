@@ -1,6 +1,24 @@
 ---
 description: Plan and design A/B test or experiment
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [hypothesis-or-element] - Interactive mode, user will be asked for all parameters
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Element or hypothesis to test identified
+- [ ] Current baseline metrics known
+- [ ] Traffic level understood
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/tests/` - Previous test results
+3. `.claude/skills/ab-test-setup/SKILL.md` - Testing frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -227,6 +245,26 @@ argument-hint: [hypothesis-or-element] - Interactive mode, user will be asked fo
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering A/B test plan:
+- [ ] Hypothesis clear (if-then-because)
+- [ ] Control and variant defined
+- [ ] Sample size calculated
+- [ ] Duration estimated
+- [ ] Success criteria set
+
+---
+
 ## Output Location
 
 Save test plan to: `./docs/tests/ab-test-[element]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After A/B test setup, consider:
+- `/cro:page` - Optimize test element
+- `/analytics:funnel` - Analyze baseline funnel
+- `/checklist:ab-testing` - Full testing framework

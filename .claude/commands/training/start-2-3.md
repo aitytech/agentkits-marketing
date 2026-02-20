@@ -1,4 +1,26 @@
+---
+description: "Generate Marketing Copy"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-3 - Generate Marketing Copy
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-2-2` (Content Strategy)
+- [ ] Understand content planning
+- [ ] Ready for high-volume copy creation
+
+## Context Loading
+
+Reference these files:
+1. `./docs/brand-guidelines.md` - Brand voice reference
+2. `./docs/content-style-guide.md` - Writing standards
+3. `./.claude/skills/copywriting/SKILL.md` - Copy frameworks
+
+---
 
 ## Language & Quality Standards
 

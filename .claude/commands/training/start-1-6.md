@@ -1,4 +1,26 @@
+---
+description: "Project Memory (CLAUDE.md)"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-6 - Project Memory (CLAUDE.md)
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-1-5` (Reviewer Agents)
+- [ ] Understand agent system
+- [ ] Ready to learn project context management
+
+## Context Loading
+
+Reference these files:
+1. `./CLAUDE.md` - The project memory file
+2. `./.claude/workflows/marketing-rules.md` - Marketing rules
+3. `./.claude/workflows/primary-workflow.md` - Main workflow
+
+---
 
 ## Language & Quality Standards
 

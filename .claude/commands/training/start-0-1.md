@@ -1,4 +1,26 @@
+---
+description: "Installation & Setup"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-0-1 - Installation & Setup
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Claude Code CLI installed
+- [ ] AgentKits Marketing kit cloned
+- [ ] Running inside the project directory
+
+## Context Loading
+
+Reference these files:
+1. `./CLAUDE.md` - System instructions and commands
+2. `./.claude/commands/` - All available commands
+3. `./docs/usage-guide.md` - Detailed usage documentation
+
+---
 
 ## Language & Quality Standards
 

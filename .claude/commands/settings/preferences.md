@@ -1,6 +1,23 @@
 ---
 description: Configure your default preferences for AgentKits Marketing
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [view|set|reset] - Interactive mode, user will be asked for all parameters
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Understanding of available settings
+- [ ] Preferred language and timezone known
+- [ ] Default scope preference decided
+
+## Context Loading
+
+Load these files first:
+1. `./.claude/user-preferences.yml` - Existing preferences (if any)
+2. `./README.md` - Product context
+
 ---
 
 ## Language & Quality Standards
@@ -206,6 +223,26 @@ If user selects "Reset":
 
 ---
 
+## Pre-Delivery Validation
+
+Before saving preferences:
+- [ ] All settings collected
+- [ ] Timezone valid
+- [ ] Language preference clear
+- [ ] Default scope appropriate
+- [ ] Confirmation received
+
+---
+
 ## Output Location
 
 Save preferences to: `./.claude/user-preferences.yml`
+
+---
+
+## Next Steps
+
+After preferences setup, consider:
+- `/brainstorm` - Start marketing brainstorm
+- `/campaign:plan` - Plan your first campaign
+- `/ops:daily` - Daily marketing tasks

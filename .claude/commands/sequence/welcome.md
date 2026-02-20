@@ -1,6 +1,24 @@
 ---
 description: Create welcome email sequence for new subscribers
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [brand-or-product] [audience]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Brand/product defined
+- [ ] Target audience identified
+- [ ] Sequence goal clear
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/sequences/` - Existing sequences
+3. `.claude/skills/email-sequence/SKILL.md` - Sequence frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -172,6 +190,26 @@ argument-hint: [brand-or-product] [audience]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering welcome sequence:
+- [ ] First email immediate (<5 min)
+- [ ] Value delivered progressively
+- [ ] Single CTA per email
+- [ ] Exit conditions set
+- [ ] Success metrics defined
+
+---
+
 ## Output Location
 
 Save sequence to: `./docs/sequences/welcome-[brand]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After welcome sequence, consider:
+- `/sequence:nurture` - Create nurture sequence
+- `/cro:onboarding` - Optimize onboarding
+- `/content:email` - Write detailed email copy

@@ -1,4 +1,26 @@
+---
+description: "Welcome to Markit"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-1-1 - Welcome to Markit
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed Module 0 lessons
+- [ ] Familiar with Claude Code CLI
+- [ ] Ready to practice with real commands
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Product context
+2. `./.claude/workflows/primary-workflow.md` - Marketing pipeline
+3. `./.claude/workflows/sales-workflow.md` - Sales pipeline
+
+---
 
 ## Language & Quality Standards
 

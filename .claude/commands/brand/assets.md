@@ -1,6 +1,24 @@
 ---
 description: Manage and organize brand assets
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [action] [asset-type]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Access to existing brand assets
+- [ ] Asset storage location known
+- [ ] Brand guidelines reference (if exists)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand/` - Existing brand documentation
+3. `.claude/skills/brand-building/SKILL.md` - Brand frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -172,6 +190,26 @@ argument-hint: [action] [asset-type]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering asset management:
+- [ ] All assets cataloged with location
+- [ ] File formats and sizes noted
+- [ ] Gaps identified
+- [ ] Naming conventions consistent
+- [ ] Usage guidelines clear
+
+---
+
 ## Output Location
 
 Save asset inventory to: `./docs/brand/assets-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After brand asset management, consider:
+- `/brand:book` - Create comprehensive brand book
+- `/brand:voice` - Define brand voice guidelines
+- `/content:landing` - Create brand-aligned landing pages

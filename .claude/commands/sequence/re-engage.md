@@ -1,6 +1,24 @@
 ---
 description: Create re-engagement sequence for inactive contacts
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [brand-or-product] [inactive-criteria]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Inactivity criteria defined
+- [ ] Win-back strategy chosen
+- [ ] List hygiene policy understood
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/sequences/` - Existing sequences
+3. `.claude/skills/email-sequence/SKILL.md` - Sequence frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -173,6 +191,26 @@ argument-hint: [brand-or-product] [inactive-criteria]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering re-engagement sequence:
+- [ ] Win-back message compelling
+- [ ] Escalation clear
+- [ ] Breakup email included
+- [ ] Post-sequence action defined
+- [ ] GDPR compliance noted
+
+---
+
 ## Output Location
 
 Save sequence to: `./docs/sequences/re-engage-[brand]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After re-engagement sequence, consider:
+- `/sequence:nurture` - Nurture re-engaged leads
+- `/crm:segment` - Update segment definitions
+- `/content:email` - Write email copy

@@ -1,6 +1,24 @@
 ---
 description: Create viral-potential content
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [topic] [platform]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Topic or theme identified
+- [ ] Target platform chosen
+- [ ] Viral trigger strategy selected
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/social/` - Existing social content
+3. `.claude/skills/marketing-psychology/SKILL.md` - Viral psychology
+
 ---
 
 ## Language & Quality Standards
@@ -177,6 +195,26 @@ argument-hint: [topic] [platform]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering viral content:
+- [ ] Hook is attention-grabbing
+- [ ] Emotional trigger clear
+- [ ] CTA encourages engagement
+- [ ] Platform-optimized format
+- [ ] Hashtag strategy included
+
+---
+
 ## Output Location
 
 Save content to: `./docs/social/viral-[topic]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After viral content, consider:
+- `/social:schedule` - Schedule content
+- `/social:engage` - Plan engagement strategy
+- `/content:social` - Create more social content

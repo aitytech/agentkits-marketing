@@ -1,0 +1,725 @@
+{
+  "$schema": "./schemas/skills-registry.schema.json",
+  "name": "agentkits-marketing-skills",
+  "version": "2.0.0",
+  "description": "Enterprise-grade marketing skills registry with semantic metadata, dependency graphs, and MCP mappings",
+  "lastUpdated": "2026-02-01",
+  "categories": {
+    "core": {
+      "description": "Foundational marketing knowledge and frameworks",
+      "skills": ["marketing-fundamentals", "marketing-psychology", "marketing-ideas", "seo-mastery", "social-media", "email-marketing", "paid-advertising", "content-strategy", "analytics-attribution", "brand-building", "problem-solving"]
+    },
+    "cro": {
+      "description": "Conversion rate optimization across touchpoints",
+      "skills": ["page-cro", "form-cro", "popup-cro", "signup-flow-cro", "onboarding-cro", "paywall-upgrade-cro", "ab-test-setup"]
+    },
+    "content": {
+      "description": "Content creation and copywriting",
+      "skills": ["copywriting", "copy-editing", "email-sequence"]
+    },
+    "seo-growth": {
+      "description": "SEO and growth-focused strategies",
+      "skills": ["programmatic-seo", "schema-markup", "competitor-alternatives", "launch-strategy", "pricing-strategy", "referral-program", "free-tool-strategy"]
+    },
+    "document": {
+      "description": "Document creation skills",
+      "skills": ["document-skills/docx", "document-skills/pdf", "document-skills/pptx", "document-skills/xlsx"]
+    }
+  },
+  "dependencyGraph": {
+    "form-cro": ["page-cro"],
+    "popup-cro": ["page-cro"],
+    "signup-flow-cro": ["form-cro"],
+    "onboarding-cro": ["signup-flow-cro"],
+    "paywall-upgrade-cro": ["page-cro", "pricing-strategy"],
+    "ab-test-setup": ["page-cro", "analytics-attribution"],
+    "copy-editing": ["copywriting"],
+    "email-sequence": ["email-marketing", "copywriting"],
+    "programmatic-seo": ["seo-mastery"],
+    "schema-markup": ["seo-mastery"],
+    "competitor-alternatives": ["seo-mastery", "copywriting"],
+    "launch-strategy": ["content-strategy", "social-media"],
+    "referral-program": ["marketing-fundamentals"],
+    "free-tool-strategy": ["seo-mastery", "content-strategy"]
+  },
+  "skills": [
+    {
+      "id": "marketing-fundamentals",
+      "name": "Marketing Fundamentals",
+      "path": "marketing-fundamentals/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "beginner",
+      "description": "Core marketing concepts, psychology, and frameworks for effective marketing",
+      "triggers": ["marketing basics", "funnel", "TOFU", "MOFU", "BOFU", "customer journey", "positioning", "value proposition", "marketing psychology", "marketing framework"],
+      "prerequisites": [],
+      "relatedSkills": ["marketing-psychology", "brand-building", "content-strategy"],
+      "agents": ["researcher", "brainstormer", "planner"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics"]
+      },
+      "successMetrics": ["funnel_conversion", "customer_acquisition"],
+      "hasReferences": true
+    },
+    {
+      "id": "marketing-psychology",
+      "name": "Marketing Psychology",
+      "path": "marketing-psychology/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "70+ mental models and psychological principles for marketing",
+      "triggers": ["psychology", "mental models", "cognitive bias", "persuasion", "behavioral science", "why people buy", "decision-making", "consumer behavior", "first principles", "jobs to be done"],
+      "prerequisites": ["marketing-fundamentals"],
+      "relatedSkills": ["marketing-fundamentals", "copywriting", "page-cro"],
+      "agents": ["brainstormer", "copywriter", "conversion-optimizer"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["conversion_rate", "engagement_rate"],
+      "hasReferences": false
+    },
+    {
+      "id": "marketing-ideas",
+      "name": "Marketing Ideas",
+      "path": "marketing-ideas/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "beginner",
+      "description": "140+ proven SaaS marketing strategies and tactics",
+      "triggers": ["marketing ideas", "growth ideas", "how to market", "marketing strategies", "marketing tactics", "ways to promote", "ideas to grow", "growth hacking"],
+      "prerequisites": [],
+      "relatedSkills": ["marketing-fundamentals", "content-strategy", "social-media"],
+      "agents": ["brainstormer", "planner", "researcher"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["idea_implementation_rate"],
+      "hasReferences": false
+    },
+    {
+      "id": "seo-mastery",
+      "name": "SEO Mastery",
+      "path": "seo-mastery/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Search engine optimization strategies for organic growth",
+      "triggers": ["SEO", "search optimization", "keyword research", "organic traffic", "rankings", "backlinks", "on-page SEO", "technical SEO", "search intent", "SERP"],
+      "prerequisites": ["content-strategy"],
+      "relatedSkills": ["programmatic-seo", "schema-markup", "content-strategy"],
+      "agents": ["attraction-specialist", "seo-specialist"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-search-console", "semrush", "dataforseo"]
+      },
+      "successMetrics": ["organic_traffic", "keyword_rankings", "domain_authority"],
+      "hasReferences": true
+    },
+    {
+      "id": "social-media",
+      "name": "Social Media",
+      "path": "social-media/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Social media strategy, content creation, and platform optimization",
+      "triggers": ["social media", "Twitter", "LinkedIn", "Instagram", "TikTok", "Facebook", "social content", "engagement", "viral", "algorithm"],
+      "prerequisites": ["content-strategy"],
+      "relatedSkills": ["content-strategy", "copywriting", "paid-advertising"],
+      "agents": ["attraction-specialist", "copywriter"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["twitter"]
+      },
+      "successMetrics": ["engagement_rate", "follower_growth", "reach"],
+      "hasReferences": true
+    },
+    {
+      "id": "email-marketing",
+      "name": "Email Marketing",
+      "path": "email-marketing/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Email campaign strategy, automation, and optimization",
+      "triggers": ["email marketing", "email campaign", "newsletter", "deliverability", "open rate", "click rate", "email automation", "email list"],
+      "prerequisites": ["copywriting"],
+      "relatedSkills": ["email-sequence", "copywriting", "analytics-attribution"],
+      "agents": ["email-wizard", "copywriter"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["hubspot"]
+      },
+      "successMetrics": ["open_rate", "click_rate", "conversion_rate", "unsubscribe_rate"],
+      "hasReferences": true
+    },
+    {
+      "id": "paid-advertising",
+      "name": "Paid Advertising",
+      "path": "paid-advertising/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Paid media strategy across platforms for customer acquisition",
+      "triggers": ["paid ads", "PPC", "Google Ads", "Facebook Ads", "Meta Ads", "LinkedIn Ads", "ROAS", "CPC", "CPL", "ad campaign"],
+      "prerequisites": ["analytics-attribution"],
+      "relatedSkills": ["analytics-attribution", "copywriting", "page-cro"],
+      "agents": ["attraction-specialist"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["meta-ads", "google-analytics"]
+      },
+      "successMetrics": ["ROAS", "CPC", "CPA", "conversion_rate"],
+      "hasReferences": true
+    },
+    {
+      "id": "content-strategy",
+      "name": "Content Strategy",
+      "path": "content-strategy/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Content planning, creation, and distribution strategy",
+      "triggers": ["content strategy", "content calendar", "editorial", "content pillars", "content marketing", "blog strategy", "content distribution"],
+      "prerequisites": ["marketing-fundamentals"],
+      "relatedSkills": ["seo-mastery", "copywriting", "social-media"],
+      "agents": ["planner", "copywriter", "attraction-specialist"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["notion", "asana"]
+      },
+      "successMetrics": ["content_output", "engagement", "traffic_growth"],
+      "hasReferences": true
+    },
+    {
+      "id": "analytics-attribution",
+      "name": "Analytics & Attribution",
+      "path": "analytics-attribution/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "advanced",
+      "description": "Performance measurement, attribution modeling, and marketing ROI",
+      "triggers": ["analytics", "attribution", "tracking", "ROI", "CAC", "LTV", "dashboard", "reporting", "conversion tracking", "marketing metrics"],
+      "prerequisites": ["marketing-fundamentals"],
+      "relatedSkills": ["ab-test-setup", "paid-advertising"],
+      "agents": ["project-manager", "researcher"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics", "google-search-console"]
+      },
+      "successMetrics": ["tracking_accuracy", "attribution_confidence"],
+      "hasReferences": true
+    },
+    {
+      "id": "brand-building",
+      "name": "Brand Building",
+      "path": "brand-building/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Brand strategy, identity, positioning, and voice development",
+      "triggers": ["brand", "branding", "brand voice", "positioning", "brand guidelines", "brand identity", "brand strategy", "tone of voice"],
+      "prerequisites": ["marketing-fundamentals"],
+      "relatedSkills": ["copywriting", "content-strategy"],
+      "agents": ["docs-manager", "brand-voice-guardian"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["brand_consistency", "brand_awareness"],
+      "hasReferences": true
+    },
+    {
+      "id": "problem-solving",
+      "name": "Problem Solving",
+      "path": "problem-solving/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "difficulty": "advanced",
+      "description": "Systematic problem-solving techniques for marketing challenges",
+      "triggers": ["stuck", "problem", "challenge", "complexity", "creative block", "campaign issues", "troubleshooting", "optimization"],
+      "prerequisites": [],
+      "relatedSkills": ["marketing-psychology", "marketing-fundamentals"],
+      "agents": ["brainstormer", "planner"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["problem_resolution_rate"],
+      "hasReferences": true
+    },
+    {
+      "id": "page-cro",
+      "name": "Page CRO",
+      "path": "page-cro/SKILL.md",
+      "category": "cro",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Optimize marketing pages for conversions",
+      "triggers": ["CRO", "conversion rate optimization", "landing page", "homepage", "pricing page", "improve conversions", "bounce rate", "page optimization"],
+      "prerequisites": [],
+      "relatedSkills": ["form-cro", "popup-cro", "ab-test-setup", "copywriting"],
+      "agents": ["conversion-optimizer", "attraction-specialist"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics"]
+      },
+      "successMetrics": ["conversion_rate", "bounce_rate", "time_on_page"],
+      "hasReferences": false
+    },
+    {
+      "id": "form-cro",
+      "name": "Form CRO",
+      "path": "form-cro/SKILL.md",
+      "category": "cro",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Optimize lead capture, contact, and demo request forms",
+      "triggers": ["form optimization", "lead form", "contact form", "demo request", "form fields", "form completion rate", "form friction", "form conversions"],
+      "prerequisites": ["page-cro"],
+      "relatedSkills": ["page-cro", "signup-flow-cro", "popup-cro"],
+      "agents": ["conversion-optimizer"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics", "hubspot"]
+      },
+      "successMetrics": ["form_completion_rate", "field_drop_off"],
+      "hasReferences": false
+    },
+    {
+      "id": "popup-cro",
+      "name": "Popup CRO",
+      "path": "popup-cro/SKILL.md",
+      "category": "cro",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Create and optimize popups, modals, and overlays",
+      "triggers": ["popup", "modal", "overlay", "exit intent", "email popup", "lead capture popup", "announcement banner", "slide-in"],
+      "prerequisites": ["page-cro"],
+      "relatedSkills": ["page-cro", "form-cro", "copywriting"],
+      "agents": ["conversion-optimizer", "copywriter"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics"]
+      },
+      "successMetrics": ["popup_conversion_rate", "close_rate"],
+      "hasReferences": false
+    },
+    {
+      "id": "signup-flow-cro",
+      "name": "Signup Flow CRO",
+      "path": "signup-flow-cro/SKILL.md",
+      "category": "cro",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Optimize signup, registration, and trial activation flows",
+      "triggers": ["signup", "registration", "account creation", "trial signup", "signup form", "signup dropoff", "registration friction"],
+      "prerequisites": ["form-cro"],
+      "relatedSkills": ["form-cro", "onboarding-cro"],
+      "agents": ["conversion-optimizer"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics"]
+      },
+      "successMetrics": ["signup_completion_rate", "step_drop_off"],
+      "hasReferences": false
+    },
+    {
+      "id": "onboarding-cro",
+      "name": "Onboarding CRO",
+      "path": "onboarding-cro/SKILL.md",
+      "category": "cro",
+      "version": "1.0.0",
+      "difficulty": "advanced",
+      "description": "Optimize post-signup onboarding and user activation",
+      "triggers": ["onboarding", "activation", "first-run experience", "aha moment", "user activation", "time to value", "onboarding checklist", "empty states"],
+      "prerequisites": ["signup-flow-cro"],
+      "relatedSkills": ["signup-flow-cro", "email-sequence"],
+      "agents": ["conversion-optimizer", "continuity-specialist"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics"]
+      },
+      "successMetrics": ["activation_rate", "time_to_value", "feature_adoption"],
+      "hasReferences": false
+    },
+    {
+      "id": "paywall-upgrade-cro",
+      "name": "Paywall & Upgrade CRO",
+      "path": "paywall-upgrade-cro/SKILL.md",
+      "category": "cro",
+      "version": "1.0.0",
+      "difficulty": "advanced",
+      "description": "Optimize in-app paywalls, upgrade screens, and feature gates",
+      "triggers": ["paywall", "upgrade screen", "upsell modal", "feature gate", "freemium conversion", "trial expiration", "upgrade prompt", "in-app pricing"],
+      "prerequisites": ["page-cro", "pricing-strategy"],
+      "relatedSkills": ["pricing-strategy", "page-cro", "copywriting"],
+      "agents": ["conversion-optimizer", "upsell-maximizer"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics"]
+      },
+      "successMetrics": ["upgrade_conversion_rate", "ARPU"],
+      "hasReferences": false
+    },
+    {
+      "id": "ab-test-setup",
+      "name": "A/B Test Setup",
+      "path": "ab-test-setup/SKILL.md",
+      "category": "cro",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Plan, design, and implement A/B tests",
+      "triggers": ["A/B test", "split test", "experiment", "test this change", "variant copy", "multivariate test", "hypothesis", "statistical significance"],
+      "prerequisites": ["page-cro", "analytics-attribution"],
+      "relatedSkills": ["page-cro", "analytics-attribution"],
+      "agents": ["conversion-optimizer", "researcher"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-analytics"]
+      },
+      "successMetrics": ["test_velocity", "win_rate"],
+      "hasReferences": false
+    },
+    {
+      "id": "copywriting",
+      "name": "Copywriting",
+      "path": "copywriting/SKILL.md",
+      "category": "content",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Write marketing copy for pages, ads, and campaigns",
+      "triggers": ["write copy", "marketing copy", "headline", "CTA copy", "landing page copy", "homepage copy", "rewrite", "improve copy"],
+      "prerequisites": [],
+      "relatedSkills": ["copy-editing", "page-cro", "email-sequence"],
+      "agents": ["copywriter", "brand-voice-guardian"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["conversion_rate", "engagement_rate"],
+      "hasReferences": false
+    },
+    {
+      "id": "copy-editing",
+      "name": "Copy Editing",
+      "path": "copy-editing/SKILL.md",
+      "category": "content",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Edit and polish existing marketing copy",
+      "triggers": ["edit copy", "review copy", "copy feedback", "proofread", "polish", "make this better", "copy sweep", "improve writing"],
+      "prerequisites": ["copywriting"],
+      "relatedSkills": ["copywriting", "brand-building"],
+      "agents": ["copywriter", "brand-voice-guardian"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["clarity_improvement", "consistency_score"],
+      "hasReferences": false
+    },
+    {
+      "id": "email-sequence",
+      "name": "Email Sequence",
+      "path": "email-sequence/SKILL.md",
+      "category": "content",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Create email sequences, drip campaigns, and automation flows",
+      "triggers": ["email sequence", "drip campaign", "nurture sequence", "welcome sequence", "onboarding emails", "re-engagement emails", "email automation", "lifecycle emails"],
+      "prerequisites": ["email-marketing", "copywriting"],
+      "relatedSkills": ["email-marketing", "copywriting", "onboarding-cro"],
+      "agents": ["email-wizard", "copywriter"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["hubspot"]
+      },
+      "successMetrics": ["sequence_completion_rate", "conversion_rate"],
+      "hasReferences": false
+    },
+    {
+      "id": "programmatic-seo",
+      "name": "Programmatic SEO",
+      "path": "programmatic-seo/SKILL.md",
+      "category": "seo-growth",
+      "version": "1.0.0",
+      "difficulty": "advanced",
+      "description": "Build SEO-driven pages at scale using templates and data",
+      "triggers": ["programmatic SEO", "template pages", "pages at scale", "directory pages", "location pages", "comparison pages", "integration pages"],
+      "prerequisites": ["seo-mastery"],
+      "relatedSkills": ["seo-mastery", "schema-markup", "competitor-alternatives"],
+      "agents": ["attraction-specialist", "seo-specialist"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-search-console", "semrush", "dataforseo"]
+      },
+      "successMetrics": ["indexed_pages", "organic_traffic", "keyword_coverage"],
+      "hasReferences": false
+    },
+    {
+      "id": "schema-markup",
+      "name": "Schema Markup",
+      "path": "schema-markup/SKILL.md",
+      "category": "seo-growth",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Add and optimize structured data for rich snippets",
+      "triggers": ["schema", "structured data", "JSON-LD", "rich snippets", "schema.org", "FAQ schema", "product schema", "review schema"],
+      "prerequisites": ["seo-mastery"],
+      "relatedSkills": ["seo-mastery", "programmatic-seo"],
+      "agents": ["seo-specialist", "attraction-specialist"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-search-console"]
+      },
+      "successMetrics": ["rich_snippet_appearance", "CTR_improvement"],
+      "hasReferences": false
+    },
+    {
+      "id": "competitor-alternatives",
+      "name": "Competitor Alternatives",
+      "path": "competitor-alternatives/SKILL.md",
+      "category": "seo-growth",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Create competitor comparison and alternative pages",
+      "triggers": ["alternative page", "vs page", "competitor comparison", "comparison page", "competitor vs", "alternative to"],
+      "prerequisites": ["seo-mastery", "copywriting"],
+      "relatedSkills": ["seo-mastery", "copywriting", "programmatic-seo"],
+      "agents": ["attraction-specialist", "researcher"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["semrush", "dataforseo"]
+      },
+      "successMetrics": ["comparison_page_traffic", "conversion_rate"],
+      "hasReferences": false
+    },
+    {
+      "id": "launch-strategy",
+      "name": "Launch Strategy",
+      "path": "launch-strategy/SKILL.md",
+      "category": "seo-growth",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Plan product launches, feature announcements, and releases",
+      "triggers": ["launch", "Product Hunt", "feature release", "announcement", "go-to-market", "beta launch", "early access", "waitlist", "product update"],
+      "prerequisites": ["content-strategy", "social-media"],
+      "relatedSkills": ["content-strategy", "social-media", "email-sequence"],
+      "agents": ["planner", "project-manager", "copywriter"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["slack", "twitter"]
+      },
+      "successMetrics": ["launch_signups", "media_coverage", "social_engagement"],
+      "hasReferences": false
+    },
+    {
+      "id": "pricing-strategy",
+      "name": "Pricing Strategy",
+      "path": "pricing-strategy/SKILL.md",
+      "category": "seo-growth",
+      "version": "1.0.0",
+      "difficulty": "advanced",
+      "description": "Design pricing, packaging, and monetization strategy",
+      "triggers": ["pricing", "pricing tiers", "freemium", "free trial", "packaging", "price increase", "value metric", "willingness to pay", "monetization"],
+      "prerequisites": ["marketing-fundamentals"],
+      "relatedSkills": ["paywall-upgrade-cro", "page-cro"],
+      "agents": ["researcher", "upsell-maximizer"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["conversion_rate", "ARPU", "LTV"],
+      "hasReferences": false
+    },
+    {
+      "id": "referral-program",
+      "name": "Referral Program",
+      "path": "referral-program/SKILL.md",
+      "category": "seo-growth",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Design referral, affiliate, and word-of-mouth programs",
+      "triggers": ["referral", "affiliate", "ambassador", "word of mouth", "viral loop", "refer a friend", "partner program"],
+      "prerequisites": ["marketing-fundamentals"],
+      "relatedSkills": ["email-sequence", "marketing-psychology"],
+      "agents": ["continuity-specialist", "upsell-maximizer"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": ["referral_rate", "viral_coefficient", "referred_conversion"],
+      "hasReferences": false
+    },
+    {
+      "id": "free-tool-strategy",
+      "name": "Free Tool Strategy",
+      "path": "free-tool-strategy/SKILL.md",
+      "category": "seo-growth",
+      "version": "1.0.0",
+      "difficulty": "advanced",
+      "description": "Plan free tools for engineering-as-marketing",
+      "triggers": ["free tool", "engineering as marketing", "calculator", "generator", "interactive tool", "lead gen tool", "marketing tool"],
+      "prerequisites": ["seo-mastery", "content-strategy"],
+      "relatedSkills": ["seo-mastery", "content-strategy", "programmatic-seo"],
+      "agents": ["attraction-specialist", "brainstormer"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": ["google-search-console", "google-analytics"]
+      },
+      "successMetrics": ["tool_usage", "backlinks_generated", "lead_conversion"],
+      "hasReferences": false
+    },
+    {
+      "id": "document-skills/docx",
+      "name": "DOCX Documents",
+      "path": "document-skills/docx/SKILL.md",
+      "category": "document",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Create and edit Microsoft Word documents",
+      "triggers": ["Word document", "DOCX", "Word file", "create document", "edit Word"],
+      "prerequisites": [],
+      "relatedSkills": ["document-skills/pdf", "document-skills/pptx"],
+      "agents": ["docs-manager", "copywriter"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": [],
+      "hasReferences": true
+    },
+    {
+      "id": "document-skills/pdf",
+      "name": "PDF Documents",
+      "path": "document-skills/pdf/SKILL.md",
+      "category": "document",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Create and edit PDF documents",
+      "triggers": ["PDF", "PDF document", "create PDF", "edit PDF"],
+      "prerequisites": [],
+      "relatedSkills": ["document-skills/docx", "document-skills/pptx"],
+      "agents": ["docs-manager"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": [],
+      "hasReferences": true
+    },
+    {
+      "id": "document-skills/pptx",
+      "name": "PPTX Presentations",
+      "path": "document-skills/pptx/SKILL.md",
+      "category": "document",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Create and edit PowerPoint presentations",
+      "triggers": ["PowerPoint", "PPTX", "presentation", "slides", "create presentation"],
+      "prerequisites": [],
+      "relatedSkills": ["document-skills/docx", "document-skills/pdf"],
+      "agents": ["docs-manager", "sales-enabler"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": [],
+      "hasReferences": true
+    },
+    {
+      "id": "document-skills/xlsx",
+      "name": "XLSX Spreadsheets",
+      "path": "document-skills/xlsx/SKILL.md",
+      "category": "document",
+      "version": "1.0.0",
+      "difficulty": "intermediate",
+      "description": "Create and edit Excel spreadsheets",
+      "triggers": ["Excel", "XLSX", "spreadsheet", "create spreadsheet", "edit Excel"],
+      "prerequisites": [],
+      "relatedSkills": ["analytics-attribution"],
+      "agents": ["docs-manager", "project-manager"],
+      "mcpIntegrations": {
+        "required": [],
+        "optional": []
+      },
+      "successMetrics": [],
+      "hasReferences": true
+    }
+  ],
+  "mcpIntegrationMatrix": {
+    "google-analytics": {
+      "skills": ["analytics-attribution", "page-cro", "form-cro", "popup-cro", "signup-flow-cro", "onboarding-cro", "paywall-upgrade-cro", "ab-test-setup", "paid-advertising", "free-tool-strategy", "marketing-fundamentals"],
+      "agents": ["conversion-optimizer", "attraction-specialist", "project-manager"],
+      "dataTypes": ["traffic", "conversions", "user_behavior", "goals"]
+    },
+    "google-search-console": {
+      "skills": ["seo-mastery", "programmatic-seo", "schema-markup", "analytics-attribution", "free-tool-strategy"],
+      "agents": ["seo-specialist", "attraction-specialist"],
+      "dataTypes": ["rankings", "impressions", "clicks", "crawl_errors"]
+    },
+    "semrush": {
+      "skills": ["seo-mastery", "programmatic-seo", "competitor-alternatives"],
+      "agents": ["seo-specialist", "attraction-specialist", "researcher"],
+      "dataTypes": ["keywords", "backlinks", "competitor_data", "domain_metrics"]
+    },
+    "dataforseo": {
+      "skills": ["seo-mastery", "programmatic-seo", "competitor-alternatives"],
+      "agents": ["seo-specialist", "attraction-specialist"],
+      "dataTypes": ["SERP_data", "keyword_metrics", "backlinks"]
+    },
+    "meta-ads": {
+      "skills": ["paid-advertising"],
+      "agents": ["attraction-specialist"],
+      "dataTypes": ["ad_performance", "audiences", "creatives"]
+    },
+    "hubspot": {
+      "skills": ["email-marketing", "email-sequence", "form-cro"],
+      "agents": ["email-wizard", "lead-qualifier", "sales-enabler"],
+      "dataTypes": ["contacts", "deals", "email_metrics", "form_submissions"]
+    },
+    "slack": {
+      "skills": ["launch-strategy"],
+      "agents": ["project-manager"],
+      "dataTypes": ["notifications", "messages"]
+    },
+    "notion": {
+      "skills": ["content-strategy"],
+      "agents": ["planner", "project-manager"],
+      "dataTypes": ["pages", "databases"]
+    },
+    "asana": {
+      "skills": ["content-strategy"],
+      "agents": ["project-manager", "planner"],
+      "dataTypes": ["tasks", "projects"]
+    },
+    "twitter": {
+      "skills": ["social-media", "launch-strategy"],
+      "agents": ["attraction-specialist", "copywriter"],
+      "dataTypes": ["tweets", "engagement", "trends"]
+    }
+  },
+  "outputSchemas": {
+    "cro-analysis": {
+      "sections": ["initial_assessment", "quick_wins", "high_impact_changes", "test_ideas", "implementation_priority"],
+      "requiredFields": ["page_type", "primary_goal", "recommendations"]
+    },
+    "content-plan": {
+      "sections": ["content_pillars", "content_calendar", "distribution_strategy", "metrics"],
+      "requiredFields": ["pillars", "schedule", "channels"]
+    },
+    "campaign-brief": {
+      "sections": ["objective", "audience", "messaging", "channels", "timeline", "success_metrics"],
+      "requiredFields": ["objective", "audience", "key_message"]
+    },
+    "seo-audit": {
+      "sections": ["technical_issues", "on_page_opportunities", "content_gaps", "backlink_analysis", "action_items"],
+      "requiredFields": ["issues", "opportunities", "priorities"]
+    }
+  }
+}

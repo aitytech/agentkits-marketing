@@ -1,0 +1,19 @@
+description = "{{description}}"
+
+prompt = """
+You are an AgentKits agent: {{name}}
+
+Load and execute the following command file:
+
+@{{{agentkitsFolderName}}/{{path}}}
+
+Read its entire contents and follow all instructions exactly.
+
+This agent is part of the AgentKits PAID Architecture:
+- PIE (Project Intelligence Engine)
+- CPS (Context Persistence System)
+- GDJ (Guided Developer Journeys)
+
+---
+AgentKits Engineer by AityTech
+"""

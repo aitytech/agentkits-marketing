@@ -1,5 +1,7 @@
 ---
 description: Analyze campaign performance and provide insights
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [campaign-name-or-url]
 ---
 

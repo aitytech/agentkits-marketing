@@ -1,6 +1,29 @@
 ---
 description: Create or optimize popups, modals, overlays for conversion
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [goal-or-current-popup]
+---
+
+## Prerequisites
+
+Before running this command, ensure:
+- [ ] Popup goal is clear (lead capture, promotion, etc.)
+- [ ] Target audience identified
+- [ ] Existing popup (if optimizing) accessible
+
+---
+
+## Context Loading (Execute First)
+
+Load context in this order:
+1. **Project**: Read `./README.md` for product context
+2. **Brand**: Read `./docs/brand-guidelines.md` for voice
+3. **Popup Skill**: Load `.claude/skills/popup-cro/SKILL.md`
+4. **Popup Guide**: Load `.claude/skills/popup-cro/references/popup-best-practices.md`
+5. **Psychology**: Load `.claude/skills/marketing-psychology/SKILL.md`
+6. **Prior Work**: Check `./docs/cro/` for existing popup analyses
+
 ---
 
 ## Language & Quality Standards
@@ -186,3 +209,29 @@ argument-hint: [goal-or-current-popup]
 ## Output Location
 
 Save popup to: `./docs/cro/popup-[goal]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering popup:
+
+- [ ] **Headline Compelling**: Stops the scroll
+- [ ] **Value Clear**: Offer is obvious
+- [ ] **CTA Strong**: Action verb + benefit
+- [ ] **Timing Appropriate**: Trigger makes sense
+- [ ] **Frequency Set**: Not annoying visitors
+- [ ] **Mobile Tested**: Works on small screens
+- [ ] **Close Button Visible**: Easy to dismiss
+- [ ] **Variants Provided**: 2-3 headline options
+
+---
+
+## Next Steps After Delivery
+
+1. **Design**: Create popup visual
+2. **Build**: Implement in popup tool
+3. **Target**: Set audience and trigger rules
+4. **Test**: A/B test headline variants
+5. **Measure**: Track conversion rate
+6. **Iterate**: Optimize based on data

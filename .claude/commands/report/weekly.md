@@ -1,6 +1,24 @@
 ---
 description: Generate client-ready weekly marketing report
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [client-or-project]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Client or project identified
+- [ ] Week to report defined
+- [ ] MCP configured: `google-analytics`, `hubspot` (for data)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/reports/` - Previous reports
+3. `./docs/ops/weekly/` - Weekly reviews
+
 ---
 
 ## Language & Quality Standards
@@ -212,6 +230,26 @@ echo "Current Week: W$CURRENT_WEEK ($WEEK_START to $WEEK_END)"
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering weekly report:
+- [ ] All data from verified sources
+- [ ] Top highlights compelling
+- [ ] Metrics clearly presented
+- [ ] Next week focus defined
+- [ ] Client-ready format
+
+---
+
 ## Output Location
 
 Save report to: `./docs/reports/[client]/weekly-W[XX]-[YYYY].md`
+
+---
+
+## Next Steps
+
+After weekly report, consider:
+- `/ops:weekly` - Internal weekly review
+- `/report:monthly` - Monthly report
+- `/campaign:analyze` - Campaign performance analysis

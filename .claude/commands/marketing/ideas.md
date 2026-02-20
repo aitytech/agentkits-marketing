@@ -1,6 +1,25 @@
 ---
 description: Get 140+ proven SaaS marketing ideas and strategies
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-goal]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Product or goal clearly defined
+- [ ] Current marketing stage known
+- [ ] Resource constraints understood
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Target audience
+3. `.claude/skills/marketing-ideas/SKILL.md` - 140+ idea catalog
+4. `.claude/skills/marketing-fundamentals/SKILL.md` - Marketing frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -197,3 +216,23 @@ argument-hint: [product-or-goal]
 ## Output Location
 
 Save ideas to: `./docs/marketing/ideas-[topic]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering ideas:
+- [ ] Ideas match stage and resources
+- [ ] Quick wins identified for immediate action
+- [ ] Effort/impact prioritization clear
+- [ ] First steps are specific and actionable
+- [ ] Ideas align with product positioning
+
+---
+
+## Next Steps
+
+After marketing ideas, consider:
+- `/campaign:plan` - Plan selected campaigns
+- `/content:blog` - Create content for ideas
+- `/growth:launch` - Plan launches for initiatives

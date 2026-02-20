@@ -260,7 +260,7 @@ No signup. No API keys. Just marketing.
 ### Founder
 
 **Le Duc Linh** - Creator of AgentKits
-- GitHub: github.com/agentkits
+- GitHub: github.com/aitytech
 - Website: agentkits.net
 
 ### Company

@@ -1,0 +1,343 @@
+# Marketing Benchmark Metrics
+# Industry standards for measuring marketing performance
+# Source: Compiled from industry reports (2024-2026)
+
+version: "1.0.0"
+lastUpdated: "2026-02-01"
+
+# Email Marketing Benchmarks
+email:
+  open_rate:
+    poor: "<15%"
+    average: "15-20%"
+    good: "20-25%"
+    excellent: ">25%"
+    industry_averages:
+      b2b: "21.5%"
+      b2c: "19.7%"
+      saas: "20.9%"
+      ecommerce: "17.1%"
+
+  click_rate:
+    poor: "<1%"
+    average: "1-2%"
+    good: "2-5%"
+    excellent: ">5%"
+    industry_averages:
+      b2b: "2.6%"
+      b2c: "2.1%"
+      saas: "2.4%"
+      ecommerce: "2.0%"
+
+  click_to_open_rate:
+    poor: "<10%"
+    average: "10-15%"
+    good: "15-20%"
+    excellent: ">20%"
+
+  unsubscribe_rate:
+    excellent: "<0.2%"
+    good: "0.2-0.5%"
+    acceptable: "0.5-1%"
+    concerning: ">1%"
+
+  bounce_rate:
+    excellent: "<0.5%"
+    good: "0.5-2%"
+    acceptable: "2-5%"
+    poor: ">5%"
+
+  spam_complaint_rate:
+    excellent: "<0.01%"
+    good: "0.01-0.05%"
+    acceptable: "0.05-0.1%"
+    concerning: ">0.1%"
+
+# Landing Page Benchmarks
+landing_page:
+  conversion_rate:
+    poor: "<2%"
+    average: "2-5%"
+    good: "5-10%"
+    excellent: ">10%"
+    by_industry:
+      saas: "3-7%"
+      ecommerce: "2-4%"
+      b2b_lead_gen: "5-10%"
+      agency_services: "4-8%"
+
+  bounce_rate:
+    excellent: "<30%"
+    good: "30-50%"
+    average: "50-70%"
+    poor: ">70%"
+
+  time_on_page:
+    poor: "<30 seconds"
+    average: "30-90 seconds"
+    good: "90-180 seconds"
+    excellent: ">180 seconds"
+
+  scroll_depth:
+    poor: "<25%"
+    average: "25-50%"
+    good: "50-75%"
+    excellent: ">75%"
+
+# Form Conversion Benchmarks
+forms:
+  completion_rate:
+    by_field_count:
+      "1-3 fields": "25-50%"
+      "4-6 fields": "15-25%"
+      "7-10 fields": "10-15%"
+      "10+ fields": "<10%"
+
+  field_impact:
+    email_only: "baseline"
+    add_name: "-10%"
+    add_phone: "-25%"
+    add_company: "-15%"
+    add_job_title: "-10%"
+
+  demo_request:
+    average: "10-20%"
+    good: "20-30%"
+    excellent: ">30%"
+
+  lead_magnet:
+    average: "20-40%"
+    good: "40-60%"
+    excellent: ">60%"
+
+# Signup/Registration Benchmarks
+signup:
+  trial_signup_rate:
+    poor: "<2%"
+    average: "2-5%"
+    good: "5-10%"
+    excellent: ">10%"
+
+  freemium_conversion:
+    typical: "2-5%"
+    good: "5-10%"
+    excellent: ">10%"
+
+  trial_to_paid:
+    poor: "<10%"
+    average: "10-20%"
+    good: "20-40%"
+    excellent: ">40%"
+
+  activation_rate:
+    poor: "<20%"
+    average: "20-40%"
+    good: "40-60%"
+    excellent: ">60%"
+
+# Onboarding Benchmarks
+onboarding:
+  day_1_retention:
+    poor: "<30%"
+    average: "30-50%"
+    good: "50-70%"
+    excellent: ">70%"
+
+  day_7_retention:
+    poor: "<10%"
+    average: "10-20%"
+    good: "20-40%"
+    excellent: ">40%"
+
+  time_to_value:
+    excellent: "<5 minutes"
+    good: "5-15 minutes"
+    average: "15-60 minutes"
+    poor: ">60 minutes"
+
+  checklist_completion:
+    poor: "<20%"
+    average: "20-40%"
+    good: "40-60%"
+    excellent: ">60%"
+
+# Paid Advertising Benchmarks
+paid_ads:
+  google_ads:
+    ctr:
+      search:
+        poor: "<2%"
+        average: "2-4%"
+        good: "4-6%"
+        excellent: ">6%"
+      display:
+        poor: "<0.2%"
+        average: "0.2-0.5%"
+        good: "0.5-1%"
+        excellent: ">1%"
+
+    conversion_rate:
+      search:
+        average: "3-5%"
+        good: "5-10%"
+        excellent: ">10%"
+
+    cpc:
+      low_competition: "$0.50-2"
+      medium_competition: "$2-5"
+      high_competition: "$5-50+"
+
+  meta_ads:
+    ctr:
+      poor: "<0.5%"
+      average: "0.5-1%"
+      good: "1-2%"
+      excellent: ">2%"
+
+    cpm:
+      low: "$5-10"
+      average: "$10-20"
+      high: "$20-50+"
+
+    cpc:
+      b2c: "$0.50-2"
+      b2b: "$2-5"
+
+  linkedin_ads:
+    ctr:
+      poor: "<0.3%"
+      average: "0.3-0.5%"
+      good: "0.5-1%"
+      excellent: ">1%"
+
+    cpc:
+      typical: "$5-10"
+      expensive: "$10-20+"
+
+    cpm:
+      typical: "$30-50"
+      premium: "$50-100+"
+
+# SEO Benchmarks
+seo:
+  organic_ctr_by_position:
+    position_1: "28-35%"
+    position_2: "15-18%"
+    position_3: "10-12%"
+    positions_4_10: "2-8%"
+    page_2: "<1%"
+
+  keyword_difficulty:
+    easy: "0-30"
+    medium: "30-50"
+    hard: "50-70"
+    very_hard: "70-100"
+
+  content_length:
+    thin: "<500 words"
+    standard: "500-1500 words"
+    comprehensive: "1500-3000 words"
+    pillar: "3000+ words"
+
+  domain_authority:
+    new_site: "1-20"
+    growing: "20-40"
+    established: "40-60"
+    authoritative: "60+"
+
+# Social Media Benchmarks
+social:
+  linkedin:
+    engagement_rate:
+      poor: "<1%"
+      average: "1-2%"
+      good: "2-4%"
+      excellent: ">4%"
+
+    post_reach:
+      typical: "5-10% of followers"
+      viral: ">20% of followers"
+
+  twitter_x:
+    engagement_rate:
+      poor: "<0.5%"
+      average: "0.5-1%"
+      good: "1-3%"
+      excellent: ">3%"
+
+    impressions_per_follower:
+      typical: "0.5-2x"
+
+  instagram:
+    engagement_rate:
+      poor: "<1%"
+      average: "1-3%"
+      good: "3-6%"
+      excellent: ">6%"
+
+# SaaS Metrics
+saas:
+  cac_ltv_ratio:
+    unhealthy: ">1:1"
+    acceptable: "1:1 - 1:3"
+    healthy: "1:3 - 1:5"
+    excellent: "<1:5"
+
+  payback_period:
+    excellent: "<6 months"
+    good: "6-12 months"
+    acceptable: "12-18 months"
+    concerning: ">18 months"
+
+  churn_rate:
+    monthly:
+      excellent: "<2%"
+      good: "2-5%"
+      average: "5-7%"
+      high: ">7%"
+
+    annual:
+      excellent: "<5%"
+      good: "5-10%"
+      average: "10-15%"
+      high: ">15%"
+
+  net_revenue_retention:
+    poor: "<90%"
+    average: "90-100%"
+    good: "100-120%"
+    excellent: ">120%"
+
+  expansion_revenue:
+    low: "<10%"
+    average: "10-20%"
+    good: "20-30%"
+    excellent: ">30%"
+
+# Content Marketing
+content:
+  blog:
+    bounce_rate:
+      excellent: "<40%"
+      good: "40-55%"
+      average: "55-70%"
+      poor: ">70%"
+
+    average_time_on_page:
+      poor: "<1 minute"
+      average: "1-2 minutes"
+      good: "2-4 minutes"
+      excellent: ">4 minutes"
+
+    organic_traffic_share:
+      low: "<30%"
+      average: "30-50%"
+      good: "50-70%"
+      excellent: ">70%"
+
+  lead_magnet:
+    download_rate:
+      poor: "<10%"
+      average: "10-25%"
+      good: "25-50%"
+      excellent: ">50%"

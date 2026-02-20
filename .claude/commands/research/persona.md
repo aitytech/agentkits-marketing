@@ -1,6 +1,23 @@
 ---
 description: Create detailed buyer persona
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-segment]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Product or segment defined
+- [ ] Data sources identified (customer data, sales feedback, etc.)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Existing personas
+3. `.claude/skills/marketing-fundamentals/SKILL.md` - Persona frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -175,3 +192,23 @@ argument-hint: [product-or-segment]
 ## Output Location
 
 Save persona to: `./docs/personas/[persona-name]-[YYYY-MM-DD].md`
+
+---
+
+## Pre-Delivery Validation
+
+Before delivering persona:
+- [ ] Based on real data (not assumptions alone)
+- [ ] Goals and pain points clearly articulated
+- [ ] Buying journey mapped
+- [ ] Objections and triggers identified
+- [ ] Messaging recommendations included (Complete)
+
+---
+
+## Next Steps
+
+After persona creation, consider:
+- `/content:landing` - Create persona-targeted landing page
+- `/sequence:nurture` - Create persona-specific nurture
+- `/sales:pitch` - Create persona-specific pitch

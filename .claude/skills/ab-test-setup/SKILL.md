@@ -1,6 +1,35 @@
 ---
 name: ab-test-setup
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: cro
+difficulty: intermediate
 description: When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," or "hypothesis." For tracking implementation, see analytics-tracking.
+triggers:
+  - A/B test
+  - split test
+  - experiment
+  - test this change
+  - variant copy
+  - multivariate test
+  - hypothesis
+  - statistical significance
+prerequisites:
+  - page-cro
+  - analytics-attribution
+related_skills:
+  - page-cro
+  - analytics-attribution
+agents:
+  - conversion-optimizer
+  - researcher
+mcp_integrations:
+  optional:
+    - google-analytics
+success_metrics:
+  - test_velocity
+  - win_rate
+output_schema: ab-test-plan
 ---
 
 # A/B Test Setup

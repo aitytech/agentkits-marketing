@@ -1,0 +1,418 @@
+# Marketing Skill Output Schemas
+# Standardized output formats for consistent skill outputs
+# Use these schemas to structure skill deliverables
+
+version: "1.0.0"
+lastUpdated: "2026-02-01"
+
+# CRO Analysis Output
+cro-analysis:
+  description: "Standard output for page/form/popup CRO analysis"
+  sections:
+    - name: initial_assessment
+      required: true
+      fields:
+        - page_type
+        - primary_goal
+        - traffic_context
+        - current_metrics
+
+    - name: quick_wins
+      required: true
+      description: "Changes implementable in < 1 hour"
+      fields:
+        - issue
+        - recommendation
+        - expected_impact
+        - effort
+
+    - name: high_impact_changes
+      required: true
+      description: "Significant changes requiring more effort"
+      fields:
+        - issue
+        - recommendation
+        - expected_impact
+        - effort
+        - dependencies
+
+    - name: test_ideas
+      required: false
+      description: "A/B test hypotheses"
+      fields:
+        - hypothesis
+        - control
+        - variant
+        - primary_metric
+        - sample_size_needed
+
+    - name: implementation_priority
+      required: true
+      description: "Ordered list of recommendations"
+      format: "numbered_list"
+
+  example: |
+    ## Initial Assessment
+    - **Page Type:** Landing page (paid traffic)
+    - **Primary Goal:** Demo request
+    - **Current Metrics:** 2.1% conversion rate
+
+    ## Quick Wins
+    1. **Issue:** CTA below fold
+       - **Fix:** Move primary CTA above fold
+       - **Impact:** +10-20% conversions
+       - **Effort:** 15 minutes
+
+    ## High-Impact Changes
+    1. **Issue:** Weak headline
+       - **Recommendation:** Rewrite with specific outcome
+       - **Impact:** +20-40% conversions
+       - **Effort:** 2-4 hours
+
+    ## Test Ideas
+    1. **Hypothesis:** Adding customer logos increases trust
+       - **Metric:** Demo request rate
+       - **Sample:** 1,000 visitors per variant
+
+# Content Plan Output
+content-plan:
+  description: "Standard output for content strategy planning"
+  sections:
+    - name: content_pillars
+      required: true
+      fields:
+        - pillar_name
+        - description
+        - target_keywords
+        - content_types
+
+    - name: content_calendar
+      required: true
+      fields:
+        - date
+        - title
+        - pillar
+        - format
+        - channel
+        - owner
+
+    - name: distribution_strategy
+      required: true
+      fields:
+        - channel
+        - frequency
+        - content_types
+        - kpis
+
+    - name: success_metrics
+      required: true
+      fields:
+        - metric
+        - current_value
+        - target_value
+        - timeframe
+
+# Campaign Brief Output
+campaign-brief:
+  description: "Standard output for campaign planning"
+  sections:
+    - name: overview
+      required: true
+      fields:
+        - campaign_name
+        - objective
+        - target_audience
+        - timeline
+        - budget
+
+    - name: messaging
+      required: true
+      fields:
+        - key_message
+        - value_proposition
+        - proof_points
+        - tone
+
+    - name: channels
+      required: true
+      fields:
+        - channel
+        - role
+        - content_needs
+        - budget_allocation
+
+    - name: creative_requirements
+      required: false
+      fields:
+        - asset_type
+        - dimensions
+        - copy_length
+        - deadline
+
+    - name: success_metrics
+      required: true
+      fields:
+        - kpi
+        - target
+        - measurement_method
+
+# SEO Audit Output
+seo-audit:
+  description: "Standard output for SEO analysis"
+  sections:
+    - name: executive_summary
+      required: true
+      fields:
+        - overall_score
+        - top_issues
+        - top_opportunities
+        - priority_actions
+
+    - name: technical_issues
+      required: true
+      fields:
+        - issue
+        - severity
+        - pages_affected
+        - fix_recommendation
+
+    - name: on_page_opportunities
+      required: true
+      fields:
+        - page
+        - current_ranking
+        - target_keyword
+        - optimization_needed
+
+    - name: content_gaps
+      required: false
+      fields:
+        - topic
+        - search_volume
+        - difficulty
+        - recommended_content
+
+    - name: backlink_analysis
+      required: false
+      fields:
+        - domain_authority
+        - backlink_count
+        - referring_domains
+        - link_opportunities
+
+    - name: action_items
+      required: true
+      format: "prioritized_list"
+      fields:
+        - action
+        - priority
+        - effort
+        - expected_impact
+
+# Email Sequence Output
+email-sequence:
+  description: "Standard output for email sequence design"
+  sections:
+    - name: sequence_overview
+      required: true
+      fields:
+        - sequence_name
+        - trigger
+        - goal
+        - duration
+        - email_count
+
+    - name: emails
+      required: true
+      repeatable: true
+      fields:
+        - email_number
+        - delay
+        - subject_line
+        - preview_text
+        - goal
+        - cta
+        - content_outline
+
+    - name: segmentation
+      required: false
+      fields:
+        - segment
+        - criteria
+        - variation
+
+    - name: success_metrics
+      required: true
+      fields:
+        - metric
+        - target
+
+# A/B Test Plan Output
+ab-test-plan:
+  description: "Standard output for A/B test design"
+  sections:
+    - name: hypothesis
+      required: true
+      fields:
+        - statement
+        - rationale
+        - expected_lift
+
+    - name: test_design
+      required: true
+      fields:
+        - control
+        - variant
+        - primary_metric
+        - secondary_metrics
+
+    - name: sample_calculation
+      required: true
+      fields:
+        - baseline_rate
+        - minimum_detectable_effect
+        - statistical_power
+        - significance_level
+        - required_sample_size
+        - estimated_duration
+
+    - name: implementation
+      required: true
+      fields:
+        - technical_requirements
+        - tracking_setup
+        - qa_checklist
+
+    - name: analysis_plan
+      required: true
+      fields:
+        - when_to_call
+        - segmentation
+        - follow_up_actions
+
+# Competitor Analysis Output
+competitor-analysis:
+  description: "Standard output for competitive analysis"
+  sections:
+    - name: overview
+      required: true
+      fields:
+        - competitor
+        - positioning
+        - target_market
+        - key_differentiators
+
+    - name: product_comparison
+      required: true
+      fields:
+        - feature
+        - your_product
+        - competitor_product
+        - advantage
+
+    - name: marketing_analysis
+      required: true
+      fields:
+        - channel
+        - competitor_approach
+        - estimated_investment
+        - effectiveness
+
+    - name: content_analysis
+      required: false
+      fields:
+        - content_type
+        - topics
+        - frequency
+        - engagement
+
+    - name: seo_comparison
+      required: false
+      fields:
+        - metric
+        - your_value
+        - competitor_value
+
+    - name: opportunities
+      required: true
+      fields:
+        - opportunity
+        - rationale
+        - recommended_action
+
+# Pricing Analysis Output
+pricing-analysis:
+  description: "Standard output for pricing strategy"
+  sections:
+    - name: current_state
+      required: true
+      fields:
+        - pricing_model
+        - price_points
+        - conversion_rate
+        - arpu
+
+    - name: market_analysis
+      required: true
+      fields:
+        - competitor
+        - pricing_model
+        - price_point
+        - positioning
+
+    - name: recommendations
+      required: true
+      fields:
+        - recommendation
+        - rationale
+        - expected_impact
+        - risks
+
+    - name: implementation_plan
+      required: false
+      fields:
+        - phase
+        - action
+        - timeline
+
+# Launch Plan Output
+launch-plan:
+  description: "Standard output for product/feature launch"
+  sections:
+    - name: launch_overview
+      required: true
+      fields:
+        - launch_name
+        - launch_date
+        - type
+        - goals
+
+    - name: pre_launch
+      required: true
+      fields:
+        - task
+        - owner
+        - deadline
+        - status
+
+    - name: launch_day
+      required: true
+      fields:
+        - time
+        - action
+        - channel
+        - owner
+
+    - name: post_launch
+      required: true
+      fields:
+        - day
+        - action
+        - metric_to_track
+
+    - name: success_criteria
+      required: true
+      fields:
+        - metric
+        - target
+        - measurement_method

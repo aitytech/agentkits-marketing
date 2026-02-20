@@ -1,4 +1,26 @@
+---
+description: "Write a Campaign Brief"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:start-2-1 - Write a Campaign Brief
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed Module 1 (Core Concepts)
+- [ ] Understand agents and commands
+- [ ] Ready for advanced applications
+
+## Context Loading
+
+Reference these files:
+1. `./README.md` - Product context (AgentKits)
+2. `./docs/campaign-playbooks.md` - Campaign templates
+3. `./docs/brand-guidelines.md` - Brand standards
+
+---
 
 ## Language & Quality Standards
 

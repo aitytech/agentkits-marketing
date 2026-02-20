@@ -1,5 +1,7 @@
 ---
 description: Optimize in-app paywalls, upgrade screens, and feature gates
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [product-or-upgrade-context]
 ---
 

@@ -1,6 +1,35 @@
 ---
 name: marketing-fundamentals
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: core
+difficulty: beginner
 description: Core marketing concepts, psychology, and frameworks for effective marketing. Use for foundational knowledge on funnels, customer journey, positioning, value propositions, and marketing psychology.
+triggers:
+  - marketing basics
+  - funnel
+  - TOFU
+  - MOFU
+  - BOFU
+  - customer journey
+  - positioning
+  - value proposition
+  - marketing framework
+prerequisites: []
+related_skills:
+  - marketing-psychology
+  - brand-building
+  - content-strategy
+agents:
+  - researcher
+  - brainstormer
+  - planner
+mcp_integrations:
+  optional:
+    - google-analytics
+success_metrics:
+  - funnel_conversion
+  - customer_acquisition
 ---
 
 # Marketing Fundamentals

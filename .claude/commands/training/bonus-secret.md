@@ -1,4 +1,26 @@
+---
+description: "The 10x Marketer Framework"
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+---
+
 # /training:bonus-secret - The 10x Marketer Framework
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed most course modules
+- [ ] Practiced with main commands
+- [ ] Ready for advanced workflows
+
+## Context Loading
+
+Reference these files:
+1. `./docs/campaign-playbooks.md` - Campaign templates
+2. `./docs/content-style-guide.md` - Content guidelines
+3. `./.claude/workflows/` - All workflows
+
+---
 
 ## Language & Quality Standards
 

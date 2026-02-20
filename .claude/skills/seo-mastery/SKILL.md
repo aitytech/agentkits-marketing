@@ -1,6 +1,40 @@
 ---
 name: seo-mastery
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: core
+difficulty: intermediate
 description: Search engine optimization strategies and tactics for organic growth. Use when optimizing content for search, conducting keyword research, performing SEO audits, or building link strategies.
+triggers:
+  - SEO
+  - search optimization
+  - keyword research
+  - organic traffic
+  - rankings
+  - backlinks
+  - on-page SEO
+  - technical SEO
+  - search intent
+  - SERP
+prerequisites:
+  - content-strategy
+related_skills:
+  - programmatic-seo
+  - schema-markup
+  - content-strategy
+agents:
+  - attraction-specialist
+  - seo-specialist
+mcp_integrations:
+  optional:
+    - google-search-console
+    - semrush
+    - dataforseo
+success_metrics:
+  - organic_traffic
+  - keyword_rankings
+  - domain_authority
+output_schema: seo-audit
 ---
 
 # SEO Mastery

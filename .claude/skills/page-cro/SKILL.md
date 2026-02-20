@@ -1,6 +1,36 @@
 ---
 name: page-cro
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: cro
+difficulty: intermediate
 description: When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," or "why isn't this page working." For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.
+triggers:
+  - CRO
+  - conversion rate optimization
+  - landing page
+  - homepage
+  - pricing page
+  - improve conversions
+  - bounce rate
+  - page optimization
+prerequisites: []
+related_skills:
+  - form-cro
+  - popup-cro
+  - ab-test-setup
+  - copywriting
+agents:
+  - conversion-optimizer
+  - attraction-specialist
+mcp_integrations:
+  optional:
+    - google-analytics
+success_metrics:
+  - conversion_rate
+  - bounce_rate
+  - time_on_page
+output_schema: cro-analysis
 ---
 
 # Page Conversion Rate Optimization (CRO)

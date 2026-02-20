@@ -1,6 +1,24 @@
 ---
 description: Pre-launch campaign checklist to ensure nothing is missed
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [campaign-name] [launch-date]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Campaign name and launch date defined
+- [ ] Campaign type and channels known
+- [ ] Team roles assigned
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/campaigns/` - Campaign documentation
+3. `./plans/` - Active campaign plans
+
 ---
 
 ## Language & Quality Standards
@@ -222,6 +240,26 @@ argument-hint: [campaign-name] [launch-date]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering launch checklist:
+- [ ] All timeline phases covered
+- [ ] Channel-specific checks included
+- [ ] Sign-offs identified
+- [ ] Emergency contacts noted
+- [ ] Post-launch review planned
+
+---
+
 ## Output Location
 
 Save checklist to: `./docs/campaigns/launch-[campaign]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After launch checklist, consider:
+- `/campaign:plan` - Create full campaign plan
+- `/campaign:brief` - Generate creative brief
+- `/campaign:analyze` - Post-launch analysis

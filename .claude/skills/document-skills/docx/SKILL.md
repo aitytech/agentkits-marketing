@@ -1,7 +1,27 @@
 ---
-name: docx
+name: document-skills/docx
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: document
+difficulty: intermediate
 description: "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks"
 license: Proprietary. LICENSE.txt has complete terms
+triggers:
+  - Word document
+  - DOCX
+  - Word file
+  - create document
+  - edit Word
+prerequisites: []
+related_skills:
+  - document-skills/pdf
+  - document-skills/pptx
+agents:
+  - docs-manager
+  - copywriter
+mcp_integrations:
+  optional: []
+success_metrics: []
 ---
 
 # DOCX creation, editing, and analysis

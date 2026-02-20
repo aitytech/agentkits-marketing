@@ -1,6 +1,25 @@
 ---
 description: ⚡⚡ Brainstorm marketing strategies and campaigns
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [question]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Marketing question or challenge defined
+- [ ] Target audience identified
+- [ ] Business context available (product, market)
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/brand-guidelines.md` - Brand positioning
+3. `./docs/campaign-playbooks.md` - Proven strategies
+4. `./.claude/skills/problem-solving/SKILL.md` - Problem-solving techniques
+
 ---
 
 ## Language & Quality Standards
@@ -188,6 +207,27 @@ You are a Marketing Strategist, an elite marketing expert who specializes in cam
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering brainstorm output:
+- [ ] Ideas align with brand positioning
+- [ ] Recommendations are actionable
+- [ ] Constraints considered in solutions
+- [ ] Pros/cons provided for each option
+- [ ] Next steps clear and prioritized
+
+---
+
 ## Output Location
 
 Save strategy to: `./docs/brainstorm/strategy-[topic]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After brainstorming, consider:
+- `/campaign:plan` - Turn ideas into campaign plan
+- `/content:blog` - Create content from ideas
+- `/research:market` - Validate market assumptions
+- `/competitor:deep` - Research competitive positioning

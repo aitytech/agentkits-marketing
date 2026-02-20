@@ -1,6 +1,24 @@
 ---
 description: Create competitive battlecard
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint: [competitor-name-or-url]
+---
+
+## Prerequisites
+
+Before running this command, ensure you have:
+- [ ] Competitor clearly identified (name, URL, product)
+- [ ] Your product positioning defined
+- [ ] Sales scenarios identified
+
+## Context Loading
+
+Load these files first:
+1. `./README.md` - Product context
+2. `./docs/personas/` - Target buyer profiles
+3. `.claude/skills/competitor-alternatives/SKILL.md` - Competitive frameworks
+
 ---
 
 ## Language & Quality Standards
@@ -166,6 +184,26 @@ argument-hint: [competitor-name-or-url]
 
 ---
 
+## Pre-Delivery Validation
+
+Before delivering battlecard:
+- [ ] All claims factually accurate
+- [ ] Objection responses tested
+- [ ] Differentiation points clear
+- [ ] Sales scenarios covered
+- [ ] Easy to scan in sales situation
+
+---
+
 ## Output Location
 
 Save battlecard to: `./docs/sales/battlecard-[competitor]-[YYYY-MM-DD].md`
+
+---
+
+## Next Steps
+
+After battlecard creation, consider:
+- `/sales:pitch` - Create prospect-specific pitch
+- `/sales:outreach` - Generate outreach sequence
+- `/competitor:deep` - Deep competitor analysis

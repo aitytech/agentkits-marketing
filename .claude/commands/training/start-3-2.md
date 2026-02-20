@@ -1,9 +1,27 @@
 ---
 description: /training:start-3-2 - Form & Signup Optimization
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
 argument-hint:
 ---
 
 # Module 3, Lesson 2: Form & Signup Optimization
+
+## Prerequisites
+
+Before this lesson:
+- [ ] Completed `/training:start-3-1` (CRO Fundamentals)
+- [ ] Understand CRO framework and page optimization
+- [ ] Ready for form and signup optimization
+
+## Context Loading
+
+Reference these files:
+1. `./.claude/skills/form-cro/SKILL.md` - Form CRO framework
+2. `./.claude/skills/signup-flow-cro/SKILL.md` - Signup optimization
+3. `./.claude/skills/ab-test-setup/SKILL.md` - A/B testing
+
+---
 
 ## Mastering Form and Registration CRO
 

@@ -534,7 +534,7 @@ MIT License - See [LICENSE](../../LICENSE)
 ## Credits
 
 - **Created for:** Marketing Tools Marketplace
-- **Maintained by:** AgentKits team
+- **Maintained by:** AgentKits Team (AityTech)
 - **Inspired by:** Modern content marketing best practices and the compounding philosophy
 
 ---

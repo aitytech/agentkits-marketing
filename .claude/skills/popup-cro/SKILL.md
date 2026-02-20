@@ -1,6 +1,35 @@
 ---
 name: popup-cro
+version: "1.0.0"
+brand: AgentKits Marketing by AityTech
+category: cro
+difficulty: intermediate
 description: When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," or "overlay." For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.
+triggers:
+  - popup
+  - modal
+  - overlay
+  - exit intent
+  - email popup
+  - lead capture popup
+  - announcement banner
+  - slide-in
+prerequisites:
+  - page-cro
+related_skills:
+  - page-cro
+  - form-cro
+  - copywriting
+agents:
+  - conversion-optimizer
+  - copywriter
+mcp_integrations:
+  optional:
+    - google-analytics
+success_metrics:
+  - popup_conversion_rate
+  - close_rate
+output_schema: cro-analysis
 ---
 
 # Popup CRO
