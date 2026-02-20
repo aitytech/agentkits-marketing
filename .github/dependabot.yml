@@ -19,7 +19,7 @@ updates:
       - "dependencies"
       - "npm"
     reviewers:
-      - "agentkits/core"
+      - "aitytech/core"
     groups:
       # Group minor and patch updates together
       minor-and-patch:
@@ -44,4 +44,4 @@ updates:
       - "dependencies"
       - "github-actions"
     reviewers:
-      - "agentkits/core"
+      - "aitytech/core"

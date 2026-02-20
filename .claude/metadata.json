@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0",
-  "name": "agentkits-marketing",
-  "description": "AI-powered marketing automation kit with specialized funnel-stage agents for lead generation, email campaigns, sales enablement, customer retention, and revenue optimization.",
-  "buildDate": "2025-12-03T00:00:00.000Z",
+  "version": "1.5.1",
+  "name": "@aitytech/agentkits-marketing",
+  "description": "Enterprise-grade AI marketing automation for Claude Code, Cursor, GitHub Copilot, Windsurf, Cline. 18 agents, 93 commands, 28 skills. One command: npx agentkits-marketing install",
+  "buildDate": "2026-02-10T02:59:30.818Z",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aitytech/agentkits-marketing.git"
+    "url": "git+https://github.com/aitytech/agentkits-marketing.git"
   },
   "download": {
     "lastDownloadedAt": null,

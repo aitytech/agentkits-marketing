@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="AgentKits Logo" width="80" height="80">
+  <img src="https://raw.githubusercontent.com/aitytech/agentkits-marketing/main/assets/logo.svg" alt="AgentKits Logo" width="80" height="80">
 </p>
 
 <h1 align="center">AgentKits Marketing</h1>
 
 <p align="center">
-  <a href="https://github.com/aitytech/agentkits-marketing/stargazers"><img src="https://img.shields.io/github/stars/agentkits/agentkits-marketing?style=flat" alt="Stars"></a>
+  <a href="https://github.com/aitytech/agentkits-marketing/stargazers"><img src="https://img.shields.io/github/stars/aitytech/agentkits-marketing?style=flat" alt="Stars"></a>
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   <img src="https://img.shields.io/badge/Claude_Code%20|%20Cursor%20|%20Copilot-Compatible-blueviolet" alt="AI Assistants">
   <br>
@@ -23,11 +23,32 @@
 </p>
 
 <p align="center">
-  <a href="https://agentkits.net/marketing.html">Website</a> •
-  <a href="https://docs.agentkits.net">Docs</a> •
+  <a href="https://www.agentkits.net/marketing">Website</a> •
+  <a href="https://www.agentkits.net/docs">Docs</a> •
   <a href="#installation">Install</a> •
   <a href="#training">Training</a>
 </p>
+
+<p align="center">
+  🌐 <strong>English</strong> · <a href="README.zh.md">简体中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.pt-br.md">Português</a> · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a>
+</p>
+
+---
+
+## Vibe Marketing
+
+<p>
+  <img src="https://img.shields.io/badge/Vibe_Coding-Developers-blue?style=for-the-badge&logo=code&logoColor=white" alt="Vibe Coding">
+  <img src="https://img.shields.io/badge/→-black?style=for-the-badge" alt="arrow">
+  <img src="https://img.shields.io/badge/Vibe_Marketing-Marketers-green?style=for-the-badge&logo=target&logoColor=white" alt="Vibe Marketing">
+</p>
+
+> *Inspired by the "Vibe Coding" movement from developers... we're expanding the universe: **Vibe Marketing** for the AI era where everything just works.*
+
+| | |
+|---|---|
+| **With AI** | Let AI agents handle your campaigns while you focus on strategy. Just vibe and let the agents do the heavy lifting. |
+| **Without AI** | This repo is a **comprehensive reference library** of marketing best practices, frameworks, and templates. Use the skills docs as your marketing playbook. |
 
 ---
 
@@ -77,7 +98,17 @@ agentkits-marketing/
 |       |-- sales-workflow.md           # Lead to customer
 |       |-- crm-workflow.md             # Contact lifecycle
 |
-|-- training/            # 19 interactive training lessons
+|-- training/            # 23 interactive lessons (English)
+|-- training-zh/         # 简体中文
+|-- training-ja/         # 日本語
+|-- training-ko/         # 한국어
+|-- training-es/         # Español
+|-- training-de/         # Deutsch
+|-- training-fr/         # Français
+|-- training-pt-br/      # Português
+|-- training-vi/         # Tiếng Việt
+|-- training-ru/         # Русский
+|-- training-ar/         # العربية
 |-- docs/                # Documentation and guides
 |-- marketplace.json     # Self-hosted marketplace config
 ```
@@ -86,41 +117,61 @@ agentkits-marketing/
 
 ## Installation
 
-### Option 1: Install via CLI (Recommended)
+### Option 1: Claude Code Plugin Marketplace (Recommended for Claude Code)
 
-One command to install 18 marketing agents, 40+ skills, and 76 commands:
+Install directly via Claude Code's plugin system — no manual configuration needed:
+
+```bash
+# Add the marketplace
+/plugin marketplace add aitytech/agentkits-marketing
+
+# Install the full suite (18 agents, 28 skills, 93 commands)
+/plugin install agentkits-marketing@agentkits-marketing
+```
+
+You can also install individual components:
+
+```bash
+/plugin install agentkits-marketing-skills@agentkits-marketing    # Skills only
+/plugin install agentkits-marketing-agents@agentkits-marketing    # Agents only
+/plugin install agentkits-marketing-commands@agentkits-marketing  # Commands only
+```
+
+Restart Claude Code after installation.
+
+---
+
+### Option 2: Install via npx (All Platforms)
+
+One command to install 18 agents, 28 skills, 93 commands:
 
 ```bash
 npx @aitytech/agentkits-marketing install
 ```
 
-The interactive installer will:
-- Detect your AI IDE (Claude Code, Cursor, Windsurf, GitHub Copilot, and 13+ more)
-- Let you select modules (Core, SEO, CRO, Content, Email, Analytics, Training)
-- Set up persistent SQLite memory
-- Configure hooks for auto-saving
+**Platform-specific installation:**
 
-**Supported AI IDEs:**
-| Preferred | Other Supported |
-|-----------|-----------------|
-| Claude Code | GitHub Copilot, Gemini CLI, Cline, Roo Code |
-| Cursor | Trae, OpenCode, Auggie, QwenCoder |
-| Windsurf | Kilo Code, Codex, Rovo Dev, Kiro |
+```bash
+npx @aitytech/agentkits-marketing install --platform claude    # Claude Code
+npx @aitytech/agentkits-marketing install --platform cursor    # Cursor IDE
+npx @aitytech/agentkits-marketing install --platform windsurf  # Windsurf
+npx @aitytech/agentkits-marketing install --platform cline     # Cline
+npx @aitytech/agentkits-marketing install --platform copilot   # GitHub Copilot
+npx @aitytech/agentkits-marketing install --platform all       # All platforms
+```
 
-**Available Modules:**
-| Module | Description |
-|--------|-------------|
-| **Core** (Required) | 18 agents, essential skills, base commands |
-| SEO | Keyword research, competitor analysis, programmatic SEO |
-| CRO | Page, form, signup, popup, onboarding optimization |
-| Content | Blog, social, landing pages, copywriting |
-| Email | Welcome, nurture, re-engagement sequences |
-| Analytics | Campaign ROI, funnel analysis, attribution |
-| Training | 23 interactive modules, pattern library |
+**Other CLI commands:**
+
+```bash
+npx @aitytech/agentkits-marketing --help        # Show all commands
+npx @aitytech/agentkits-marketing list-ides     # List supported IDEs
+npx @aitytech/agentkits-marketing list-modules  # List available modules
+npx @aitytech/agentkits-marketing update        # Update existing installation
+```
 
 ---
 
-### Option 2: Clone and Use
+### Option 3: Clone and Use
 
 Clone the repository and work within it:
 
@@ -132,7 +183,7 @@ claude
 
 ---
 
-### Option 3: Manual Installation
+### Option 4: Manual Installation
 
 Copy individual components to your Claude config:
 
@@ -297,10 +348,21 @@ cp -r agentkits-marketing/.claude/workflows/* ~/.claude/workflows/
 | **Project** | Markit agency working for client AgentKits |
 | **Duration** | 5-6 hours total |
 | **Prerequisite** | Claude Code, Cursor, or compatible AI assistant |
+| **Languages** | 10 languages: EN, 简体中文, 日本語, 한국어, ES, DE, FR, PT, VI, RU, AR |
 
 ```bash
-# Start training now
-/training:start-0-0
+# Start training in your language
+/training:start-0-0           # English
+/training-zh:start-0-0        # 简体中文
+/training-ja:start-0-0        # 日本語
+/training-ko:start-0-0        # 한국어
+/training-es:start-0-0        # Español
+/training-de:start-0-0        # Deutsch
+/training-fr:start-0-0        # Français
+/training-pt-br:start-0-0     # Português
+/training-vi:start-0-0        # Tiếng Việt
+/training-ru:start-0-0        # Русский
+/training-ar:start-0-0        # العربية
 ```
 
 ---
@@ -448,6 +510,25 @@ Free User → Paywall CRO → Paid Customer
 
 ---
 
+### Multi-Language Training
+
+Training is available in 3 languages. All content is identical - choose your preferred language:
+
+| Language | Command Prefix | Example |
+|----------|---------------|---------|
+| **English** | `/training:` | `/training:start-0-0` |
+| **Vietnamese** (Tiếng Việt) | `/training-vi:` | `/training-vi:start-0-0` |
+| **Japanese** (日本語) | `/training-ja:` | `/training-ja:start-0-0` |
+
+**Available localized commands:**
+- `start-0-0` to `start-0-2` (Module 0)
+- `start-1-1` to `start-1-7` (Module 1)
+- `start-2-1` to `start-2-6` (Module 2)
+- `start-3-1` to `start-3-3` (Module 3)
+- `help`, `bonus-patterns`, `bonus-secret`, `persona-builder`
+
+---
+
 ### The Compounding Effect
 
 Each campaign makes the next one faster:
@@ -547,8 +628,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ### AgentKits
 - [AgentKits Homepage](https://agentkits.net)
-- [Marketing Kit Page](https://agentkits.net/marketing.html)
-- [Documentation](https://docs.agentkits.net)
+- [Marketing Kit Page](https://www.agentkits.net/marketing)
+- [Documentation](https://www.agentkits.net/docs)
 - [AgentKits CLI](https://github.com/aitytech/agentkits-cli)
 
 ### AI Assistants
@@ -565,11 +646,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Star History
 
-<a href="https://star-history.com/#agentkits/agentkits-marketing&Date">
+<a href="https://star-history.com/#aitytech/agentkits-marketing&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=agentkits/agentkits-marketing&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=agentkits/agentkits-marketing&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=agentkits/agentkits-marketing&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=aitytech/agentkits-marketing&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=aitytech/agentkits-marketing&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=aitytech/agentkits-marketing&type=Date" />
  </picture>
 </a>
 

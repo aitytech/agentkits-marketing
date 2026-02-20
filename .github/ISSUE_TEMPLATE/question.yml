@@ -18,7 +18,7 @@ body:
       label: Before Asking
       description: Please confirm you've tried these first
       options:
-        - label: I have read the [documentation](https://docs.agentkits.net)
+        - label: I have read the [documentation](https://www.agentkits.net/docs)
           required: true
         - label: I have searched existing issues and discussions
           required: true

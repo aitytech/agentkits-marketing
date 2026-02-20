@@ -1,29 +1,47 @@
 {
-  "name": "agentkits-marketing",
-  "version": "1.0.0",
-  "description": "Enterprise-grade AI marketing automation for Claude Code, Cursor, and GitHub Copilot. 18 agents, 93 commands, 28 skills for campaigns, content, SEO, CRO, and analytics.",
-  "main": "CLAUDE.md",
+  "name": "@aitytech/agentkits-marketing",
+  "version": "1.5.1",
+  "description": "Enterprise-grade AI marketing automation for Claude Code, Cursor, GitHub Copilot, Windsurf, Cline. 18 agents, 93 commands, 28 skills. One command: npx agentkits-marketing install",
+  "main": "bin/agentkits.js",
+  "bin": {
+    "agentkits-marketing": "./bin/agentkits.js",
+    "markit": "./bin/agentkits.js"
+  },
   "scripts": {
+    "start": "node bin/agentkits.js",
+    "install-local": "node bin/agentkits.js install",
     "test": "echo \"Warning: no test specified\" && exit 0",
     "lint": "echo \"Linting passed\"",
     "semantic-release": "semantic-release",
-    "prepare": "husky"
+    "prepare": "husky",
+    "translate-readme": "node scripts/translate-readme/cli.js -v README.md",
+    "translate-readme:all": "node scripts/translate-readme/cli.js -v README.md zh ja ko es de fr pt-br vi ru ar",
+    "translate-training": "node scripts/translate-training/cli.js -v .claude/commands/training",
+    "translate-training:all": "node scripts/translate-training/cli.js -v .claude/commands/training zh ko es de fr pt-br ru ar"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aitytech/agentkits-marketing.git"
+    "url": "git+https://github.com/aitytech/agentkits-marketing.git"
   },
   "keywords": [
+    "agentkits",
+    "marketing",
+    "ai-agents",
     "claude-code",
     "cursor",
     "github-copilot",
-    "ai-agents",
+    "windsurf",
+    "cline",
     "marketing-automation",
     "content-marketing",
     "seo",
     "cro",
     "email-marketing",
-    "campaign-management"
+    "campaign-management",
+    "copywriting",
+    "lead-generation",
+    "brand-building",
+    "cli"
   ],
   "author": "Le Duc Linh <linh@agentkits.net>",
   "license": "MIT",
@@ -33,16 +51,29 @@
   "homepage": "https://agentkits.net",
   "files": [
     ".claude/",
+    "bin/",
+    "installers/",
     "training/",
     "docs/",
     "plugins/",
     "assets/",
     "CLAUDE.md",
     "README.md",
+    "README.vi.md",
+    "README.ja.md",
     "CHANGELOG.md",
     "LICENSE"
   ],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "yaml": "^2.4.0"
+  },
   "devDependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.77",
     "@commitlint/cli": "^20.4.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@semantic-release/changelog": "^6.0.3",

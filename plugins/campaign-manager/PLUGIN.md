@@ -71,19 +71,6 @@ The CM Plugin brings systematic, efficient marketing workflows to Claude Code. I
 - Basic understanding of Claude Code marketplace system
 - Completed "Claude Code for Marketers" course (recommended)
 
-### Install from Marketplace
-
-```bash
-# Add the marketplace (when published)
-/plugin marketplace add agentkits/cc4.marketing
-
-# Install the plugin
-/plugin install cm@cc4.marketing
-
-# Verify installation
-/help
-```
-
 ### Manual Installation (Development)
 
 ```bash
