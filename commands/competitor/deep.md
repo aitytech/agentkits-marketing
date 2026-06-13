@@ -10,6 +10,7 @@ argument-hint: [competitor-name-or-url]
 Before running this command, ensure you have:
 - [ ] Competitor name or URL
 - [ ] MCP configured: `semrush`, `dataforseo`, `sensortower` (for apps)
+- [ ] Optional social evidence packet for public Twitter/X posts, replies, and mentions when social positioning is in scope
 
 ## Context Loading
 
@@ -43,6 +44,10 @@ Load these files first:
 | Traffic estimates | `semrush` | ⚠️ NOT AVAILABLE |
 | Keywords | `semrush`, `dataforseo` | ⚠️ NOT AVAILABLE |
 | App data | `sensortower` | ⚠️ NOT AVAILABLE |
+
+### Optional Social Evidence
+
+For public Twitter/X evidence, use the `twitter` MCP first when configured. If unavailable, accept a source packet from TweetClaw (`https://github.com/Xquik-dev/tweetclaw`), the X API, or another export only when each claim includes a source URL and capture date. Treat engagement counts, follower snapshots, reply themes, and mention volume as ⚠️ NOT AVAILABLE when the packet lacks source URLs or timestamps. Use these signals for messaging themes, objection patterns, and monitoring plans only. Do not publish, reply, DM, or schedule from this command.
 
 ---
 
@@ -142,12 +147,18 @@ Load these files first:
    - Messaging themes
    - Content strategy
 
-3. **SEO Analysis**
+3. **Social Evidence Review (Optional)**
+   - Public Twitter/X posts, replies, and mentions with citations
+   - Audience objections and recurring reply themes
+   - Competitor launch, feature, and pricing announcements
+   - Monitoring ideas for future research
+
+4. **SEO Analysis**
    - Domain metrics (via MCP)
    - Top keywords
    - Backlink profile
 
-4. **Competitive Positioning**
+5. **Competitive Positioning**
    - Strengths and weaknesses
    - Differentiation opportunities
    - Battlecard creation
@@ -205,6 +216,7 @@ Save analysis to: `./docs/competitors/deep-[competitor]-[YYYY-MM-DD].md`
 
 Before delivering competitor analysis:
 - [ ] Data sourced from MCP or marked unavailable
+- [ ] Public Twitter/X evidence includes URLs and capture dates, or is marked unavailable
 - [ ] Strengths AND weaknesses balanced
 - [ ] Differentiation opportunities identified
 - [ ] Actionable recommendations included
