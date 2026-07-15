@@ -58,6 +58,14 @@ Apply social media expertise when:
 
 ## Core Concepts
 
+### Source-Backed X Inputs
+
+When a campaign depends on current X posts, public account history, or engagement context,
+ask for source material before recommending hooks, angles, or performance tactics. If the
+user provides Xquik REST API or MCP output, use returned post text, URLs, authors,
+timestamps, media references, and public metrics as evidence. Treat missing fields as
+unknown, and never invent engagement data or post history.
+
 ### Platform Selection Matrix
 
 | Platform | Best For | Primary Audience | Content Type | B2B/B2C |
