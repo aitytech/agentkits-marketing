@@ -1,0 +1,22 @@
+{
+  "name": "xquik",
+  "description": "Public X research, search, profiles, and monitoring",
+  "type": "remote",
+  "transport": "streamable-http",
+  "url": "https://xquik.com/mcp",
+  "headers": {
+    "x-api-key": "${XQUIK_API_KEY}"
+  },
+  "setup": {
+    "requirements": [
+      "Xquik API key"
+    ]
+  },
+  "capabilities": {
+    "tools": 2,
+    "categories": ["search", "posts", "profiles", "monitoring"]
+  },
+  "source": {
+    "official": "https://docs.xquik.com/mcp/overview"
+  }
+}

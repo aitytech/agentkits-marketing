@@ -60,6 +60,12 @@
     },
 
     "_comment_social": "=== SOCIAL MEDIA (GLOBAL) ===",
+    "xquik": {
+      "type": "http",
+      "url": "https://xquik.com/mcp",
+      "headers": { "x-api-key": "${XQUIK_API_KEY}" },
+      "_note": "Public X research, monitoring, and account data"
+    },
     "twitter": {
       "command": "npx",
       "args": ["-y", "@anthropic/mcp-twitter"],

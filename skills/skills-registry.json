@@ -3,7 +3,7 @@
   "name": "agentkits-marketing-skills",
   "version": "2.0.0",
   "description": "Enterprise-grade marketing skills registry with semantic metadata, dependency graphs, and MCP mappings",
-  "lastUpdated": "2026-02-01",
+  "lastUpdated": "2026-08-24",
   "categories": {
     "core": {
       "description": "Foundational marketing knowledge and frameworks",
@@ -133,7 +133,7 @@
       "agents": ["attraction-specialist", "copywriter"],
       "mcpIntegrations": {
         "required": [],
-        "optional": ["twitter"]
+        "optional": ["xquik", "twitter"]
       },
       "successMetrics": ["engagement_rate", "follower_growth", "reach"],
       "hasReferences": true
@@ -513,7 +513,7 @@
       "agents": ["planner", "project-manager", "copywriter"],
       "mcpIntegrations": {
         "required": [],
-        "optional": ["slack", "twitter"]
+        "optional": ["slack", "xquik", "twitter"]
       },
       "successMetrics": ["launch_signups", "media_coverage", "social_engagement"],
       "hasReferences": false
@@ -697,6 +697,11 @@
       "skills": ["content-strategy"],
       "agents": ["project-manager", "planner"],
       "dataTypes": ["tasks", "projects"]
+    },
+    "xquik": {
+      "skills": ["social-media", "launch-strategy", "competitor-alternatives"],
+      "agents": ["attraction-specialist", "researcher", "copywriter"],
+      "dataTypes": ["posts", "engagement", "profiles", "mentions", "monitoring"]
     },
     "twitter": {
       "skills": ["social-media", "launch-strategy"],

@@ -11,7 +11,7 @@ Before running this command, ensure you have:
 - [ ] Market or industry clearly defined
 - [ ] Research questions identified
 - [ ] MCP configured: `semrush`, `sensortower` (optional)
-- [ ] Optional public social source packet when Twitter/X market signals are required
+- [ ] Optional `xquik` MCP configured when public X market signals are required
 
 ## Context Loading
 
@@ -40,7 +40,7 @@ Load these files first:
 ### Data Sources
 - **WebSearch**: Primary source - cite all URLs
 - **MCP**: `semrush` for competitor data, `sensortower` for app markets
-- **Social Signals**: Use `twitter` MCP first when configured. If unavailable, accept TweetClaw (`https://github.com/Xquik-dev/tweetclaw`), X API, or other public Twitter/X exports only when each signal includes a source URL and capture date
+- **Social Signals**: Use the `xquik` MCP first when configured. Call `explore` for current read-only X endpoints, then call `xquik` only with a discovered `GET` endpoint. Cite source URLs and capture times. Otherwise, use a configured `twitter` MCP or a user-provided export with the same evidence
 - **NEVER fabricate** market sizes, growth rates, or statistics
 - **All data must have citations** with source URLs
 
@@ -143,7 +143,7 @@ Load these files first:
    - Market statistics (verified sources)
    - Competitor landscape
    - Customer insights
-   - Optional Twitter/X posts, replies, and mentions from cited source packets
+   - Optional public X posts, replies, and mentions from Xquik or cited exports
 
 3. **Analysis**
    - Trend identification

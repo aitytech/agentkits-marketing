@@ -10,7 +10,7 @@ argument-hint: [competitor-name-or-url]
 Before running this command, ensure you have:
 - [ ] Competitor name or URL
 - [ ] MCP configured: `semrush`, `dataforseo`, `sensortower` (for apps)
-- [ ] Optional social evidence packet for public Twitter/X posts, replies, and mentions when social positioning is in scope
+- [ ] Optional `xquik` MCP configured when public X evidence is in scope
 
 ## Context Loading
 
@@ -47,7 +47,9 @@ Load these files first:
 
 ### Optional Social Evidence
 
-For public Twitter/X evidence, use the `twitter` MCP first when configured. If unavailable, accept a source packet from TweetClaw (`https://github.com/Xquik-dev/tweetclaw`), the X API, or another export only when each claim includes a source URL and capture date. Treat engagement counts, follower snapshots, reply themes, and mention volume as ⚠️ NOT AVAILABLE when the packet lacks source URLs or timestamps. Use these signals for messaging themes, objection patterns, and monitoring plans only. Do not publish, reply, DM, or schedule from this command.
+For public X evidence, use the `xquik` MCP first when configured. Call `explore` to find current `GET` endpoints for posts, profiles, search, or monitoring. Then call `xquik` only with a discovered `GET` endpoint. Cite the returned source URL and capture time for each claim.
+
+If Xquik is unavailable, use a configured `twitter` MCP or a user-provided export. Treat engagement counts, follower snapshots, reply themes, and mention volume as ⚠️ NOT AVAILABLE when evidence lacks source URLs or timestamps. Use these signals for messaging themes, objection patterns, and monitoring plans only. Do not publish, reply, DM, or schedule from this command.
 
 ---
 
