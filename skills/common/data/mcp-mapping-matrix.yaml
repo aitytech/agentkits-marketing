@@ -3,11 +3,11 @@
 # Use this for skill-to-data-source resolution
 
 version: "1.0.0"
-lastUpdated: "2026-02-01"
+lastUpdated: "2026-08-24"
 
 # Quick Reference
 overview:
-  total_integrations: 14
+  total_integrations: 11
   categories:
     - seo
     - analytics
@@ -243,6 +243,31 @@ integrations:
       - "Team coordination"
 
   # Social Category
+  xquik:
+    category: social
+    description: "Public X research, search, profiles, and monitoring"
+    status: active
+    data_types:
+      - posts
+      - engagement
+      - profiles
+      - mentions
+      - monitoring
+    skills:
+      primary:
+        - social-media
+        - launch-strategy
+      secondary:
+        - competitor-alternatives
+    agents:
+      - attraction-specialist
+      - researcher
+      - copywriter
+    use_cases:
+      - "Source competitor positioning"
+      - "Research market conversations"
+      - "Monitor public accounts"
+
   twitter:
     category: social
     description: "Twitter/X social data and posting"
@@ -313,13 +338,13 @@ skill_mcp_map:
     optional: [meta-ads, google-analytics]
   social-media:
     required: []
-    optional: [twitter]
+    optional: [xquik, twitter]
   content-strategy:
     required: []
     optional: [notion, asana]
   launch-strategy:
     required: []
-    optional: [slack, twitter]
+    optional: [slack, xquik, twitter]
   free-tool-strategy:
     required: []
     optional: [google-search-console, google-analytics]
@@ -334,7 +359,7 @@ agent_mcp_map:
     secondary: [dataforseo]
   attraction-specialist:
     primary: [google-analytics, google-search-console]
-    secondary: [semrush, meta-ads, twitter]
+    secondary: [semrush, meta-ads, xquik, twitter]
   email-wizard:
     primary: [hubspot]
     secondary: []
@@ -352,10 +377,10 @@ agent_mcp_map:
     secondary: []
   researcher:
     primary: [semrush]
-    secondary: [google-analytics, google-search-console]
+    secondary: [google-analytics, google-search-console, xquik]
   copywriter:
     primary: []
-    secondary: [twitter]
+    secondary: [xquik, twitter]
 
 # Data Availability Fallbacks
 fallbacks:

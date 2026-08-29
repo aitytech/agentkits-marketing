@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node bin/agentkits.js",
     "install-local": "node bin/agentkits.js install",
-    "test": "echo \"Warning: no test specified\" && exit 0",
+    "test": "node --test test/*.test.cjs",
     "lint": "echo \"Linting passed\"",
     "semantic-release": "semantic-release",
     "prepare": "husky",

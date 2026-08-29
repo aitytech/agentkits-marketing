@@ -16,6 +16,7 @@
 | [Slack](./slack/) | Communication | npm | ✅ Active |
 | [Notion](./notion/) | Project Mgmt | npm | ✅ Active |
 | [Asana](./asana/) | Project Mgmt | npm | ✅ Active |
+| [Xquik](./xquik/) | Social research | Remote | ✅ Active |
 | [Twitter/X](./twitter/) | Social | npm | ✅ Active |
 | [TikTok](./tiktok/) | Social | npm | ✅ Active |
 | [Crosspost](./crosspost/) | Social | npm | ✅ Active |
@@ -64,6 +65,9 @@
   - Tools: 12 | Package: `@roychri/mcp-server-asana` | Auth: Access Token
 
 ### Social Media
+- **[Xquik](./xquik/)** - Public X research, search, profiles, and monitoring
+  - Tools: 2 | Type: Remote HTTP | Auth: `XQUIK_API_KEY`
+
 - **[Twitter/X](./twitter/)** - Tweets, search, threads
   - Tools: 8 | Package: `x-mcp-server` | Auth: OAuth 1.0a
 
@@ -141,6 +145,7 @@ export NOTION_API_KEY="secret_xxx"
 export ASANA_ACCESS_TOKEN="xxx"
 
 # Social Media
+export XQUIK_API_KEY="xq_xxx"
 export TWITTER_API_KEY="xxx"
 export TWITTER_API_SECRET="xxx"
 export TWITTER_ACCESS_TOKEN="xxx"

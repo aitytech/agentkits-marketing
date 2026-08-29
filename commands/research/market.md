@@ -11,6 +11,7 @@ Before running this command, ensure you have:
 - [ ] Market or industry clearly defined
 - [ ] Research questions identified
 - [ ] MCP configured: `semrush`, `sensortower` (optional)
+- [ ] Optional `xquik` MCP configured when public X market signals are required
 
 ## Context Loading
 
@@ -39,6 +40,7 @@ Load these files first:
 ### Data Sources
 - **WebSearch**: Primary source - cite all URLs
 - **MCP**: `semrush` for competitor data, `sensortower` for app markets
+- **Social Signals**: Use the `xquik` MCP first when configured. Call `explore` for current read-only X endpoints, then call `xquik` only with a discovered `GET` endpoint. Cite source URLs and capture times. Otherwise, use a configured `twitter` MCP or a user-provided export with the same evidence
 - **NEVER fabricate** market sizes, growth rates, or statistics
 - **All data must have citations** with source URLs
 
@@ -141,12 +143,14 @@ Load these files first:
    - Market statistics (verified sources)
    - Competitor landscape
    - Customer insights
+   - Optional public X posts, replies, and mentions from Xquik or cited exports
 
 3. **Analysis**
    - Trend identification
    - Growth drivers
    - Risk factors
    - Competitive dynamics
+   - Social signal themes without inferring market size from volume alone
 
 4. **Synthesis**
    - Key findings
@@ -206,6 +210,7 @@ Save research to: `./docs/research/market-[industry]-[YYYY-MM-DD].md`
 
 Before delivering market research:
 - [ ] All data points have citations
+- [ ] Public Twitter/X signals include URLs and capture dates, or are marked unavailable
 - [ ] Market size methodology explained
 - [ ] Competitive landscape complete
 - [ ] Trends identified with confidence levels
