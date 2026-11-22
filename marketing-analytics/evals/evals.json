@@ -1,0 +1,217 @@
+{
+  "skill_name": "marketing-analytics",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just connected my Google Ads and Mailchimp data to Coupler.io last week. Can you pull up a weekly performance report for me? I want to know how things are going across both channels.",
+      "expected_output": "A structured weekly report covering both Google Ads and Mailchimp metrics, with key numbers, week-over-week changes, highlights, and actionable recommendations. Should use list-dataflows to find the data, get-schema to understand columns, and get-data to query both dataflows.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "a1-1",
+          "text": "Uses list-dataflows MCP tool to discover available dataflows",
+          "type": "tool_usage",
+          "check": "transcript contains a call to list-dataflows"
+        },
+        {
+          "id": "a1-2",
+          "text": "Uses get-schema to understand column structure before querying",
+          "type": "tool_usage",
+          "check": "transcript contains a call to get-schema before any get-data call with a complex query"
+        },
+        {
+          "id": "a1-3",
+          "text": "Presents discovered dataflows to user and asks for confirmation before proceeding",
+          "type": "interaction",
+          "check": "response includes a list of discovered dataflows and asks user to confirm which to analyze"
+        },
+        {
+          "id": "a1-4",
+          "text": "Uses get-data with SQL to pull metrics from both Google Ads and Mailchimp dataflows",
+          "type": "tool_usage",
+          "check": "transcript contains at least two get-data calls with SQL queries"
+        },
+        {
+          "id": "a1-5",
+          "text": "Presents key metrics with period-over-period comparison",
+          "type": "output_content",
+          "check": "final output contains at least one numeric metric with a percentage change (e.g., '+18%', '-5%', 'up 12%')"
+        },
+        {
+          "id": "a1-6",
+          "text": "Includes actionable recommendations citing supporting data",
+          "type": "output_content",
+          "check": "final output contains a recommendations section where each recommendation references a specific metric or finding"
+        },
+        {
+          "id": "a1-7",
+          "text": "Mentions data freshness (when dataflows were last refreshed)",
+          "type": "output_content",
+          "check": "response mentions when the data was last updated or refreshed"
+        },
+        {
+          "id": "a1-8",
+          "text": "Does not expose raw column names (col_0, col_1) in user-facing text",
+          "type": "output_quality",
+          "check": "final user-facing output does not contain 'col_0', 'col_1', or similar raw column identifiers"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Something weird is happening with our conversions — they dropped a lot this week compared to last week. Can you check my Coupler.io data and figure out what's going on?",
+      "expected_output": "An anomaly investigation that quantifies the conversion drop, checks multiple channels to isolate where the drop occurred, compares against historical baselines, and suggests possible root causes with next steps to investigate.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "a2-1",
+          "text": "Retrieves data from Coupler.io using the MCP tool chain (list-dataflows, get-schema, get-data)",
+          "type": "tool_usage",
+          "check": "transcript contains calls to list-dataflows, get-schema, and get-data"
+        },
+        {
+          "id": "a2-2",
+          "text": "Quantifies the conversion drop with specific numbers and percentages",
+          "type": "output_content",
+          "check": "output contains a specific conversion number and a percentage change (not just 'conversions dropped')"
+        },
+        {
+          "id": "a2-3",
+          "text": "Investigates across available channels to isolate where the drop occurred",
+          "type": "output_content",
+          "check": "output discusses more than one channel or dataflow when investigating the drop"
+        },
+        {
+          "id": "a2-4",
+          "text": "Compares against a baseline (prior period or rolling average)",
+          "type": "output_content",
+          "check": "output explicitly compares current period against at least one prior period with numbers"
+        },
+        {
+          "id": "a2-5",
+          "text": "Suggests possible root causes for the anomaly",
+          "type": "output_content",
+          "check": "output includes at least two hypotheses for what might be causing the drop"
+        },
+        {
+          "id": "a2-6",
+          "text": "Recommends specific next steps to investigate or remediate",
+          "type": "output_content",
+          "check": "output contains at least one specific action the user should take (not generic advice)"
+        },
+        {
+          "id": "a2-7",
+          "text": "Checks for data quality issues before concluding the drop is real",
+          "type": "output_content",
+          "check": "response mentions checking data completeness, dataflow health, or rules out data issues"
+        },
+        {
+          "id": "a2-8",
+          "text": "Classifies anomaly severity",
+          "type": "output_content",
+          "check": "output characterizes the severity of the drop (e.g., informational/warning/critical, or equivalent language)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm trying to figure out where to put my budget next quarter. Can you compare how all my marketing channels are performing and tell me which ones are giving me the best return? My data is all in Coupler.io.",
+      "expected_output": "A cross-channel comparison pulling data from all available Coupler.io dataflows, showing spend, results, and efficiency per channel, with a clear recommendation on budget allocation for next quarter.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "a3-1",
+          "text": "Queries multiple Coupler.io dataflows to cover all available channels",
+          "type": "tool_usage",
+          "check": "transcript contains get-data calls for at least two different dataflows/execution IDs"
+        },
+        {
+          "id": "a3-2",
+          "text": "Compares channels on efficiency metrics (CPA, ROAS) not just volume",
+          "type": "output_content",
+          "check": "output contains at least one efficiency metric (CPA, ROAS, cost per lead, or equivalent ratio) per channel"
+        },
+        {
+          "id": "a3-3",
+          "text": "Presents a channel comparison matrix or table",
+          "type": "output_content",
+          "check": "output contains a table or structured comparison with multiple channels and multiple metrics"
+        },
+        {
+          "id": "a3-4",
+          "text": "Provides specific budget allocation recommendations with rationale",
+          "type": "output_content",
+          "check": "output recommends increasing, maintaining, or decreasing spend on specific channels with a data-backed reason"
+        },
+        {
+          "id": "a3-5",
+          "text": "Defines metric abbreviations on first use",
+          "type": "output_quality",
+          "check": "first occurrence of CPA, ROAS, or similar abbreviation includes a definition or expansion"
+        },
+        {
+          "id": "a3-6",
+          "text": "Acknowledges limitations of the analysis (channel interactions, attribution)",
+          "type": "output_content",
+          "check": "output includes at least one caveat about limitations (e.g., attribution, channel interactions, correlation vs. causation)"
+        },
+        {
+          "id": "a3-7",
+          "text": "Presents dataflow selection to user before proceeding with analysis",
+          "type": "interaction",
+          "check": "response shows which dataflows were found and asks user to confirm before running the full analysis"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Can you check if there's anything unusual in my recent marketing data from Coupler.io? I haven't looked at it in a couple of weeks and want to know if anything needs my attention.",
+      "expected_output": "A proactive anomaly scan across all available dataflows, flagging any metrics with significant deviations from recent trends, categorized by severity, with plain-language explanations of what each anomaly means and what to do about it.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "a4-1",
+          "text": "Scans all available Coupler.io dataflows, not just one channel",
+          "type": "tool_usage",
+          "check": "transcript contains get-data calls for multiple dataflows"
+        },
+        {
+          "id": "a4-2",
+          "text": "Compares recent metrics against a baseline or trend",
+          "type": "output_content",
+          "check": "output compares recent values against prior period values with specific numbers"
+        },
+        {
+          "id": "a4-3",
+          "text": "Classifies anomalies by severity (informational, warning, critical)",
+          "type": "output_content",
+          "check": "output uses severity levels or equivalent language to distinguish between minor and major deviations"
+        },
+        {
+          "id": "a4-4",
+          "text": "Explains each finding in plain language with 'so what' context",
+          "type": "output_content",
+          "check": "each flagged anomaly includes an explanation of why it matters, not just the number"
+        },
+        {
+          "id": "a4-5",
+          "text": "Provides actionable next steps for any issues found",
+          "type": "output_content",
+          "check": "each warning or critical finding includes at least one specific action to take"
+        },
+        {
+          "id": "a4-6",
+          "text": "If nothing unusual is found, says so clearly rather than fabricating issues",
+          "type": "output_quality",
+          "check": "if all metrics are within normal ranges, output explicitly states nothing unusual was found"
+        },
+        {
+          "id": "a4-7",
+          "text": "Mentions data freshness for each dataflow checked",
+          "type": "output_content",
+          "check": "output notes when the data was last refreshed or how current it is"
+        }
+      ]
+    }
+  ]
+}
